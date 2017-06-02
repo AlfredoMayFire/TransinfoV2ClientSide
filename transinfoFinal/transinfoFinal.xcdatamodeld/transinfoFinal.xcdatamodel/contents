@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Automatic">
+    <entity name="PageEight" syncable="YES">
+        <attribute name="busUse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cuartaCategoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cuartoEvento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leftPlace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="primeraCategoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primerDefectoMec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primerEvento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="segundaCategoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="segundoDefectoMec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="segundoEvento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="terceraCategoria" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tercerEvento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="towedDamage" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageEleven" syncable="YES">
+        <attribute name="idInformationAllPerson" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idLawInfractionFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewPersonFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewVehicleFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="suspectAlcohol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suspectSubst" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testResultAl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testResultSubst" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testStatusAl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testStatusSubst" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testTypeAl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testTypeSubst" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageFive" syncable="YES">
+        <attribute name="detallesAccidente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="horaLlegadaMedica" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="horaLlegadaPolicia" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="horaNotificadaMedica" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="horaNotificadaPolicia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="PageFour" syncable="YES">
+        <attribute name="aseguradoraField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estadoField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechaCompraField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechaExpiracionField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jurisdicionVehiculo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marcaField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modeloField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numDeTablilla" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numeroDeMarbete" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ocupantes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoVehiculo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vinField" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearField" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageNine" syncable="YES">
+        <attribute name="authorizedDriver" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commercialVehicle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diamondIDNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueCollision" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extendDamage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grossWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hazardousMaterial" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heavyVehicleType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initialContactPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspectionDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movingVehicle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="specialPermit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalAxis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleConfiguration" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageOne" syncable="YES">
+        <attribute name="attribute" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="automovilistaInvolu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cercaDe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coordX" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coordY" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distancia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatalidadesInvolu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechaAccidente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heridosInvolu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hora" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medida" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="municipio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numCaso" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="peatonesInvolu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="puntoCardinal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoAccidente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoPropiedad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoZona" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ubicacion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehiculoInvolu" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageSeven" syncable="YES">
+        <attribute name="alineamiento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cantidadCarril" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoriaCarril" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descripcionCarretera" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inclinacion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="operationOrLost" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoCarril" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageSix" syncable="YES">
+        <attribute name="direccionDeViaje" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="funcionEspecial" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="limiteDeVelocidad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maniobra" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mph" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="tipoVehiculoMotor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="usoDeVehiculo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageTen" syncable="YES">
+        <attribute name="airbagActivation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distractedDriver" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expulsion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extractionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idNewPersonFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewVehicleFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idPersonInformationVehicle" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="otherLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="restraintSystem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="row" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="safetyEquipment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speedRelatedDescription" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageThirteen" syncable="YES">
+        <attribute name="idInformationPCV" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewPersonFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewVehiclesFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="locationWhenCollision" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="waySchool" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageThree" syncable="YES">
+        <attribute name="categoriaPerson" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ciudad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genero" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="license" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="organDonor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoPersona" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transportedBy" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageTwelve" syncable="YES">
+        <attribute name="articleNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fineNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hora" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idLawInfraction" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewPersonFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="idNewVehicleFK" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="summonsToCourt" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PageTwo" syncable="YES">
+        <attribute name="ambiente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="areaConstruccionOMantenimiento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carretera" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clima1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clima2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formaColision" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="interseccionDesnivel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localizacionAcidente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localizacionEvento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lugarEspecifico" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="omnibus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pavimento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="policiaPresente" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoColision" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoInterseccion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipoZonaTrabajo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trabajadoresPresentes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="visibilidad" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Posts" syncable="YES">
+        <attribute name="crashBasicInformation" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="crashConditions" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="newPersonID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="newVehicleID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="officerID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PageEight" positionX="-792" positionY="-0" width="128" height="253"/>
+        <element name="PageEleven" positionX="-18" positionY="153" width="128" height="240"/>
+        <element name="PageFive" positionX="151" positionY="180" width="128" height="135"/>
+        <element name="PageFour" positionX="412" positionY="177" width="128" height="28"/>
+        <element name="PageNine" positionX="-650" positionY="18" width="128" height="270"/>
+        <element name="PageOne" positionX="-423" positionY="-15" width="128" height="375"/>
+        <element name="PageSeven" positionX="-702" positionY="63" width="128" height="165"/>
+        <element name="PageSix" positionX="-333" positionY="99" width="128" height="165"/>
+        <element name="PageTen" positionX="-533" positionY="45" width="128" height="255"/>
+        <element name="PageThirteen" positionX="214" positionY="336" width="128" height="133"/>
+        <element name="PageThree" positionX="-38" positionY="-72" width="128" height="193"/>
+        <element name="PageTwelve" positionX="-866" positionY="378" width="128" height="165"/>
+        <element name="PageTwo" positionX="-243" positionY="-9" width="128" height="345"/>
+        <element name="Posts" positionX="-657" positionY="81" width="128" height="120"/>
+    </elements>
+</model>

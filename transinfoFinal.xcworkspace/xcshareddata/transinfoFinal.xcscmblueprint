@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E14FDF953AB5E094E06028BBD0E57A0AFB6AADE7" : 0,
+    "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71" : 0,
+    "3FB7712DE2CE31245F2ACCEAC6278619E5219052" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D26E04FB-5EDF-4E5D-87FF-BDE97DB2F00E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E14FDF953AB5E094E06028BBD0E57A0AFB6AADE7" : "ProjectTransInfoUpdate-master-2\/",
+    "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71" : "TransInfoV2Client\/",
+    "3FB7712DE2CE31245F2ACCEAC6278619E5219052" : "ProjectTransInfoUpdate-master-2\/Pods\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "transinfoFinal",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "transinfoFinal.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/TransInfoAlfredo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3FB7712DE2CE31245F2ACCEAC6278619E5219052"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/TransInfoV2Client",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/TransinfoV2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E14FDF953AB5E094E06028BBD0E57A0AFB6AADE7"
+    }
+  ]
+}
