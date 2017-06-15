@@ -189,8 +189,8 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         //if you're having gps troubles use this
         
         
-        latitudField.text = "1"
-        longitudField.text = "1"
+//        latitudField.text = "1"
+//        longitudField.text = "1"
 
     
     }

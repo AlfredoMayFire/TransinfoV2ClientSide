@@ -66,7 +66,7 @@ class ViewController: UIViewController {
             singleton.testString = ""
             
             
-            let accidentConditionFK = Info(officerID: (officerID["OfficerID"] as? Int)!,crashBasicInformation: 0, accidentCondition: 0, newVehicle:0,newPerson: 0,personExtended:0,vehicleExtended:0,narrative:0,numCaso:"")
+            let accidentConditionFK = Info(officerPlate: (officerID["PlateNumber"]!.stringValue), officerID: (officerID["OfficerID"] as? Int)!,crashBasicInformation: 0, accidentCondition: 0, newVehicle:0,newPerson: 0,personExtended:0,vehicleExtended:0,narrative:0,numCaso:"")
             singleton.foreignKeys.append(accidentConditionFK)
             
             let listPeopleInit = People(person: ["":""])

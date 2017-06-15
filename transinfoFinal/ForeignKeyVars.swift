@@ -11,6 +11,7 @@ import Foundation
 struct Info {
     
     var officerID: Int
+    var officerPlate: String
     var crashBasicInformation: Int
     var accidentCondition: Int
     var newPerson: Int
@@ -21,7 +22,8 @@ struct Info {
     var numCaso: String
     
     
-    init (officerID:Int, crashBasicInformation:Int, accidentCondition:Int,newVehicle: Int, newPerson:Int,personExtended: Int,vehicleExtended: Int,narrative: Int,numCaso: String) {
+    init (officerPlate:String, officerID:Int, crashBasicInformation:Int, accidentCondition:Int,newVehicle: Int, newPerson:Int,personExtended: Int,vehicleExtended: Int,narrative: Int,numCaso: String) {
+        self.officerPlate=officerPlate
         self.officerID=officerID
         self.crashBasicInformation=crashBasicInformation
         self.accidentCondition=accidentCondition

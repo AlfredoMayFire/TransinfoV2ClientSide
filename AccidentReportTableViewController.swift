@@ -36,9 +36,10 @@ class AccidentReportTableViewController: UITableViewController {
         let WebServiceQuery = WebService.init()
         WebServiceQuery.initiate(1)
 
-        print(WebServiceQuery.getListOfReports("2017-09-09"))
+        print(singleton.foreignKeys[0].officerPlate)
+        print(WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate))
         
-        dictionary = WebServiceQuery.getListOfReports("7")
+        dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
         myArray = (dictionary1["ReportList"] as? Array<AnyObject>)!
         
@@ -104,8 +105,8 @@ class AccidentReportTableViewController: UITableViewController {
         var cellName: String
         dictionary = (myArray[indexPath.row] as? Dictionary<String,AnyObject>)!
         if transition {
-            cellName = "Case Number: "
-            cellName += (dictionary["caseNumber"] as? String)!
+            cellName = "Plate Number: "
+            cellName += (dictionary["plateNumber"] as? String)!
             
             cell.textLabel?.text = cellName
             
@@ -146,6 +147,30 @@ class AccidentReportTableViewController: UITableViewController {
             self.selectedRowIndex = -1
         }
         
+        print(myArray[(indexPath.row)])
+                dictionary2 = (myArray[(indexPath.row)] as? Dictionary<String,AnyObject>)!
+        
+        
+                var message = dictionary2["firstName"] as? String
+                message?.appendContentsOf((dictionary2["lastName"] as? String)!)
+                message?.appendContentsOf(" -> ")
+                message?.appendContentsOf((dictionary2["crashType"] as? String)!)
+                 message?.appendContentsOf(" -> ")
+                message?.appendContentsOf((dictionary2["crashDate"] as? String)!)
+                 message?.appendContentsOf(" -> ")
+                message?.appendContentsOf((dictionary2["countryDescriptionES"] as? String)!)
+                 message?.appendContentsOf(" -> ")
+//                message?.appendContentsOf((dictionary2["caseNumber"] as? String)!)
+//                 message?.appendContentsOf(" -> ")
+                message?.appendContentsOf((dictionary2["address"] as? String)!)
+        
+                print(message)
+                let alertController = UIAlertController(title: "Informacion Presente", message:
+                    message, preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
     }
