@@ -185,6 +185,10 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             menuButoon.action = #selector(SWRevealViewController.revealToggle(_:))
         }
         
+        
+        //if you're having gps troubles use this
+        
+        
         latitudField.text = "1"
         longitudField.text = "1"
 

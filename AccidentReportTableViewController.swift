@@ -10,6 +10,7 @@ import UIKit
 
 class AccidentReportTableViewController: UITableViewController {
 
+    let singleton = Global.sharedGlobal
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet var Reportes: UITableView!
     var objectNum = Int()
@@ -37,7 +38,7 @@ class AccidentReportTableViewController: UITableViewController {
 
         print(WebServiceQuery.getListOfReports("2017-09-09"))
         
-        dictionary = WebServiceQuery.getListOfReports("2017-09-09")
+        dictionary = WebServiceQuery.getListOfReports("7")
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
         myArray = (dictionary1["ReportList"] as? Array<AnyObject>)!
         

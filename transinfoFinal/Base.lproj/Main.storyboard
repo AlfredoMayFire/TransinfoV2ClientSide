@@ -880,6 +880,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Wtq-1e-8co">
                                         <rect key="frame" x="435" y="630" width="16" height="20"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="okB-Vh-Ttf">
+                                        <rect key="frame" x="527" y="362" width="16" height="20"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
