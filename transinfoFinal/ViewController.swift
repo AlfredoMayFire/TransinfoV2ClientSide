@@ -88,7 +88,13 @@ class ViewController: UIViewController {
         }
 
     
-        
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
         
         
     
