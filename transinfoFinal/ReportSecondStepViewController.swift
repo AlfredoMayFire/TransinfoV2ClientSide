@@ -185,7 +185,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         }
-        
+        print(singleton.foreignKeys)
         numCasoLabel.text = "Caso #" + singleton.foreignKeys[0].numCaso
         
     }

@@ -19,6 +19,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     let singleton = Global.sharedGlobal
 
     var once = false
+    var failSubmit = false
     
     @IBOutlet weak var typeAccident: SwiftDropDownList!
     @IBOutlet weak var numberCaseField: UITextField!
@@ -200,6 +201,15 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
 //        print("Here it is, ",objectNum)
     }
     
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "accidenteCondiciones"{
+        
+        
+        
+        }
+    }
     @IBAction func ReportFirst(sender: AnyObject) {
         print ("------------")
         
@@ -241,7 +251,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             self.presentViewController(alertController, animated: true, completion: nil)
             
             crashID.removeAll()
-            
+            failSubmit = true
         }else{
             
             let myID = crashID["success"]
@@ -252,10 +262,11 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             
             let alertController = UIAlertController(title: "Éxito", message:
                 "Oprima para continuar.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: nil))
+            alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: confirm))
             self.presentViewController(alertController, animated: true, completion: nil)
 
-            clear(self)
+            // Solo si quieres limpiar pantalla
+           // clear(self)
         }
         print ("******************")
     }
@@ -287,11 +298,14 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             }
             else {
                 if let p = placemarks?[0]{
-                    var address = ""
-                    address = address + self.addInfoDirection(p.thoroughfare)
-                    address = address + self.addInfoDirection(p.subThoroughfare)
-                    self.direccionField.text = address
-                    print(userLocation)
+                    if self.direccionField.text != ""{
+                        var address = ""
+                        address = address + self.addInfoDirection(p.thoroughfare)
+                        address = address + self.addInfoDirection(p.subThoroughfare)
+                        self.direccionField.text = address
+                        print(userLocation)
+
+                    }
                 }
             }
         })
@@ -330,5 +344,9 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     }
     
     @IBAction func unwindToFirstStep(segue: UIStoryboardSegue) {
+    }
+    
+    func confirm(action: UIAlertAction){
+        performSegueWithIdentifier("accidenteCondiciones", sender: self)
     }
 }

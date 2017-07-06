@@ -231,7 +231,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             let myID = newPersonID["success"]
             let results = myID as? Dictionary<String,AnyObject>
             print("Here it is!",results!["NewPersonId"])
-            if  singleton.foreignKeys[0].newPerson != 0 {
+            if  singleton.foreignKeys[0].newPerson == 0 {
                 singleton.foreignKeys[0].newPerson = (results!["NewPersonId"]?.integerValue)!
             }
             

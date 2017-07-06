@@ -101,19 +101,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //
-        //ws
-        //lena todos los espacios hay un error
-        
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.registerClass(UITableViewCell.self,forCellReuseIdentifier: "cellIdentifier")
-        
-        //let singleton = Global.sharedGlobal
-        
-//        singleton.foreignKeys[0].crashBasicInformation = 112
-//        singleton.foreignKeys[0].newPerson = 1
-//        singleton.foreignKeys[0].newVehicle = 1
+ 
         
         
         let webServicesObject = WebService.init()
@@ -138,7 +126,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         
                
-        search.text = "123"
+        //search.text = "123"
         
     }
     
