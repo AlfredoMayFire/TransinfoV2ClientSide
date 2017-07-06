@@ -129,6 +129,7 @@ class NarrativeViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    
     @IBAction func sendData(sender: AnyObject) {
         
         let singleton = Global.sharedGlobal

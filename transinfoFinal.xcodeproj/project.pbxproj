@@ -37,6 +37,61 @@
 		EB088FF11E4E0F8A004203F4 /* AccidentReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */; };
 		EB17581D1E6C5EAB003BFC0F /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */; };
 		EB72BB201E66F67400AB42BA /* InfraccionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */; };
+		EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED28551F0DCFD4002CDE57 /* collision.swift */; };
+		EBED28651F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */; };
+		EBED28661F0DD0AE002CDE57 /* curvaderecha.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28581F0DD0AE002CDE57 /* curvaderecha.png */; };
+		EBED28671F0DD0AE002CDE57 /* curvaizquierda.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28591F0DD0AE002CDE57 /* curvaizquierda.png */; };
+		EBED28681F0DD0AE002CDE57 /* interseccionTPARE.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED285A1F0DD0AE002CDE57 /* interseccionTPARE.png */; };
+		EBED28691F0DD0AE002CDE57 /* interseccionTSemaforizada.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED285B1F0DD0AE002CDE57 /* interseccionTSemaforizada.png */; };
+		EBED286A1F0DD0AE002CDE57 /* interseccionXCuatroPARE.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED285C1F0DD0AE002CDE57 /* interseccionXCuatroPARE.png */; };
+		EBED286B1F0DD0AE002CDE57 /* interseccionXDosPARE.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED285D1F0DD0AE002CDE57 /* interseccionXDosPARE.png */; };
+		EBED286C1F0DD0AE002CDE57 /* interseccionXSemaforizada.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED285E1F0DD0AE002CDE57 /* interseccionXSemaforizada.png */; };
+		EBED286D1F0DD0AE002CDE57 /* parking.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED285F1F0DD0AE002CDE57 /* parking.png */; };
+		EBED286E1F0DD0AE002CDE57 /* rampaDeEntrada.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28601F0DD0AE002CDE57 /* rampaDeEntrada.png */; };
+		EBED286F1F0DD0AE002CDE57 /* rampaDeSalida.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28611F0DD0AE002CDE57 /* rampaDeSalida.png */; };
+		EBED28701F0DD0AE002CDE57 /* rotonda.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28621F0DD0AE002CDE57 /* rotonda.png */; };
+		EBED28711F0DD0AE002CDE57 /* tangente4CarrilesConIsleta.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28631F0DD0AE002CDE57 /* tangente4CarrilesConIsleta.png */; };
+		EBED28721F0DD0AE002CDE57 /* tangenteDosCarriles.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28641F0DD0AE002CDE57 /* tangenteDosCarriles.png */; };
+		EBED289B1F0DD103002CDE57 /* bus_0000_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28731F0DD103002CDE57 /* bus_0000_1.png */; };
+		EBED289C1F0DD103002CDE57 /* bus_0001_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28741F0DD103002CDE57 /* bus_0001_2.png */; };
+		EBED289D1F0DD103002CDE57 /* bus_0002_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28751F0DD103002CDE57 /* bus_0002_3.png */; };
+		EBED289E1F0DD103002CDE57 /* bus_0003_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28761F0DD103002CDE57 /* bus_0003_4.png */; };
+		EBED289F1F0DD103002CDE57 /* bus_0004_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28771F0DD103002CDE57 /* bus_0004_5.png */; };
+		EBED28A01F0DD103002CDE57 /* bus_0005_6.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28781F0DD103002CDE57 /* bus_0005_6.png */; };
+		EBED28A11F0DD103002CDE57 /* bus_0006_7.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28791F0DD103002CDE57 /* bus_0006_7.png */; };
+		EBED28A21F0DD103002CDE57 /* bus_0007_8.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED287A1F0DD103002CDE57 /* bus_0007_8.png */; };
+		EBED28A31F0DD103002CDE57 /* bus_0008_9.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED287B1F0DD103002CDE57 /* bus_0008_9.png */; };
+		EBED28A41F0DD103002CDE57 /* bus_0009_10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED287C1F0DD103002CDE57 /* bus_0009_10.png */; };
+		EBED28A51F0DD103002CDE57 /* car_0000_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED287D1F0DD103002CDE57 /* car_0000_1.png */; };
+		EBED28A61F0DD103002CDE57 /* car_0001_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED287E1F0DD103002CDE57 /* car_0001_2.png */; };
+		EBED28A71F0DD103002CDE57 /* car_0002_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED287F1F0DD103002CDE57 /* car_0002_3.png */; };
+		EBED28A81F0DD103002CDE57 /* car_0003_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28801F0DD103002CDE57 /* car_0003_4.png */; };
+		EBED28A91F0DD103002CDE57 /* car_0004_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28811F0DD103002CDE57 /* car_0004_5.png */; };
+		EBED28AA1F0DD103002CDE57 /* car_0005_6.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28821F0DD103002CDE57 /* car_0005_6.png */; };
+		EBED28AB1F0DD103002CDE57 /* car_0006_7.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28831F0DD103002CDE57 /* car_0006_7.png */; };
+		EBED28AC1F0DD103002CDE57 /* car_0007_8.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28841F0DD103002CDE57 /* car_0007_8.png */; };
+		EBED28AD1F0DD103002CDE57 /* car_0008_9.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28851F0DD103002CDE57 /* car_0008_9.png */; };
+		EBED28AE1F0DD103002CDE57 /* car_0009_10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28861F0DD103002CDE57 /* car_0009_10.png */; };
+		EBED28AF1F0DD103002CDE57 /* moto_0000_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28871F0DD103002CDE57 /* moto_0000_1.png */; };
+		EBED28B01F0DD103002CDE57 /* moto_0001_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28881F0DD103002CDE57 /* moto_0001_2.png */; };
+		EBED28B11F0DD103002CDE57 /* moto_0002_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28891F0DD103002CDE57 /* moto_0002_3.png */; };
+		EBED28B21F0DD103002CDE57 /* moto_0003_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED288A1F0DD103002CDE57 /* moto_0003_4.png */; };
+		EBED28B31F0DD103002CDE57 /* moto_0004_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED288B1F0DD103002CDE57 /* moto_0004_5.png */; };
+		EBED28B41F0DD103002CDE57 /* moto_0005_6.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED288C1F0DD103002CDE57 /* moto_0005_6.png */; };
+		EBED28B51F0DD103002CDE57 /* moto_0006_7.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED288D1F0DD103002CDE57 /* moto_0006_7.png */; };
+		EBED28B61F0DD103002CDE57 /* moto_0007_8.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED288E1F0DD103002CDE57 /* moto_0007_8.png */; };
+		EBED28B71F0DD103002CDE57 /* moto_0008_9.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED288F1F0DD103002CDE57 /* moto_0008_9.png */; };
+		EBED28B81F0DD103002CDE57 /* moto_0009_10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28901F0DD103002CDE57 /* moto_0009_10.png */; };
+		EBED28B91F0DD103002CDE57 /* truck_0000_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28911F0DD103002CDE57 /* truck_0000_1.png */; };
+		EBED28BA1F0DD103002CDE57 /* truck_0001_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28921F0DD103002CDE57 /* truck_0001_2.png */; };
+		EBED28BB1F0DD103002CDE57 /* truck_0002_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28931F0DD103002CDE57 /* truck_0002_3.png */; };
+		EBED28BC1F0DD103002CDE57 /* truck_0003_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28941F0DD103002CDE57 /* truck_0003_4.png */; };
+		EBED28BD1F0DD103002CDE57 /* truck_0004_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28951F0DD103002CDE57 /* truck_0004_5.png */; };
+		EBED28BE1F0DD103002CDE57 /* truck_0005_6.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28961F0DD103002CDE57 /* truck_0005_6.png */; };
+		EBED28BF1F0DD103002CDE57 /* truck_0006_7.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28971F0DD103002CDE57 /* truck_0006_7.png */; };
+		EBED28C01F0DD103002CDE57 /* truck_0007_8.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28981F0DD103002CDE57 /* truck_0007_8.png */; };
+		EBED28C11F0DD103002CDE57 /* truck_0008_9.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28991F0DD103002CDE57 /* truck_0008_9.png */; };
+		EBED28C21F0DD103002CDE57 /* truck_0009_10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED289A1F0DD103002CDE57 /* truck_0009_10.png */; };
 		EBF3A91D1EB59DEB00F3961F /* ForeignKeyVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +151,61 @@
 		EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccidentReportTableViewController.swift; path = ../AccidentReportTableViewController.swift; sourceTree = "<group>"; };
 		EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportsListController.swift; path = ../ReportsListController.swift; sourceTree = "<group>"; };
 		EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfraccionesTableViewController.swift; sourceTree = "<group>"; };
+		EBED28551F0DCFD4002CDE57 /* collision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collision.swift; sourceTree = "<group>"; };
+		EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2000px-Street_intersection_diagram.png"; path = "../../../Desktop/Alfredo/DiagramaColisiones/2000px-Street_intersection_diagram.png"; sourceTree = "<group>"; };
+		EBED28581F0DD0AE002CDE57 /* curvaderecha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = curvaderecha.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/curvaderecha.png; sourceTree = "<group>"; };
+		EBED28591F0DD0AE002CDE57 /* curvaizquierda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = curvaizquierda.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/curvaizquierda.png; sourceTree = "<group>"; };
+		EBED285A1F0DD0AE002CDE57 /* interseccionTPARE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = interseccionTPARE.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/interseccionTPARE.png; sourceTree = "<group>"; };
+		EBED285B1F0DD0AE002CDE57 /* interseccionTSemaforizada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = interseccionTSemaforizada.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/interseccionTSemaforizada.png; sourceTree = "<group>"; };
+		EBED285C1F0DD0AE002CDE57 /* interseccionXCuatroPARE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = interseccionXCuatroPARE.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/interseccionXCuatroPARE.png; sourceTree = "<group>"; };
+		EBED285D1F0DD0AE002CDE57 /* interseccionXDosPARE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = interseccionXDosPARE.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/interseccionXDosPARE.png; sourceTree = "<group>"; };
+		EBED285E1F0DD0AE002CDE57 /* interseccionXSemaforizada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = interseccionXSemaforizada.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/interseccionXSemaforizada.png; sourceTree = "<group>"; };
+		EBED285F1F0DD0AE002CDE57 /* parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parking.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/parking.png; sourceTree = "<group>"; };
+		EBED28601F0DD0AE002CDE57 /* rampaDeEntrada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rampaDeEntrada.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/rampaDeEntrada.png; sourceTree = "<group>"; };
+		EBED28611F0DD0AE002CDE57 /* rampaDeSalida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rampaDeSalida.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/rampaDeSalida.png; sourceTree = "<group>"; };
+		EBED28621F0DD0AE002CDE57 /* rotonda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rotonda.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/rotonda.png; sourceTree = "<group>"; };
+		EBED28631F0DD0AE002CDE57 /* tangente4CarrilesConIsleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tangente4CarrilesConIsleta.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/tangente4CarrilesConIsleta.png; sourceTree = "<group>"; };
+		EBED28641F0DD0AE002CDE57 /* tangenteDosCarriles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tangenteDosCarriles.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/tangenteDosCarriles.png; sourceTree = "<group>"; };
+		EBED28731F0DD103002CDE57 /* bus_0000_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0000_1.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0000_1.png; sourceTree = "<group>"; };
+		EBED28741F0DD103002CDE57 /* bus_0001_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0001_2.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0001_2.png; sourceTree = "<group>"; };
+		EBED28751F0DD103002CDE57 /* bus_0002_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0002_3.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0002_3.png; sourceTree = "<group>"; };
+		EBED28761F0DD103002CDE57 /* bus_0003_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0003_4.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0003_4.png; sourceTree = "<group>"; };
+		EBED28771F0DD103002CDE57 /* bus_0004_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0004_5.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0004_5.png; sourceTree = "<group>"; };
+		EBED28781F0DD103002CDE57 /* bus_0005_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0005_6.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0005_6.png; sourceTree = "<group>"; };
+		EBED28791F0DD103002CDE57 /* bus_0006_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0006_7.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0006_7.png; sourceTree = "<group>"; };
+		EBED287A1F0DD103002CDE57 /* bus_0007_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0007_8.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0007_8.png; sourceTree = "<group>"; };
+		EBED287B1F0DD103002CDE57 /* bus_0008_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0008_9.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0008_9.png; sourceTree = "<group>"; };
+		EBED287C1F0DD103002CDE57 /* bus_0009_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bus_0009_10.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/bus_0009_10.png; sourceTree = "<group>"; };
+		EBED287D1F0DD103002CDE57 /* car_0000_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0000_1.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0000_1.png; sourceTree = "<group>"; };
+		EBED287E1F0DD103002CDE57 /* car_0001_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0001_2.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0001_2.png; sourceTree = "<group>"; };
+		EBED287F1F0DD103002CDE57 /* car_0002_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0002_3.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0002_3.png; sourceTree = "<group>"; };
+		EBED28801F0DD103002CDE57 /* car_0003_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0003_4.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0003_4.png; sourceTree = "<group>"; };
+		EBED28811F0DD103002CDE57 /* car_0004_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0004_5.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0004_5.png; sourceTree = "<group>"; };
+		EBED28821F0DD103002CDE57 /* car_0005_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0005_6.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0005_6.png; sourceTree = "<group>"; };
+		EBED28831F0DD103002CDE57 /* car_0006_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0006_7.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0006_7.png; sourceTree = "<group>"; };
+		EBED28841F0DD103002CDE57 /* car_0007_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0007_8.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0007_8.png; sourceTree = "<group>"; };
+		EBED28851F0DD103002CDE57 /* car_0008_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0008_9.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0008_9.png; sourceTree = "<group>"; };
+		EBED28861F0DD103002CDE57 /* car_0009_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car_0009_10.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/car_0009_10.png; sourceTree = "<group>"; };
+		EBED28871F0DD103002CDE57 /* moto_0000_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0000_1.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0000_1.png; sourceTree = "<group>"; };
+		EBED28881F0DD103002CDE57 /* moto_0001_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0001_2.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0001_2.png; sourceTree = "<group>"; };
+		EBED28891F0DD103002CDE57 /* moto_0002_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0002_3.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0002_3.png; sourceTree = "<group>"; };
+		EBED288A1F0DD103002CDE57 /* moto_0003_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0003_4.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0003_4.png; sourceTree = "<group>"; };
+		EBED288B1F0DD103002CDE57 /* moto_0004_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0004_5.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0004_5.png; sourceTree = "<group>"; };
+		EBED288C1F0DD103002CDE57 /* moto_0005_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0005_6.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0005_6.png; sourceTree = "<group>"; };
+		EBED288D1F0DD103002CDE57 /* moto_0006_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0006_7.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0006_7.png; sourceTree = "<group>"; };
+		EBED288E1F0DD103002CDE57 /* moto_0007_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0007_8.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0007_8.png; sourceTree = "<group>"; };
+		EBED288F1F0DD103002CDE57 /* moto_0008_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0008_9.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0008_9.png; sourceTree = "<group>"; };
+		EBED28901F0DD103002CDE57 /* moto_0009_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moto_0009_10.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/moto_0009_10.png; sourceTree = "<group>"; };
+		EBED28911F0DD103002CDE57 /* truck_0000_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0000_1.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0000_1.png; sourceTree = "<group>"; };
+		EBED28921F0DD103002CDE57 /* truck_0001_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0001_2.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0001_2.png; sourceTree = "<group>"; };
+		EBED28931F0DD103002CDE57 /* truck_0002_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0002_3.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0002_3.png; sourceTree = "<group>"; };
+		EBED28941F0DD103002CDE57 /* truck_0003_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0003_4.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0003_4.png; sourceTree = "<group>"; };
+		EBED28951F0DD103002CDE57 /* truck_0004_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0004_5.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0004_5.png; sourceTree = "<group>"; };
+		EBED28961F0DD103002CDE57 /* truck_0005_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0005_6.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0005_6.png; sourceTree = "<group>"; };
+		EBED28971F0DD103002CDE57 /* truck_0006_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0006_7.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0006_7.png; sourceTree = "<group>"; };
+		EBED28981F0DD103002CDE57 /* truck_0007_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0007_8.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0007_8.png; sourceTree = "<group>"; };
+		EBED28991F0DD103002CDE57 /* truck_0008_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0008_9.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0008_9.png; sourceTree = "<group>"; };
+		EBED289A1F0DD103002CDE57 /* truck_0009_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truck_0009_10.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/Icons/truck_0009_10.png; sourceTree = "<group>"; };
 		EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForeignKeyVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,8 +283,63 @@
 				A078DCF01D4E7F4D00D40E51 /* MapPopoverViewController.swift */,
 				A078DCBA1D48090500D40E51 /* LaunchScreen.storyboard */,
 				A078DCB21D48090500D40E51 /* Main.storyboard */,
+				EBED28551F0DCFD4002CDE57 /* collision.swift */,
 				EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */,
 				EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */,
+				EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */,
+				EBED28731F0DD103002CDE57 /* bus_0000_1.png */,
+				EBED28741F0DD103002CDE57 /* bus_0001_2.png */,
+				EBED28751F0DD103002CDE57 /* bus_0002_3.png */,
+				EBED28761F0DD103002CDE57 /* bus_0003_4.png */,
+				EBED28771F0DD103002CDE57 /* bus_0004_5.png */,
+				EBED28781F0DD103002CDE57 /* bus_0005_6.png */,
+				EBED28791F0DD103002CDE57 /* bus_0006_7.png */,
+				EBED287A1F0DD103002CDE57 /* bus_0007_8.png */,
+				EBED287B1F0DD103002CDE57 /* bus_0008_9.png */,
+				EBED287C1F0DD103002CDE57 /* bus_0009_10.png */,
+				EBED287D1F0DD103002CDE57 /* car_0000_1.png */,
+				EBED287E1F0DD103002CDE57 /* car_0001_2.png */,
+				EBED287F1F0DD103002CDE57 /* car_0002_3.png */,
+				EBED28801F0DD103002CDE57 /* car_0003_4.png */,
+				EBED28811F0DD103002CDE57 /* car_0004_5.png */,
+				EBED28821F0DD103002CDE57 /* car_0005_6.png */,
+				EBED28831F0DD103002CDE57 /* car_0006_7.png */,
+				EBED28841F0DD103002CDE57 /* car_0007_8.png */,
+				EBED28851F0DD103002CDE57 /* car_0008_9.png */,
+				EBED28861F0DD103002CDE57 /* car_0009_10.png */,
+				EBED28871F0DD103002CDE57 /* moto_0000_1.png */,
+				EBED28881F0DD103002CDE57 /* moto_0001_2.png */,
+				EBED28891F0DD103002CDE57 /* moto_0002_3.png */,
+				EBED288A1F0DD103002CDE57 /* moto_0003_4.png */,
+				EBED288B1F0DD103002CDE57 /* moto_0004_5.png */,
+				EBED288C1F0DD103002CDE57 /* moto_0005_6.png */,
+				EBED288D1F0DD103002CDE57 /* moto_0006_7.png */,
+				EBED288E1F0DD103002CDE57 /* moto_0007_8.png */,
+				EBED288F1F0DD103002CDE57 /* moto_0008_9.png */,
+				EBED28901F0DD103002CDE57 /* moto_0009_10.png */,
+				EBED28911F0DD103002CDE57 /* truck_0000_1.png */,
+				EBED28921F0DD103002CDE57 /* truck_0001_2.png */,
+				EBED28931F0DD103002CDE57 /* truck_0002_3.png */,
+				EBED28941F0DD103002CDE57 /* truck_0003_4.png */,
+				EBED28951F0DD103002CDE57 /* truck_0004_5.png */,
+				EBED28961F0DD103002CDE57 /* truck_0005_6.png */,
+				EBED28971F0DD103002CDE57 /* truck_0006_7.png */,
+				EBED28981F0DD103002CDE57 /* truck_0007_8.png */,
+				EBED28991F0DD103002CDE57 /* truck_0008_9.png */,
+				EBED289A1F0DD103002CDE57 /* truck_0009_10.png */,
+				EBED28581F0DD0AE002CDE57 /* curvaderecha.png */,
+				EBED28591F0DD0AE002CDE57 /* curvaizquierda.png */,
+				EBED285A1F0DD0AE002CDE57 /* interseccionTPARE.png */,
+				EBED285B1F0DD0AE002CDE57 /* interseccionTSemaforizada.png */,
+				EBED285C1F0DD0AE002CDE57 /* interseccionXCuatroPARE.png */,
+				EBED285D1F0DD0AE002CDE57 /* interseccionXDosPARE.png */,
+				EBED285E1F0DD0AE002CDE57 /* interseccionXSemaforizada.png */,
+				EBED285F1F0DD0AE002CDE57 /* parking.png */,
+				EBED28601F0DD0AE002CDE57 /* rampaDeEntrada.png */,
+				EBED28611F0DD0AE002CDE57 /* rampaDeSalida.png */,
+				EBED28621F0DD0AE002CDE57 /* rotonda.png */,
+				EBED28631F0DD0AE002CDE57 /* tangente4CarrilesConIsleta.png */,
+				EBED28641F0DD0AE002CDE57 /* tangenteDosCarriles.png */,
 				EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */,
 				A078DCBD1D48090500D40E51 /* Info.plist */,
 				A078DCB51D48090500D40E51 /* transinfoFinal.xcdatamodeld */,
@@ -322,9 +487,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBED28A61F0DD103002CDE57 /* car_0001_2.png in Resources */,
+				EBED28A01F0DD103002CDE57 /* bus_0005_6.png in Resources */,
+				EBED289C1F0DD103002CDE57 /* bus_0001_2.png in Resources */,
+				EBED28C21F0DD103002CDE57 /* truck_0009_10.png in Resources */,
+				EBED28A51F0DD103002CDE57 /* car_0000_1.png in Resources */,
+				EBED28691F0DD0AE002CDE57 /* interseccionTSemaforizada.png in Resources */,
+				EBED286C1F0DD0AE002CDE57 /* interseccionXSemaforizada.png in Resources */,
+				EBED28C01F0DD103002CDE57 /* truck_0007_8.png in Resources */,
+				EBED28B01F0DD103002CDE57 /* moto_0001_2.png in Resources */,
+				EBED28B81F0DD103002CDE57 /* moto_0009_10.png in Resources */,
+				EBED28AB1F0DD103002CDE57 /* car_0006_7.png in Resources */,
+				EBED28711F0DD0AE002CDE57 /* tangente4CarrilesConIsleta.png in Resources */,
+				EBED28C11F0DD103002CDE57 /* truck_0008_9.png in Resources */,
 				A078DCBC1D48090500D40E51 /* LaunchScreen.storyboard in Resources */,
+				EBED28BB1F0DD103002CDE57 /* truck_0002_3.png in Resources */,
+				EBED28A11F0DD103002CDE57 /* bus_0006_7.png in Resources */,
+				EBED28651F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png in Resources */,
+				EBED28A31F0DD103002CDE57 /* bus_0008_9.png in Resources */,
+				EBED289F1F0DD103002CDE57 /* bus_0004_5.png in Resources */,
+				EBED28BC1F0DD103002CDE57 /* truck_0003_4.png in Resources */,
+				EBED289E1F0DD103002CDE57 /* bus_0003_4.png in Resources */,
+				EBED28661F0DD0AE002CDE57 /* curvaderecha.png in Resources */,
+				EBED28A91F0DD103002CDE57 /* car_0004_5.png in Resources */,
+				EBED28BA1F0DD103002CDE57 /* truck_0001_2.png in Resources */,
+				EBED289B1F0DD103002CDE57 /* bus_0000_1.png in Resources */,
 				A078DCB91D48090500D40E51 /* Assets.xcassets in Resources */,
+				EBED286D1F0DD0AE002CDE57 /* parking.png in Resources */,
+				EBED28B11F0DD103002CDE57 /* moto_0002_3.png in Resources */,
+				EBED28BE1F0DD103002CDE57 /* truck_0005_6.png in Resources */,
+				EBED28AA1F0DD103002CDE57 /* car_0005_6.png in Resources */,
+				EBED28B71F0DD103002CDE57 /* moto_0008_9.png in Resources */,
+				EBED286B1F0DD0AE002CDE57 /* interseccionXDosPARE.png in Resources */,
+				EBED28A71F0DD103002CDE57 /* car_0002_3.png in Resources */,
+				EBED286A1F0DD0AE002CDE57 /* interseccionXCuatroPARE.png in Resources */,
+				EBED28BF1F0DD103002CDE57 /* truck_0006_7.png in Resources */,
+				EBED28AC1F0DD103002CDE57 /* car_0007_8.png in Resources */,
+				EBED28B41F0DD103002CDE57 /* moto_0005_6.png in Resources */,
+				EBED286E1F0DD0AE002CDE57 /* rampaDeEntrada.png in Resources */,
+				EBED28681F0DD0AE002CDE57 /* interseccionTPARE.png in Resources */,
+				EBED289D1F0DD103002CDE57 /* bus_0002_3.png in Resources */,
+				EBED28B21F0DD103002CDE57 /* moto_0003_4.png in Resources */,
+				EBED28721F0DD0AE002CDE57 /* tangenteDosCarriles.png in Resources */,
+				EBED28B51F0DD103002CDE57 /* moto_0006_7.png in Resources */,
+				EBED28B61F0DD103002CDE57 /* moto_0007_8.png in Resources */,
+				EBED28BD1F0DD103002CDE57 /* truck_0004_5.png in Resources */,
+				EBED28AF1F0DD103002CDE57 /* moto_0000_1.png in Resources */,
+				EBED28AE1F0DD103002CDE57 /* car_0009_10.png in Resources */,
+				EBED28671F0DD0AE002CDE57 /* curvaizquierda.png in Resources */,
+				EBED28B31F0DD103002CDE57 /* moto_0004_5.png in Resources */,
+				EBED286F1F0DD0AE002CDE57 /* rampaDeSalida.png in Resources */,
+				EBED28AD1F0DD103002CDE57 /* car_0008_9.png in Resources */,
+				EBED28701F0DD0AE002CDE57 /* rotonda.png in Resources */,
+				EBED28B91F0DD103002CDE57 /* truck_0000_1.png in Resources */,
+				EBED28A41F0DD103002CDE57 /* bus_0009_10.png in Resources */,
 				A078DCB41D48090500D40E51 /* Main.storyboard in Resources */,
+				EBED28A81F0DD103002CDE57 /* car_0003_4.png in Resources */,
+				EBED28A21F0DD103002CDE57 /* bus_0007_8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +590,7 @@
 				A078DCEF1D4A4F0A00D40E51 /* SWRevealViewController.m in Sources */,
 				A078DCF91D4ED18400D40E51 /* NewVehicleController.swift in Sources */,
 				A0AD03691D590BA500E424DA /* PersonExtendedViewController.swift in Sources */,
+				EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */,
 				A078DCE61D49A8A700D40E51 /* VehiclesTableViewController.swift in Sources */,
 				A078DCF51D4E9C2500D40E51 /* ViolationViewController.swift in Sources */,
 				A078DCB71D48090500D40E51 /* transinfoFinal.xcdatamodeld in Sources */,
