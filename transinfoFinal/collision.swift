@@ -14,7 +14,19 @@ class CollisionDiagram: UIViewController {
     //random needed variables
     var angleOfRotation = 0.0
     var location = CGPoint()
-    var list = ["1","2","3","4","5","6","7","8","9","10","11","12","13"]
+    var list = ["Curva a la derecha",
+                "Curva a la izquierda",
+                "Interseccion T con Pare",
+                "Interseccion T con Semaforo",
+                "Interseccion Cuatro Pares",
+                "Interseccion Dos Pares",
+                "Interseccion Semaforo",
+                "Estacionamiento",
+                "Rampa de Entrada",
+                "Rampa de Salida",
+                "Rotonda",
+                "Carretera Recta Dividida",
+                "Carretera Recta No Dividida"]
     var indexCounter = 0
     var carnumber = 2
     
