@@ -19,6 +19,7 @@ class CollisionDiagram: UIViewController {
     var carnumber = 2
     
     
+    @IBOutlet var scrollview: UIScrollView!
     
     
     
@@ -283,6 +284,7 @@ class CollisionDiagram: UIViewController {
         //Add the recognizer to your view.
         carImage.addGestureRecognizer(tapRecognizer)
         // Do any additional setup after loading the view, typically from a nib.
+        scrollview.contentSize.height = 750
     }
     
     override func didReceiveMemoryWarning()

@@ -1,18 +1,22 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7D3416FB69B4DFD8F9C03CB93BDAC8FD3B7CD796",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3FB7712DE2CE31245F2ACCEAC6278619E5219052" : 0,
     "E14FDF953AB5E094E06028BBD0E57A0AFB6AADE7" : 0,
+    "7D3416FB69B4DFD8F9C03CB93BDAC8FD3B7CD796" : 0,
     "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71" : 0,
-    "3FB7712DE2CE31245F2ACCEAC6278619E5219052" : 0
+    "4DA4B330F834B11C3D3443BAB4AE9F8434548CDB" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D26E04FB-5EDF-4E5D-87FF-BDE97DB2F00E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3FB7712DE2CE31245F2ACCEAC6278619E5219052" : "ProjectTransInfoUpdate-master-2\/Pods\/",
     "E14FDF953AB5E094E06028BBD0E57A0AFB6AADE7" : "ProjectTransInfoUpdate-master-2\/",
+    "7D3416FB69B4DFD8F9C03CB93BDAC8FD3B7CD796" : "TransinfoV2ClientSide\/",
     "A8AD7BC1BE290B75F1852FCC7FC69E1C226AFC71" : "TransInfoV2Client\/",
-    "3FB7712DE2CE31245F2ACCEAC6278619E5219052" : "ProjectTransInfoUpdate-master-2\/Pods\/"
+    "4DA4B330F834B11C3D3443BAB4AE9F8434548CDB" : "Alfredo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "transinfoFinal",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -22,6 +26,16 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/TransInfoAlfredo.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3FB7712DE2CE31245F2ACCEAC6278619E5219052"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/DiagramaColisiones.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4DA4B330F834B11C3D3443BAB4AE9F8434548CDB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/TransinfoV2ClientSide.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7D3416FB69B4DFD8F9C03CB93BDAC8FD3B7CD796"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AlfredoMayFire\/TransInfoV2Client",

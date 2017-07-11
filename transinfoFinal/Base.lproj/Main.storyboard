@@ -4115,6 +4115,7 @@
                         <outlet property="carImage8" destination="WLu-UQ-IQl" id="WPr-C5-jdd"/>
                         <outlet property="carImage9" destination="6Kh-7Q-SE2" id="9fd-Dj-7np"/>
                         <outlet property="dropDown" destination="gp7-vF-BbJ" id="796-BC-Hg1"/>
+                        <outlet property="scrollview" destination="fh2-Gg-K5z" id="uTe-dd-1Gu"/>
                         <outlet property="textBox" destination="u9A-0b-s4l" id="mSZ-g1-rjE"/>
                     </connections>
                 </viewController>
