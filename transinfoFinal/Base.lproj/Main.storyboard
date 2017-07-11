@@ -3585,7 +3585,7 @@
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="P6s-f6-1kA" kind="show" id="CRP-qn-52U"/>
+                                            <segue destination="P6s-f6-1kA" kind="push" id="CRP-qn-52U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -3874,7 +3874,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jei-o7-Y9n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFit" id="fh2-Gg-K5z" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car_0000_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xfg-dF-XWf">
@@ -3989,7 +3989,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwf-rZ-Ca7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Add Truck"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Truck">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="165" y="16" width="87" height="30"/>
                                 </variation>
@@ -3999,7 +4003,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-PV-PwH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Add Motorcycle"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Motorcycle">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="280" y="16" width="112" height="30"/>
                                 </variation>
@@ -4009,7 +4016,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-fP-Cl4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Add Car"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Car">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="434" y="16" width="60" height="29"/>
                                 </variation>
@@ -4019,7 +4029,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WR-Yg-gtV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Add Bus"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Bus">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="525" y="15" width="71" height="30"/>
                                 </variation>
@@ -4039,7 +4052,7 @@
                                 </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-vF-BbJ">
-                                <rect key="frame" x="569" y="128" width="179" height="106"/>
+                                <rect key="frame" x="658" y="85" width="347" height="106"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="703" y="0.0" width="97" height="106"/>
                                 </variation>
@@ -4088,17 +4101,18 @@
                     <navigationItem key="navigationItem" id="JnT-5j-ZGj">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="upe-Qh-0tr">
-                            <rect key="frame" x="335" y="6" width="98" height="32"/>
+                            <rect key="frame" x="463" y="6" width="98" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Reset">
-                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="resetButton:" destination="P6s-f6-1kA" eventType="touchUpInside" id="CM4-zG-5rB"/>
                             </connections>
                         </button>
                     </navigationItem>
-                    <value key="contentSizeForViewInPopover" type="size" width="1400" height="1200"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="carImage" destination="Xfg-dF-XWf" id="kRL-86-OeA"/>
                         <outlet property="carImage1" destination="wAj-ae-VpW" id="ywC-MI-b7f"/>
@@ -4217,7 +4231,7 @@
                     </connections>
                 </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-90.625" y="-1631.8359375"/>
+            <point key="canvasLocation" x="453" y="-1854"/>
         </scene>
     </scenes>
     <resources>
@@ -4260,5 +4274,5 @@
         <segue reference="cIx-FK-bHu"/>
         <segue reference="OSB-m3-WC8"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

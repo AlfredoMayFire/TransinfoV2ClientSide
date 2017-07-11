@@ -29,6 +29,7 @@ class CollisionDiagram: UIViewController {
                 "Carretera Recta No Dividida"]
     var indexCounter = 0
     var carnumber = 2
+    var lastOne = ""
     
     
     @IBOutlet var scrollview: UIScrollView!
@@ -87,6 +88,7 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addTruck(sender: AnyObject) {
+        lastOne = "truck"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "truck_000\(carnumber-1)_\(carnumber)")
@@ -136,6 +138,7 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addMotorcycle(sender: AnyObject) {
+       lastOne = "moto"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "moto_000\(carnumber-1)_\(carnumber)")
@@ -186,6 +189,7 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addCar(sender: AnyObject) {
+      lastOne = "car"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
@@ -236,6 +240,7 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addBus(sender: AnyObject) {
+       lastOne = "bus"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "bus_000\(carnumber-1)_\(carnumber)")
@@ -405,7 +410,7 @@ class CollisionDiagram: UIViewController {
     func determineBackground()
     {
         switch self.textBox.text {
-        case "1"?:
+        case "Curva a la derecha"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "curvaderecha.png")
