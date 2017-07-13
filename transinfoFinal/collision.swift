@@ -7,6 +7,8 @@
 // Running
 
 import UIKit
+import Photos
+import PhotosUI
 
 class CollisionDiagram: UIViewController {
     
@@ -14,25 +16,11 @@ class CollisionDiagram: UIViewController {
     //random needed variables
     var angleOfRotation = 0.0
     var location = CGPoint()
-    var list = ["Curva a la derecha",
-                "Curva a la izquierda",
-                "Interseccion T con Pare",
-                "Interseccion T con Semaforo",
-                "Interseccion Cuatro Pares",
-                "Interseccion Dos Pares",
-                "Interseccion Semaforo",
-                "Estacionamiento",
-                "Rampa de Entrada",
-                "Rampa de Salida",
-                "Rotonda",
-                "Carretera Recta Dividida",
-                "Carretera Recta No Dividida"]
+    var list = ["1","2","3","4","5","6","7","8","9","10","11","12","13"]
     var indexCounter = 0
     var carnumber = 2
-    var lastOne = ""
     
     
-    @IBOutlet var scrollview: UIScrollView!
     
     
     
@@ -51,6 +39,7 @@ class CollisionDiagram: UIViewController {
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
     
+    @IBOutlet weak var shutterButton: UIButton!
     
     
     //Button Functionalities
@@ -85,10 +74,17 @@ class CollisionDiagram: UIViewController {
         
     }
     
-    
+    @IBAction func takeScreenshot(sender:AnyObject){
+        
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, false, UIScreen.mainScreen().scale)
+        self.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        
+    }
     
     @IBAction func addTruck(sender: AnyObject) {
-        lastOne = "truck"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "truck_000\(carnumber-1)_\(carnumber)")
@@ -138,7 +134,6 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addMotorcycle(sender: AnyObject) {
-       lastOne = "moto"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "moto_000\(carnumber-1)_\(carnumber)")
@@ -189,7 +184,6 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addCar(sender: AnyObject) {
-      lastOne = "car"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
@@ -240,7 +234,6 @@ class CollisionDiagram: UIViewController {
     
     
     @IBAction func addBus(sender: AnyObject) {
-       lastOne = "bus"
         switch (carnumber-1){
         case 0:
             carImage.image = UIImage(named: "bus_000\(carnumber-1)_\(carnumber)")
@@ -301,7 +294,6 @@ class CollisionDiagram: UIViewController {
         //Add the recognizer to your view.
         carImage.addGestureRecognizer(tapRecognizer)
         // Do any additional setup after loading the view, typically from a nib.
-        scrollview.contentSize.height = 750
     }
     
     override func didReceiveMemoryWarning()
@@ -410,7 +402,7 @@ class CollisionDiagram: UIViewController {
     func determineBackground()
     {
         switch self.textBox.text {
-        case "Curva a la derecha"?:
+        case "1"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "curvaderecha.png")
@@ -535,6 +527,49 @@ class CollisionDiagram: UIViewController {
     }
     
     
+    @IBAction func undo(sender: AnyObject) {
+        
+        switch (carnumber-2){
+        case 0:
+            carImage.hidden = true
+            carnumber -= 1
+        case 1:
+            carImage1.hidden = true
+            carnumber -= 1
+        case 2:
+            carImage2.hidden = true
+            carnumber -= 1
+            
+        case 3:
+            carImage3.hidden = true
+            carnumber -= 1
+        case 4:
+            carImage4.hidden = true
+            carnumber -= 1
+        case 5:
+            carImage5.hidden = true
+            carnumber -= 1
+        case 6:
+            carImage6.hidden = true
+            carnumber -= 1
+        case 7:
+            carImage7.hidden = true
+            carnumber -= 1
+            
+        case 8:
+            carImage8.hidden = true
+            carnumber -= 1
+            
+        case 9:
+            carImage9.hidden = true
+            carnumber -= 1
+            
+        default:
+            print("Nothing Happened")
+        }
+        
+        
+    }
     
     
     

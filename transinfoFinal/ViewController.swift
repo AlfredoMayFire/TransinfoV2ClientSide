@@ -16,11 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var login: UIButton!
     
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet weak var loginButton: UITextField!
+    @IBOutlet weak var pass: UITextField!
     var myAO: AnyObject?
     var officerID = Dictionary<String,AnyObject>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -87,16 +91,6 @@ class ViewController: UIViewController {
             
         }
 
-    
-    func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y -= 150
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y += 150
-    }
-        
-        
     
 }
 
