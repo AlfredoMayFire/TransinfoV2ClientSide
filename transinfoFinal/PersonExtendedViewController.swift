@@ -343,7 +343,10 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         localizacionMomentoAccident.text = dictionary["locationWhenCollision"]
         
 
-        scrollView.contentSize.height = 5000
+        //scrollView.contentSize.height = 1600
+        //scrollView.contentSize.width = 1000
+        scrollView.contentSize = CGSizeMake(500, 1599)
+    
     }
     
     override func didReceiveMemoryWarning() {

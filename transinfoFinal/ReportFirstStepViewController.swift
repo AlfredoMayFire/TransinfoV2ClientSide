@@ -302,7 +302,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
                         var address = ""
                         address = address + self.addInfoDirection(p.thoroughfare)
                         address = address + self.addInfoDirection(p.subThoroughfare)
-                        self.direccionField.text = address
+                        //self.direccionField.text = address
                         print(userLocation)
 
                     }

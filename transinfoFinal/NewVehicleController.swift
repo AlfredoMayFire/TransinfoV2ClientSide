@@ -127,7 +127,6 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
                
         //search.text = "123"
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -175,7 +174,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         webServicesObjectPOST.addIData("ExpirationDate", value: fechaExpiracionField.text)
         
-        webServicesObjectPOST.addIData("idPersonaFK", value: values["personfk"]?.stringValue)
+        webServicesObjectPOST.addIData("idPersonaFK", value: "34")//values["personfk"]?.stringValue)
         
         print(webServicesObjectPOST.PostData)
         
@@ -243,10 +242,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
 }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        
-        
+
     }
     
     func segueBack(action: UIAlertAction){

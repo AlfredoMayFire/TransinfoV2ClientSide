@@ -319,9 +319,9 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             PhoneNumber.text = dictionaries["phoneNumber"] as? String
             nombreField.text = dictionaries["name"] as? String
             
-            singleton.foreignKeys[0].newPerson = (dictionaries["idPersonaFK"] as? Int)!
+           // singleton.foreignKeys[0].newPerson = (dictionaries["idPersonaFK"] as? Int)!
             
-            
+            singleton.foreignKeys[0].newPerson = (dictionaries["idPersonaFK"]?.integerValue)!
             listVehicles = webServicesQuery.getListofVehiclesPerson((dictionaries["idPersonaFK"] as? String)!)
             //print(listVehicles)
             listVehiclesConvert = (listVehicles.first?.1)! as! Dictionary<String, AnyObject>
