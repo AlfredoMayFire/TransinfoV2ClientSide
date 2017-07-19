@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class NarrativeViewController: UIViewController {
+class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -20,12 +20,21 @@ class NarrativeViewController: UIViewController {
     @IBOutlet weak var timeArrivalEmergenceField: UITextField!
     @IBOutlet weak var detailField: UITextView!
     
+    
+    
+    @IBOutlet var image: UIImageView!
+    
+    
+    
     var crashID = Dictionary<String,AnyObject>()
     var narrFK = String()
     var values: [String:AnyObject] = [
         "accidentfk":"",
         "narrfk":""
     ]
+    
+    
+    
 
     
     @IBAction func horaNotificadaField(sender: UITextField) {
@@ -174,8 +183,141 @@ class NarrativeViewController: UIViewController {
 
     }
     
+    //image upload and post
+    
+    
+    
+    
+    
+    @IBAction func selectPicture(sender: AnyObject) {
+        
+        let ImagePicker = UIImagePickerController()
+        ImagePicker.delegate = self
+        ImagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(ImagePicker, animated: true, completion: nil)
+        
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        image.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    @IBAction func upload_request(sender: AnyObject) {
+        UploadRequest()
+    }
+    
+    
+    
+    func UploadRequest()
+    {
+        let url = NSURL(string: "http://www.kaleidosblog.com/tutorial/upload.php")
+        
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        
+        let boundary = generateBoundaryString()
+        
+        
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        if (image.image == nil)
+        {
+            return
+        }
+        
+        let image_data = UIImagePNGRepresentation(image.image!)
+        
+        
+        if(image_data == nil)
+        {
+            return
+        }
+        
+        
+        let body = NSMutableData()
+        
+        let fname = "test.png"
+        let mimetype = "image/png"
+        
+        
+        
+        
+        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("Content-Disposition:form-data; name=\"test\"\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("hi\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        
+        
+        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("Content-Disposition:form-data; name=\"file\"; filename=\"\(fname)\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("Content-Type: \(mimetype)\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData(image_data!)
+        body.appendData("\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        
+        body.appendData("--\(boundary)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        
+        
+        request.HTTPBody = body
+        
+        
+        
+        let session = NSURLSession.sharedSession()
+        
+        
+        let task = session.dataTaskWithRequest(request) {
+            (
+            let data, let response, let error) in
+            
+            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+                print("error")
+                return
+            }
+            
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            
+            print(dataString)
+            
+        }
+        
+        task.resume()
+        
+        
+    }
+    
+    
+    func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().UUIDString)"
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+
+//    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+//        let supported = UIInterfaceOrientationMask.Portrait.rawValue
+//        return Int(supported)
+//    }
+
+    
+    
     
     
     
 
+}
+
+
+func supportedInterfaceOrientations() -> Int {
+    let supported = UIInterfaceOrientationMask.Portrait.rawValue
+    return Int(supported)
 }

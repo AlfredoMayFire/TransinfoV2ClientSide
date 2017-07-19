@@ -3588,13 +3588,32 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-CN-730">
-                                        <rect key="frame" x="408" y="223" width="195" height="40"/>
+                                        <rect key="frame" x="444" y="104" width="195" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Diagrama de Colisiones">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="P6s-f6-1kA" kind="push" id="CRP-qn-52U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIq-Xu-j9h">
+                                        <rect key="frame" x="589" y="142" width="50" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Upload"/>
+                                        <connections>
+                                            <action selector="upload_request:" destination="5qO-jh-boS" eventType="touchUpInside" id="KIa-de-CKf"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ao3-xY-oBN">
+                                        <rect key="frame" x="421" y="166" width="240" height="128"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-M2-cf5">
+                                        <rect key="frame" x="444" y="142" width="99" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Choose Image"/>
+                                        <connections>
+                                            <action selector="selectPicture:" destination="5qO-jh-boS" eventType="touchUpInside" id="6My-Nv-2GK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -3615,6 +3634,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailField" destination="dKV-Yh-9zE" id="XHp-4a-h7P"/>
+                        <outlet property="image" destination="ao3-xY-oBN" id="VXq-nE-PcD"/>
                         <outlet property="menuButton" destination="A6v-PC-OZf" id="OLR-gE-k1N"/>
                         <outlet property="notifiedTimeEmergenceField" destination="E97-mf-gxg" id="8LE-mU-cgQ"/>
                         <outlet property="notifiedTimePoliceField" destination="NI1-Yo-jWW" id="0Hd-5f-46U"/>
