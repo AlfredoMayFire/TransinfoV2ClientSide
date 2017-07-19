@@ -245,7 +245,7 @@ class VehicleExtendedViewController: UIViewController{
         
         
         
-        if (postFK.first!.0 == "error_code" || postFK.first!.0 == "error")  {
+        if (postFK["error_code"]?.integerValue != 200)  {
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
                 "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
@@ -254,7 +254,7 @@ class VehicleExtendedViewController: UIViewController{
             postFK.removeAll()
             
         }else{
-            let myID = postFK.first!.1
+            let myID = postFK["success"]
             let results = myID as? Dictionary<String,AnyObject>
             print("Here it is!",results!["CrashId"])
             

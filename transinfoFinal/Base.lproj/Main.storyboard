@@ -529,6 +529,7 @@
                         <outlet property="typeColisionField" destination="hrn-Ar-Qld" id="lSi-Oh-DW7"/>
                         <outlet property="typezonaField" destination="3o4-09-b5c" id="WSP-wb-YLC"/>
                         <outlet property="visibilidadConditionField" destination="C7y-LG-cMM" id="AIS-Bu-oWK"/>
+                        <segue destination="zo3-ZY-WSM" kind="show" identifier="condicionesToNew" id="Bpe-HZ-5vh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0A-BO-s7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -935,7 +936,7 @@
                         <outlet property="stateField" destination="TgW-lY-ccU" id="C0Y-A3-J7a"/>
                         <outlet property="typeAccident" destination="LmI-tK-VHr" id="7ed-8m-mlN"/>
                         <outlet property="typeZonaField" destination="JHM-6x-WXd" id="6kK-nP-HzX"/>
-                        <segue destination="jnn-Si-A5y" kind="show" identifier="accidenteCondiciones" id="qoS-x7-Qbu"/>
+                        <segue destination="jnn-Si-A5y" kind="showDetail" identifier="accidenteCondiciones" action="showViewController:sender:" id="qoS-x7-Qbu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jf6-RU-uqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1610,17 +1611,17 @@
             <objects>
                 <tableViewController id="zo3-ZY-WSM" customClass="NewDataEntryTableViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dgr-z4-NOg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1060" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="zl2-Bv-5rh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addPersonaCell" id="usQ-uq-P2L">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1060" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="usQ-uq-P2L" id="WPd-e6-HlF">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="828" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Persona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIY-fh-9RF">
@@ -1637,10 +1638,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addVehiculoCell" id="nh9-dD-ttz">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="1060" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nh9-dD-ttz" id="KEa-K4-ATC">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="828" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2. Vehículo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTz-HD-iAh">
@@ -1677,7 +1678,7 @@
                 <exit id="vrB-dI-ZpJ" userLabel="Exit" sceneMemberID="exit"/>
                 <customObject id="tYb-b2-KhU"/>
             </objects>
-            <point key="canvasLocation" x="637" y="2373"/>
+            <point key="canvasLocation" x="717" y="2125"/>
         </scene>
         <!--Entrada de Datos-->
         <scene sceneID="vId-D1-Gab">
@@ -2640,7 +2641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jf9-Mu-nzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="910"/>
+            <point key="canvasLocation" x="1716" y="954"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZLc-Qx-IZi">
@@ -2752,7 +2753,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9Ll-I8-ntj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9RW-y2-kw2" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="2500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBF-gN-rCd">
@@ -3346,7 +3347,7 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1024" height="1600"/>
+                    <size key="freeformSize" width="1024" height="2500"/>
                     <connections>
                         <outlet property="AmbulanceCSPNumber" destination="2Rk-sR-CuA" id="ORo-kh-1Te"/>
                         <outlet property="MedicalEmergenciesNumber" destination="eHz-dX-w2m" id="IHd-u9-zNE"/>
@@ -4263,12 +4264,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jfR-I8-iUe"/>
-        <segue reference="a90-V3-8ey"/>
-        <segue reference="qoS-x7-Qbu"/>
         <segue reference="rRJ-lM-kEd"/>
         <segue reference="Rdt-Ca-E81"/>
-        <segue reference="cIx-FK-bHu"/>
-        <segue reference="9nv-1L-DMD"/>
+        <segue reference="a90-V3-8ey"/>
+        <segue reference="qoS-x7-Qbu"/>
+        <segue reference="Bpe-HZ-5vh"/>
+        <segue reference="jdc-3d-ca8"/>
+        <segue reference="vkf-Pb-Bpn"/>
         <segue reference="OZL-AG-qyJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

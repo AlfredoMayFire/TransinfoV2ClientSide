@@ -305,10 +305,10 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
             }else{
-                clear()
+                //clear()
                 let alertController = UIAlertController(title: "Éxito", message:
                     "Oprima para continuar.", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: nil))
+                alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: confirm))
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
             
@@ -343,5 +343,10 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         policiaPresenteField.text = ""
         narrativeField.text = ""
     }
+    
+    func confirm(action: UIAlertAction){
+        performSegueWithIdentifier("condicionesToNew", sender: self)
+    }
+
     
 }

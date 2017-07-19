@@ -182,7 +182,9 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         let errorCode = newVehicleID["error_code"]
         
-        if(/*newVehicleID.first!.0 == "error_code" || newVehicleID.first!.0 == "error"*/errorCode?.integerValue == 400){
+        let allClear = checkParameters()
+        
+        if(/*newVehicleID.first!.0 == "error_code" || newVehicleID.first!.0 == "error"*/errorCode?.integerValue == 400 || !allClear){
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
                 "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
@@ -401,7 +403,23 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         
     }
+    func checkParameters()->Bool{
+        if Int(numeroDeTablilla.text!) != nil{
+            
+        }else{
+            return false
+        }
+        if Int(numeroDeMarbete.text!) != nil{
+            
+        }else{
+            return false
+        }
+        if (VINField.text!.characters.count > 13){
+            return false
+        }
     
+    return true
+    }
     func willNotUse(action: UIAlertAction){
         saveSubmit.title = "Guardar"
         jurisdictionVehicleField.text = ""
