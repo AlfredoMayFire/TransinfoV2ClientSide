@@ -37,6 +37,20 @@
 		EB088FF11E4E0F8A004203F4 /* AccidentReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */; };
 		EB17581D1E6C5EAB003BFC0F /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */; };
 		EB72BB201E66F67400AB42BA /* InfraccionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */; };
+		EB89C9D81F20D68000D66966 /* 2000px-Street_intersection_diagram.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9CA1F20D68000D66966 /* 2000px-Street_intersection_diagram.png */; };
+		EB89C9D91F20D68000D66966 /* curvaderecha.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9CB1F20D68000D66966 /* curvaderecha.png */; };
+		EB89C9DA1F20D68000D66966 /* curvaizquierda.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9CC1F20D68000D66966 /* curvaizquierda.png */; };
+		EB89C9DB1F20D68000D66966 /* interseccionTPARE.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9CD1F20D68000D66966 /* interseccionTPARE.png */; };
+		EB89C9DC1F20D68000D66966 /* interseccionTSemaforizada.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9CE1F20D68000D66966 /* interseccionTSemaforizada.png */; };
+		EB89C9DD1F20D68000D66966 /* interseccionXCuatroPARE.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9CF1F20D68000D66966 /* interseccionXCuatroPARE.png */; };
+		EB89C9DE1F20D68000D66966 /* interseccionXDosPARE.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D01F20D68000D66966 /* interseccionXDosPARE.png */; };
+		EB89C9DF1F20D68000D66966 /* interseccionXSemaforizada.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D11F20D68000D66966 /* interseccionXSemaforizada.png */; };
+		EB89C9E01F20D68000D66966 /* parking.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D21F20D68000D66966 /* parking.png */; };
+		EB89C9E11F20D68000D66966 /* rampaDeEntrada.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D31F20D68000D66966 /* rampaDeEntrada.png */; };
+		EB89C9E21F20D68000D66966 /* rampaDeSalida.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D41F20D68000D66966 /* rampaDeSalida.png */; };
+		EB89C9E31F20D68000D66966 /* rotonda.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D51F20D68000D66966 /* rotonda.png */; };
+		EB89C9E41F20D68000D66966 /* tangente4CarrilesConIsleta.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D61F20D68000D66966 /* tangente4CarrilesConIsleta.png */; };
+		EB89C9E51F20D68000D66966 /* tangenteDosCarriles.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D71F20D68000D66966 /* tangenteDosCarriles.png */; };
 		EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED28551F0DCFD4002CDE57 /* collision.swift */; };
 		EBED28651F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */; };
 		EBED28661F0DD0AE002CDE57 /* curvaderecha.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28581F0DD0AE002CDE57 /* curvaderecha.png */; };
@@ -151,6 +165,20 @@
 		EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccidentReportTableViewController.swift; path = ../AccidentReportTableViewController.swift; sourceTree = "<group>"; };
 		EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportsListController.swift; path = ../ReportsListController.swift; sourceTree = "<group>"; };
 		EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfraccionesTableViewController.swift; sourceTree = "<group>"; };
+		EB89C9CA1F20D68000D66966 /* 2000px-Street_intersection_diagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2000px-Street_intersection_diagram.png"; sourceTree = SOURCE_ROOT; };
+		EB89C9CB1F20D68000D66966 /* curvaderecha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curvaderecha.png; sourceTree = SOURCE_ROOT; };
+		EB89C9CC1F20D68000D66966 /* curvaizquierda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curvaizquierda.png; sourceTree = SOURCE_ROOT; };
+		EB89C9CD1F20D68000D66966 /* interseccionTPARE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = interseccionTPARE.png; sourceTree = SOURCE_ROOT; };
+		EB89C9CE1F20D68000D66966 /* interseccionTSemaforizada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = interseccionTSemaforizada.png; sourceTree = SOURCE_ROOT; };
+		EB89C9CF1F20D68000D66966 /* interseccionXCuatroPARE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = interseccionXCuatroPARE.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D01F20D68000D66966 /* interseccionXDosPARE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = interseccionXDosPARE.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D11F20D68000D66966 /* interseccionXSemaforizada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = interseccionXSemaforizada.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D21F20D68000D66966 /* parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parking.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D31F20D68000D66966 /* rampaDeEntrada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rampaDeEntrada.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D41F20D68000D66966 /* rampaDeSalida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rampaDeSalida.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D51F20D68000D66966 /* rotonda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotonda.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D61F20D68000D66966 /* tangente4CarrilesConIsleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tangente4CarrilesConIsleta.png; sourceTree = SOURCE_ROOT; };
+		EB89C9D71F20D68000D66966 /* tangenteDosCarriles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tangenteDosCarriles.png; sourceTree = SOURCE_ROOT; };
 		EBED28551F0DCFD4002CDE57 /* collision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collision.swift; sourceTree = "<group>"; };
 		EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2000px-Street_intersection_diagram.png"; path = "../../../Desktop/Alfredo/DiagramaColisiones/2000px-Street_intersection_diagram.png"; sourceTree = "<group>"; };
 		EBED28581F0DD0AE002CDE57 /* curvaderecha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = curvaderecha.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/curvaderecha.png; sourceTree = "<group>"; };
@@ -277,6 +305,20 @@
 				A078DCF21D4E908F00D40E51 /* VehicleExtendedViewController.swift */,
 				A078DCF41D4E9C2500D40E51 /* ViolationViewController.swift */,
 				A078DCE91D4A4AE900D40E51 /* NarrativeViewController.swift */,
+				EB89C9CA1F20D68000D66966 /* 2000px-Street_intersection_diagram.png */,
+				EB89C9CB1F20D68000D66966 /* curvaderecha.png */,
+				EB89C9CC1F20D68000D66966 /* curvaizquierda.png */,
+				EB89C9CD1F20D68000D66966 /* interseccionTPARE.png */,
+				EB89C9CE1F20D68000D66966 /* interseccionTSemaforizada.png */,
+				EB89C9CF1F20D68000D66966 /* interseccionXCuatroPARE.png */,
+				EB89C9D01F20D68000D66966 /* interseccionXDosPARE.png */,
+				EB89C9D11F20D68000D66966 /* interseccionXSemaforizada.png */,
+				EB89C9D21F20D68000D66966 /* parking.png */,
+				EB89C9D31F20D68000D66966 /* rampaDeEntrada.png */,
+				EB89C9D41F20D68000D66966 /* rampaDeSalida.png */,
+				EB89C9D51F20D68000D66966 /* rotonda.png */,
+				EB89C9D61F20D68000D66966 /* tangente4CarrilesConIsleta.png */,
+				EB89C9D71F20D68000D66966 /* tangenteDosCarriles.png */,
 				A078DCE11D492C8200D40E51 /* ReportSecondStepViewController.swift */,
 				A078DCDF1D491F3800D40E51 /* ReportFirstStepViewController.swift */,
 				A078DCB81D48090500D40E51 /* Assets.xcassets */,
@@ -489,24 +531,33 @@
 			files = (
 				EBED28A61F0DD103002CDE57 /* car_0001_2.png in Resources */,
 				EBED28A01F0DD103002CDE57 /* bus_0005_6.png in Resources */,
+				EB89C9E41F20D68000D66966 /* tangente4CarrilesConIsleta.png in Resources */,
+				EB89C9DC1F20D68000D66966 /* interseccionTSemaforizada.png in Resources */,
 				EBED289C1F0DD103002CDE57 /* bus_0001_2.png in Resources */,
 				EBED28C21F0DD103002CDE57 /* truck_0009_10.png in Resources */,
+				EB89C9DD1F20D68000D66966 /* interseccionXCuatroPARE.png in Resources */,
+				EB89C9DA1F20D68000D66966 /* curvaizquierda.png in Resources */,
+				EB89C9E31F20D68000D66966 /* rotonda.png in Resources */,
 				EBED28A51F0DD103002CDE57 /* car_0000_1.png in Resources */,
 				EBED28691F0DD0AE002CDE57 /* interseccionTSemaforizada.png in Resources */,
 				EBED286C1F0DD0AE002CDE57 /* interseccionXSemaforizada.png in Resources */,
 				EBED28C01F0DD103002CDE57 /* truck_0007_8.png in Resources */,
 				EBED28B01F0DD103002CDE57 /* moto_0001_2.png in Resources */,
+				EB89C9E51F20D68000D66966 /* tangenteDosCarriles.png in Resources */,
 				EBED28B81F0DD103002CDE57 /* moto_0009_10.png in Resources */,
 				EBED28AB1F0DD103002CDE57 /* car_0006_7.png in Resources */,
 				EBED28711F0DD0AE002CDE57 /* tangente4CarrilesConIsleta.png in Resources */,
+				EB89C9DF1F20D68000D66966 /* interseccionXSemaforizada.png in Resources */,
 				EBED28C11F0DD103002CDE57 /* truck_0008_9.png in Resources */,
 				A078DCBC1D48090500D40E51 /* LaunchScreen.storyboard in Resources */,
 				EBED28BB1F0DD103002CDE57 /* truck_0002_3.png in Resources */,
 				EBED28A11F0DD103002CDE57 /* bus_0006_7.png in Resources */,
+				EB89C9D91F20D68000D66966 /* curvaderecha.png in Resources */,
 				EBED28651F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png in Resources */,
 				EBED28A31F0DD103002CDE57 /* bus_0008_9.png in Resources */,
 				EBED289F1F0DD103002CDE57 /* bus_0004_5.png in Resources */,
 				EBED28BC1F0DD103002CDE57 /* truck_0003_4.png in Resources */,
+				EB89C9E11F20D68000D66966 /* rampaDeEntrada.png in Resources */,
 				EBED289E1F0DD103002CDE57 /* bus_0003_4.png in Resources */,
 				EBED28661F0DD0AE002CDE57 /* curvaderecha.png in Resources */,
 				EBED28A91F0DD103002CDE57 /* car_0004_5.png in Resources */,
@@ -524,6 +575,8 @@
 				EBED28BF1F0DD103002CDE57 /* truck_0006_7.png in Resources */,
 				EBED28AC1F0DD103002CDE57 /* car_0007_8.png in Resources */,
 				EBED28B41F0DD103002CDE57 /* moto_0005_6.png in Resources */,
+				EB89C9DB1F20D68000D66966 /* interseccionTPARE.png in Resources */,
+				EB89C9E21F20D68000D66966 /* rampaDeSalida.png in Resources */,
 				EBED286E1F0DD0AE002CDE57 /* rampaDeEntrada.png in Resources */,
 				EBED28681F0DD0AE002CDE57 /* interseccionTPARE.png in Resources */,
 				EBED289D1F0DD103002CDE57 /* bus_0002_3.png in Resources */,
@@ -534,8 +587,11 @@
 				EBED28BD1F0DD103002CDE57 /* truck_0004_5.png in Resources */,
 				EBED28AF1F0DD103002CDE57 /* moto_0000_1.png in Resources */,
 				EBED28AE1F0DD103002CDE57 /* car_0009_10.png in Resources */,
+				EB89C9D81F20D68000D66966 /* 2000px-Street_intersection_diagram.png in Resources */,
+				EB89C9E01F20D68000D66966 /* parking.png in Resources */,
 				EBED28671F0DD0AE002CDE57 /* curvaizquierda.png in Resources */,
 				EBED28B31F0DD103002CDE57 /* moto_0004_5.png in Resources */,
+				EB89C9DE1F20D68000D66966 /* interseccionXDosPARE.png in Resources */,
 				EBED286F1F0DD0AE002CDE57 /* rampaDeSalida.png in Resources */,
 				EBED28AD1F0DD103002CDE57 /* car_0008_9.png in Resources */,
 				EBED28701F0DD0AE002CDE57 /* rotonda.png in Resources */,
