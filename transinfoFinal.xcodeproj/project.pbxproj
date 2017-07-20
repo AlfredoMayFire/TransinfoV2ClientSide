@@ -51,6 +51,7 @@
 		EB89C9E31F20D68000D66966 /* rotonda.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D51F20D68000D66966 /* rotonda.png */; };
 		EB89C9E41F20D68000D66966 /* tangente4CarrilesConIsleta.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D61F20D68000D66966 /* tangente4CarrilesConIsleta.png */; };
 		EB89C9E51F20D68000D66966 /* tangenteDosCarriles.png in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9D71F20D68000D66966 /* tangenteDosCarriles.png */; };
+		EB89C9E71F20D6E800D66966 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9E61F20D6E800D66966 /* Icons */; };
 		EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED28551F0DCFD4002CDE57 /* collision.swift */; };
 		EBED28651F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */; };
 		EBED28661F0DD0AE002CDE57 /* curvaderecha.png in Resources */ = {isa = PBXBuildFile; fileRef = EBED28581F0DD0AE002CDE57 /* curvaderecha.png */; };
@@ -179,6 +180,7 @@
 		EB89C9D51F20D68000D66966 /* rotonda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotonda.png; sourceTree = SOURCE_ROOT; };
 		EB89C9D61F20D68000D66966 /* tangente4CarrilesConIsleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tangente4CarrilesConIsleta.png; sourceTree = SOURCE_ROOT; };
 		EB89C9D71F20D68000D66966 /* tangenteDosCarriles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tangenteDosCarriles.png; sourceTree = SOURCE_ROOT; };
+		EB89C9E61F20D6E800D66966 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = ../../Alfredo/DiagramaColisiones/Icons; sourceTree = "<group>"; };
 		EBED28551F0DCFD4002CDE57 /* collision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collision.swift; sourceTree = "<group>"; };
 		EBED28571F0DD0AE002CDE57 /* 2000px-Street_intersection_diagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2000px-Street_intersection_diagram.png"; path = "../../../Desktop/Alfredo/DiagramaColisiones/2000px-Street_intersection_diagram.png"; sourceTree = "<group>"; };
 		EBED28581F0DD0AE002CDE57 /* curvaderecha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = curvaderecha.png; path = ../../../Desktop/Alfredo/DiagramaColisiones/curvaderecha.png; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				A078DCF21D4E908F00D40E51 /* VehicleExtendedViewController.swift */,
 				A078DCF41D4E9C2500D40E51 /* ViolationViewController.swift */,
 				A078DCE91D4A4AE900D40E51 /* NarrativeViewController.swift */,
+				EB89C9E61F20D6E800D66966 /* Icons */,
 				EB89C9CA1F20D68000D66966 /* 2000px-Street_intersection_diagram.png */,
 				EB89C9CB1F20D68000D66966 /* curvaderecha.png */,
 				EB89C9CC1F20D68000D66966 /* curvaizquierda.png */,
@@ -538,6 +541,7 @@
 				EB89C9DD1F20D68000D66966 /* interseccionXCuatroPARE.png in Resources */,
 				EB89C9DA1F20D68000D66966 /* curvaizquierda.png in Resources */,
 				EB89C9E31F20D68000D66966 /* rotonda.png in Resources */,
+				EB89C9E71F20D6E800D66966 /* Icons in Resources */,
 				EBED28A51F0DD103002CDE57 /* car_0000_1.png in Resources */,
 				EBED28691F0DD0AE002CDE57 /* interseccionTSemaforizada.png in Resources */,
 				EBED286C1F0DD0AE002CDE57 /* interseccionXSemaforizada.png in Resources */,
