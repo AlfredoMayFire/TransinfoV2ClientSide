@@ -11,6 +11,8 @@ import CoreData
 
 class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    let singleton = Global.sharedGlobal
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     //
@@ -23,6 +25,14 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     @IBOutlet var image: UIImageView!
+    
+    
+    var parametersForUpload: [String:String] = [
+    "path":"",
+    "fecha":"",
+    "fileName":"",
+    "idAccidentFK":"",
+    ]
     
     
     
@@ -216,16 +226,16 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     
     func UploadRequest()
     {
-        let url = NSURL(string: "http://www.kaleidosblog.com/tutorial/upload.php")
-        
-        let request = NSMutableURLRequest(URL: url!)
-        request.HTTPMethod = "POST"
-        
-        let boundary = generateBoundaryString()
-        
-        
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
+//        let url = NSURL(string: "http://www.kaleidosblog.com/tutorial/upload.php")
+//        
+//        let request = NSMutableURLRequest(URL: url!)
+//        request.HTTPMethod = "POST"
+//        
+//        let boundary = generateBoundaryString()
+//        
+//        
+//        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+//        
         if (image.image == nil)
         {
             return
@@ -239,82 +249,212 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
             return
         }
         
-        
-        let body = NSMutableData()
-        
-        let fname = "test.png"
-        let mimetype = "image/png"
-        
-        
-        
-        
-        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData("Content-Disposition:form-data; name=\"test\"\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData("hi\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        
-        
-        
-        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData("Content-Disposition:form-data; name=\"file\"; filename=\"\(fname)\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData("Content-Type: \(mimetype)\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        body.appendData(image_data!)
-        body.appendData("\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        
-        
-        body.appendData("--\(boundary)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-        
-        
-        
-        request.HTTPBody = body
-        
-        
-        
-        let session = NSURLSession.sharedSession()
-        
-        
-        let task = session.dataTaskWithRequest(request) {
-            (
-            let data, let response, let error) in
-            
-            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
-                print("error")
-                return
-            }
-            
-            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            
-            print(dataString)
-            
-        }
-        
-        task.resume()
-        
+//        
+//        let body = NSMutableData()
+//        
+//        let fname = "test.png"
+//        let mimetype = "image/png"
+//        
+//        
+//        
+//        
+//        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        body.appendData("Content-Disposition:form-data; name=\"test\"\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        body.appendData("hi\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        
+//        
+//        
+//        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        body.appendData("Content-Disposition:form-data; name=\"file\"; filename=\"\(fname)\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        body.appendData("Content-Type: \(mimetype)\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        body.appendData(image_data!)
+//        body.appendData("\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        
+//        
+//        body.appendData("--\(boundary)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+//        
+//        
+//        
+//        request.HTTPBody = body
+//        
+//        
+//        
+//        let session = NSURLSession.sharedSession()
+//        
+//        
+//        let task = session.dataTaskWithRequest(request) {
+//            (
+//            let data, let response, let error) in
+//            
+//            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+//                print("error")
+//                return
+//            }
+//            
+//            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+//            
+//            print(dataString)
+//            
+//        }
+//        
+//        task.resume()
+        parametersForUpload["path"] = "Users/jessicacotrina/Desktop/file/testimage.png"
+        parametersForUpload["fecha"] = "Julio/20/2017"
+        parametersForUpload["fileName"] = "testimage.png"
+        parametersForUpload["idAccidentFK"] = (singleton.foreignKeys[0].accidentCondition as? String)
+        imageUploadRequest(imageView: image, uploadUrl: NSURL(fileURLWithPath: "http://127.0.1:5000/loaddata"), param: parametersForUpload)
         
     }
     
     
-    func generateBoundaryString() -> String
-    {
-        return "Boundary-\(NSUUID().UUIDString)"
-    }
     
     override func shouldAutorotate() -> Bool {
         return false
     }
+    
+    
+    
     
 
 //    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
 //        let supported = UIInterfaceOrientationMask.Portrait.rawValue
 //        return Int(supported)
 //    }
+    
+    
+    
+    
+    
+    func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL, param: [String:String]?) {
+        
+        //let myUrl = NSURL(string: "http://192.168.1.103/upload.photo/index.php");
+        
+        
+        
+        
+        let request = NSMutableURLRequest(URL:uploadUrl);
+        request.HTTPMethod = "POST"
+        
+        let boundary = generateBoundaryString()
+        
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        let imageData = UIImagePNGRepresentation(imageView.image!)
+        
+        if(imageData==nil)  { return; }
+        
+        request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
+        
+        //myActivityIndicator.startAnimating();
+        
+        let task =  NSURLSession.sharedSession().dataTaskWithRequest(request,completionHandler: {(data, response, error) -> Void in if let data = data {
+            
+        
+            // You can print out response object
+            
+            print("******* response = \(response)")
+            
+            
+            
+            print(data.length)
+            
+            
+            // you can use data here
+            
+            
+            
+            
+            // Print out reponse body
+            
+            let responseString = NSString(data: data, encoding:NSUTF8StringEncoding)
+            
+            print("****** response data = \(responseString!)")
+            
+            
+            
+            let json =  try!NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? NSDictionary
+            
+            
+            
+            print("json value \(json)")
+            
+            
+            
+            //var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &err)
+            
+            
+            
+            dispatch_async(dispatch_get_main_queue(),{
+            
+                //self.myActivityIndicator.stopAnimating()
+                
+                //self.imageView.image = nil;
+                
+            });
+            
+            
+            
+        } else if let error = error {
+        
+            print(error.description)
+            
+            }
+        })
+        task.resume()
+        
+        
+    }
+    
+    
+    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+        let body = NSMutableData();
+        
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.appendString("--\(boundary)\r\n")
+                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                body.appendString("\(value)\r\n")
+            }
+        }
+        
+        let filename = "testimage.png"
+        
+        let mimetype = "image/png"
+        
+        body.appendString("--\(boundary)\r\n")
+        body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
+        body.appendString("Content-Type: \(mimetype)\r\n\r\n")
+        body.appendData(imageDataKey)
+        body.appendString("\r\n")
+        
+        body.appendString("--\(boundary)--\r\n")
+        
+        return body
+    }
+    
+
+    func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().UUIDString)"
+    }
 
     
-    
-    
-    
-    
+}// extension for impage uploading
 
+extension NSMutableData {
+    
+    func appendString(string: String) {
+        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        appendData(data!)
+    }
 }
+    
+    
+    
+    
+    
+
+
 
 
 func supportedInterfaceOrientations() -> Int {
