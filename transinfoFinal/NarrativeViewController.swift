@@ -27,8 +27,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet var image: UIImageView!
     
     
-    var parametersForUpload: [String:String] = [
-    "path":"",
+    var parametersForUpload: [String:AnyObject] = [
     "fecha":"",
     "fileName":"",
     "idAccidentFK":"",
@@ -298,14 +297,18 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
 //        }
 //        
 //        task.resume()
-        parametersForUpload["path"] = "Users/jessicacotrina/Desktop/file/testimage.png"
+//      parametersForUpload["path"] = "Users/jessicacotrina/Desktop/file/testimage.png"
         parametersForUpload["fecha"] = "Julio/20/2017"
         parametersForUpload["fileName"] = "testimage.png"
 
         
         
         parametersForUpload["idAccidentFK"] = String(singleton.foreignKeys[0].accidentCondition)
-        imageUploadRequest(imageView: image, uploadUrl: NSURL(fileURLWithPath: "http://127.0.1:5000/LoadData"), param: parametersForUpload)
+        
+     
+        
+        
+        imageUploadRequest(imageView: image, uploadUrl: NSURL(string: "http://127.0.1:5000/LoadData")!, param: parametersForUpload)
         
     }
     
@@ -328,7 +331,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     
-    func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL, param: [String:String]?) {
+    func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL, param: [String:AnyObject]?) {
         
         //let myUrl = NSURL(string: "http://192.168.1.103/upload.photo/index.php");
         
@@ -345,6 +348,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         let imageData = UIImagePNGRepresentation(imageView.image!)
         
         if(imageData==nil)  { return; }
+        
         
         request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
         
@@ -374,12 +378,12 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
             print("****** response data = \(responseString!)")
             
             
-            
-            let json =  try!NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? NSDictionary
-            
-            
-            
-            print("json value \(json)")
+//            
+//            let json =  try!NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? NSDictionary
+//            
+//            
+//            
+//            print("json value \(json)")
             
             
             
@@ -409,7 +413,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     
-    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+    func createBodyWithParameters(parameters: [String: AnyObject]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
         let body = NSMutableData();
         
         if parameters != nil {

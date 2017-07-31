@@ -93,6 +93,8 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.tintColor = UIColor.blueColor()
+
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.contentSize.height = 1000
         

@@ -187,7 +187,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condición Climática 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBC-vR-DOa" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Condición Climática 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBC-vR-DOa" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="23" y="288" width="223" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -197,7 +197,7 @@
                                         <rect key="frame" x="225" y="293" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condición Climática 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-ej-0ax" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Condición Climática 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-ej-0ax" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="23" y="326" width="223" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1060,13 +1060,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3La-tS-gK3">
                                 <rect key="frame" x="0.0" y="0.0" width="1012" height="702"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq1-A3-Vdz">
-                                        <rect key="frame" x="21" y="170" width="280" height="21"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Género:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAY-DO-Jhq">
                                         <rect key="frame" x="312" y="170" width="174" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1288,6 +1281,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre y Apellido:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq1-A3-Vdz">
+                                        <rect key="frame" x="21" y="170" width="280" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1433,10 +1433,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdq-XI-BcV">
-                                        <rect key="frame" x="407" y="301" width="22" height="22"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número de Tablilla:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvM-yo-T9X">
                                         <rect key="frame" x="21" y="196" width="185" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1910,13 +1906,13 @@
                                         <rect key="frame" x="0.0" y="260" width="97" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9c-pL-0u5">
-                                        <rect key="frame" x="105" y="260" width="200" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MPH" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9c-pL-0u5">
+                                        <rect key="frame" x="315" y="255" width="200" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidad Máxima Rotulada:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T44-Po-XCY">
                                         <rect key="frame" x="0.0" y="231" width="219" height="21"/>
@@ -1925,18 +1921,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MPH" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyN-z7-AaZ">
-                                        <rect key="frame" x="313" y="260" width="97" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6O9-5L-8mR">
-                                        <rect key="frame" x="418" y="260" width="200" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maniobra/Acción del Vehículo de Motor:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb4-tO-GuC">
                                         <rect key="frame" x="0.0" y="298" width="308" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2023,7 +2007,7 @@
                                         <rect key="frame" x="8" y="490" width="97" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Categoría de Carril" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQH-lV-uQV" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="113" y="490" width="259" height="30"/>
@@ -2085,7 +2069,7 @@
                                         <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Primera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-6w-1ol" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-6w-1ol" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="653" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2101,7 +2085,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpB-UQ-k8A" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segundo Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpB-UQ-k8A" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="227" y="691" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2111,7 +2095,7 @@
                                         <rect key="frame" x="417" y="695" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tercer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-DF-yCd" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Tercer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-DF-yCd" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="227" y="729" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2121,7 +2105,7 @@
                                         <rect key="frame" x="418" y="734" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuarto Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-Tp-NLc" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Cuarto Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-Tp-NLc" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="227" y="767" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2131,7 +2115,7 @@
                                         <rect key="frame" x="418" y="772" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Primer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-Sr-sAM" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-Sr-sAM" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="227" y="653" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2141,7 +2125,7 @@
                                         <rect key="frame" x="418" y="663" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segunda Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vin-UO-Ibz" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segunda Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vin-UO-Ibz" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="691" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2151,7 +2135,7 @@
                                         <rect key="frame" x="201" y="696" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tercera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xp-ZT-qmx" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Tercera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xp-ZT-qmx" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="729" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2161,7 +2145,7 @@
                                         <rect key="frame" x="201" y="734" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuarta Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H15-fa-9nY" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Cuarta Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H15-fa-9nY" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="767" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2227,7 +2211,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Primer Defecto Mecánico" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-oV-dy6" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primer Defecto Mecánico" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-oV-dy6" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="834" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2237,7 +2221,7 @@
                                         <rect key="frame" x="201" y="839" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo Defecto Mecánico" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L35-FY-0JN" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segundo Defecto Mecánico" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L35-FY-0JN" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="8" y="872" width="211" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2417,7 +2401,7 @@
                                         <rect key="frame" x="8" y="1263" width="261" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configuración del Vehículo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-lJ-spq">
                                         <rect key="frame" x="277" y="1234" width="210" height="21"/>
@@ -2526,13 +2510,6 @@
                                             </segue>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidad del Vehículo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-cx-K1c">
-                                        <rect key="frame" x="313" y="231" width="225" height="21"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWa-Sj-yBC" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
                                         <rect key="frame" x="468" y="189" width="258" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2566,12 +2543,19 @@
                                         <rect key="frame" x="421" y="327" width="240" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="fLP-PE-Le7">
                                         <rect key="frame" x="348" y="495" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidad del Vehículo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-cx-K1c">
+                                        <rect key="frame" x="313" y="231" width="225" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -2581,6 +2565,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="xbf-XV-B6z">
                             <connections>
                                 <action selector="guardarCondicionAccident:" destination="2xh-g0-owt" id="LWh-7D-Vfv"/>
+                                <segue destination="7aS-eE-P2O" kind="unwind" unwindAction="unwindToVC:" id="rb2-jJ-BlX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2640,6 +2625,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jf9-Mu-nzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7aS-eE-P2O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1716" y="954"/>
         </scene>
@@ -4284,14 +4270,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jfR-I8-iUe"/>
-        <segue reference="rRJ-lM-kEd"/>
         <segue reference="Rdt-Ca-E81"/>
+        <segue reference="rRJ-lM-kEd"/>
         <segue reference="a90-V3-8ey"/>
         <segue reference="qoS-x7-Qbu"/>
         <segue reference="Bpe-HZ-5vh"/>
-        <segue reference="jdc-3d-ca8"/>
         <segue reference="vkf-Pb-Bpn"/>
-        <segue reference="OZL-AG-qyJ"/>
+        <segue reference="jdc-3d-ca8"/>
+        <segue reference="emB-ob-KHv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

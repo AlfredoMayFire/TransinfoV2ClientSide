@@ -135,133 +135,15 @@ class VehicleExtendedViewController: UIViewController{
     
     
     @IBAction func guardarCondicionAccident(sender: AnyObject) {
-        print ("------------")
         
-        //singleton.foreignKeys[0].newVehicle = 46
-        
-        values["vehiclefk"] = singleton.foreignKeys[0].newVehicle
-        
-        let  webServicesObjectPOST = WebService.init()
-        
-        webServicesObjectPOST.addIData("VehicleType", value: typeVehicleField.text)
-        
-        webServicesObjectPOST.addIData("Occupants", value: ocupantes.text)
-        
-        webServicesObjectPOST.addIData("VehicleMotor", value: "Agricultural Equipment")
-        
-        webServicesObjectPOST.addIData("DirectionTripCB", value: direccionViajeField.text)
-        
-        webServicesObjectPOST.addIData("FunctionSpecialMVT", value: funcionEspecialField.text)
-        
-        webServicesObjectPOST.addIData("MotorEmergencyVU", value: usoVehiculoField.text)
-        
-        webServicesObjectPOST.addIData("MPH", value: mphField.text)
-        
-        webServicesObjectPOST.addIData("MPHDescription", value: mphdosField.text)
-        
-        webServicesObjectPOST.addIData("ManeuverVehicleMotor", value: maniobraField.text)
-        
-        webServicesObjectPOST.addIData("DescriptionRoad", value: roadDescriptionField.text)
-        
-        webServicesObjectPOST.addIData("Alignment", value: alineamientoField.text)
-        
-        webServicesObjectPOST.addIData("Slope", value: inclinacionField.text)
-        
-        webServicesObjectPOST.addIData("LaneCantidad", value: cantidadField.text)
-        
-        webServicesObjectPOST.addIData("LaneCategoria", value: categoriaField.text)
-        
-        webServicesObjectPOST.addIData("LaneTipoCarril", value: typeCarrilField.text)
-        
-        webServicesObjectPOST.addIData("TypeControlTraffic", value: "Other")
-        
-        webServicesObjectPOST.addIData("InOperationLost", value: operacionField.text)
-        
-        webServicesObjectPOST.addIData("PrimeraCategoriaEvent", value: primerCategoria.text)
-        
-        webServicesObjectPOST.addIData("SegundaCategoriaEvent", value: segundaCategoria.text)
-        
-        webServicesObjectPOST.addIData("TerceraCategoriaEvent", value: terceraCategoria.text)
-        
-        webServicesObjectPOST.addIData("CuartaCategoria", value: cuartaCategoria.text)
-        
-        webServicesObjectPOST.addIData("PrimerEvent", value: primerEvento.text)
-        
-        webServicesObjectPOST.addIData("SegundoEvent", value: segundoEvento.text)
-        
-        webServicesObjectPOST.addIData("TecerEvent", value: tercerEvento.text)
-        
-        webServicesObjectPOST.addIData("CuartoEvent", value: cuartoEvento.text)
-        
-        webServicesObjectPOST.addIData("BusUse", value: usoBusField.text)
-        
-        webServicesObjectPOST.addIData("LefthPlace", value: abandonoLugarField.text)
-        
-        webServicesObjectPOST.addIData("TowedDamage", value: remolcadoField.text)
-        
-        webServicesObjectPOST.addIData("PrimerDefectoMecánico", value: primerDefecto.text)
-        
-        webServicesObjectPOST.addIData("SegundoDefectoMecánico", value: segundoDefecto.text)
-        
-        webServicesObjectPOST.addIData("InitialContactPoint", value: PuntoInicialField.text)
-
-        webServicesObjectPOST.addIData("AffectedArea", value: "12")
-        
-        webServicesObjectPOST.addIData("ExtendDamage", value: gradoDanioField.text)
-        
-        webServicesObjectPOST.addIData("CommercialVehicleUse", value: usoVehiculoComercialField.text)
-        
-        webServicesObjectPOST.addIData("VehicleMoving", value: vehiculoMovimientoField.text)
-        
-        webServicesObjectPOST.addIData("AuthorizedDriver", value: conductorAutorizadoField.text)
-        
-        webServicesObjectPOST.addIData("InspectionUpdate", value: inspeccionDiaField.text)
-        
-        webServicesObjectPOST.addIData("SpecialPermit", value: permisoEspecialField.text)
-        
-        webServicesObjectPOST.addIData("GrossWeight", value: pesoBrutoField.text)
-        
-        webServicesObjectPOST.addIData("TotalAxis", value: cantidadEjesField.text)
-        
-        webServicesObjectPOST.addIData("VehicleConfiguration", value: confVehiculo.text)
-        
-        webServicesObjectPOST.addIData("HeavyVehicleType", value: tipoVehiculoCargaField.text)
-        
-        webServicesObjectPOST.addIData("HazardousMaterial", value: vehiculoContieneMPField.text)
-        
-        webServicesObjectPOST.addIData("DiamondIdNumber", value: numeroIdentificacionField.text)
-        
-        webServicesObjectPOST.addIData("ThereHazardousMaterial", value: huboDerrameMPField.text)
-        
-        webServicesObjectPOST.addIData("VehicleFK", value: values["vehiclefk"]?.stringValue)
-        
-        //captura el fk vehicle
-        print(webServicesObjectPOST.PostData)
-        
-        
-        //print(webServicesObjectPOST.sendPOSTs(6))
-        
-        var postFK = webServicesObjectPOST.sendPOSTs(6)
-        
-        
-        
-        if (postFK["error_code"]?.integerValue != 200)  {
-            let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
-                "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-            postFK.removeAll()
-            
-        }else{
-            let myID = postFK["success"]
-            let results = myID as? Dictionary<String,AnyObject>
-            print("Here it is!",results!["CrashId"])
-            
-            
-        }
 
     }
+    
+    
+    func confirm(action: UIAlertAction){
+        performSegueWithIdentifier("unwindToVC", sender: self)
+    }
+
     
     @IBAction func seleccionMultipleTipoControlesTransito(sender: AnyObject) {
         print("gotIn")
@@ -529,9 +411,143 @@ class VehicleExtendedViewController: UIViewController{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-          }
- 
+        print ("------------")
+        
+        //singleton.foreignKeys[0].newVehicle = 46
+        
+        values["vehiclefk"] = singleton.foreignKeys[0].newVehicle
+        
+        let  webServicesObjectPOST = WebService.init()
+        
+        webServicesObjectPOST.addIData("VehicleType", value: typeVehicleField.text)
+        
+        webServicesObjectPOST.addIData("Occupants", value: ocupantes.text)
+        
+        webServicesObjectPOST.addIData("VehicleMotor", value: "Agricultural Equipment")
+        
+        webServicesObjectPOST.addIData("DirectionTripCB", value: direccionViajeField.text)
+        
+        webServicesObjectPOST.addIData("FunctionSpecialMVT", value: funcionEspecialField.text)
+        
+        webServicesObjectPOST.addIData("MotorEmergencyVU", value: usoVehiculoField.text)
+        
+        webServicesObjectPOST.addIData("MPH", value: mphField.text)
+        
+        webServicesObjectPOST.addIData("MPHDescription", value: mphdosField.text)
+        
+        webServicesObjectPOST.addIData("ManeuverVehicleMotor", value: maniobraField.text)
+        
+        webServicesObjectPOST.addIData("DescriptionRoad", value: roadDescriptionField.text)
+        
+        webServicesObjectPOST.addIData("Alignment", value: alineamientoField.text)
+        
+        webServicesObjectPOST.addIData("Slope", value: inclinacionField.text)
+        
+        webServicesObjectPOST.addIData("LaneCantidad", value: cantidadField.text)
+        
+        webServicesObjectPOST.addIData("LaneCategoria", value: categoriaField.text)
+        
+        webServicesObjectPOST.addIData("LaneTipoCarril", value: typeCarrilField.text)
+        
+        webServicesObjectPOST.addIData("TypeControlTraffic", value: "Other")
+        
+        webServicesObjectPOST.addIData("InOperationLost", value: operacionField.text)
+        
+        webServicesObjectPOST.addIData("PrimeraCategoriaEvent", value: primerCategoria.text)
+        
+        webServicesObjectPOST.addIData("SegundaCategoriaEvent", value: segundaCategoria.text)
+        
+        webServicesObjectPOST.addIData("TerceraCategoriaEvent", value: terceraCategoria.text)
+        
+        webServicesObjectPOST.addIData("CuartaCategoria", value: cuartaCategoria.text)
+        
+        webServicesObjectPOST.addIData("PrimerEvent", value: primerEvento.text)
+        
+        webServicesObjectPOST.addIData("SegundoEvent", value: segundoEvento.text)
+        
+        webServicesObjectPOST.addIData("TecerEvent", value: tercerEvento.text)
+        
+        webServicesObjectPOST.addIData("CuartoEvent", value: cuartoEvento.text)
+        
+        webServicesObjectPOST.addIData("BusUse", value: usoBusField.text)
+        
+        webServicesObjectPOST.addIData("LefthPlace", value: abandonoLugarField.text)
+        
+        webServicesObjectPOST.addIData("TowedDamage", value: remolcadoField.text)
+        
+        webServicesObjectPOST.addIData("PrimerDefectoMecánico", value: primerDefecto.text)
+        
+        webServicesObjectPOST.addIData("SegundoDefectoMecánico", value: segundoDefecto.text)
+        
+        webServicesObjectPOST.addIData("InitialContactPoint", value: PuntoInicialField.text)
+        
+        webServicesObjectPOST.addIData("AffectedArea", value: "12")
+        
+        webServicesObjectPOST.addIData("ExtendDamage", value: gradoDanioField.text)
+        
+        webServicesObjectPOST.addIData("CommercialVehicleUse", value: usoVehiculoComercialField.text)
+        
+        webServicesObjectPOST.addIData("VehicleMoving", value: vehiculoMovimientoField.text)
+        
+        webServicesObjectPOST.addIData("AuthorizedDriver", value: conductorAutorizadoField.text)
+        
+        webServicesObjectPOST.addIData("InspectionUpdate", value: inspeccionDiaField.text)
+        
+        webServicesObjectPOST.addIData("SpecialPermit", value: permisoEspecialField.text)
+        
+        webServicesObjectPOST.addIData("GrossWeight", value: pesoBrutoField.text)
+        
+        webServicesObjectPOST.addIData("TotalAxis", value: cantidadEjesField.text)
+        
+        webServicesObjectPOST.addIData("VehicleConfiguration", value: confVehiculo.text)
+        
+        webServicesObjectPOST.addIData("HeavyVehicleType", value: tipoVehiculoCargaField.text)
+        
+        webServicesObjectPOST.addIData("HazardousMaterial", value: vehiculoContieneMPField.text)
+        
+        webServicesObjectPOST.addIData("DiamondIdNumber", value: numeroIdentificacionField.text)
+        
+        webServicesObjectPOST.addIData("ThereHazardousMaterial", value: huboDerrameMPField.text)
+        
+        webServicesObjectPOST.addIData("VehicleFK", value: values["vehiclefk"]?.stringValue)
+        
+        //captura el fk vehicle
+        print(webServicesObjectPOST.PostData)
+        
+        
+        //print(webServicesObjectPOST.sendPOSTs(6))
+        
+        var postFK = webServicesObjectPOST.sendPOSTs(6)
+        
+        
+        
+        if (postFK["error_code"]?.integerValue != 200)  {
+            let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
+                "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            postFK.removeAll()
+            
+        }else{
+            let myID = postFK["success"]
+            let results = myID as? Dictionary<String,AnyObject>
+            let alertController = UIAlertController(title: "Éxito", message:
+                "Oprima para continuar.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            print("Here it is!",results!["CrashId"])
+            
+            
+        }
+        
+        
+
+        
     }
+ 
+}
 
 
 

@@ -343,9 +343,9 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         localizacionMomentoAccident.text = dictionary["locationWhenCollision"]
         
 
-        //scrollView.contentSize.height = 1600
+        scrollView.contentSize.height = 2600
         //scrollView.contentSize.width = 1000
-        scrollView.contentSize = CGSizeMake(500, 1599)
+        //scrollView.contentSize = CGSizeMake(500, 1599)
     
     }
     
@@ -420,7 +420,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         webServicesObjectPOST.addIData("AmbulanceCSPNumber", value: AmbulanceCSPNumber.text)
         
         //Temporary values for missing keys
-        webServicesObjectPOST.addIData("PersonaFK", value: "2")
+        webServicesObjectPOST.addIData("PersonaFK", value: String(singleton.foreignKeys[0].newPerson))
         webServicesObjectPOST.addIData("TestResultTP", value: resultado.text)
         webServicesObjectPOST.addIData("ActionsAtCollisionTime", value: accionesMomentoAccident.text)
         webServicesObjectPOST.addIData("LocationWhenCollision", value: localizacionMomentoAccident.text)
@@ -431,7 +431,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
 
         var postFK = webServicesObjectPOST.sendPOSTs(7)
         
-        if (/*postFK.first!.0 == "error_code" ||*/ postFK.first!.0 == "error")  {
+        if (/*postFK.first!.0 == "error_code" || postFK.first!.0 == "error"*/postFK["error_code"]?.integerValue != 200)  {
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
                 "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))

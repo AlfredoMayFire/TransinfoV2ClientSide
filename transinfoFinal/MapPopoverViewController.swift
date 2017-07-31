@@ -56,7 +56,12 @@ class MapPopoverViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     }
     func locationManager(manager: CLLocationManager, didFailWhitError error: NSError) {
-    print("Errors:" + error.localizedDescription)    }
+    //print("Errors:" + error.localizedDescription)    
+    }
 
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+    }
 
 }

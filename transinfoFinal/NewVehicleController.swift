@@ -51,6 +51,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     var isUpdating = false
 
     var vehiclefk = ""
+    var problemField = ""
     
     var newVehicleID = Dictionary<String,AnyObject>()
     
@@ -102,7 +103,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        
+        self.view.tintColor = UIColor.blueColor()
         
         let webServicesObject = WebService.init()
         webServicesObject.initiate(5)
@@ -174,7 +175,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         webServicesObjectPOST.addIData("ExpirationDate", value: fechaExpiracionField.text)
         
-        webServicesObjectPOST.addIData("idPersonaFK", value: "34")//values["personfk"]?.stringValue)
+        webServicesObjectPOST.addIData("idPersonaFK", value: values["personfk"]?.stringValue)
         
         print(webServicesObjectPOST.PostData)
         
@@ -184,12 +185,16 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         let allClear = checkParameters()
         
+       
+        
+        
+        
         if(/*newVehicleID.first!.0 == "error_code" || newVehicleID.first!.0 == "error"*/errorCode?.integerValue == 400 || !allClear){
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
-                "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
+                "Campo: " + problemField , preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
-            
+        
             newVehicleID.removeAll()
         }else{
             let myID = newVehicleID["success"]
@@ -404,21 +409,44 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
     }
     func checkParameters()->Bool{
-        if Int(numeroDeTablilla.text!) != nil{
-            
-        }else{
-            return false
-        }
+//        if Int(numeroDeTablilla.text!) != nil{
+//            
+//        }else{
+//            return false
+//        }
+        
+        problemField = ""
+        
+        var condition = false
         if Int(numeroDeMarbete.text!) != nil{
-            
+            condition = true
         }else{
-            return false
+//            let alertController = UIAlertController(title: "Campo con informacion erronea.", message:
+//                "Campo: Numero de marbete", preferredStyle: UIAlertControllerStyle.Alert)
+//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+//            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            
+            problemField = "Numero de Marbete, solo numeros"
+            
+            condition = false
+         
         }
         if (VINField.text!.characters.count > 13){
-            return false
+//            let alertController = UIAlertController(title: "Campo con informacion erronea.", message:
+//                "Campo: Numero de marbete", preferredStyle: UIAlertControllerStyle.Alert)
+//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+//            
+//            self.presentViewController(alertController, animated: true, completion: nil)
+
+            problemField = "Numero de Vin: Demasiados caracteres"
+            
+            
+            condition = false
         }
+        
     
-    return true
+    return condition
     }
     func willNotUse(action: UIAlertAction){
         saveSubmit.title = "Guardar"

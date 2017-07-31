@@ -190,39 +190,50 @@ class CollisionDiagram: UIViewController {
             carImage.hidden = false
             carnumber += 1
         case 1:
+            carImage1.frame = carImage.frame
+            //carImage1.center.y += 50
+   
             carImage1.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage1.hidden = false
             carnumber += 1
         case 2:
+            carImage2.frame = carImage.frame
+            //carImage2.center.y += (carImage1.center.y + 50)
             carImage2.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage2.hidden = false
             carnumber += 1
         case 3:
+            carImage3.frame = carImage.frame
             carImage3.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage3.hidden = false
             carnumber += 1
         case 4:
-            
+            carImage4.frame = carImage.frame
             carImage4.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage4.hidden = false
             carnumber += 1
         case 5:
+            carImage5.frame = carImage.frame
             carImage5.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage5.hidden = false
             carnumber += 1
         case 6:
+            carImage6.frame = carImage.frame
             carImage6.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage6.hidden = false
             carnumber += 1
         case 7:
+            carImage7.frame = carImage.frame
             carImage7.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage7.hidden = false
             carnumber += 1
         case 8:
+            carImage8.frame = carImage.frame
             carImage8.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage8.hidden = false
             carnumber += 1
         case 9:
+            carImage9.frame = carImage.frame
             carImage9.image = UIImage(named: "car_000\(carnumber-1)_\(carnumber)")
             carImage9.hidden = false
             carnumber += 1
@@ -312,15 +323,18 @@ class CollisionDiagram: UIViewController {
         backgroundImage.image = UIImage(named: "2000px-Street_intersection_diagram.png")
         self.view.insertSubview(backgroundImage, atIndex: 0)
         self.textBox.hidden = true
-        carImage1.hidden = true
-        carImage2.hidden = true
-        carImage3.hidden = true
-        carImage4.hidden = true
-        carImage5.hidden = true
-        carImage6.hidden = true
-        carImage7.hidden = true
-        carImage8.hidden = true
-        carImage9.hidden = true
+        self.carImage.hidden = true
+        self.carImage1.hidden = true
+        self.carImage2.hidden = true
+        self.carImage3.hidden = true
+        self.carImage4.hidden = true
+        self.carImage5.hidden = true
+        self.carImage6.hidden = true
+        self.carImage7.hidden = true
+        self.carImage8.hidden = true
+        self.carImage9.hidden = true
+        self.carnumber = 1
+
         
     }
     
@@ -347,8 +361,7 @@ class CollisionDiagram: UIViewController {
     
     
     func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
-        //tappedImageView will be the image view that was tapped.
-        //dismiss it, animate it off screen, whatever.
+     
         let tappedImageView = gestureRecognizer.view!
         angleOfRotation += M_PI/6
         tappedImageView.transform=CGAffineTransformMakeRotation(CGFloat(angleOfRotation));
