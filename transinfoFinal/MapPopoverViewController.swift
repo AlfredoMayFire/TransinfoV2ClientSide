@@ -12,15 +12,22 @@ import CoreLocation
 
 class MapPopoverViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    let singleton = Global.sharedGlobal
+    
     @IBOutlet weak var longitudeField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var latitudeField: UITextField!
-
+    
     let manager = CLLocationManager()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let UILGR = UILongPressGestureRecognizer(target: self, action: #selector(action(_:)))
+        UILGR.minimumPressDuration = 0.5
+        mapView.addGestureRecognizer(UILGR)
+        
         
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -62,6 +69,21 @@ class MapPopoverViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
+    }
+    func action(gestureRecognizer:UIGestureRecognizer){
+        let touchPoint = gestureRecognizer.locationInView(mapView)
+        let newCoordinates = mapView.convertPoint(touchPoint, toCoordinateFromView: mapView)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = newCoordinates
+        mapView.addAnnotation(annotation)
+     
+        self.latitudeField.text = String(newCoordinates.latitude)
+        self.longitudeField.text = String(newCoordinates.longitude)
+        updateValues()
+    }
+      func updateValues() {
+        singleton.foreignKeys[0].latitude = self.latitudeField.text!
+        singleton.foreignKeys[0].longitude = self.longitudeField.text!
     }
 
 }

@@ -176,8 +176,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         
         values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
         
-//        print(singleton.foreignKeys)
-//        print(values)
+
         let webServicesObject2 = WebService.init()
         webServicesObject2.addIData("AccidenteFK", value: values["accidentfk"]?.stringValue)
         webServicesObject2.addIData("NarrativaFK", value: values["narrfk"]?.stringValue)
@@ -225,16 +224,6 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     
     func UploadRequest()
     {
-//        let url = NSURL(string: "http://www.kaleidosblog.com/tutorial/upload.php")
-//        
-//        let request = NSMutableURLRequest(URL: url!)
-//        request.HTTPMethod = "POST"
-//        
-//        let boundary = generateBoundaryString()
-//        
-//        
-//        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-//        
         if (image.image == nil)
         {
             return
@@ -248,56 +237,6 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
             return
         }
         
-//        
-//        let body = NSMutableData()
-//        
-//        let fname = "test.png"
-//        let mimetype = "image/png"
-//        
-//        
-//        
-//        
-//        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        body.appendData("Content-Disposition:form-data; name=\"test\"\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        body.appendData("hi\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        
-//        
-//        
-//        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        body.appendData("Content-Disposition:form-data; name=\"file\"; filename=\"\(fname)\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        body.appendData("Content-Type: \(mimetype)\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        body.appendData(image_data!)
-//        body.appendData("\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        
-//        
-//        body.appendData("--\(boundary)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
-//        
-//        
-//        
-//        request.HTTPBody = body
-//        
-//        
-//        
-//        let session = NSURLSession.sharedSession()
-//        
-//        
-//        let task = session.dataTaskWithRequest(request) {
-//            (
-//            let data, let response, let error) in
-//            
-//            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
-//                print("error")
-//                return
-//            }
-//            
-//            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//            
-//            print(dataString)
-//            
-//        }
-//        
-//        task.resume()
-//      parametersForUpload["path"] = "Users/jessicacotrina/Desktop/file/testimage.png"
         parametersForUpload["fecha"] = "Julio/20/2017"
         parametersForUpload["fileName"] = "testimage.png"
 
@@ -322,10 +261,6 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     
     
 
-//    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-//        let supported = UIInterfaceOrientationMask.Portrait.rawValue
-//        return Int(supported)
-//    }
     
     
     
@@ -333,7 +268,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     
     func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL, param: [String:AnyObject]?) {
         
-        //let myUrl = NSURL(string: "http://192.168.1.103/upload.photo/index.php");
+     
         
         
         

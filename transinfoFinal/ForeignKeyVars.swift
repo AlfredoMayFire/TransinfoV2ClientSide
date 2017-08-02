@@ -20,9 +20,11 @@ struct Info {
     var vehicleExtended: Int
     var narrative: Int
     var numCaso: String
+    var latitude: String
+    var longitude: String
     
     
-    init (officerPlate:String, officerID:Int, crashBasicInformation:Int, accidentCondition:Int,newVehicle: Int, newPerson:Int,personExtended: Int,vehicleExtended: Int,narrative: Int,numCaso: String) {
+    init (officerPlate:String, officerID:Int, crashBasicInformation:Int, accidentCondition:Int,newVehicle: Int, newPerson:Int,personExtended: Int,vehicleExtended: Int,narrative: Int,numCaso: String,latitude:String,longitude:String) {
         self.officerPlate=officerPlate
         self.officerID=officerID
         self.crashBasicInformation=crashBasicInformation
@@ -33,6 +35,8 @@ struct Info {
         self.vehicleExtended=vehicleExtended
         self.narrative=narrative
         self.numCaso=numCaso
+        self.latitude=latitude
+        self.longitude=longitude
         
     }
 }

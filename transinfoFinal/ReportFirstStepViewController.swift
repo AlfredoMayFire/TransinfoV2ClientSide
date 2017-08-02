@@ -281,17 +281,23 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         }
     }
     
+    @IBAction func updateCoordinates(sender: AnyObject) {
+        self.latitudField.text = String(singleton.foreignKeys[0].latitude)
+        self.longitudField.text = String(singleton.foreignKeys[0].longitude)
+        
+    }
     //función cargar dato de direccion en la tabla
     func locationManager(manager:CLLocationManager, didUpdateLocations locations: [CLLocation]){
        
-        
-        
-        
         if let userLocation = locations.first {
             
-        self.latitudField.text = "\(userLocation.coordinate.latitude)"
-        self.longitudField.text = "\(userLocation.coordinate.longitude)"
-        
+            if !self.once{
+                self.latitudField.text = "\(userLocation.coordinate.latitude)"
+                self.longitudField.text = "\(userLocation.coordinate.longitude)"
+
+            }
+            
+            
         CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: { (placemarks, error) in
             if error != nil && !self.once {
                 print(error)
