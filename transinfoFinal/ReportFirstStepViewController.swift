@@ -20,6 +20,8 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
 
     var once = false
     var failSubmit = false
+    var condition = false
+    var problemField = ""
     
     @IBOutlet weak var typeAccident: SwiftDropDownList!
     @IBOutlet weak var numberCaseField: UITextField!
@@ -246,7 +248,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         
         if (crashID["error_code"]?.integerValue==400 || crashID.first!.0 == "error")  {
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
-                "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
+                problemField, preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
             
@@ -354,5 +356,27 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     
     func confirm(action: UIAlertAction){
         performSegueWithIdentifier("accidenteCondiciones", sender: self)
+    }
+    func checkValues()->Bool{
+        if Int(numberCaseField.text!) != nil {
+            condition=true
+        }else{
+            problemField = "Numero de caso erróneo."
+        }
+        if Int(distanceField.text!) != nil{
+            condition=true
+        }
+        else{
+            problemField = "Campo de distancia erróneo."
+            condition=false
+        }
+        if Int(numberVehiclesFIeld.text!) != nil && Int(automovilistasField.text!) != nil && Int(UnitPedestrians.text!) != nil && Int(heridosField.text!) != nil && Int(fatalitiesField.text!) != nil{
+            condition=true
+        }else{
+            problemField = "Unidades involucradas, información errónea."
+            condition=false
+        }
+        
+        return condition
     }
 }

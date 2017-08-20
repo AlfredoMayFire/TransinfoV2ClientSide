@@ -20,7 +20,7 @@ class MapPopoverViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     let manager = CLLocationManager()
 
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,12 +71,16 @@ class MapPopoverViewController: UIViewController, MKMapViewDelegate, CLLocationM
         
     }
     func action(gestureRecognizer:UIGestureRecognizer){
+       
+        mapView.removeAnnotations(mapView.annotations)
+        
         let touchPoint = gestureRecognizer.locationInView(mapView)
         let newCoordinates = mapView.convertPoint(touchPoint, toCoordinateFromView: mapView)
         let annotation = MKPointAnnotation()
         annotation.coordinate = newCoordinates
         mapView.addAnnotation(annotation)
-     
+    
+       
         self.latitudeField.text = String(newCoordinates.latitude)
         self.longitudeField.text = String(newCoordinates.longitude)
         updateValues()

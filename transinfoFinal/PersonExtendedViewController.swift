@@ -442,6 +442,11 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         }else{
             let myID = postFK["success"]
             let results = myID as? Dictionary<String,AnyObject>
+            let alertController = UIAlertController(title: "Éxito", message:
+                "Oprima para continuar.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+
             print("Here it is!",results!["CrashId"])
             
             
