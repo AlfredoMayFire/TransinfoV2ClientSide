@@ -538,7 +538,7 @@ class CollisionDiagram: UIViewController {
         case "13"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
-            backgroundImage1.image = UIImage(named: "tangenteDosCarriles.png")
+            backgroundImage1.image = UIImage(named: "/Users/user/Desktop/TransinfoV2ClientSide/CollisionDiagramAssets/tangenteDosCarriles.png")
             let backgroundReset = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundReset.image = UIImage(named: "white.jpg")
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
