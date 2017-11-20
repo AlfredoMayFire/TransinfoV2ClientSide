@@ -20,6 +20,7 @@ class CollisionDiagram: UIViewController {
     var indexCounter = 0
     var carnumber = 2
     
+    @IBOutlet var scrollview: UIScrollView!
     
     
     
@@ -65,6 +66,16 @@ class CollisionDiagram: UIViewController {
             self.carImage8.hidden = true
             self.carImage9.hidden = true
             self.carnumber = 1
+            self.carImage.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage1.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage2.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage3.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage4.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage5.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage6.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage7.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage8.transform = CGAffineTransformMakeRotation(CGFloat(0))
+            self.carImage9.transform = CGAffineTransformMakeRotation(CGFloat(0))
             
         }
         alertController.addAction(OKAction)
@@ -304,6 +315,7 @@ class CollisionDiagram: UIViewController {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
         //Add the recognizer to your view.
         carImage.addGestureRecognizer(tapRecognizer)
+        scrollview.contentSize.height = 800
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -546,36 +558,44 @@ class CollisionDiagram: UIViewController {
         case 0:
             carImage.hidden = true
             carnumber -= 1
+            carImage.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 1:
             carImage1.hidden = true
             carnumber -= 1
+             carImage1.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 2:
             carImage2.hidden = true
             carnumber -= 1
-            
+             carImage2.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 3:
             carImage3.hidden = true
             carnumber -= 1
+             carImage3.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 4:
             carImage4.hidden = true
             carnumber -= 1
+             carImage4.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 5:
             carImage5.hidden = true
             carnumber -= 1
+             carImage5.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 6:
             carImage6.hidden = true
             carnumber -= 1
+             carImage6.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 7:
             carImage7.hidden = true
             carnumber -= 1
-            
+             carImage7.transform = CGAffineTransformMakeRotation(CGFloat(0))
         case 8:
             carImage8.hidden = true
             carnumber -= 1
+             carImage8.transform = CGAffineTransformMakeRotation(CGFloat(0))
             
         case 9:
             carImage9.hidden = true
             carnumber -= 1
+             carImage9.transform = CGAffineTransformMakeRotation(CGFloat(0))
             
         default:
             print("Nothing Happened")

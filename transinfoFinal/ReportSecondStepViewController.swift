@@ -82,7 +82,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         mannerColisionField.isDismissWhenSelected = true
         mannerColisionField.isArrayWithObject = true
         mannerColisionField.keyPath = "DescriptionES"
-        mannerColisionField.arrayList = webServicesObject.arrayOfDictionaries("mannerOfColisions")
+        mannerColisionField.arrayList = webServicesObject.arrayOfDictionaries("mannerOfCollisions")
         
         condition1Field.isKeyboardHidden = true
         condition1Field.isDismissWhenSelected = true
@@ -187,7 +187,8 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         }
         print(singleton.foreignKeys)
         numCasoLabel.text = "Caso #" + singleton.foreignKeys[0].numCaso
-        
+     
+        print("What's happening")
     }
     
     override func didReceiveMemoryWarning() {
@@ -274,7 +275,8 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         }else{
             let myID = crashID["success"]
             let results = myID as? Dictionary<String,AnyObject>
-            singleton.foreignKeys[0].accidentCondition = (results!["NarrativaId"]?.integerValue)!
+            
+            singleton.foreignKeys[0].accidentCondition = (results!["CrashConditionId"]?.integerValue)!
             //conditional code
             
             
@@ -345,7 +347,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func confirm(action: UIAlertAction){
-        performSegueWithIdentifier("condicionesToNew", sender: self)
+//        performSegueWithIdentifier("condicionesToNew", sender: self)
     }
 
     

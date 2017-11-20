@@ -16,9 +16,9 @@ extension WebService {
         
         // URLs
         static let ApiScheme = "http://"
-        //static let ApiHost = "localhost:9000"
+        static let ApiHost = "localhost:9000"
         //static let ApiHost = "136.145.116.83:8080"
-        static let ApiHost = "136.145.59.111:9000"
+        //this one static let ApiHost = "136.145.59.111:9000"
     }
     
     struct Methods {

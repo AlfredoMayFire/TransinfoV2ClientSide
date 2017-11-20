@@ -359,6 +359,23 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
     
     //todo lo de guardar y post
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+
+        
+    }
+
+    
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        }
+    
+    
+    @IBAction func unwindToPersonExtended(segue: UIStoryboardSegue) {
+    }
+
+    @IBAction func submit(sender: AnyObject) {
         print ("------------")
         
         let  webServicesObjectPOST = WebService.init()
@@ -408,9 +425,9 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         webServicesObjectPOST.addIData("InWayToSchool", value: walkScholl.text)
         
         webServicesObjectPOST.addIData("LocationWhenCollision", value: localizacionMomentoAccident.text)
-     
+        
         webServicesObjectPOST.addIData("TransportedByME", value: personTransport.text)
-
+        
         webServicesObjectPOST.addIData("TransportedTo", value: TransportedTo.text)
         
         webServicesObjectPOST.addIData("TransportedBy", value: transportedBy.text)
@@ -428,7 +445,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         webServicesObjectPOST.addIData("DistractedBy", value: conductorDistraidoBy.text)
         webServicesObjectPOST.addIData("ActionsBeforeCollision", value: accionesMomentoAccident.text)
         print(webServicesObjectPOST.PostData)
-
+        
         var postFK = webServicesObjectPOST.sendPOSTs(7)
         
         if (/*postFK.first!.0 == "error_code" || postFK.first!.0 == "error"*/postFK["error_code"]?.integerValue != 200)  {
@@ -446,28 +463,14 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
                 "Oprima para continuar.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
-
+            
             print("Here it is!",results!["CrashId"])
             
             
         }
-
-        
+    
+    
     }
-
-    
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        }
-    
-    
-    @IBAction func unwindToPersonExtended(segue: UIStoryboardSegue) {
-    }
-
-    @IBAction func submit(sender: AnyObject) {
-           }
     
     //TABLE LOADING
     

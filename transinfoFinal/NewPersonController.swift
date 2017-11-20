@@ -60,6 +60,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     var modifier = 0
     var submission = false
     
+    
     //For Singleton
     var values: [String:AnyObject] = [
         "accidentfk":"",
@@ -90,11 +91,15 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     var listVehicles: Dictionary<String,AnyObject> = ["":""]
     var listVehiclesConvert: Dictionary<String,AnyObject> = ["":""]
     var listVehiclesDictionary: Dictionary<String,AnyObject> = ["":""]
+    var problemField = ""
+    var allClear = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.tintColor = UIColor.blueColor()
-
+//        singleton.foreignKeys[0].accidentCondition = 98
+//        singleton.foreignKeys[0].crashBasicInformation = 98
+//        singleton.foreignKeys[0].newVehicle = 119
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.contentSize.height = 1000
         
@@ -175,18 +180,6 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         dictionary1["genero"] = dictionaries["gender"] as? String
         dictionary1["name"] = dictionaries["name"] as? String
         
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
-        //
 //        if singleton.foreignKeys[0].newPerson == 0 {
 //            
 //        }
@@ -219,11 +212,12 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         
         newPersonID = webServicesObjectPOST.sendPOSTs(5)
         let errorCode = newPersonID["error_code"]
-        // print(newPersonID)
         
-        if (/*newPersonID.first!.0 == "error_code" || newPersonID.first!.0 == "error"*/errorCode?.integerValue == 400)  {
+        allClear = checkParameters()
+        
+        if (newPersonID.first!.0 == "error" || errorCode?.integerValue == 400 || !allClear)  {
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
-                "Por favor llena/arregla los campos.", preferredStyle: UIAlertControllerStyle.Alert)
+                problemField, preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
             
@@ -325,11 +319,9 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             
             singleton.foreignKeys[0].newPerson = (dictionaries["idPersonaFK"]?.integerValue)!
             listVehicles = webServicesQuery.getListofVehiclesPerson((dictionaries["idPersonaFK"] as? String)!)
-            //print(listVehicles)
             listVehiclesConvert = (listVehicles.first?.1)! as! Dictionary<String, AnyObject>
             
             myArray1 = (listVehiclesConvert.first?.1)! as! Array<AnyObject>
-           // print(myArray1)
             listVehiclesDictionary = myArray1[1] as! Dictionary<String, AnyObject>
 
             
@@ -425,7 +417,40 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     }
 
     
+    func checkParameters()->Bool{
     
+        problemField = ""
+        
+        var condition = false
+        if Int(numLicenciaField.text!) != nil && (numLicenciaField.text?.characters.count == 7){
+            condition = true
+            
+        }else{
+            problemField = "Numero de licencia solo numeros, exactamente 7 digitos."
+            condition = false
+            return condition
+        }
+      
+        if ((Int(zipCode.text!) != nil) && zipCode.text?.characters.count == 5){
+            condition = true
+        }else{
+            problemField = "Zip Code solo numeros."
+            condition = false
+            return condition
+        }
+        print(PhoneNumber.text?.characters.count, "over here")
+        if ((Int(PhoneNumber.text!) != nil) && (PhoneNumber.text?.characters.count == 10 )){
+            condition = true
+           
+        }else{
+            problemField = PhoneNumber.text!
+            condition = false
+            return condition
+        }
+        return condition
+
+    }
+
     
 }
     

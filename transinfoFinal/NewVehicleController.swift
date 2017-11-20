@@ -65,6 +65,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
 
     var submission = false
     
+    var condition = false
     
     @IBAction func fechaCompraField(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
@@ -189,7 +190,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         
         
-        if(/*newVehicleID.first!.0 == "error_code" || newVehicleID.first!.0 == "error"*/errorCode?.integerValue == 400 || !allClear){
+        if(newVehicleID.first!.0 == "error" || errorCode?.integerValue != 200 || !allClear){
             let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
                 "Campo: " + problemField , preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
@@ -402,52 +403,30 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         aseguradoraField.text = dictionaries["insuranceCompany"] as? String
         fechaCompraField.text = dictionaries["purchaseDate"] as? String
         fechaExpiracionField.text = dictionaries["expirationDate"] as? String
-        //
-        
-        
-        
-        
     }
+    
+    
     func checkParameters()->Bool{
-//        if Int(numeroDeTablilla.text!) != nil{
-//            
-//        }else{
-//            return false
-//        }
-        
+
         problemField = ""
         
-        var condition = false
+        
         if Int(numeroDeMarbete.text!) != nil{
             condition = true
         }else{
-//            let alertController = UIAlertController(title: "Campo con informacion erronea.", message:
-//                "Campo: Numero de marbete", preferredStyle: UIAlertControllerStyle.Alert)
-//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-//            self.presentViewController(alertController, animated: true, completion: nil)
-            
-            
             problemField = "Numero de Marbete, solo numeros"
-            
             condition = false
-         
+            return condition
         }
         if (VINField.text!.characters.count > 13){
-//            let alertController = UIAlertController(title: "Campo con informacion erronea.", message:
-//                "Campo: Numero de marbete", preferredStyle: UIAlertControllerStyle.Alert)
-//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-//            
-//            self.presentViewController(alertController, animated: true, completion: nil)
-
             problemField = "Numero de Vin: Demasiados caracteres"
-            
-            
             condition = false
+            return condition
         }
-        
-    
     return condition
     }
+    
+    
     func willNotUse(action: UIAlertAction){
         saveSubmit.title = "Guardar"
         jurisdictionVehicleField.text = ""

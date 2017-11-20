@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -539,7 +539,7 @@
         <!--Map Popover View Controller-->
         <scene sceneID="f2q-we-TzG">
             <objects>
-                <viewController id="OD7-c5-sgb" customClass="MapPopoverViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="OD7-c5-sgb" customClass="MapPopoverViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aXQ-UF-VXx"/>
                         <viewControllerLayoutGuide type="bottom" id="3hM-sI-1lN"/>
@@ -578,7 +578,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFm-9y-2lg">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFm-9y-2lg">
                                 <rect key="frame" x="591" y="54" width="157" height="30"/>
                                 <state key="normal" title="Actualizar Localización">
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -588,6 +588,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="768" height="1024"/>
                     <connections>
                         <outlet property="latitudeField" destination="BZv-8T-BBV" id="5NK-pW-f3C"/>
                         <outlet property="longitudeField" destination="rmu-fI-17l" id="Gti-NL-Llq"/>
@@ -607,11 +608,11 @@
                         <viewControllerLayoutGuide type="bottom" id="dRt-0g-3nz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X6O-C4-7Bk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="719"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="975"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-i2-Ep3">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="912"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="1024"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número del Caso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-Z3-3fA">
                                         <rect key="frame" x="285" y="11" width="184" height="21"/>
@@ -708,7 +709,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-br-697">
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-br-697">
                                         <rect key="frame" x="364" y="252" width="144" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -920,7 +921,7 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1024" height="768"/>
+                    <size key="freeformSize" width="1024" height="1024"/>
                     <connections>
                         <outlet property="UnitPedestrians" destination="o01-ZS-VBR" id="UJT-iV-dxn"/>
                         <outlet property="automovilistasField" destination="Bgu-Qz-phw" id="XR3-NI-iqf"/>
@@ -1064,7 +1065,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Vfu-4y-na5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pci-ck-wt2">
-                        <rect key="frame" x="0.0" y="0.0" width="1012" height="710"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1012" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3La-tS-gK3">
@@ -1287,7 +1288,7 @@
                                         </connections>
                                     </tableView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWT-E7-GDa">
-                                        <rect key="frame" x="21" y="199" width="185" height="30"/>
+                                        <rect key="frame" x="21" y="199" width="244" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1311,8 +1312,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="1012" height="650"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1012" height="710"/>
+                    <size key="freeformSize" width="1012" height="650"/>
                     <connections>
                         <outlet property="PhoneNumber" destination="7hB-Wg-Hfy" id="MUB-KT-d4L"/>
                         <outlet property="calle" destination="gFy-1A-bGV" id="br4-lb-Plx"/>
@@ -1348,7 +1351,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qvn-Hn-elw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jqe-qy-oWs" customClass="UIScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="1012" height="710"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1012" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQL-QL-pSP">
@@ -1557,9 +1560,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="1012" height="650"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1012" height="710"/>
+                    <size key="freeformSize" width="1012" height="650"/>
                     <connections>
                         <outlet property="VINField" destination="hyj-Jq-gV9" id="aLE-0O-5tB"/>
                         <outlet property="aseguradoraField" destination="qUd-Ne-iBv" id="KSG-6b-jbc"/>
@@ -1660,7 +1664,7 @@
                                             <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="y6B-ak-hjx" kind="showDetail" identifier="goToVehiculo" action="showViewController:sender:" id="jdc-3d-ca8"/>
+                                            <segue destination="y6B-ak-hjx" kind="show" identifier="goToVehiculo" id="jdc-3d-ca8"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1684,7 +1688,7 @@
                 <exit id="vrB-dI-ZpJ" userLabel="Exit" sceneMemberID="exit"/>
                 <customObject id="tYb-b2-KhU"/>
             </objects>
-            <point key="canvasLocation" x="717" y="2125"/>
+            <point key="canvasLocation" x="783" y="2165"/>
         </scene>
         <!--Entrada de Datos-->
         <scene sceneID="vId-D1-Gab">
@@ -2515,7 +2519,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="rwU-dV-ANf" kind="popoverPresentation" popoverAnchorView="08K-Qb-gXz" id="QzR-mO-wBY">
+                                            <segue destination="rwU-dV-ANf" kind="popoverPresentation" popoverAnchorView="08K-Qb-gXz" id="oVV-ur-F6J">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -2574,8 +2578,7 @@
                     <navigationItem key="navigationItem" title="INFORMACIÓN EXTENDIDA DE VEHÍCULO" id="Cgb-ag-xxR">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="xbf-XV-B6z">
                             <connections>
-                                <action selector="guardarCondicionAccident:" destination="2xh-g0-owt" id="LWh-7D-Vfv"/>
-                                <segue destination="7aS-eE-P2O" kind="unwind" unwindAction="unwindToVC:" id="rb2-jJ-BlX"/>
+                                <action selector="guardarCondicionAccident:" destination="2xh-g0-owt" id="ktd-Df-TfV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2635,20 +2638,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jf9-Mu-nzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="7aS-eE-P2O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1716" y="954"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZLc-Qx-IZi">
             <objects>
-                <viewController id="rwU-dV-ANf" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" id="rwU-dV-ANf" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IdA-7k-n0K"/>
                         <viewControllerLayoutGuide type="bottom" id="9zD-Xb-knw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HtF-ka-5C1">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="550" height="550"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clockpoint_Diagrams-2" translatesAutoresizingMaskIntoConstraints="NO" id="WbQ-yM-FFp">
@@ -2658,12 +2660,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sBc-UH-XnS"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="700" height="500"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="500" height="500"/>
+                    <size key="freeformSize" width="550" height="550"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQN-sl-DgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="324"/>
+            <point key="canvasLocation" x="2552" y="345"/>
         </scene>
         <!--Vehículos-->
         <scene sceneID="rTZ-be-Rwn">
@@ -3337,7 +3340,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="HO4-Ck-nWj">
                             <connections>
                                 <action selector="submit:" destination="Flv-ZM-8CD" id="npz-An-37c"/>
-                                <segue destination="Kkr-QU-B4Q" kind="unwind" unwindAction="unwindToVC2:" id="JhN-j1-UWL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -3383,7 +3385,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hg-5m-o70" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Kkr-QU-B4Q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2803" y="1479"/>
         </scene>
@@ -4140,6 +4141,7 @@
                         <outlet property="carImage8" destination="WLu-UQ-IQl" id="WPr-C5-jdd"/>
                         <outlet property="carImage9" destination="6Kh-7Q-SE2" id="9fd-Dj-7np"/>
                         <outlet property="dropDown" destination="gp7-vF-BbJ" id="796-BC-Hg1"/>
+                        <outlet property="scrollview" destination="fh2-Gg-K5z" id="Xzf-o5-52b"/>
                         <outlet property="textBox" destination="u9A-0b-s4l" id="mSZ-g1-rjE"/>
                     </connections>
                 </viewController>
@@ -4279,15 +4281,15 @@
         <image name="truck_0008_9.png" width="281" height="117"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jfR-I8-iUe"/>
-        <segue reference="Rdt-Ca-E81"/>
-        <segue reference="rRJ-lM-kEd"/>
-        <segue reference="a90-V3-8ey"/>
-        <segue reference="qoS-x7-Qbu"/>
-        <segue reference="Bpe-HZ-5vh"/>
+        <segue reference="OZL-AG-qyJ"/>
         <segue reference="vkf-Pb-Bpn"/>
+        <segue reference="Bpe-HZ-5vh"/>
+        <segue reference="qoS-x7-Qbu"/>
+        <segue reference="a90-V3-8ey"/>
+        <segue reference="jfR-I8-iUe"/>
+        <segue reference="rRJ-lM-kEd"/>
+        <segue reference="Rdt-Ca-E81"/>
         <segue reference="jdc-3d-ca8"/>
-        <segue reference="emB-ob-KHv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -180,7 +180,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
        
         
         //ADD SCROLL VIEW DIMENTIONS
-        scrollview.contentSize.height = 1075
+        scrollview.contentSize.height = 1375
         
         //menu
         if revealViewController() != nil {
@@ -190,17 +190,13 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         
         
         //if you're having gps troubles use this
-        
-        
-//        latitudField.text = "1"
-//        longitudField.text = "1"
+        //        latitudField.text = "1"
+        //        longitudField.text = "1"
 
     
     }
     
     override func viewWillAppear(animated: Bool) {
-//
-//        print("Here it is, ",objectNum)
     }
     
     
@@ -214,6 +210,9 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     }
     @IBAction func ReportFirst(sender: AnyObject) {
         print ("------------")
+        
+        self.view.endEditing(true)
+        
         
         converter["officerID"] = singleton.foreignKeys[0].officerID
         
@@ -267,7 +266,6 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: confirm))
             self.presentViewController(alertController, animated: true, completion: nil)
 
-            // Solo si quieres limpiar pantalla
            // clear(self)
         }
         print ("******************")
@@ -355,7 +353,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     }
     
     func confirm(action: UIAlertAction){
-        performSegueWithIdentifier("accidenteCondiciones", sender: self)
+//        performSegueWithIdentifier("accidenteCondiciones", sender: self)
     }
     func checkValues()->Bool{
         if Int(numberCaseField.text!) != nil {

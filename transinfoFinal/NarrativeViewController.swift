@@ -239,15 +239,13 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         
         parametersForUpload["fecha"] = "Julio/20/2017"
         parametersForUpload["fileName"] = "testimage.png"
-
-        
-        
-        parametersForUpload["idAccidentFK"] = String(singleton.foreignKeys[0].accidentCondition)
+        parametersForUpload["path"] = "path"
+        parametersForUpload["idAccidentFK"] = "7"//String(singleton.foreignKeys[0].accidentCondition)
         
      
         
         
-        imageUploadRequest(imageView: image, uploadUrl: NSURL(string: "http://127.0.1:5000/LoadData")!, param: parametersForUpload)
+        imageUploadRequest(imageView: image, uploadUrl: NSURL(string: "http://136.145.59.111:5000/LoadData")!, param: parametersForUpload)
         
     }
     
