@@ -38,7 +38,6 @@
 		EB17581D1E6C5EAB003BFC0F /* ReportsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */; };
 		EB56E8481FC3042D004AE1C5 /* CollisionDiagramAssets in Resources */ = {isa = PBXBuildFile; fileRef = EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */; };
 		EB72BB201E66F67400AB42BA /* InfraccionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */; };
-		EB89C9E71F20D6E800D66966 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = EB89C9E61F20D6E800D66966 /* Icons */; };
 		EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED28551F0DCFD4002CDE57 /* collision.swift */; };
 		EBF3A91D1EB59DEB00F3961F /* ForeignKeyVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */; };
 /* End PBXBuildFile section */
@@ -100,7 +99,6 @@
 		EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportsListController.swift; path = ../ReportsListController.swift; sourceTree = "<group>"; };
 		EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CollisionDiagramAssets; sourceTree = SOURCE_ROOT; };
 		EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfraccionesTableViewController.swift; sourceTree = "<group>"; };
-		EB89C9E61F20D6E800D66966 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = ../../Alfredo/DiagramaColisiones/Icons; sourceTree = "<group>"; };
 		EBED28551F0DCFD4002CDE57 /* collision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collision.swift; sourceTree = "<group>"; };
 		EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForeignKeyVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +180,6 @@
 				EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */,
 				EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */,
 				EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */,
-				EB89C9E61F20D6E800D66966 /* Icons */,
 				A078DCB81D48090500D40E51 /* Assets.xcassets */,
 				EB17581C1E6C5EAB003BFC0F /* ReportsListController.swift */,
 				A078DCBD1D48090500D40E51 /* Info.plist */,
@@ -332,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB56E8481FC3042D004AE1C5 /* CollisionDiagramAssets in Resources */,
-				EB89C9E71F20D6E800D66966 /* Icons in Resources */,
 				A078DCBC1D48090500D40E51 /* LaunchScreen.storyboard in Resources */,
 				A078DCB91D48090500D40E51 /* Assets.xcassets in Resources */,
 				A078DCB41D48090500D40E51 /* Main.storyboard in Resources */,
