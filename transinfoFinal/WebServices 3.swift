@@ -82,7 +82,7 @@ class WebService : NSObject{
                 //   self.addDatatoGetsData("collisionTypes", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.coll)))
                 self.addDatatoGetsData("harmfulEvents", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.harmfulEvents)))
                 self.addDatatoGetsData("harmfulEventCategories", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.harmfulEventsCatefories)))
-                self.addDatatoGetsData("mannerOfColisions", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.mannerOfCollisions)))
+                self.addDatatoGetsData("mannerOfCollisions", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.mannerOfCollisions)))
                 self.addDatatoGetsData("weatherConditions", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.weatherConditions)))
                 self.addDatatoGetsData("lightingConditions", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.lightingConditions)))
                 self.addDatatoGetsData("roadSurfaces", item: WebService.getsArrayOfDictionaries(WebService.get(url + Methods.roadSurfaces)))
