@@ -44,7 +44,9 @@ class WebService : NSObject{
     func getListOfReports(date: String) -> Dictionary<String,AnyObject>{
         return WebService.get(url + Methods.ListReport + "/" + date)
     }
-    
+    func letsReport(numCaso:String) -> Dictionary<String,AnyObject>{
+        return WebService.get(url + Methods.ListAccidentByCaseNumber + "/" + numCaso)
+    }
     
     
     //******************************************* GETS Dictionary Functions **************************************************

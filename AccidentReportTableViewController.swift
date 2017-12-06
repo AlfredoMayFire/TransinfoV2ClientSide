@@ -25,6 +25,7 @@ class AccidentReportTableViewController: UITableViewController {
     
     var thereIsCellTapped = false
     var selectedRowIndex = -1
+    var caseNumber: Dictionary<String,AnyObject>=["":""]
     
     override func viewDidLoad() {
         Reportes.delegate = self
@@ -37,7 +38,6 @@ class AccidentReportTableViewController: UITableViewController {
         WebServiceQuery.initiate(1)
 
         print(singleton.foreignKeys[0].officerPlate)
-        print(WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate))
         
         dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
@@ -160,14 +160,15 @@ class AccidentReportTableViewController: UITableViewController {
                  message?.appendContentsOf(" -> ")
                 message?.appendContentsOf((dictionary2["countryDescriptionES"] as? String)!)
                  message?.appendContentsOf(" -> ")
-//                message?.appendContentsOf((dictionary2["caseNumber"] as? String)!)
-//                 message?.appendContentsOf(" -> ")
                 message?.appendContentsOf((dictionary2["address"] as? String)!)
+                caseNumber["num"] = (dictionary2["CaseNumber"] )
         
-                print(message)
+        
+        
                 let alertController = UIAlertController(title: "Informacion Presente", message:
                     message, preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                alertController.addAction(UIAlertAction(title: "Dismiss.", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Ver reporte completo.", style: UIAlertActionStyle.Default,handler: letsReport))
                 
                 self.presentViewController(alertController, animated: true, completion: nil)
 
@@ -210,6 +211,23 @@ class AccidentReportTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
+    func letsReport(action: UIAlertAction){
+        let WebServicesQuery = WebService.init()
+        
+        let message = WebServicesQuery.letsReport((caseNumber["num"]as? String )!)
+        
+//        let alertMessage = (message["success"]!["ReportList"] as? String)!
+//        print(alertMessage)
+//        alertYou(alertMessage)
+        
+        
+    }
+    func alertYou(alertMessage: String)->Void{
+        let alertController = UIAlertController(title: "Informacion Presente", message:
+            alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss.", style: UIAlertActionStyle.Default,handler: nil))
+    }
+
     
     
 }
