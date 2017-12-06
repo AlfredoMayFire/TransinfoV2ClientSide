@@ -1305,7 +1305,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva Persona" id="LXP-Zl-NYp">
-                        <barButtonItem key="rightBarButtonItem" title="Añadir" id="UsR-fz-DzI">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="UsR-fz-DzI">
                             <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="Guardar:" destination="4Dh-2u-Ip0" id="QBQ-rs-FKg"/>

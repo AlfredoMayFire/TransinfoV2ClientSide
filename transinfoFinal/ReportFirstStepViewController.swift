@@ -103,7 +103,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            singleton.foreignKeys[0].crashBasicInformation = 96
+           // singleton.foreignKeys[0].crashBasicInformation = 96
         //Direccion
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest

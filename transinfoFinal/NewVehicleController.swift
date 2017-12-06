@@ -273,7 +273,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
 
         dictionaryQuery = webServicesQuery.printQuery(search.text!)
-        
+        print(dictionaryQuery)
         vehicle = dictionaryQuery.first!.1
         
         myArray = (vehicle?["VehicleList"])! as! Array<AnyObject>

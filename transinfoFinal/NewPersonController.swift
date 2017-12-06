@@ -86,6 +86,9 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         "typeLicense" :"",
         "numLicense": ""
     ]
+    var converter: [String:AnyObject] = [
+        "idNewPerson":""
+    ]
     
     
     var listVehicles: Dictionary<String,AnyObject> = ["":""]
@@ -180,97 +183,126 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         dictionary1["genero"] = dictionaries["gender"] as? String
         dictionary1["name"] = dictionaries["name"] as? String
         
-//        if singleton.foreignKeys[0].newPerson == 0 {
-//            
-//        }
-        print("--------------------")
-        let webServicesObjectPOST = WebService.init()
-        
-        webServicesObjectPOST.addIData("Name", value: nombreField.text)
-        
-        webServicesObjectPOST.addIData("Gender", value: generoField.text)
-        
-        webServicesObjectPOST.addIData("LicenseType", value: driverLicence.text)
-        
-        webServicesObjectPOST.addIData("LicenceNumber", value: numLicenciaField.text)
-        
-        webServicesObjectPOST.addIData("OrganDonor", value: organDonor.text)
-        
-        webServicesObjectPOST.addIData("ExpirationDate", value: fechaExpiracionField.text)
-        
-        webServicesObjectPOST.addIData("Neighborhood", value: urbanizacionBarrio.text)
-        
-        webServicesObjectPOST.addIData("StreetName", value: calle.text)
-        
-        webServicesObjectPOST.addIData("City", value: city.text)
-        
-        webServicesObjectPOST.addIData("StateCountry", value: state.text)
-        
-        webServicesObjectPOST.addIData("ZipCode", value: zipCode.text)
-        
-        webServicesObjectPOST.addIData("PhoneNumber", value: PhoneNumber.text)
-        
-        newPersonID = webServicesObjectPOST.sendPOSTs(5)
-        let errorCode = newPersonID["error_code"]
-        
-        allClear = checkParameters()
-        
-        if (newPersonID.first!.0 == "error" || errorCode?.integerValue == 400 || !allClear)  {
-            let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
-                problemField, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+        if saveSubmit.title != "Save" {
+            print("--------------------")
+            let webServicesObjectPOST = WebService.init()
             
-            newPersonID.removeAll()
+            webServicesObjectPOST.addIData("Name", value: nombreField.text)
             
-        }else{
-            let myID = newPersonID["success"]
-            let results = myID as? Dictionary<String,AnyObject>
-            print("Here it is!",results!["NewPersonId"])
-            if  singleton.foreignKeys[0].newPerson == 0 {
-                singleton.foreignKeys[0].newPerson = (results!["NewPersonId"]?.integerValue)!
+            webServicesObjectPOST.addIData("Gender", value: generoField.text)
+            
+            webServicesObjectPOST.addIData("LicenseType", value: driverLicence.text)
+            
+            webServicesObjectPOST.addIData("LicenceNumber", value: numLicenciaField.text)
+            
+            webServicesObjectPOST.addIData("OrganDonor", value: organDonor.text)
+            
+            webServicesObjectPOST.addIData("ExpirationDate", value: fechaExpiracionField.text)
+            
+            webServicesObjectPOST.addIData("Neighborhood", value: urbanizacionBarrio.text)
+            
+            webServicesObjectPOST.addIData("StreetName", value: calle.text)
+            
+            webServicesObjectPOST.addIData("City", value: city.text)
+            
+            webServicesObjectPOST.addIData("StateCountry", value: state.text)
+            
+            webServicesObjectPOST.addIData("ZipCode", value: zipCode.text)
+            
+            webServicesObjectPOST.addIData("PhoneNumber", value: PhoneNumber.text)
+            
+            newPersonID = webServicesObjectPOST.sendPOSTs(5)
+            let errorCode = newPersonID["error_code"]
+            
+            allClear = checkParameters()
+            
+            if (newPersonID.first!.0 == "error" || errorCode?.integerValue == 400 || !allClear)  {
+                let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
+                    problemField, preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+                newPersonID.removeAll()
+                
+            }else{
+                let myID = newPersonID["success"]
+                let results = myID as? Dictionary<String,AnyObject>
+                print("Here it is!",results!["NewPersonId"])
+                if  singleton.foreignKeys[0].newPerson == 0 {
+                    singleton.foreignKeys[0].newPerson = (results!["NewPersonId"]?.integerValue)!
+                }
+                
+                print(singleton.foreignKeys[0].newPerson)
+                values["personfk"] = singleton.foreignKeys[0].newPerson
+                values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
+                
+                let webServicesObjectPOST2 = WebService.init()
+                webServicesObjectPOST2.clearPostData()
+                webServicesObjectPOST2.addIData("Person_fk", value: values["personfk"]?.stringValue)
+                webServicesObjectPOST2.addIData("Accident_fk", value: values["accidentfk"]?.stringValue)
+                
+                print("Here's postdata",webServicesObjectPOST2.PostData)
+                print("here's the singleton", singleton.foreignKeys[0])
+                print("here's value personfk",values["personfk"]?.stringValue)
+                print("here's value accidentfk",values["accidentfk"]?.stringValue)
+                webServicesObjectPOST2.sendPOSTs(10)
+                
+                print(singleton.foreignKeys[0])
+                
+                dictionary1["name"] = nombreField.text
+                dictionary1["gender"] = generoField.text
+                dictionary1["typeLicense"] = driverLicence.text
+                dictionary1["numLicense"] = numLicenciaField.text
+                
+                let newPerson = People(person: dictionary1)
+                singleton.listPeople.append(newPerson)
+                
+                singleton.listNum[1] += 1
+                
+                print(singleton.listPeople)
+                print(singleton.listNum)
+                
+                submission = true
             }
             
-            print(singleton.foreignKeys[0].newPerson)
-            values["personfk"] = singleton.foreignKeys[0].newPerson
-            values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
-            
-            let webServicesObjectPOST2 = WebService.init()
-            webServicesObjectPOST2.clearPostData()
-            webServicesObjectPOST2.addIData("Person_fk", value: values["personfk"]?.stringValue)
-            webServicesObjectPOST2.addIData("Accident_fk", value: values["accidentfk"]?.stringValue)
-            
-            print("Here's postdata",webServicesObjectPOST2.PostData)
-            print("here's the singleton", singleton.foreignKeys[0])
-            print("here's value personfk",values["personfk"]?.stringValue)
-            print("here's value accidentfk",values["accidentfk"]?.stringValue)
-            webServicesObjectPOST2.sendPOSTs(10)
-            
-            print(singleton.foreignKeys[0])
-            
-            dictionary1["name"] = nombreField.text
-            dictionary1["gender"] = generoField.text
-            dictionary1["typeLicense"] = driverLicence.text
-            dictionary1["numLicense"] = numLicenciaField.text
-            
-            let newPerson = People(person: dictionary1)
-            singleton.listPeople.append(newPerson)
-            
-            singleton.listNum[1] += 1
-            
-            print(singleton.listPeople)
-            print(singleton.listNum)
-            
-            submission = true
+            if submission{
+                let alertController = UIAlertController(title: "Se sometio con exito!", message:
+                    "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
         }
+       
+        values["personfk"] = singleton.foreignKeys[0].newPerson
+        values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
         
-        if submission{
-            let alertController = UIAlertController(title: "Se sometio con exito!", message:
-                "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }
+        let webServicesObjectPOST2 = WebService.init()
+        webServicesObjectPOST2.clearPostData()
+        webServicesObjectPOST2.addIData("Person_fk", value: values["personfk"]?.stringValue)
+        webServicesObjectPOST2.addIData("Accident_fk", value: values["accidentfk"]?.stringValue)
+        
+        print("Here's postdata",webServicesObjectPOST2.PostData)
+        print("here's the singleton", singleton.foreignKeys[0])
+        print("here's value personfk",values["personfk"]?.stringValue)
+        print("here's value accidentfk",values["accidentfk"]?.stringValue)
+        webServicesObjectPOST2.sendPOSTs(10)
+        
+        print(singleton.foreignKeys[0])
+        let newPerson = People(person: dictionary1)
+        singleton.listPeople.append(newPerson)
+        
+        singleton.listNum[1] += 1
+        
+        print(singleton.listPeople)
+        print(singleton.listNum)
 
+        
+        
+        let alertController = UIAlertController(title: "Se seleccionó con éxito!", message:
+            "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
 
     
@@ -292,7 +324,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             myArray = (vehicle?["PersonList"])! as! Array<AnyObject>
 
         }
-        print(myArray.count)
+       
         
         if myArray.count != 0 {
 
@@ -317,12 +349,15 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             
            // singleton.foreignKeys[0].newPerson = (dictionaries["idPersonaFK"] as? Int)!
             
-            singleton.foreignKeys[0].newPerson = (dictionaries["idPersonaFK"]?.integerValue)!
-            listVehicles = webServicesQuery.getListofVehiclesPerson((dictionaries["idPersonaFK"] as? String)!)
+            singleton.foreignKeys[0].newPerson = (dictionaries["idNewPerson"]?.integerValue)!
+            converter["idNewPerson"] = dictionaries["idNewPerson"]
+            listVehicles = webServicesQuery.getListofVehiclesPerson((converter["idNewPerson"]?.stringValue)!)
             listVehiclesConvert = (listVehicles.first?.1)! as! Dictionary<String, AnyObject>
+           
             
             myArray1 = (listVehiclesConvert.first?.1)! as! Array<AnyObject>
-            listVehiclesDictionary = myArray1[1] as! Dictionary<String, AnyObject>
+             print(myArray)
+            listVehiclesDictionary = myArray1[0] as! Dictionary<String, AnyObject>
 
             
             let alertController = UIAlertController(title: "Persona encontrado!", message:
@@ -351,15 +386,16 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     }
 
     func FoundPerson(action: UIAlertAction){
-        saveSubmit.title = "Submit"
+        saveSubmit.title = "Save"
         transition = true
-       
         tableView.reloadData()
+        singleton.foreignKeys[0].newPerson = myArray[0]["idNewPerson"] as! Int
+        print(singleton.foreignKeys[0])
 }
     
     
     func willNotUse(action: UIAlertAction){
-        saveSubmit.title  = "Guardar"
+        saveSubmit.title  = "Submit"
         //function to clear out fields
         numLicenciaField.text = ""
         generoField.text = ""
