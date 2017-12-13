@@ -133,7 +133,8 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         notifiedTimeEmergenceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
         
         // Do any additional setup after loading the view, typically from a nib.
-         scrollView.contentSize.height = 1000
+         scrollView.contentSize.height = 1200
+       
         
         if revealViewController() != nil {
             menuButton.target = revealViewController()
@@ -246,6 +247,10 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         
         
         imageUploadRequest(imageView: image, uploadUrl: NSURL(string: "http://136.145.59.111:5000/LoadData")!, param: parametersForUpload)
+        let alertController = UIAlertController(title: "Imagen subido!", message:
+            "Ya su imagen se ha subido con exito!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
         
     }
     

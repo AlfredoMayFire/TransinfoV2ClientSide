@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2234" y="465"/>
+            <point key="canvasLocation" x="-2474" y="389"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wo5-Ww-fa9">
@@ -2183,7 +2183,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Remolcado por Daños?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNo-Gd-1gh">
-                                        <rect key="frame" x="774" y="694" width="191" height="21"/>
+                                        <rect key="frame" x="448" y="767" width="191" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2210,14 +2210,11 @@
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-GI-a3c" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="774" y="729" width="205" height="30"/>
+                                        <rect key="frame" x="448" y="802" width="340" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-AR-PQm">
-                                        <rect key="frame" x="956" y="734" width="16" height="20"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defectos Mecánicos del Vehículo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnc-eq-iWj">
                                         <rect key="frame" x="8" y="805" width="259" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2570,6 +2567,9 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-AR-PQm">
+                                        <rect key="frame" x="764" y="807" width="16" height="20"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -3491,7 +3491,7 @@
         <!--NARRATIVA-->
         <scene sceneID="qCb-2X-USm">
             <objects>
-                <viewController id="5qO-jh-boS" customClass="NarrativeViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="5qO-jh-boS" customClass="NarrativeViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VT9-zv-HZd"/>
                         <viewControllerLayoutGuide type="bottom" id="lOm-Ni-1gC"/>
@@ -3501,7 +3501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uc0-wF-IhB">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1078" height="1024"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DETALLES DEL ACCIDENTE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dk3-fF-nTF">
                                         <rect key="frame" x="16" y="267" width="568" height="21"/>
@@ -3509,7 +3509,7 @@
                                         <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKV-Yh-9zE" userLabel="Narrative">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Toque aqui para comenzar a escribir." translatesAutoresizingMaskIntoConstraints="NO" id="dKV-Yh-9zE" userLabel="Narrative">
                                         <rect key="frame" x="16" y="296" width="721" height="400"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -3585,7 +3585,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJC-CN-730">
-                                        <rect key="frame" x="444" y="104" width="195" height="40"/>
+                                        <rect key="frame" x="355" y="95" width="195" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Diagrama de Colisiones">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -3595,7 +3595,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIq-Xu-j9h">
-                                        <rect key="frame" x="589" y="142" width="50" height="30"/>
+                                        <rect key="frame" x="516" y="133" width="50" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Upload"/>
                                         <connections>
@@ -3606,7 +3606,7 @@
                                         <rect key="frame" x="421" y="166" width="240" height="128"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR8-M2-cf5">
-                                        <rect key="frame" x="444" y="142" width="99" height="30"/>
+                                        <rect key="frame" x="562" y="99" width="99" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Choose Image"/>
                                         <connections>
@@ -3629,6 +3629,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="detailField" destination="dKV-Yh-9zE" id="XHp-4a-h7P"/>
                         <outlet property="image" destination="ao3-xY-oBN" id="VXq-nE-PcD"/>
@@ -3642,7 +3644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YM3-eb-7AP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807.8125" y="-1602.5390625"/>
+            <point key="canvasLocation" x="-808" y="-1603"/>
         </scene>
         <!--Narrativa-->
         <scene sceneID="biI-7z-7yw">
@@ -3766,7 +3768,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Nre-uo-xTN" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="f2m-Wq-LpR"/>
+                                            <segue destination="Mvc-ah-LMH" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="mj1-RV-aM2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myReports" textLabel="b9I-L6-SiY" imageView="0YP-jJ-UuT" style="IBUITableViewCellStyleDefault" id="Q4l-Mw-Gqc">
@@ -4281,15 +4283,15 @@
         <image name="truck_0008_9.png" width="281" height="117"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OZL-AG-qyJ"/>
-        <segue reference="vkf-Pb-Bpn"/>
-        <segue reference="Bpe-HZ-5vh"/>
         <segue reference="qoS-x7-Qbu"/>
         <segue reference="a90-V3-8ey"/>
-        <segue reference="jfR-I8-iUe"/>
-        <segue reference="rRJ-lM-kEd"/>
+        <segue reference="mj1-RV-aM2"/>
         <segue reference="Rdt-Ca-E81"/>
-        <segue reference="jdc-3d-ca8"/>
+        <segue reference="rRJ-lM-kEd"/>
+        <segue reference="OSB-m3-WC8"/>
+        <segue reference="cIx-FK-bHu"/>
+        <segue reference="9nv-1L-DMD"/>
+        <segue reference="Bpe-HZ-5vh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

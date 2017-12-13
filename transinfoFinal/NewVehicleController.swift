@@ -67,6 +67,8 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     
     var condition = false
     
+    let singleton = Global.sharedGlobal
+    
     @IBAction func fechaCompraField(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Date
@@ -148,71 +150,100 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
         
         print("--------------------")
         
-        let singleton = Global.sharedGlobal
-        
-        values["personfk"] = singleton.foreignKeys[0].newPerson
-        
-        let webServicesObjectPOST = WebService.init()
-        
-        webServicesObjectPOST.addIData("PlateNumber", value: numeroDeTablilla.text)
-        
-        webServicesObjectPOST.addIData("VehicleJurisdiction", value: jurisdictionVehicleField.text)
-        
-        webServicesObjectPOST.addIData("State", value: estadoField.text)
-        
-        webServicesObjectPOST.addIData("Vin", value: VINField.text)
-        
-        webServicesObjectPOST.addIData("Year", value: yearField.text)
-        
-        webServicesObjectPOST.addIData("Make", value: marcaField.text)
-        
-        webServicesObjectPOST.addIData("modelos", value: modeloField.text)
-        
-        webServicesObjectPOST.addIData("RegistrationNumber", value: numeroDeMarbete.text)
-        
-        webServicesObjectPOST.addIData("InsuranceCompany", value: aseguradoraField.text)
-        
-        webServicesObjectPOST.addIData("PurchaseDate", value: fechaCompraField.text)
-        
-        webServicesObjectPOST.addIData("ExpirationDate", value: fechaExpiracionField.text)
-        
-        webServicesObjectPOST.addIData("idPersonaFK", value: values["personfk"]?.stringValue)
-        
-        print(webServicesObjectPOST.PostData)
-        
-        newVehicleID = webServicesObjectPOST.sendPOSTs(4)
-        
-        let errorCode = newVehicleID["error_code"]
-        
-        let allClear = checkParameters()
-        
-       
-        
-        
-        
-        if(newVehicleID.first!.0 == "error" || errorCode?.integerValue != 200 || !allClear){
-            let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
-                "Campo: " + problemField , preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        
-            newVehicleID.removeAll()
-        }else{
-            let myID = newVehicleID["success"]
-            let results = myID as? Dictionary<String,AnyObject>
+        if saveSubmit.title != "Save"{
+            values["personfk"] = singleton.foreignKeys[0].newPerson
             
-            print(results!["NewVehicleId"])
-            singleton.foreignKeys[0].newVehicle = (results!["NewVehicleId"]?.integerValue)!
+            let webServicesObjectPOST = WebService.init()
+            
+            webServicesObjectPOST.addIData("PlateNumber", value: numeroDeTablilla.text)
+            
+            webServicesObjectPOST.addIData("VehicleJurisdiction", value: jurisdictionVehicleField.text)
+            
+            webServicesObjectPOST.addIData("State", value: estadoField.text)
+            
+            webServicesObjectPOST.addIData("Vin", value: VINField.text)
+            
+            webServicesObjectPOST.addIData("Year", value: yearField.text)
+            
+            webServicesObjectPOST.addIData("Make", value: marcaField.text)
+            
+            webServicesObjectPOST.addIData("modelos", value: modeloField.text)
+            
+            webServicesObjectPOST.addIData("RegistrationNumber", value: numeroDeMarbete.text)
+            
+            webServicesObjectPOST.addIData("InsuranceCompany", value: aseguradoraField.text)
+            
+            webServicesObjectPOST.addIData("PurchaseDate", value: fechaCompraField.text)
+            
+            webServicesObjectPOST.addIData("ExpirationDate", value: fechaExpiracionField.text)
+            
+            webServicesObjectPOST.addIData("idPersonaFK", value: values["personfk"]?.stringValue)
+            
+            print(webServicesObjectPOST.PostData)
+            
+            newVehicleID = webServicesObjectPOST.sendPOSTs(4)
+            
+            let errorCode = newVehicleID["error_code"]
+            
+            let allClear = checkParameters()
             
             
-            values["vehiclefk"] = singleton.foreignKeys[0].newVehicle
+            
+            
+            
+            if(newVehicleID.first!.0 == "error" || errorCode?.integerValue != 200 || !allClear){
+                let alertController = UIAlertController(title: "No has llenado todos los campos o has puesto un valor erroneo.", message:
+                    "Campo: " + problemField , preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+                newVehicleID.removeAll()
+            }else{
+                let myID = newVehicleID["success"]
+                let results = myID as? Dictionary<String,AnyObject>
+                
+                print(results!["NewVehicleId"])
+                singleton.foreignKeys[0].newVehicle = (results!["NewVehicleId"]?.integerValue)!
+                
+                
+                values["vehiclefk"] = singleton.foreignKeys[0].newVehicle
+                values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
+                
+                let webServicesObjectPOST2 = WebService.init()
+                webServicesObjectPOST2.clearPostData()
+                webServicesObjectPOST2.addIData("Accidentfk", value: values["accidentfk"]?.stringValue)
+                webServicesObjectPOST2.addIData("Vehiclefk", value: values["vehiclefk"]?.stringValue)
+                webServicesObjectPOST2.sendPOSTs(11)
+                
+//                dictionary["numTablilla"] = numeroDeTablilla.text
+//                dictionary["year"] = yearField.text
+//                dictionary["make"] = marcaField.text
+//                dictionary["model"] = modeloField.text
+                
+                let newVehicle = Vehicle(vehicle: dictionary)
+                singleton.listVehicle.append(newVehicle)
+                
+                singleton.listNum[0] += 1
+//                
+//                print(singleton.listVehicle)
+//                print(singleton.listNum)
+                
+                submission = true
+                
+                
+            }
+            
+            if submission {
+                let alertController = UIAlertController(title: "Se sometio con exito!", message:
+                    "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+            }}
+        if saveSubmit.title == "Save" {
+            singleton.foreignKeys[0].newVehicle = (dictionaries["idNewVehicle"] as? Int)!
+            values["vehiclefk"] = dictionaries["idNewVehicle"]
             values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
-            
-            
-            
-            print(singleton.foreignKeys)
-            
-            
             
             let webServicesObjectPOST2 = WebService.init()
             webServicesObjectPOST2.clearPostData()
@@ -220,34 +251,20 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
             webServicesObjectPOST2.addIData("Vehiclefk", value: values["vehiclefk"]?.stringValue)
             webServicesObjectPOST2.sendPOSTs(11)
             
-            dictionary["numTablilla"] = numeroDeTablilla.text
-            dictionary["year"] = yearField.text
-            dictionary["make"] = marcaField.text
-            dictionary["model"] = modeloField.text
-            
             let newVehicle = Vehicle(vehicle: dictionary)
             singleton.listVehicle.append(newVehicle)
             
             singleton.listNum[0] += 1
-            
-            print(singleton.listVehicle)
-            print(singleton.listNum)
-            
-            submission = true
-            
-            
-        }
-        
-        if submission {
-            let alertController = UIAlertController(title: "Se sometio con exito!", message:
+            let alertController = UIAlertController(title: "Se seleccionó con éxito!", message:
                 "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
             self.presentViewController(alertController, animated: true, completion: nil)
-            
+
         }
         
         
-}
+        
+}//end of guardar
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
@@ -386,7 +403,8 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     
     func foundVehicle(action: UIAlertAction){
 
-        saveSubmit.title = "Submit"
+        saveSubmit.title = "Save"
+       
         
         print(dictionaries)
         

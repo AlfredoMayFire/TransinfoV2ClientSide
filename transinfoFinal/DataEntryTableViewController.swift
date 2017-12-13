@@ -24,7 +24,7 @@ class DataEntryTableViewController: UITableViewController{
     
     let singleton = Global.sharedGlobal
     
-    let section = ["Vehicles", "People"]
+    let section = ["Vehiculos","Personas" ]
     
     //let  array: [Any] = []
     var items = [["vehicles"],["people"]]

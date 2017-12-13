@@ -182,6 +182,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     @IBAction func Guardar(sender: AnyObject) {
         dictionary1["genero"] = dictionaries["gender"] as? String
         dictionary1["name"] = dictionaries["name"] as? String
+        singleton.foreignKeys[0].newPerson = 0
         
         if saveSubmit.title != "Save" {
             print("--------------------")
@@ -227,12 +228,12 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             }else{
                 let myID = newPersonID["success"]
                 let results = myID as? Dictionary<String,AnyObject>
+                print("here boy")
                 print("Here it is!",results!["NewPersonId"])
                
-                    singleton.foreignKeys[0].newPerson = (results!["NewPersonId"]?.integerValue)!
+                singleton.foreignKeys[0].newPerson = (results!["NewPersonId"]?.integerValue)!
                 
-                
-                print(singleton.foreignKeys[0].newPerson)
+                //print(singleton.foreignKeys[0].newPerson)
                 values["personfk"] = singleton.foreignKeys[0].newPerson
                 values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
                 
@@ -247,7 +248,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
                 print("here's value accidentfk",values["accidentfk"]?.stringValue)
                 webServicesObjectPOST2.sendPOSTs(10)
                 
-                print(singleton.foreignKeys[0])
+               
                 
                 dictionary1["name"] = nombreField.text
                 dictionary1["gender"] = generoField.text
@@ -259,8 +260,6 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
                 
                 singleton.listNum[1] += 1
                 
-                print(singleton.listPeople)
-                print(singleton.listNum)
                 
                 submission = true
             }
@@ -272,36 +271,43 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
         }
-       
-        values["personfk"] = singleton.foreignKeys[0].newPerson
-        values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
-        
-        let webServicesObjectPOST2 = WebService.init()
-        webServicesObjectPOST2.clearPostData()
-        webServicesObjectPOST2.addIData("Person_fk", value: values["personfk"]?.stringValue)
-        webServicesObjectPOST2.addIData("Accident_fk", value: values["accidentfk"]?.stringValue)
-        
-        print("Here's postdata",webServicesObjectPOST2.PostData)
-        print("here's the singleton", singleton.foreignKeys[0])
-        print("here's value personfk",values["personfk"]?.stringValue)
-        print("here's value accidentfk",values["accidentfk"]?.stringValue)
-        webServicesObjectPOST2.sendPOSTs(10)
-        
-        print(singleton.foreignKeys[0])
-        let newPerson = People(person: dictionary1)
-        singleton.listPeople.append(newPerson)
-        
-        singleton.listNum[1] += 1
-        
-        print(singleton.listPeople)
-        print(singleton.listNum)
+  
+        if saveSubmit.title=="Save" {
+            
+            singleton.foreignKeys[0].newPerson = (dictionaries["idNewPerson"] as? Int)!
+            print("here boiz",singleton.foreignKeys[0].newPerson)
+            
+            values["personfk"] = singleton.foreignKeys[0].newPerson
+            values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
+            
+            let webServicesObjectPOST2 = WebService.init()
+            webServicesObjectPOST2.clearPostData()
+            webServicesObjectPOST2.addIData("Person_fk", value: values["personfk"]?.stringValue)
+            webServicesObjectPOST2.addIData("Accident_fk", value: values["accidentfk"]?.stringValue)
+            
+            print("Here's postdata",webServicesObjectPOST2.PostData)
+            print("here's the singleton", singleton.foreignKeys[0])
+            print("here's value personfk",values["personfk"]?.stringValue)
+            print("here's value accidentfk",values["accidentfk"]?.stringValue)
+            webServicesObjectPOST2.sendPOSTs(10)
+            
+            print(singleton.foreignKeys[0])
+            let newPerson = People(person: dictionary1)
+            singleton.listPeople.append(newPerson)
+            
+            singleton.listNum[1] += 1
+            
+            print(singleton.listPeople)
+            print(singleton.listNum)
+            
+            
+            
+            let alertController = UIAlertController(title: "Se seleccionó con éxito!", message:
+                "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
+            self.presentViewController(alertController, animated: true, completion: nil)
 
-        
-        
-        let alertController = UIAlertController(title: "Se seleccionó con éxito!", message:
-            "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        }
         
     }
 
@@ -320,7 +326,8 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         }
         else{
             dictionaryQuery = webServicesQuery.printQueryPerson(numLicenciaSearch.text!)
-            vehicle = dictionaryQuery.first!.1
+            print(dictionaryQuery)
+            vehicle = dictionaryQuery["success"]
             myArray = (vehicle?["PersonList"])! as! Array<AnyObject>
 
         }
@@ -329,7 +336,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         if myArray.count != 0 {
 
             //put first value of array into dictionaries which is just a single dictionary
-            print("here's the array",myArray)
+            //print("here's the array",myArray)
             dictionaries = myArray[0] as! Dictionary<String, AnyObject>
         
             //print("here's the dictionary",dictionaries)
@@ -356,9 +363,12 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
            
             
             myArray1 = (listVehiclesConvert.first?.1)! as! Array<AnyObject>
-             print(myArray)
-            listVehiclesDictionary = myArray1[0] as! Dictionary<String, AnyObject>
-
+             print(myArray1)
+            if myArray1.isEmpty {
+                listVehiclesDictionary = ["Empty":"empty"]
+            }else{
+                listVehiclesDictionary = myArray1[0] as! Dictionary<String, AnyObject>
+            }
             
             let alertController = UIAlertController(title: "Persona encontrado!", message:
                 "Escoge Dismiss para buscar de nuevo.", preferredStyle: UIAlertControllerStyle.Alert)

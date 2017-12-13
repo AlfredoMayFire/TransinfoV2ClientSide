@@ -92,6 +92,10 @@ class CollisionDiagram: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        let alertController = UIAlertController(title: "Screenshot tomadp.", message:
+            "Acuerdese de escoger el imagen antes de subirlo!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
         
     }
     
