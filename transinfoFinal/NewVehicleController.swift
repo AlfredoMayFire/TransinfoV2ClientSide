@@ -215,10 +215,10 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
                 webServicesObjectPOST2.addIData("Vehiclefk", value: values["vehiclefk"]?.stringValue)
                 webServicesObjectPOST2.sendPOSTs(11)
                 
-//                dictionary["numTablilla"] = numeroDeTablilla.text
-//                dictionary["year"] = yearField.text
-//                dictionary["make"] = marcaField.text
-//                dictionary["model"] = modeloField.text
+                dictionary["numTablilla"] = numeroDeTablilla.text
+                dictionary["year"] = yearField.text
+                dictionary["make"] = marcaField.text
+                dictionary["model"] = modeloField.text
                 
                 let newVehicle = Vehicle(vehicle: dictionary)
                 singleton.listVehicle.append(newVehicle)
@@ -227,6 +227,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
 //                
 //                print(singleton.listVehicle)
 //                print(singleton.listNum)
+                  print("submit",singleton.listVehicle)
                 
                 submission = true
                 
@@ -251,10 +252,16 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
             webServicesObjectPOST2.addIData("Vehiclefk", value: values["vehiclefk"]?.stringValue)
             webServicesObjectPOST2.sendPOSTs(11)
             
+            dictionary["numTablilla"] = numeroDeTablilla.text
+            dictionary["year"] = yearField.text
+            dictionary["make"] = marcaField.text
+            dictionary["model"] = modeloField.text
+            
             let newVehicle = Vehicle(vehicle: dictionary)
             singleton.listVehicle.append(newVehicle)
             
             singleton.listNum[0] += 1
+            print("Save",singleton.listVehicle)
             let alertController = UIAlertController(title: "Se seleccionó con éxito!", message:
                 "Pulsa el boton para regresar.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Regresar.", style: UIAlertActionStyle.Default,handler: segueBack))
