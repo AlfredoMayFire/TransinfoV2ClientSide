@@ -1997,47 +1997,47 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Zw-oq1" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="423" width="410" height="30"/>
+                                        <rect key="frame" x="8" y="423" width="530" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="WdF-Hg-Y7p">
-                                        <rect key="frame" x="394" y="428" width="16" height="20"/>
+                                        <rect key="frame" x="514" y="428" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alineamiento:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1Q-2W-bYT">
-                                        <rect key="frame" x="426" y="394" width="104" height="21"/>
+                                        <rect key="frame" x="554" y="394" width="104" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inclinación:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAl-B1-aEj">
-                                        <rect key="frame" x="598" y="394" width="87" height="21"/>
+                                        <rect key="frame" x="726" y="394" width="87" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jep-gb-rFo" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="426" y="423" width="164" height="30"/>
+                                        <rect key="frame" x="554" y="423" width="164" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="fQa-FR-5It">
-                                        <rect key="frame" x="568" y="428" width="16" height="20"/>
+                                        <rect key="frame" x="696" y="428" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3B-zm-6zQ" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="598" y="423" width="182" height="30"/>
+                                        <rect key="frame" x="726" y="423" width="243" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="FFo-mi-RYN">
-                                        <rect key="frame" x="756" y="428" width="16" height="20"/>
+                                        <rect key="frame" x="946" y="428" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cantidad de Carriles en la Carretera:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovb-MW-A2h">
@@ -2060,13 +2060,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tipo de Carril" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-4a-p7s" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="388" y="490" width="475" height="30"/>
+                                        <rect key="frame" x="388" y="490" width="581" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="0Q9-MI-vlT">
-                                        <rect key="frame" x="840" y="495" width="16" height="20"/>
+                                        <rect key="frame" x="946" y="495" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de Controles de Tránsito: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ur8-h1-uiD">
@@ -2113,14 +2113,8 @@
                                         <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-6w-1ol" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="653" width="211" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-rX-aR4">
-                                        <rect key="frame" x="201" y="657" width="16" height="20"/>
+                                        <rect key="frame" x="277" y="658" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cadena de Eventos:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tY8-MQ-z0S">
@@ -2130,117 +2124,105 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segundo Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpB-UQ-k8A" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="227" y="691" width="211" height="30"/>
+                                        <rect key="frame" x="313" y="691" width="258" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="fgp-VB-cgD">
-                                        <rect key="frame" x="417" y="695" width="16" height="20"/>
+                                        <rect key="frame" x="546" y="696" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Tercer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-DF-yCd" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="227" y="729" width="211" height="30"/>
+                                        <rect key="frame" x="313" y="729" width="258" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-wj-DLE">
-                                        <rect key="frame" x="418" y="734" width="16" height="20"/>
+                                        <rect key="frame" x="546" y="734" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Cuarto Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-Tp-NLc" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="227" y="767" width="211" height="30"/>
+                                        <rect key="frame" x="313" y="767" width="258" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="gGY-I2-JQh">
-                                        <rect key="frame" x="418" y="772" width="16" height="20"/>
+                                        <rect key="frame" x="546" y="772" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-Sr-sAM" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="227" y="653" width="211" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-1x-9HK">
-                                        <rect key="frame" x="418" y="663" width="16" height="20"/>
+                                        <rect key="frame" x="546" y="658" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segunda Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vin-UO-Ibz" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="691" width="211" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-DG-gB3">
-                                        <rect key="frame" x="201" y="696" width="16" height="20"/>
+                                        <rect key="frame" x="277" y="697" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Tercera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xp-ZT-qmx" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="729" width="211" height="30"/>
+                                        <rect key="frame" x="8" y="729" width="290" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-2M-NiR">
-                                        <rect key="frame" x="201" y="734" width="16" height="20"/>
+                                        <rect key="frame" x="277" y="735" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Cuarta Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H15-fa-9nY" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="767" width="211" height="30"/>
+                                        <rect key="frame" x="8" y="767" width="290" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="ory-MI-iNY">
-                                        <rect key="frame" x="201" y="772" width="16" height="20"/>
+                                        <rect key="frame" x="277" y="773" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uso del Bus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWr-on-Flu">
-                                        <rect key="frame" x="446" y="624" width="261" height="21"/>
+                                        <rect key="frame" x="579" y="624" width="261" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Abandonó el Lugar?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVj-rG-T5X">
-                                        <rect key="frame" x="446" y="695" width="165" height="21"/>
+                                        <rect key="frame" x="579" y="695" width="165" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Remolcado por Daños?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNo-Gd-1gh">
-                                        <rect key="frame" x="448" y="767" width="191" height="21"/>
+                                        <rect key="frame" x="581" y="767" width="191" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-Pt-brs" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="446" y="653" width="342" height="30"/>
+                                        <rect key="frame" x="579" y="653" width="408" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-JP-84l">
-                                        <rect key="frame" x="764" y="658" width="16" height="20"/>
+                                        <rect key="frame" x="964" y="658" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3WH-Gp-p6L" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="446" y="729" width="320" height="30"/>
+                                        <rect key="frame" x="579" y="729" width="320" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Zin-5u-h1G">
-                                        <rect key="frame" x="745" y="734" width="16" height="20"/>
+                                        <rect key="frame" x="878" y="734" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-GI-a3c" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="448" y="802" width="340" height="30"/>
+                                        <rect key="frame" x="581" y="802" width="406" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -2253,23 +2235,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primer Defecto Mecánico" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-oV-dy6" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="834" width="211" height="30"/>
+                                        <rect key="frame" x="8" y="834" width="336" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-iv-7xM">
-                                        <rect key="frame" x="201" y="839" width="16" height="20"/>
+                                        <rect key="frame" x="324" y="839" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segundo Defecto Mecánico" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L35-FY-0JN" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="872" width="211" height="30"/>
+                                        <rect key="frame" x="8" y="872" width="336" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="go9-2x-2G6">
-                                        <rect key="frame" x="201" y="877" width="16" height="20"/>
+                                        <rect key="frame" x="324" y="877" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Punto Inicial de Contacto:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcp-YC-YOk">
@@ -2338,30 +2320,30 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPa-Qj-ZVV" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="1064" width="261" height="30"/>
+                                        <rect key="frame" x="8" y="1064" width="400" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-YM-Xb2">
-                                        <rect key="frame" x="246" y="1069" width="16" height="20"/>
+                                        <rect key="frame" x="388" y="1069" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Vehículo en Movimiento?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuO-gp-0Bj">
-                                        <rect key="frame" x="277" y="1035" width="202" height="21"/>
+                                        <rect key="frame" x="421" y="1035" width="202" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pj-GD-SUq" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="277" y="1064" width="261" height="30"/>
+                                        <rect key="frame" x="421" y="1064" width="312" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="F6M-Dq-WfW">
-                                        <rect key="frame" x="514" y="1069" width="16" height="20"/>
+                                        <rect key="frame" x="711" y="1069" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-g8-tfu" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
@@ -2416,17 +2398,17 @@
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kO-Wl-3cP" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="546" y="1064" width="259" height="30"/>
+                                        <rect key="frame" x="741" y="1064" width="259" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="WaL-el-0k9">
-                                        <rect key="frame" x="783" y="1069" width="16" height="20"/>
+                                        <rect key="frame" x="978" y="1069" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Conductor autorizado?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-Ts-uXR">
-                                        <rect key="frame" x="546" y="1035" width="187" height="21"/>
+                                        <rect key="frame" x="741" y="1035" width="187" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2445,34 +2427,34 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configuración del Vehículo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-lJ-spq">
-                                        <rect key="frame" x="277" y="1234" width="210" height="21"/>
+                                        <rect key="frame" x="307" y="1234" width="210" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMi-z0-fYt" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="277" y="1263" width="261" height="30"/>
+                                        <rect key="frame" x="307" y="1263" width="492" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="DSU-xC-gm4">
-                                        <rect key="frame" x="514" y="1268" width="16" height="20"/>
+                                        <rect key="frame" x="775" y="1268" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-Wv-NsN" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="546" y="1263" width="259" height="30"/>
+                                        <rect key="frame" x="307" y="1196" width="492" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="DPW-tL-OBE">
-                                        <rect key="frame" x="783" y="1268" width="16" height="20"/>
+                                        <rect key="frame" x="775" y="1201" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de Vehículo de Carga:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2v-aO-38w">
-                                        <rect key="frame" x="546" y="1234" width="207" height="21"/>
+                                        <rect key="frame" x="307" y="1167" width="207" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2552,13 +2534,13 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWa-Sj-yBC" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="468" y="189" width="258" height="30"/>
+                                        <rect key="frame" x="468" y="189" width="480" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="mvD-XS-Wlh">
-                                        <rect key="frame" x="703" y="194" width="16" height="20"/>
+                                        <rect key="frame" x="926" y="194" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="1Vr-fG-t2U">
@@ -2598,8 +2580,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Mvw-AR-PQm">
-                                        <rect key="frame" x="764" y="807" width="16" height="20"/>
+                                        <rect key="frame" x="964" y="806" width="16" height="20"/>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primera Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYM-6w-1ol" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="653" width="290" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Primer Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQc-Sr-sAM" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                        <rect key="frame" x="313" y="653" width="258" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No aplica" borderStyle="roundedRect" placeholder="Segunda Categoría de Evento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vin-UO-Ibz" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="691" width="290" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -4322,9 +4322,9 @@
         <segue reference="mHD-kJ-a0U"/>
         <segue reference="vkf-Pb-Bpn"/>
         <segue reference="jdc-3d-ca8"/>
-        <segue reference="OZL-AG-qyJ"/>
         <segue reference="a90-V3-8ey"/>
         <segue reference="qoS-x7-Qbu"/>
+        <segue reference="emB-ob-KHv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
