@@ -116,8 +116,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         let webServicesObject = WebService.init()
         webServicesObject.initiate(3)
         
-      
-
+        self.view.tintColor = UIColor.blueColor()
         
         generoField.isKeyboardHidden = true
         generoField.isDismissWhenSelected = true

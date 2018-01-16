@@ -11,7 +11,7 @@ import UIKit
 class NewDataEntryTableViewController: UITableViewController {
  
     override func viewDidLoad() {
-
+        self.view.tintColor = UIColor.blueColor()
     }
 
 }

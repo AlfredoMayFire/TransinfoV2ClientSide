@@ -35,6 +35,8 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var longitudField: UITextField!
     @IBOutlet weak var stateField: SwiftDropDownList!
     @IBOutlet weak var direccionField: UITextField!
+    @IBOutlet weak var direccionField2: UITextField!
+    @IBOutlet weak var direccionField3: UITextField!
     @IBOutlet weak var cercadeField: SwiftDropDownList!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var distanceField: UITextField!
@@ -109,6 +111,12 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0)
+//        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+//        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0)]
+
         
         let webServicesObject = WebService.init()
         webServicesObject.initiate(1)
@@ -228,7 +236,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         webServicesObjectPOST.addIData("UnitFatalaties", value: fatalitiesField.text)
         webServicesObjectPOST.addIData("Latitude", value: latitudField.text)
         webServicesObjectPOST.addIData("Longitude", value: longitudField.text)
-        webServicesObjectPOST.addIData("Address", value: direccionField.text)
+        webServicesObjectPOST.addIData("Address", value: direccionField.text! + direccionField2.text! + direccionField3.text!)
         webServicesObjectPOST.addIData("CityDescriptionES", value: stateField.text)
         webServicesObjectPOST.addIData("CountryDescriptionES", value: municipioField.text)
         webServicesObjectPOST.addIData("NearToDescriptionEs", value: cercadeField.text)
