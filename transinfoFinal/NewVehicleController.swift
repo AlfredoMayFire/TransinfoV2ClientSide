@@ -443,7 +443,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
             condition = false
             return condition
         }
-        if (VINField.text!.characters.count > 13){
+        if (VINField.text!.characters.count > 50){
             problemField = "Numero de Vin: Demasiados caracteres"
             condition = false
             return condition
