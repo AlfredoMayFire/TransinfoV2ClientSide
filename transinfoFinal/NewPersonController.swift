@@ -100,18 +100,17 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.tintColor = UIColor.blueColor()
-//        singleton.foreignKeys[0].accidentCondition = 98
-//        singleton.foreignKeys[0].crashBasicInformation = 98
-//        singleton.foreignKeys[0].newVehicle = 119
+
+        print(singleton.foreignKeys[0])
+        
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.contentSize.height = 1000
         
         //ws
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-//        let singleton = Global.sharedGlobal
+
         
-        //singleton.foreignKeys[0].crashBasicInformation = 112
         
         let webServicesObject = WebService.init()
         webServicesObject.initiate(3)
@@ -232,7 +231,6 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
                
                 singleton.foreignKeys[0].newPerson = (results!["NewPersonId"]?.integerValue)!
                 
-                //print(singleton.foreignKeys[0].newPerson)
                 values["personfk"] = singleton.foreignKeys[0].newPerson
                 values["accidentfk"] = singleton.foreignKeys[0].crashBasicInformation
                 

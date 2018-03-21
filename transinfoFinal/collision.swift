@@ -16,7 +16,18 @@ class CollisionDiagram: UIViewController {
     //random needed variables
     var angleOfRotation = 0.0
     var location = CGPoint()
-    var list = ["1","2","3","4","5","6","7","8","9","10","11","12","13"]
+    var list = ["Curva Derecha","Curva Izquierda",
+                "Intersección T Pare",
+                "Intersección T Semaforizada",
+                "Intersección X 4 Pare",
+                "Intersección X 2 Pare",
+                "Intersección X Semaforizada",
+                "Parking",
+                "Rampa de Entrada",
+                "Rampa de Salida",
+                "Rotonda",
+                "Tangente 4 Carriles Isleta",
+                "Tangente 2 Carriles"]
     var indexCounter = 0
     var carnumber = 2
     
@@ -307,15 +318,36 @@ class CollisionDiagram: UIViewController {
         }
     }
     
+    func pickerView(pickerView: UIPickerView, rowWidthForComponent component: Int) -> CGFloat {
+        return 200.0
+        
+        
+    }
     
-    
-    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        
+        var label = view as! UILabel!
+        if label == nil {
+            label = UILabel()
+        }
+        
+        let data = list[row]
+        let title = NSAttributedString(string: data, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(15.0, weight: UIFontWeightRegular)])
+        label.attributedText = title
+        label.textAlignment = .Center
+        label.font = UIFont.boldSystemFontOfSize(20)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.1
+        return label
+        
+    }
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setup()
+    
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
         //Add the recognizer to your view.
         carImage.addGestureRecognizer(tapRecognizer)
@@ -384,12 +416,13 @@ class CollisionDiagram: UIViewController {
         
         
     }
-    
-    
-    
-    
-    
-    
+    @IBAction func longPressRecognizer(recognizer: UILongPressGestureRecognizer) {
+        if let view = recognizer.view{
+            print("hey")
+            view.delete(view)
+        }
+    }
+        
     //Set in stone down below
     
     
@@ -431,7 +464,7 @@ class CollisionDiagram: UIViewController {
     func determineBackground()
     {
         switch self.textBox.text {
-        case "1"?:
+        case "This guy"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "curvaderecha.png")
@@ -440,7 +473,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "2"?:
+        case "Curva Izquierda"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "curvaizquierda.png")
@@ -449,7 +482,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "3"?:
+        case "Intersección T Pare"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "interseccionTPARE.png")
@@ -458,7 +491,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "4"?:
+        case "Intersección T Semaforizada"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "interseccionTSemaforizada.png")
@@ -467,7 +500,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "5"?:
+        case "Intersección X 4 Pare"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "interseccionXCuatroPARE.png")
@@ -476,7 +509,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "6"?:
+        case "Intersección X 2 Pare"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "interseccionXDosPARE.png")
@@ -485,7 +518,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "7"?:
+        case "Intersección X Semaforizada"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "interseccionXSemaforizada.png")
@@ -494,7 +527,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "8"?:
+        case "Parking"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "parking.png")
@@ -503,7 +536,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "9"?:
+        case "Rampa de Entrada"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "rampaDeEntrada.png")
@@ -512,7 +545,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "10"?:
+        case "Rampa de Salida"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "rampaDeSalida.png")
@@ -521,7 +554,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "11"?:
+        case "Rotonda"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "rotonda.png")
@@ -530,7 +563,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "12"?:
+        case "Tangente 4 Carriles Isleta"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "tangente4CarrilesConIsleta.png")
@@ -539,7 +572,7 @@ class CollisionDiagram: UIViewController {
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)
             indexCounter += 1
             self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
-        case "13"?:
+        case "Tangente 2 Carriles"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "/Users/user/Desktop/TransinfoV2ClientSide/CollisionDiagramAssets/tangenteDosCarriles.png")

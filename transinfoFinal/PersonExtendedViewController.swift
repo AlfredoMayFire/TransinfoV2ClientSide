@@ -127,6 +127,8 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
     //Actualizacion de webservice y diccionarios
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(singleton.foreignKeys[0])
    
         let webServicesObject1 = WebService.init()
         webServicesObject1.initiate(3)

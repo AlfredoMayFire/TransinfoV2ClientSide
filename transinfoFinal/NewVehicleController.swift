@@ -106,6 +106,8 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
  
+        print(singleton.foreignKeys[0])
+        
         self.view.tintColor = UIColor.blueColor()
         
         let webServicesObject = WebService.init()
@@ -145,8 +147,6 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func guardar(sender: AnyObject) {
-        
-        //post time
         
         print("--------------------")
         

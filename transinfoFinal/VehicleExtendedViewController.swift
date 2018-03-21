@@ -284,6 +284,9 @@ class VehicleExtendedViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(singleton.foreignKeys[0])
+        
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.contentSize.height = 2550
         //ws

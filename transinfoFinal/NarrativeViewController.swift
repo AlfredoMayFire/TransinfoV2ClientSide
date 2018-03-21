@@ -117,7 +117,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        print(singleton.foreignKeys[0])
         
         //colornavigation
         navigationController!.navigationBar.barTintColor = UIColor (red:28.0/255.0, green:69.0/255.0, blue:135.0/255.0, alpha:1.0)

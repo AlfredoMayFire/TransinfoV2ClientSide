@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -277,7 +277,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de Intersección:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzo-Uc-Bgo">
-                                        <rect key="frame" x="386" y="558" width="223" height="21"/>
+                                        <rect key="frame" x="632" y="489" width="223" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -307,82 +307,65 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9va-jk-Fkz" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="587" width="362" height="30"/>
+                                        <rect key="frame" x="632" y="518" width="362" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="vR8-Ix-KSN">
-                                        <rect key="frame" x="726" y="592" width="16" height="20"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Relacionado a Ómnibus Escolar:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EF4-y9-pt5">
-                                        <rect key="frame" x="8" y="558" width="262" height="21"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-5e-Ps4" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="587" width="351" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="N9U-J4-kxi">
-                                        <rect key="frame" x="334" y="592" width="16" height="20"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="972" y="523" width="16" height="20"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RELACIONADO A ZONA DE CONSTRUCCIÓN O MANTENIMIENTO:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86b-co-kei">
-                                        <rect key="frame" x="8" y="625" width="568" height="21"/>
+                                        <rect key="frame" x="8" y="665" width="568" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Localización del Accidente:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N3-Xz-5Lh">
-                                        <rect key="frame" x="23" y="721" width="223" height="21"/>
+                                        <rect key="frame" x="23" y="761" width="223" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trabajadores Presentes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-IB-59g">
-                                        <rect key="frame" x="476" y="788" width="223" height="21"/>
+                                        <rect key="frame" x="476" y="828" width="223" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de Zona de Trabajo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAW-ds-uKm">
-                                        <rect key="frame" x="488" y="655" width="223" height="21"/>
+                                        <rect key="frame" x="488" y="695" width="223" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pi-k1-km9" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="750" width="737" height="30"/>
+                                        <rect key="frame" x="23" y="790" width="737" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-09-b5c" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="488" y="684" width="324" height="30"/>
+                                        <rect key="frame" x="488" y="724" width="324" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1I-2w-x4B" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="476" y="817" width="278" height="30"/>
+                                        <rect key="frame" x="476" y="857" width="278" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="GAY-rn-C3u">
-                                        <rect key="frame" x="732" y="822" width="16" height="20"/>
+                                        <rect key="frame" x="732" y="862" width="16" height="20"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Relación" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hjf-FY-8h8" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="683" width="223" height="30"/>
+                                        <rect key="frame" x="23" y="723" width="223" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -391,30 +374,30 @@
                                         </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="QiK-cR-ahB">
-                                        <rect key="frame" x="225" y="688" width="16" height="20"/>
+                                        <rect key="frame" x="225" y="728" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Policia Presente en el Área:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txb-zD-5et">
-                                        <rect key="frame" x="23" y="788" width="223" height="21"/>
+                                        <rect key="frame" x="23" y="828" width="223" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmD-Ki-XEl" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="817" width="419" height="30"/>
+                                        <rect key="frame" x="23" y="857" width="419" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿En o Cerca de Area de Contruccion/Mantenimiento?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86U-CA-B7l">
-                                        <rect key="frame" x="23" y="654" width="477" height="21"/>
+                                        <rect key="frame" x="23" y="694" width="477" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DETALLES DEL ACCIDENTE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4K-pN-BT7">
-                                        <rect key="frame" x="22" y="855" width="568" height="21"/>
+                                        <rect key="frame" x="22" y="895" width="568" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -435,7 +418,7 @@
                                         <rect key="frame" x="737" y="130" width="16" height="20"/>
                                     </imageView>
                                     <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Pr-sP-ukM" userLabel="Narrative">
-                                        <rect key="frame" x="23" y="884" width="685" height="107"/>
+                                        <rect key="frame" x="23" y="924" width="685" height="107"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -462,7 +445,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="jjj-3W-r47">
-                                        <rect key="frame" x="421" y="822" width="16" height="20"/>
+                                        <rect key="frame" x="421" y="862" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-3c-AnH">
@@ -470,17 +453,34 @@
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="TUp-Ig-tBj">
-                                        <rect key="frame" x="738" y="755" width="16" height="20"/>
+                                        <rect key="frame" x="738" y="795" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="alF-HE-JsE">
-                                        <rect key="frame" x="791" y="689" width="16" height="20"/>
+                                        <rect key="frame" x="791" y="729" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-Iz-4bf">
                                         <rect key="frame" x="584" y="523" width="16" height="20"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-5e-Ps4" customClass="SwiftDropDownList" customModule="transinfoFinal" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="611" width="351" height="30"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="N9U-J4-kxi">
+                                        <rect key="frame" x="334" y="616" width="16" height="20"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RELACIONADO A ÓMNIBUS ESCOLAR:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M05-uG-9Yy">
+                                        <rect key="frame" x="8" y="582" width="568" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -533,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0A-BO-s7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-174"/>
+            <point key="canvasLocation" x="1220" y="-100"/>
         </scene>
         <!--Map Popover View Controller-->
         <scene sceneID="f2q-we-TzG">
@@ -1415,14 +1415,6 @@
                                             <action selector="searchLicence:" destination="4Dh-2u-Ip0" eventType="editingDidEnd" id="GDb-ZU-sZn"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-vn-pVy">
-                                        <rect key="frame" x="209" y="132" width="32" height="27"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button" image="LookupIcon"/>
-                                        <connections>
-                                            <action selector="searchTablilla:" destination="y6B-ak-hjx" eventType="touchUpInside" id="UFK-pI-Wa8"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Año:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7b-9K-k6Q">
                                         <rect key="frame" x="21" y="336" width="185" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1576,6 +1568,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-vn-pVy">
+                                        <rect key="frame" x="188" y="123" width="104" height="42"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="LookupIcon"/>
+                                        <connections>
+                                            <action selector="searchTablilla:" destination="y6B-ak-hjx" eventType="touchUpInside" id="UFK-pI-Wa8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1650,17 +1650,17 @@
             <objects>
                 <tableViewController id="zo3-ZY-WSM" customClass="NewDataEntryTableViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dgr-z4-NOg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1060" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="zl2-Bv-5rh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addPersonaCell" id="usQ-uq-P2L">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1060" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="usQ-uq-P2L" id="WPd-e6-HlF">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="828" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Persona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIY-fh-9RF">
@@ -1677,10 +1677,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addVehiculoCell" id="nh9-dD-ttz">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="1060" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nh9-dD-ttz" id="KEa-K4-ATC">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="828" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2. Vehículo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTz-HD-iAh">
@@ -3950,7 +3950,7 @@
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="wAj-ae-VpW">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="159" width="240" height="128"/>
@@ -3960,8 +3960,8 @@
                                     <outletCollection property="gestureRecognizers" destination="3Lb-Yj-nh3" appends="YES" id="XSH-q0-hzh"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus_0002_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-jM-jS0">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-jM-jS0">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="287" width="240" height="128"/>
@@ -3971,8 +3971,8 @@
                                     <outletCollection property="gestureRecognizers" destination="2Db-sc-qWj" appends="YES" id="cNs-Ja-rfR"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truck_0003_4.png" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-e4-D0A">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-e4-D0A">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="414" width="240" height="128"/>
@@ -3982,8 +3982,8 @@
                                     <outletCollection property="gestureRecognizers" destination="Fd0-UH-Gr5" appends="YES" id="owZ-VY-oHP"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0005_6.png" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-jt-oIB">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-jt-oIB">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="539" width="240" height="128"/>
@@ -3993,8 +3993,8 @@
                                     <outletCollection property="gestureRecognizers" destination="bEg-UD-Qdu" appends="YES" id="U98-5d-hAc"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus_0006_7.png" translatesAutoresizingMaskIntoConstraints="NO" id="m98-u0-AMG">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="m98-u0-AMG">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="664" width="240" height="128"/>
@@ -4004,8 +4004,8 @@
                                     <outletCollection property="gestureRecognizers" destination="cqj-mS-R1Y" appends="YES" id="w0h-Mt-uU1"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moto_0007_8.png" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-Q2-XBX">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-Q2-XBX">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="292" y="36" width="240" height="128"/>
@@ -4015,8 +4015,8 @@
                                     <outletCollection property="gestureRecognizers" destination="eED-uz-sna" appends="YES" id="1Dd-lb-oAz"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truck_0008_9.png" translatesAutoresizingMaskIntoConstraints="NO" id="iXg-UK-sZV">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="iXg-UK-sZV">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="292" y="159" width="240" height="128"/>
@@ -4026,8 +4026,8 @@
                                     <outletCollection property="gestureRecognizers" destination="uYF-2q-VcV" appends="YES" id="B1o-eB-iMa"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0009_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="WLu-UQ-IQl">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="WLu-UQ-IQl">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="102"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="292" y="287" width="240" height="128"/>
@@ -4037,8 +4037,8 @@
                                     <outletCollection property="gestureRecognizers" destination="VjG-bM-oVT" appends="YES" id="5R0-fm-83i"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="truck_0004_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Kh-7Q-SE2">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_0001_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Kh-7Q-SE2">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="128"/>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="292" y="414" width="240" height="128"/>
@@ -4060,7 +4060,7 @@
                                 </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-vF-BbJ">
-                                <rect key="frame" x="658" y="85" width="347" height="106"/>
+                                <rect key="frame" x="658" y="85" width="346" height="106"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="703" y="0.0" width="97" height="106"/>
                                 </variation>
@@ -4297,34 +4297,26 @@
         <image name="Sidebar 2" width="22" height="17"/>
         <image name="UPRM Seal" width="1024" height="1024"/>
         <image name="Vehicle Tab 5" width="25" height="25"/>
-        <image name="bus_0002_3.png" width="284" height="109"/>
-        <image name="bus_0006_7.png" width="284" height="109"/>
         <image name="car_0000_1.png" width="239" height="107"/>
         <image name="car_0001_2.png" width="239" height="107"/>
-        <image name="car_0005_6.png" width="239" height="107"/>
-        <image name="car_0009_10.png" width="239" height="107"/>
         <image name="carslogo" width="524" height="206"/>
         <image name="contracts" width="128" height="128"/>
         <image name="exit-to-app-button" width="128" height="128"/>
         <image name="fondof" width="1920" height="1271"/>
-        <image name="moto_0007_8.png" width="191" height="95"/>
         <image name="newspaper" width="128" height="128"/>
         <image name="policemans" width="128" height="128"/>
         <image name="road_closure-25" width="25" height="25"/>
-        <image name="truck_0003_4.png" width="281" height="117"/>
-        <image name="truck_0004_5.png" width="281" height="117"/>
-        <image name="truck_0008_9.png" width="281" height="117"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="vkf-Pb-Bpn"/>
+        <segue reference="Bpe-HZ-5vh"/>
+        <segue reference="qoS-x7-Qbu"/>
+        <segue reference="a90-V3-8ey"/>
         <segue reference="mj1-RV-aM2"/>
+        <segue reference="emB-ob-KHv"/>
         <segue reference="rRJ-lM-kEd"/>
         <segue reference="Rdt-Ca-E81"/>
-        <segue reference="mHD-kJ-a0U"/>
-        <segue reference="vkf-Pb-Bpn"/>
         <segue reference="jdc-3d-ca8"/>
-        <segue reference="a90-V3-8ey"/>
-        <segue reference="qoS-x7-Qbu"/>
-        <segue reference="emB-ob-KHv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

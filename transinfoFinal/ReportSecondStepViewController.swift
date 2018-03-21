@@ -51,9 +51,9 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         
         let singleton = Global.sharedGlobal
         
-        print(singleton.foreignKeys)
+        singleton.foreignKeys[0].accidentCondition = 121
 
-        //singleton.foreignKeys[0].crashBasicInformation = 112
+        print(singleton.foreignKeys[0],"Second Scene")
         
         let webServicesObject = WebService.init()
         
@@ -185,7 +185,6 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         }
-        print(singleton.foreignKeys)
         numCasoLabel.text = "Caso #" + singleton.foreignKeys[0].numCaso
      
         print("What's happening")
