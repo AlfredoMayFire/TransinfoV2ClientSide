@@ -60,7 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A03F59051DDEBDAB0021A5B5 /* SwiftDropDownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDropDownList.swift; sourceTree = "<group>"; };
+		A03F59051DDEBDAB0021A5B5 /* SwiftDropDownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDropDownList.swift; sourceTree = "<group>"; tabWidth = 5; };
 		A078DCAB1D48090500D40E51 /* transinfoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = transinfoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A078DCAE1D48090500D40E51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A078DCB01D48090500D40E51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };

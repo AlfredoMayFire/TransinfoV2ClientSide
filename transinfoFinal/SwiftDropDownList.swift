@@ -77,6 +77,20 @@ class SwiftDropDownList: UITextField, UITextFieldDelegate, UITableViewDataSource
         return true
     }
     
+    
+    func OutSide(gestureRecognizer: UITapGestureRecognizer) {
+        
+        if self.tblView != gestureRecognizer.view!{
+            UIView.animateWithDuration(0.5, animations: {
+                self.tblView.frame.size.height=0
+            })
+
+        }
+        
+        
+    }
+
+    
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         if self.tblView.frame.size.height > 0{
             
@@ -200,7 +214,7 @@ class SwiftDropDownList: UITextField, UITextFieldDelegate, UITableViewDataSource
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first
         //print("Didit")
-        if touch?.view?.tag != 7890707{
+        if touch?.view?.tag != self.tblView{
             //change 0
             //print("Didit")
             UIView.animateWithDuration(0.5, animations: {
