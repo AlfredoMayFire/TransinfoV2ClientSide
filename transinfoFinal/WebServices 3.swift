@@ -47,6 +47,20 @@ class WebService : NSObject{
     func letsReport(numCaso:String) -> Dictionary<String,AnyObject>{
         return WebService.get(url + Methods.ListAccidentByCaseNumber + "/" + numCaso)
     }
+    func secondTab(numIdCrashBasicInformation:String) -> Dictionary<String,AnyObject>{ return WebService.get(url + "/CrashConditionsByIdAccident/"+numIdCrashBasicInformation)
+    }
+    func personTab(numIdCrashBasicInformation:String) -> Dictionary<String,AnyObject>{ return WebService.get(url + "/NewPersonByIdAccident/"+numIdCrashBasicInformation)
+    }
+    func vehicleTab(numIdCrashBasicInformation:String) -> Dictionary<String,AnyObject>{ return WebService.get(url + "/NewVehicleByIdAccident/"+numIdCrashBasicInformation)
+    }
+    func narrativeTab(numIdCrashBasicInformation:String) -> Dictionary<String,AnyObject>{ return WebService.get(url + "/NarrativeByIdAccident/"+numIdCrashBasicInformation)
+    }
+    func vehicleExtendedTab(idVehicleFK:String) -> Dictionary<String,AnyObject>{ return WebService.get(url + "/ListVehicleExtend/"+idVehicleFK)
+    }
+    func personExtendedTab(idPersonFK:String) -> Dictionary<String,AnyObject>{ return WebService.get(url + "/ListPersonExtend/"+idPersonFK)
+    }
+
+    
     
     
     //******************************************* GETS Dictionary Functions **************************************************

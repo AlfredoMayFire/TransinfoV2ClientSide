@@ -19,6 +19,8 @@ class AccidentReportTableViewController: UITableViewController {
     var dictionary: Dictionary<String,AnyObject> = ["":""]
     var dictionary1: Dictionary<String,AnyObject> = ["":""]
     var dictionary2: Dictionary<String,AnyObject> = ["":""]
+    var converterObject: Dictionary<String,AnyObject> = ["":""]
+    var converterArray = Array<AnyObject>()
     var myArray = Array<AnyObject> ()
     
     var transition = false
@@ -177,49 +179,31 @@ class AccidentReportTableViewController: UITableViewController {
     }
     
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let indexPath = tableView.indexPathForSelectedRow // index path of selected cell
-//       
-//        print(myArray[(indexPath?.row)!])
-//        dictionary2 = (myArray[(indexPath?.row)!] as? Dictionary<String,AnyObject>)!
-//        
-//        
-//        var message = dictionary2["firstName"] as? String
-//        message?.appendContentsOf((dictionary2["lastName"] as? String)!)
-//        message?.appendContentsOf(" -> ")
-//        message?.appendContentsOf((dictionary2["crashType"] as? String)!)
-//         message?.appendContentsOf(" -> ")
-//        message?.appendContentsOf((dictionary2["crashDate"] as? String)!)
-//         message?.appendContentsOf(" -> ")
-//        message?.appendContentsOf((dictionary2["cityDescriptionES"] as? String)!)
-//         message?.appendContentsOf(" -> ")
-//        message?.appendContentsOf((dictionary2["caseNumber"] as? String)!)
-//         message?.appendContentsOf(" -> ")
-//        message?.appendContentsOf((dictionary2["address"] as? String)!)
-//        
-//        print(message)
-//        let alertController = UIAlertController(title: "Informacion Presente", message:
-//            message, preferredStyle: UIAlertControllerStyle.Alert)
-//        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-//        
-//        self.presentViewController(alertController, animated: true, completion: nil)
-//
-//
-//  
-//    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
     func letsReport(action: UIAlertAction){
         let WebServicesQuery = WebService.init()
         
-        let message = WebServicesQuery.letsReport((caseNumber["num"]as? String )!)
+        var message = WebServicesQuery.letsReport((caseNumber["num"]as? String )!)
+        print(message)
+        converterObject = (message["success"] as? Dictionary<String,AnyObject>!)!
+        converterArray = converterObject["ReportList"] as! Array<AnyObject>
+        let thisNewObject = converterArray.popLast()
+        print(thisNewObject!["address"])
+        let thisNewNewObject = thisNewObject!["idCrashBasicInformation"]
         
-//        let alertMessage = (message["success"]!["ReportList"] as? String)!
-//        print(alertMessage)
-//        alertYou(alertMessage)
         
+        
+        let message2 = WebServicesQuery.secondTab(thisNewNewObject!!.stringValue)
+        
+        let message3 = WebServicesQuery.personTab(thisNewNewObject!!.stringValue)
+        let message4 = WebServicesQuery.vehicleTab(thisNewNewObject!!.stringValue)
+        let message5 = WebServicesQuery.narrativeTab(thisNewNewObject!!.stringValue)
+        //let message6 = WebServicesQuery.personExtendedTab(<#T##idPersonFK: String##String#>)
+        print(message3,message4,message5)
+        
+        //        _ = UIAlertView(title: "AccidentCondition", message: converterObject["address"] as? String, delegate: self, cancelButtonTitle: "OK")
         
     }
     func alertYou(alertMessage: String)->Void{
