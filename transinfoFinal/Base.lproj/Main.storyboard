@@ -607,7 +607,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dRt-0g-3nz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X6O-C4-7Bk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="975"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-i2-Ep3">
@@ -3703,7 +3703,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zf8-89-rCh">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3864,6 +3864,35 @@
             </objects>
             <point key="canvasLocation" x="-2167.96875" y="1152.5390625"/>
         </scene>
+        <!--Report Controller-->
+        <scene sceneID="94m-Gu-pkP">
+            <objects>
+                <viewController id="jPN-Zz-D1b" customClass="ReportController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mjK-J1-BDq"/>
+                        <viewControllerLayoutGuide type="bottom" id="blF-US-y9G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5jL-tP-zcm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lxQ-mX-dBW">
+                                <rect key="frame" x="20" y="77" width="568" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="reportText" destination="lxQ-mX-dBW" id="P5t-RU-OrO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDC-FD-R8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3253" y="-1435"/>
+        </scene>
         <!--Accidentes Reportados-->
         <scene sceneID="Thv-Ot-Bcm">
             <objects>
@@ -3880,6 +3909,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jPN-Zz-D1b" kind="show" identifier="displayReport" id="B01-0T-X8V"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -3907,7 +3939,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T8-v4-oSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Mad-hs-zdf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3400.78125" y="-410.7421875"/>
+            <point key="canvasLocation" x="-3433" y="-447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lLh-Jg-JPh">
@@ -4308,14 +4340,14 @@
         <image name="road_closure-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vkf-Pb-Bpn"/>
-        <segue reference="Bpe-HZ-5vh"/>
         <segue reference="qoS-x7-Qbu"/>
-        <segue reference="a90-V3-8ey"/>
+        <segue reference="6AY-Xv-40A"/>
         <segue reference="mj1-RV-aM2"/>
-        <segue reference="emB-ob-KHv"/>
         <segue reference="rRJ-lM-kEd"/>
         <segue reference="Rdt-Ca-E81"/>
+        <segue reference="emB-ob-KHv"/>
+        <segue reference="Bpe-HZ-5vh"/>
+        <segue reference="vkf-Pb-Bpn"/>
         <segue reference="jdc-3d-ca8"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -40,6 +40,7 @@ class AccidentReportTableViewController: UITableViewController {
         WebServiceQuery.initiate(1)
 
         print(singleton.foreignKeys[0].officerPlate)
+       // singleton.foreignKeys[0].accidentCondition =
         
         dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
@@ -186,6 +187,7 @@ class AccidentReportTableViewController: UITableViewController {
         let WebServicesQuery = WebService.init()
         
         var message = WebServicesQuery.letsReport((caseNumber["num"]as? String )!)
+        
         print(message)
         converterObject = (message["success"] as? Dictionary<String,AnyObject>!)!
         converterArray = converterObject["ReportList"] as! Array<AnyObject>
@@ -193,6 +195,9 @@ class AccidentReportTableViewController: UITableViewController {
         print(thisNewObject!["address"])
         let thisNewNewObject = thisNewObject!["idCrashBasicInformation"]
         
+        
+        singleton.foreignKeys[0].accidentCondition = thisNewNewObject!!.integerValue
+        singleton.foreignKeys[0].crashBasicInformation = (caseNumber["num"]?.integerValue)!
         
         
         let message2 = WebServicesQuery.secondTab(thisNewNewObject!!.stringValue)
@@ -202,10 +207,15 @@ class AccidentReportTableViewController: UITableViewController {
         let message5 = WebServicesQuery.narrativeTab(thisNewNewObject!!.stringValue)
         //let message6 = WebServicesQuery.personExtendedTab(<#T##idPersonFK: String##String#>)
         print(message3,message4,message5)
-        
+        segueBack()
         //        _ = UIAlertView(title: "AccidentCondition", message: converterObject["address"] as? String, delegate: self, cancelButtonTitle: "OK")
         
     }
+    func segueBack(){
+        performSegueWithIdentifier("displayReport", sender: self)
+    }
+
+    
     func alertYou(alertMessage: String)->Void{
         let alertController = UIAlertController(title: "Informacion Presente", message:
             alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
