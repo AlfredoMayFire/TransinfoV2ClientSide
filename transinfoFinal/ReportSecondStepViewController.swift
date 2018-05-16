@@ -44,6 +44,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
     "AccidenteFK":"",
     "CrashConditionFK":"",
     ]
+    var dictionaryBro: [String:String] = ["":""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +52,41 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         
         let singleton = Global.sharedGlobal
         
-        singleton.foreignKeys[0].accidentCondition = 121
+//        singleton.foreignKeys[0].accidentCondition = 121
 
-        print(singleton.foreignKeys[0],"Second Scene")
+//        print(singleton.foreignKeys[0],"Second Scene")
+        
+        if singleton.firstTabInfo[0].sawReport {
+            dictionaryBro = singleton.firstTabInfo[0].secondTab
+            print(dictionaryBro)
+            
+            typeColisionField.text = dictionaryBro["collisionTypeDescriptionES"]
+            condition1Field.text = dictionaryBro["weatherConditionUno"]
+            condition2Field.text = dictionaryBro["weatherConditionDos"]
+            eventField.text = dictionaryBro["eventDescriptionES"]
+            eventLocationField.text = dictionaryBro["eventLocationDescriptionES"]
+            mannerColisionField.text = dictionaryBro["mannerofColisionDescriptionES"]
+            visibilidadConditionField.text = dictionaryBro["visibilityCondition"]
+            pavimentCondition.text = dictionaryBro["pavementCondition"]
+            circunstanciaAmbientalField.text = dictionaryBro["environmental"]
+            circunstanciaCarreteraField.text = dictionaryBro["roadDescription"]
+            interseccionDesnivelField.text = dictionaryBro["withinInterchange"]
+            lugarEspecificoField.text = dictionaryBro["specifLocation"]
+            tipoIntersecciónField.text = dictionaryBro["inserctionType"]
+            RelacionadoOmnibusField.text = dictionaryBro["schoolBusRelated"]
+            relacionField.text = dictionaryBro["nearConstruction"]
+            localizacionAccidenteField.text = dictionaryBro["crashLocation"]
+            typezonaField.text = dictionaryBro["workerZoneType"]
+            trabajadoresPresentesField.text = dictionaryBro["workerPresent"]
+            policiaPresenteField.text = dictionaryBro["policePresent"]
+    
+        }
+
+        
+        
+        
+        
+        
         
         let webServicesObject = WebService.init()
         

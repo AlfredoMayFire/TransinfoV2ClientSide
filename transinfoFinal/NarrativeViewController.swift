@@ -41,6 +41,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         "accidentfk":"",
         "narrfk":""
     ]
+    var dictionaryBro: Dictionary<String,String> = ["":""]
     
     
     
@@ -118,6 +119,17 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         super.viewDidLoad()
         
         print(singleton.foreignKeys[0])
+        if singleton.firstTabInfo[0].sawReport {
+            dictionaryBro = singleton.firstTabInfo[0].thirdTab
+            print(dictionaryBro)
+            notifiedTimePoliceField.text = dictionaryBro["notifiedTimePolice"]
+            notifiedTimeEmergenceField.text = dictionaryBro["notifiedTimeEmergencie"]
+            timeArrivalPoliceField.text = dictionaryBro["timeOfArrivalPolice"]
+            timeArrivalEmergenceField.text = dictionaryBro["timeOfArrivalEmergencie"]
+            detailField.text = dictionaryBro["details"]
+      
+        }
+
         
         //colornavigation
         navigationController!.navigationBar.barTintColor = UIColor (red:28.0/255.0, green:69.0/255.0, blue:135.0/255.0, alpha:1.0)

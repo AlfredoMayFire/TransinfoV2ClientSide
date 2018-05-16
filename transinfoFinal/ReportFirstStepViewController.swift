@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-import CoreData
+
 
 class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITextFieldDelegate, UIPickerViewDelegate {
 //UIPickerViewDataSource
@@ -22,6 +22,8 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     var failSubmit = false
     var condition = false
     var problemField = ""
+    var dictionaryBro: Dictionary<String,String> = ["":""]
+    var stringy: String?
     
     @IBOutlet weak var typeAccident: SwiftDropDownList!
     @IBOutlet weak var numberCaseField: UITextField!
@@ -106,7 +108,36 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         super.viewDidLoad()
 
         //singleton.foreignKeys[0].crashBasicInformation = 167
-        //singleton.foreignKeys[0].
+        
+        if singleton.firstTabInfo[0].sawReport {
+            dictionaryBro = singleton.firstTabInfo[0].firstTab
+            print(dictionaryBro)
+            
+            typeAccident.text = (dictionaryBro["crashType"])
+            numberCaseField.text = dictionaryBro["caseNumber"]
+            stateField.text = dictionaryBro["cityDescriptionES"]
+            municipioField.text = dictionaryBro["countryDescriptionES"]
+            dateTextField.text = dictionaryBro["crashDate"]
+            direccionField.text = dictionaryBro["address"]
+            puntoCardinalField.text = dictionaryBro["directionDescriptionES"]
+            distanceField.text = dictionaryBro["distance"]
+            hourField.text = dictionaryBro["hour"]
+            latitudField.text = dictionaryBro["latitude"]
+            longitudField.text = dictionaryBro["longitude"]
+            locationField.text = dictionaryBro["locationDescriptionES"]
+            medidaField.text = dictionaryBro["measurementDescriptionES"]
+            nameField.text = dictionaryBro["name"]
+            cercadeField.text = dictionaryBro["nearToDescriptionEs"]
+            propertyField.text = dictionaryBro["propertyDescriptionES"]
+            automovilistasField.text = dictionaryBro["unitAutomovilistas"]
+            fatalitiesField.text = dictionaryBro["unitFatalaties"]
+            heridosField.text = dictionaryBro["unitInjured"]
+            UnitPedestrians.text = dictionaryBro["unitPedestrians"]
+            numberVehiclesFIeld.text = dictionaryBro["unitVehiculos"]
+            typeZonaField.text = dictionaryBro["zoneTypeDescriptionES"]
+            
+            
+        }
         
         print(singleton.foreignKeys[0])
         //Direccion

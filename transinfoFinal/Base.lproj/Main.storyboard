@@ -1759,7 +1759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSb-bC-mwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2099.21875" y="-207.421875"/>
+            <point key="canvasLocation" x="-2680" y="20"/>
         </scene>
         <!--Vehículos-->
         <scene sceneID="yfA-QB-CTH">
@@ -3885,6 +3885,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="reportText" destination="lxQ-mX-dBW" id="P5t-RU-OrO"/>
                     </connections>
@@ -3934,6 +3936,7 @@
                         <outlet property="Reportes" destination="hd9-X9-Wmc" id="8gw-bA-fKo"/>
                         <outlet property="menuButton" destination="YOp-mX-2uS" id="cXy-zx-8AY"/>
                         <segue destination="KfN-BF-Lgo" kind="show" identifier="firstStep" id="6AY-Xv-40A"/>
+                        <segue destination="Mvc-ah-LMH" kind="show" identifier="firstPage" id="WlE-RK-2pl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T8-v4-oSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4340,15 +4343,15 @@
         <image name="road_closure-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qoS-x7-Qbu"/>
         <segue reference="6AY-Xv-40A"/>
-        <segue reference="mj1-RV-aM2"/>
+        <segue reference="WlE-RK-2pl"/>
+        <segue reference="qoS-x7-Qbu"/>
+        <segue reference="Bpe-HZ-5vh"/>
+        <segue reference="jdc-3d-ca8"/>
+        <segue reference="vkf-Pb-Bpn"/>
+        <segue reference="emB-ob-KHv"/>
         <segue reference="rRJ-lM-kEd"/>
         <segue reference="Rdt-Ca-E81"/>
-        <segue reference="emB-ob-KHv"/>
-        <segue reference="Bpe-HZ-5vh"/>
-        <segue reference="vkf-Pb-Bpn"/>
-        <segue reference="jdc-3d-ca8"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -58,6 +58,21 @@ struct Vehicle {
     }
 }
 
+struct Report {
+    var firstTab = ["address":"","caseNumber":"","cityDescriptionES":"","countryDescriptionES":"","crashDate":"","crashType":"","directionDescriptionES":"","distance":"","hour":"","latitude":"","locationDescriptionES":"","longitude":"","measurementDescriptionES":"","name":"","nearToDescriptionEs":"","propertyDescriptionES":"","status":"","unitAutomovilistas":"","unitFatalaties":"","unitInjured":"","unitVehiculos":"","unitPedestrians":"","zoneTypeDescriptionES":""]
+       var secondTab = ["":""]
+    var thirdTab = ["":""]
+    var sawReport = false
+    
+    init(firstTab: Dictionary<String,String>,secondTab: Dictionary<String,String>,thirdTab: Dictionary<String,String>, sawReport: Bool){
+    self.firstTab=firstTab
+    self.secondTab=secondTab
+    self.thirdTab=thirdTab
+    self.sawReport=false
+    }
+ 
+}
+
 class Global {
     
     // Now Global.sharedGlobal is your singleton, no need to use nested or other classes
@@ -74,6 +89,8 @@ class Global {
     var listPeople:[People] = []
     
     var foreignKeys:[Info] = []
+    
+    var firstTabInfo:[Report] = []
     
     
 }

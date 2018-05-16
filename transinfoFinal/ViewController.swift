@@ -75,6 +75,9 @@ class ViewController: UIViewController {
             let listPeopleInit = People(person: ["":""])
             singleton.listPeople.append(listPeopleInit)
             
+            let listReportInit = Report(firstTab: ["":""],secondTab:["":""],thirdTab:["":""],sawReport: false)
+            singleton.firstTabInfo.append(listReportInit)
+            
             print(singleton.foreignKeys)
             print(singleton.listPeople)
             
