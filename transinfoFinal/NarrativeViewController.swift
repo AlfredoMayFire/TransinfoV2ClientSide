@@ -52,7 +52,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         
         timePicker.datePickerMode = UIDatePickerMode.Time
         sender.inputView = timePicker
-        timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraNotificadaPolice(_:)),forControlEvents: UIControlEvents.ValueChanged)
+        //timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraNotificadaPolice(_:)),forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func timePickerValueChangedhoraNotificadaPolice(sender:UIDatePicker) {
@@ -60,7 +60,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         let dateformatter = NSDateFormatter()
         dateformatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateformatter.dateFormat = "hh:mm a"
-        notifiedTimePoliceField.text = dateformatter.stringFromDate(sender.date)
+       // notifiedTimePoliceField.text = dateformatter.stringFromDate(sender.date)
 
     }
     
@@ -78,7 +78,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         let timePicker:UIDatePicker = UIDatePicker()
         timePicker.datePickerMode = UIDatePickerMode.Time
         sender.inputView = timePicker
-        timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraLLegadaPolice(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        //timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraLLegadaPolice(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func timePickerValueChangedhoraNotificaEmergencia(sender:UIDatePicker) {
@@ -95,7 +95,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         let timePicker:UIDatePicker = UIDatePicker()
         timePicker.datePickerMode = UIDatePickerMode.Time
         sender.inputView = timePicker
-        timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraNotificaEmergencia(_:)), forControlEvents: UIControlEvents.ValueChanged)
+       // timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraNotificaEmergencia(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func timePickerValueChangedhoraLLegadaEmergencia(sender:UIDatePicker) {
@@ -110,7 +110,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         let timePicker:UIDatePicker = UIDatePicker()
         timePicker.datePickerMode = UIDatePickerMode.Time
         sender.inputView = timePicker
-        timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraLLegadaEmergencia(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        //timePicker.addTarget(self, action: #selector(NarrativeViewController.timePickerValueChangedhoraLLegadaEmergencia(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
 
 
@@ -118,7 +118,8 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(singleton.foreignKeys[0])
+        print(singleton.firstTabInfo[0].sawReport)
+       
         if singleton.firstTabInfo[0].sawReport {
             dictionaryBro = singleton.firstTabInfo[0].thirdTab
             print(dictionaryBro)
@@ -139,11 +140,11 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
        
         
         //cargar hora automaticamente
-        notifiedTimePoliceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
-        timeArrivalPoliceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
-        timeArrivalEmergenceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
-        notifiedTimeEmergenceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
-        
+//        notifiedTimePoliceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+//        timeArrivalPoliceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+//        timeArrivalEmergenceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+//        notifiedTimeEmergenceField.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.NoStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+//        
         // Do any additional setup after loading the view, typically from a nib.
          scrollView.contentSize.height = 1200
        
@@ -170,7 +171,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         webServicesObject.addIData("TimeOfArrivalPolice", value: timeArrivalPoliceField.text)
         webServicesObject.addIData("NotifiedTimeEmergencie", value: notifiedTimeEmergenceField.text)
         webServicesObject.addIData("TimeOfArrivalEmergencie", value: timeArrivalEmergenceField.text)
-        webServicesObject.addIData("Details", value: "TempValue0")
+        webServicesObject.addIData("Details", value: detailField.text)
         
         
         crashID = webServicesObject.sendPOSTs(13)

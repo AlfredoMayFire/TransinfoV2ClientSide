@@ -23,8 +23,9 @@ class AccidentReportTableViewController: UITableViewController {
     var converterArray = Array<AnyObject>()
     var converterObject1: Dictionary<String,AnyObject> = ["":""]
     var converterArray1 = Array<AnyObject>()
-
+    var listRemoveIndex: Array<Int> = Array()
     var myArray = Array<AnyObject> ()
+    var myArrayTemp = Array<AnyObject> ()
     
     var transition = false
     
@@ -47,14 +48,63 @@ class AccidentReportTableViewController: UITableViewController {
         let WebServiceQuery = WebService.init()
         WebServiceQuery.initiate(1)
 
-        print(singleton.foreignKeys[0].officerPlate)
+//        print(singleton.foreignKeys[0].officerPlate)
        // singleton.foreignKeys[0].accidentCondition =
         
         dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
         myArray = (dictionary1["ReportList"] as? Array<AnyObject>)!
         
+        print(myArray.count)
+        var indices = 0
         transition = true
+        myArrayTemp = myArray
+        for i in myArray.startIndex..<myArray.endIndex {
+            for j in i..<myArray.endIndex {
+                if (myArray[i]["CaseNumber"] as? String) == (myArray[j]["CaseNumber"] as? String){
+                   print(i,j)
+                    listRemoveIndex.insert(j, atIndex: indices)
+                    //listRemoveIndex[indices] = i
+                    indices += 1
+                    //myArrayTemp.removeAtIndex(i)
+                }
+            }
+            
+        }
+        myArrayTemp.removeAll()
+        myArrayTemp.insert(myArray[0], atIndex: 0)
+        indices = 1
+        for i in myArray.startIndex..<myArray.endIndex {
+            print(myArrayTemp[indices-1]["CaseNumber"],myArray[i]["CaseNumber"])
+            if ((myArrayTemp[indices-1]["CaseNumber"] as? String) != (myArray[i]["CaseNumber"] as? String)){
+                myArrayTemp.insert(myArray[i], atIndex: indices)
+                indices += 1
+            }
+          
+        }
+//        print(listRemoveIndex)
+////        indices = 0
+////        for var i in listRemoveIndex.startIndex..<listRemoveIndex.endIndex {
+////            for j in i.advancedBy(1)..<listRemoveIndex.endIndex {
+////                if listRemoveIndex[i] == listRemoveIndex[j] {
+////                    print("indices",indices)
+////                    print("i",i)
+////                    print("j",j)
+////                    print("subtraction",i-indices)
+////                    //print(myArray)
+////                    myArray.removeAtIndex(listRemoveIndex[i-indices])
+////                    indices += 1
+////                    break
+////                }
+////                
+////                
+////            }
+////            
+////        }
+        
+        self.tableView.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
+        Reportes.reloadData()
+        self.tableView.reloadData()
         
         tableView.reloadData()
         //print(WebServiceQuery.getListOfReports("Apr 1, 2017"))
@@ -113,7 +163,7 @@ class AccidentReportTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rows: Int
         if transition {
-            rows = myArray.count
+            rows = myArrayTemp.count
         }else{
             rows = 0
         }
@@ -123,10 +173,21 @@ class AccidentReportTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         var cellName: String
-        dictionary = (myArray[indexPath.row] as? Dictionary<String,AnyObject>)!
+        dictionary = (myArrayTemp[indexPath.row] as? Dictionary<String,AnyObject>)!
+//        for i in dictionary {
+//            if dictionary[i]
+//        }
         if transition {
-            cellName = "Plate Number: "
-            cellName += (dictionary["plateNumber"] as? String)!
+            cellName = "Numero de Caso: "
+            cellName += (dictionary["CaseNumber"] as? String)!
+            cellName += " / "
+            cellName += "Fecha: "
+            cellName += (dictionary["crashDate"] as? String)!
+            cellName += " / "
+            cellName += "Tipo de Accidente: "
+            cellName += (dictionary["crashType"] as? String)!
+
+
             
             cell.textLabel?.text = cellName
             
@@ -166,11 +227,14 @@ class AccidentReportTableViewController: UITableViewController {
             self.thereIsCellTapped = false
             self.selectedRowIndex = -1
         }
+//        print(dictionary)
+//        print(myArray[(indexPath.row)])
+                dictionary2 = (myArrayTemp[(indexPath.row)] as? Dictionary<String,AnyObject>)!
         
-        print(myArray[(indexPath.row)])
-                dictionary2 = (myArray[(indexPath.row)] as? Dictionary<String,AnyObject>)!
         
+
         
+            print("this is myarray",myArray)
                 var message = dictionary2["firstName"] as? String
                 message?.appendContentsOf((dictionary2["lastName"] as? String)!)
                 message?.appendContentsOf(" -> ")
@@ -181,15 +245,15 @@ class AccidentReportTableViewController: UITableViewController {
                 message?.appendContentsOf((dictionary2["countryDescriptionES"] as? String)!)
                  message?.appendContentsOf(" -> ")
                 message?.appendContentsOf((dictionary2["address"] as? String)!)
-                caseNumber["num"] = (dictionary2["CaseNumber"] )
+                caseNumber["num"] = (dictionary2["CaseNumber"] as? String )
         
         
         
                 let alertController = UIAlertController(title: "Informacion Presente", message:
-                    message, preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss.", style: UIAlertActionStyle.Default,handler: nil))
+                    nil, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Ver reporte completo.", style: UIAlertActionStyle.Default,handler: letsReport))
-                
+                alertController.addAction(UIAlertAction(title: "Dismiss.", style: UIAlertActionStyle.Default,handler: nil))
+        
                 self.presentViewController(alertController, animated: true, completion: nil)
 
         self.tableView.beginUpdates()
@@ -202,8 +266,12 @@ class AccidentReportTableViewController: UITableViewController {
     
     func letsReport(action: UIAlertAction){
         let WebServicesQuery = WebService.init()
+        let stringed = caseNumber["num"] as? String
+        let stringeded = stringed
+        print(stringeded)
+        var message = WebServicesQuery.letsReport(stringeded!)
         
-        var message = WebServicesQuery.letsReport((caseNumber["num"]as? String )!)
+        
         
         print(message)
         converterObject1 = (message["success"] as? Dictionary<String,AnyObject>!)!
@@ -212,21 +280,11 @@ class AccidentReportTableViewController: UITableViewController {
         print(thisNewObject!["address"])
         let thisNewNewObject = thisNewObject!["idCrashBasicInformation"]
         
-        
+        print("were over here",caseNumber["num"]?.integerValue)
         singleton.foreignKeys[0].accidentCondition = thisNewNewObject!!.integerValue
         singleton.foreignKeys[0].crashBasicInformation = (caseNumber["num"]?.integerValue)!
         
-        
-        let message2 = WebServicesQuery.secondTab(thisNewNewObject!!.stringValue)
-        
-        let message3 = WebServicesQuery.personTab(thisNewNewObject!!.stringValue)
-        let message4 = WebServicesQuery.vehicleTab(thisNewNewObject!!.stringValue)
-        let message5 = WebServicesQuery.narrativeTab(thisNewNewObject!!.stringValue)
-        //let message6 = WebServicesQuery.personExtendedTab(<#T##idPersonFK: String##String#>)
-        print(message3,message4,message5)
-        //segueBack()
-        //        _ = UIAlertView(title: "AccidentCondition", message: converterObject["address"] as? String, delegate: self, cancelButtonTitle: "OK")
-        getTouchedTable()
+        getTouchedTable(stringeded!)
         
     }
     func segueBack(){
@@ -243,24 +301,25 @@ class AccidentReportTableViewController: UITableViewController {
 
     
     
-    func getTouchedTable(){
+    func getTouchedTable(caseNumberString: String){
         let WebServicesQuery = WebService.init()
-        let caseNumber = singleton.foreignKeys[0].crashBasicInformation
+        //let caseNumber = singleton.foreignKeys[0].crashBasicInformation
         let accidentFK = singleton.foreignKeys[0].accidentCondition
         singleton.foreignKeys[0].crashBasicInformation = 0
         singleton.foreignKeys[0].accidentCondition = 0
+        print(singleton.foreignKeys[0].crashBasicInformation)
         
-        let firstTab = WebServicesQuery.letsReport(String(caseNumber))
+        let firstTab = WebServicesQuery.letsReport(caseNumberString)
         let secondTab = WebServicesQuery.secondTab(String(accidentFK))
         let newPerson = WebServicesQuery.personTab(String(accidentFK))
         let newVehicle = WebServicesQuery.vehicleTab(String(accidentFK))
         let narrative = WebServicesQuery.narrativeTab(String(accidentFK))
         
-        print(firstTab)
-        print(secondTab)
-        print(newPerson)
-        print(newVehicle)
-        print(narrative)
+        print("Here we are!",firstTab)
+//        print(secondTab)
+//        print(newPerson)
+//        print(newVehicle)
+//        print(narrative)
         
         converterObject = (firstTab["success"] as? Dictionary<String,AnyObject>)!
         converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
@@ -279,7 +338,8 @@ class AccidentReportTableViewController: UITableViewController {
         
         converterObject = (newPerson["success"] as? Dictionary<String,AnyObject>)!
         converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
-        //print(converterArray)
+        print(converterArray)
+        //personTabFormat(String(converterArray))
         
 //        reportText.insertText(String(converterArray))
         
@@ -291,19 +351,12 @@ class AccidentReportTableViewController: UITableViewController {
         
         converterObject = (narrative["success"] as? Dictionary<String,AnyObject>)!
         converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
-        print(converterArray)
-        
+        //print(converterArray)
+        thirdTabFormat(String(converterArray))
 //        reportText.insertText(String(converterArray))
         
         singleton.firstTabInfo[0].sawReport = true
         
-        //let json = try? NSJSONSerialization.JSONObjectWithData(firstTab, options: [])
-        
-        //        reportText.insertText(String(firstTab.first))
-        //        reportText.insertText(String(secondTab.first))
-        //        reportText.insertText(String(newPerson.first))
-        //        reportText.insertText(String(newVehicle.first))
-        //        reportText.insertText(String(narrative.first))
         segueBack()
     }
     
@@ -314,7 +367,7 @@ class AccidentReportTableViewController: UITableViewController {
         var value = ""
         var first = false
         
-        print("aiiiiooo",firstTab.rangeOfString("address")!)
+        print(firstTab)
         
         for i in firstTab.startIndex..<firstTab.endIndex {
             if firstTab.startIndex.distanceTo(i) == 17 {
@@ -335,7 +388,7 @@ class AccidentReportTableViewController: UITableViewController {
             var j = i
             //j = j.advancedBy(12, limit: firstTab.endIndex)
             
-            if i == firstTab.rangeOfString("caseNumber")!.endIndex {
+            if i == firstTab.rangeOfString("caseNumber")!.endIndex.advancedBy(3) {
                 j = i;
                 while firstTab[j] != ";" {
                     value.append(firstTab[j])
@@ -899,10 +952,10 @@ class AccidentReportTableViewController: UITableViewController {
             
             
         }
-        print(value)
-        
-        print(singleton.firstTabInfo[0].firstTab,"thisinfor",singleton.firstTabInfo[0].secondTab)
-        
+//        print(value)
+//        
+//        print(singleton.firstTabInfo[0].firstTab,"thisinfor",singleton.firstTabInfo[0].secondTab)
+//        
         
         
     }
@@ -976,10 +1029,10 @@ class AccidentReportTableViewController: UITableViewController {
             }
             
             
-            
-            print(value)
-            
-            print(singleton.firstTabInfo[0].firstTab,"thisinfor")
+//            
+//            print(value)
+//            
+//            print(singleton.firstTabInfo[0].firstTab,"thisinfor")
             
             
             
@@ -989,4 +1042,91 @@ class AccidentReportTableViewController: UITableViewController {
 
     
     }
+    
+//    func personTabFormat(firstTab: String){
+//        var value = ""
+//        var first = false
+//        
+//        for i in firstTab.rangeOfString("details")!.startIndex ..< firstTab.endIndex {
+//            var j = i
+//            //j = j.advancedBy(12, limit: firstTab.endIndex)
+//            
+//            if i == firstTab.rangeOfString("details")!.endIndex.advancedBy(3) {
+//                j = i;
+//                while firstTab[j] != ";" {
+//                    value.append(firstTab[j])
+//                    j = j.advancedBy(1)
+//                    //                    print(value)
+//                }
+//                singleton.firstTabInfo[0].thirdTab["details"] = value
+//                value = ""
+//            }
+//            if i == firstTab.rangeOfString("notifiedTimeEmergencie")!.endIndex {
+//                j=i;
+//                j = j.advancedBy(3)
+//                while firstTab[j] != ";" {
+//                    value.append(firstTab[j])
+//                    j = j.advancedBy(1)
+//                    //                    print(value)
+//                }
+//                singleton.firstTabInfo[0].thirdTab["notifiedTimeEmergencie"] = value
+//                value = ""
+//                
+//            }
+//            if i == firstTab.rangeOfString("notifiedTimePolice")!.endIndex {
+//                j=i;
+//                j = j.advancedBy(3)
+//                while firstTab[j] != ";" {
+//                    value.append(firstTab[j])
+//                    j = j.advancedBy(1)
+//                    //                    print(value)
+//                }
+//                singleton.firstTabInfo[0].thirdTab["notifiedTimePolice"] = value
+//                value = ""
+//                
+//            }
+//            if i == firstTab.rangeOfString("timeOfArrivalEmergencie")!.endIndex {
+//                j=i;
+//                j = j.advancedBy(3)
+//                while firstTab[j] != ";" {
+//                    value.append(firstTab[j])
+//                    j = j.advancedBy(1)
+//                    //                    print(value)
+//                }
+//                singleton.firstTabInfo[0].thirdTab["timeOfArrivalEmergencie"] = value
+//                value = ""
+//                
+//            }
+//            
+//            if i == firstTab.rangeOfString("timeOfArrivalPolice")!.endIndex {
+//                j=i;
+//                j = j.advancedBy(3)
+//                while firstTab[j] != ";" {
+//                    value.append(firstTab[j])
+//                    j = j.advancedBy(1)
+//                    //                    print(value)
+//                }
+//                singleton.firstTabInfo[0].thirdTab["timeOfArrivalPolice"] = value
+//                value = ""
+//                
+//            }
+//            
+//            
+//            
+//            print(value)
+//            
+//            print(singleton.firstTabInfo[0].firstTab,"thisinfor")
+//            
+//            
+//            
+//            
+//        }
+//        
+//        
+//        
+//    }
+
+    
+    
+    
 }

@@ -113,6 +113,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             dictionaryBro = singleton.firstTabInfo[0].firstTab
             print(dictionaryBro)
             
+            typeAccident.userInteractionEnabled = false
             typeAccident.text = (dictionaryBro["crashType"])
             numberCaseField.text = dictionaryBro["caseNumber"]
             stateField.text = dictionaryBro["cityDescriptionES"]
@@ -270,7 +271,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         webServicesObjectPOST.addIData("UnitFatalaties", value: fatalitiesField.text)
         webServicesObjectPOST.addIData("Latitude", value: latitudField.text)
         webServicesObjectPOST.addIData("Longitude", value: longitudField.text)
-        webServicesObjectPOST.addIData("Address", value: direccionField.text! + direccionField2.text! + direccionField3.text!)
+        webServicesObjectPOST.addIData("Address", value: direccionField.text)
         webServicesObjectPOST.addIData("CityDescriptionES", value: stateField.text)
         webServicesObjectPOST.addIData("CountryDescriptionES", value: municipioField.text)
         webServicesObjectPOST.addIData("NearToDescriptionEs", value: cercadeField.text)

@@ -19,9 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="760"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondof" translatesAutoresizingMaskIntoConstraints="NO" id="g7d-xm-JkA">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carslogo" translatesAutoresizingMaskIntoConstraints="NO" id="pF1-T2-rTj">
                                 <rect key="frame" x="297" y="36" width="431" height="197"/>
                             </imageView>
@@ -70,7 +67,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -891,18 +888,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6G9-CX-R4l">
-                                        <rect key="frame" x="17" y="381" width="254" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsH-a3-FGt">
-                                        <rect key="frame" x="17" y="424" width="254" height="30"/>
-                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="Wtq-1e-8co">
                                         <rect key="frame" x="532" y="630" width="16" height="20"/>
                                     </imageView>
@@ -952,8 +937,6 @@
                         <outlet property="cercadeField" destination="UDr-hW-jbD" id="uQC-mZ-C1I"/>
                         <outlet property="dateTextField" destination="Wvx-lN-MkP" id="l7H-s9-JKv"/>
                         <outlet property="direccionField" destination="1g0-1o-EJe" id="0hm-Wy-71c"/>
-                        <outlet property="direccionField2" destination="6G9-CX-R4l" id="bLe-3G-1zl"/>
-                        <outlet property="direccionField3" destination="vsH-a3-FGt" id="bMW-QR-feB"/>
                         <outlet property="distanceField" destination="8oC-Nw-z1f" id="g9b-l9-nAi"/>
                         <outlet property="fatalitiesField" destination="jJs-DD-nva" id="imc-jN-tCo"/>
                         <outlet property="heridosField" destination="9uk-Zl-Ham" id="vKa-uw-pOA"/>
@@ -4337,7 +4320,6 @@
         <image name="carslogo" width="524" height="206"/>
         <image name="contracts" width="128" height="128"/>
         <image name="exit-to-app-button" width="128" height="128"/>
-        <image name="fondof" width="1920" height="1271"/>
         <image name="newspaper" width="128" height="128"/>
         <image name="policemans" width="128" height="128"/>
         <image name="road_closure-25" width="25" height="25"/>
