@@ -3907,9 +3907,11 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Laq-et-kum" userLabel="pruebAAAA"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Accidentes Reportados" id="B82-Wf-jbn">
-                        <barButtonItem key="leftBarButtonItem" image="Sidebar 2" id="YOp-mX-2uS"/>
+                        <barButtonItem key="leftBarButtonItem" image="Sidebar 2" id="YOp-mX-2uS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="gSQ-hE-kr7">
-                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="Mad-hs-zdf" kind="unwind" unwindAction="unwindToFirstStep:" id="fJc-ax-vCJ"/>
                             </connections>
@@ -4325,14 +4327,14 @@
         <image name="road_closure-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6AY-Xv-40A"/>
         <segue reference="WlE-RK-2pl"/>
+        <segue reference="6AY-Xv-40A"/>
         <segue reference="qoS-x7-Qbu"/>
         <segue reference="Bpe-HZ-5vh"/>
-        <segue reference="jdc-3d-ca8"/>
-        <segue reference="vkf-Pb-Bpn"/>
-        <segue reference="emB-ob-KHv"/>
+        <segue reference="9nv-1L-DMD"/>
         <segue reference="rRJ-lM-kEd"/>
+        <segue reference="OSB-m3-WC8"/>
+        <segue reference="cIx-FK-bHu"/>
         <segue reference="Rdt-Ca-E81"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

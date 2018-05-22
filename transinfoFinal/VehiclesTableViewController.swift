@@ -62,7 +62,7 @@ class VehiclesTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
       
-        cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["numTablilla"]
+        cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]
         
         return cell!
 

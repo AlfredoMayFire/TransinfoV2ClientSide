@@ -17,32 +17,18 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
     
     let singleton = Global.sharedGlobal
 
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var saveSubmit: UIBarButtonItem!
-    
     @IBOutlet weak var driverLicence: SwiftDropDownList!
     @IBOutlet weak var generoField: SwiftDropDownList!
-
     @IBOutlet weak var organDonor: SwiftDropDownList!
-    
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var state: UITextField!
-    
     @IBOutlet weak var numLicenciaSearch: UITextField!
-    
-    
     @IBOutlet weak var urbanizacionBarrio: UITextField!
-    
     @IBOutlet weak var calle: UITextField!
     @IBOutlet weak var zipCode: UITextField!
-    
     @IBOutlet weak var PhoneNumber: UITextField!
-    
-    
-    
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fechaExpiracionField: UITextField!
     @IBOutlet weak var numLicenciaField:UITextField!

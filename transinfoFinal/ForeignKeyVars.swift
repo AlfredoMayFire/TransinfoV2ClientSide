@@ -62,12 +62,20 @@ struct Report {
     var firstTab = ["address":"","caseNumber":"","cityDescriptionES":"","countryDescriptionES":"","crashDate":"","crashType":"","directionDescriptionES":"","distance":"","hour":"","latitude":"","locationDescriptionES":"","longitude":"","measurementDescriptionES":"","name":"","nearToDescriptionEs":"","propertyDescriptionES":"","status":"","unitAutomovilistas":"","unitFatalaties":"","unitInjured":"","unitVehiculos":"","unitPedestrians":"","zoneTypeDescriptionES":""]
        var secondTab = ["":""]
     var thirdTab = ["":""]
+    var personTab = ["":""]
+    var personExtenTab = ["":""]
+    var vehicleTab = ["":""]
+    var vehicleExtendTab = ["":""]
     var sawReport = false
     
-    init(firstTab: Dictionary<String,String>,secondTab: Dictionary<String,String>,thirdTab: Dictionary<String,String>, sawReport: Bool){
+    init(firstTab: Dictionary<String,String>,secondTab: Dictionary<String,String>,thirdTab: Dictionary<String,String>,personTab: Dictionary<String,String>, personExtenTab: Dictionary<String,String>,vehicleTab: Dictionary<String,String>,vehicleExtendTab: Dictionary<String,String>,sawReport: Bool){
     self.firstTab=firstTab
     self.secondTab=secondTab
     self.thirdTab=thirdTab
+    self.personTab=personTab
+    self.personExtenTab=personExtenTab
+    self.vehicleTab=vehicleTab
+    self.vehicleExtendTab=vehicleExtendTab
     self.sawReport=false
     }
  
