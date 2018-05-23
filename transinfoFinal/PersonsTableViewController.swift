@@ -84,7 +84,7 @@ class PersonsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexPath = tableView.indexPathForSelectedRow // index path of selected cell
-        
+        singleton.listPeople[0].counter = (indexPath?.row)!
         let cellIndex = indexPath!.row // index of selected cell
         
         singleton.selectedKey = indexPath!.row

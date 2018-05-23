@@ -250,6 +250,9 @@ class AccidentReportTableViewController: UITableViewController {
         converterObject = (newPerson["success"] as? Dictionary<String,AnyObject>)!
         converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
         
+        singleton.listPeople[0].arrayPerson.removeAll()
+        //singleton.listVehicle[0].arrayVehicle.removeAll()
+        
         for i in converterArray.startIndex..<converterArray.endIndex {
             personTabFormat(String(converterArray[i]))
         }
@@ -1711,6 +1714,10 @@ class AccidentReportTableViewController: UITableViewController {
             
         }
         print(singleton.firstTabInfo[0].personExtenTab,"thisinfor")
+//        let counter  = singleton.listPeople[0].counter
+//        print(counter)
+        singleton.listPeople[0].arrayPerson.append(singleton.firstTabInfo[0].personExtenTab)
+        singleton.listPeople[0].counter += 1
        
     }
     
@@ -2232,8 +2239,12 @@ class AccidentReportTableViewController: UITableViewController {
             }
     
         }
-        print(singleton.firstTabInfo[0].vehicleExtendTab,"thisinfor")
         
+        //print(singleton.firstTabInfo[0].vehicleExtendTab,"thisinfor")
+        let counter  = singleton.listVehicle[0].counter
+        
+        singleton.listVehicle[0].arrayVehicle[counter] = singleton.firstTabInfo[0].vehicleExtendTab
+        singleton.listVehicle[0].counter += 1
     }
     
 }

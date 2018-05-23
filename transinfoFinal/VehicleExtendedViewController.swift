@@ -147,7 +147,7 @@ class VehicleExtendedViewController: UIViewController{
         
         webServicesObjectPOST.addIData("Occupants", value: ocupantes.text)
         
-        webServicesObjectPOST.addIData("VehicleMotor", value: "Agricultural Equipment")
+        webServicesObjectPOST.addIData("VehicleMotor", value: "Agricultural Equipment")//??
         
         webServicesObjectPOST.addIData("DirectionTripCB", value: direccionViajeField.text)
         
@@ -205,7 +205,7 @@ class VehicleExtendedViewController: UIViewController{
         
         webServicesObjectPOST.addIData("InitialContactPoint", value: PuntoInicialField.text)
         
-        webServicesObjectPOST.addIData("AffectedArea", value: "12")
+        webServicesObjectPOST.addIData("AffectedArea", value: areaAfectadaField.text)
         
         webServicesObjectPOST.addIData("ExtendDamage", value: gradoDanioField.text)
         
@@ -285,7 +285,61 @@ class VehicleExtendedViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(singleton.foreignKeys[0])
+        print(singleton.firstTabInfo[0].vehicleExtendTab)
+        if singleton.firstTabInfo[0].vehicleExtendTab["vehicleType"] != "" {
+            let counter = singleton.listVehicle[0].counter
+            let arrayForStuff = singleton.listVehicle[0].arrayVehicle[counter]
+            remolcadoField.text = String(arrayForStuff["towedDamage"]!)
+            ocupantes.text = String(arrayForStuff["occupants"]!)
+            mphField.text = String(arrayForStuff["mPH"]!)
+            confVehiculo.text = String(arrayForStuff["vehicleConfiguration"]!)
+            cuartoEvento.text = String(arrayForStuff["cuartoEvent"]!)
+            cantidadField.text = String(arrayForStuff["laneCantidad"]!)//??
+            usoVehiculoField.text = String(arrayForStuff["motorEmergencyVU"]!)
+            abandonoLugarField.text = String(arrayForStuff["lefthPlace"]!)
+            conductorAutorizadoField.text = String(arrayForStuff["authorizedDriver"]!)
+            pesoBrutoField.text = String(arrayForStuff["grossWeight"]!)
+            segundoEvento.text = String(arrayForStuff["segundoEvent"]!)
+            cantidadEjesField.text = String(arrayForStuff["totalAxis"]!)
+            typeVehicleField.text = String(arrayForStuff["vehicleMotor"]!)
+            tipoControlesField.text = String(arrayForStuff["typeControlTraffic"]!)
+            cuartaCategoria.text = String(arrayForStuff["cuartaCategoria"]!)
+            gradoDanioField.text = String(arrayForStuff["extendDamage"]!)
+            operacionField.text = String(arrayForStuff["inOperationLost"]!)
+            tipoVehiculoCargaField.text = String(arrayForStuff["heavyVehicleType"]!)
+            roadDescriptionField.text = String(arrayForStuff["descriptionRoad"]!)
+            typeCarrilField.text = String(arrayForStuff["laneTipoCarril"]!)
+            PuntoInicialField.text = String(arrayForStuff["initialContactPoint"]!)
+            numeroIdentificacionField.text = String(arrayForStuff["diamondIdNumber"]!)
+            primerCategoria.text = String(arrayForStuff["primeraCategoriaEvent"]!)
+            segundaCategoria.text = String(arrayForStuff["segundaCategoriaEvent"]!)
+            mphdosField.text = String(arrayForStuff["mPHDescription"]!)
+            inclinacionField.text = String(arrayForStuff["slope"]!)
+            usoBusField.text = String(arrayForStuff["busUse"]!)
+            categoriaField.text = String(arrayForStuff["laneCategoria"]!)
+            vehiculoMovimientoField.text = String(arrayForStuff["vehicleMoving"]!)
+            direccionViajeField.text = String(arrayForStuff["directionTripCB"]!)
+            permisoEspecialField.text = String(arrayForStuff["specialPermit"]!)
+            areaAfectadaField.text = String(arrayForStuff["affectedArea"]!)
+            terceraCategoria.text = String(arrayForStuff["terceraCategoriaEvent"]!)
+            primerDefecto.text = String(arrayForStuff["primerDefectoMec"]!)
+            funcionEspecialField.text = String(arrayForStuff["functionSpecialMVT"]!)
+            vehiculoContieneMPField.text = String(arrayForStuff["hazardousMaterial"]!)
+            inspeccionDiaField.text = String(arrayForStuff["inspectionUpdate"]!)
+            alineamientoField.text = String(arrayForStuff["alignment"]!)
+            primerEvento.text = String(arrayForStuff["primerEvent"]!)
+            huboDerrameMPField.text = String(arrayForStuff["thereHazardousMaterial"]!)
+            typeVehicleField.text = String(arrayForStuff["vehicleType"]!)
+
+            usoVehiculoComercialField.text = String(arrayForStuff["commercialVehicleUse"]!)
+
+            segundoDefecto.text = String(arrayForStuff["segundoDefectoMec"]!)
+
+            tercerEvento.text = String(arrayForStuff["tecerEvent"]!)
+            maniobraField.text = String(arrayForStuff["maneuverVehicleMotor"]!)
+
+            
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.contentSize.height = 2550

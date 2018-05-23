@@ -72,6 +72,8 @@ class VehiclesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexPath = tableView.indexPathForSelectedRow // index path of selected cell
         
+        singleton.listVehicle[0].counter = (indexPath?.row)!
+        
         let cellIndex = indexPath!.row // index of selected cell
         print(indexPath?.row)//iT'S THE NUMBER YOU WANT - 1
         let cellName = tableView.cellForRowAtIndexPath(indexPath!) //  instance of selected cell

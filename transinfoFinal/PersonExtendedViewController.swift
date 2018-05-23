@@ -149,7 +149,48 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
 //        transportedBy.keyPath = "DescriptionES"
 //        transportedBy.arrayList = webServicesObject1.arrayOfDictionaries("organDonor")
         
-    
+        if singleton.firstTabInfo[0].personExtenTab["ambulanceCSPNumber"] != "" {
+            let counter = singleton.listPeople[0].counter
+            print(singleton.listPeople[0].arrayPerson[0])
+            print(singleton.listPeople[0].arrayPerson.count)
+            print(counter)
+            
+            let arrayForStuff = singleton.listPeople[0].arrayPerson[counter]
+            
+            accionesMomentoAccident.text = String(arrayForStuff["actionsAtCollisionTime"]!)//??
+            accionesMomentoAccident.text = String(arrayForStuff["actionsBeforeCollision"]!)//??
+            airbagsActiviationField.text = String(arrayForStuff["airbagsActivation"]!)
+            AmbulanceCSPNumber.text = String(arrayForStuff["ambulanceCSPNumber"]!)
+            condicionMomentoAccidente.text = String(arrayForStuff["conditionCollisionTime"]!)
+            conductorDistraidoBy.text = String(arrayForStuff["distractedBy"]!)//??
+            conductorDistraidoBy.text = String(arrayForStuff["distractedDriverBy"]!)//??
+            circunstanciasConductorField.text = String(arrayForStuff["driverCirncunstanceBC"]!)
+            expulsionField.text = String(arrayForStuff["expulsion"]!)
+            extractionField.text = String(arrayForStuff["extraction"]!)
+            walkScholl.text = String(arrayForStuff["inWayToSchool"]!)
+            localizacionMomentoAccident.text = String(arrayForStuff["locationWhenCollision"]!)
+            MedicalEmergenciesNumber.text = String(arrayForStuff["medicalEmergenciesNumber"]!)
+            otherLocationField.text = String(arrayForStuff["otherLocation"]!)
+            restraintSystemField.text = String(arrayForStuff["restraintSystem"]!)
+            rowField.text = String(arrayForStuff["row"]!)
+            equipoSeguridadUsado.text = String(arrayForStuff["safetyEquipmentUsed"]!)
+            seatField.text = String(arrayForStuff["seat"]!)
+            relacionadoVelocidaField.text = String(arrayForStuff["speedRelated"]!)
+            usoSustanciasControladas.text = String(arrayForStuff["suscpectControlledSubstances"]!)
+            usoAlcoholField.text = String(arrayForStuff["suspectAlcoholUse"]!)
+            resultado.text = String(arrayForStuff["testResultAl"]!)//??
+            resultadoPruebaField.text = String(arrayForStuff["testResultSub"]!)
+            resultado.text = String(arrayForStuff["testStatusAl"]!)//??
+            estadoPruebaDosField.text = String(arrayForStuff["testStatusSub"]!)
+            tipoPrueba.text = String(arrayForStuff["testTypeAl"]!)
+            tipoPruebaDosField.text = String(arrayForStuff["testTypeSub"]!)
+            transportedBy.text = String(arrayForStuff["transportedBy"]!)
+            personTransport.text = String(arrayForStuff["transportedByME"]!)
+            TransportedTo.text = String(arrayForStuff["transportedTo"]!)
+            
+            
+            
+        }
         
 
         
@@ -323,26 +364,26 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         resultadoPruebaField.keyPath = "DescriptionES"
         resultadoPruebaField.arrayList = webServicesObject.arrayOfDictionaries("drugTestResults")
   
-        rowField.text =  dictionary["row"]
-        seatField.text = dictionary["seat"]
-        otherLocationField.text = dictionary["otherLocation"]
-        restraintSystemField.text = dictionary["restraintSystem"]
-        airbagsActiviationField.text = dictionary["airbagActivation"]
-        expulsionField.text = dictionary["expulsion"]
-        extractionField.text = dictionary["extractionDescription"]
-        relacionadoVelocidaField.text = dictionary["speedRelatedDescription"]
-        conductorDistraidoBy.text = dictionary["distractedDriver"]
-        equipoSeguridadUsado.text = dictionary["safetyEquipment"]
-        usoAlcoholField.text = dictionary["suspectAlcohol"]
-        usoSustanciasControladas.text = dictionary["suspectSubst"]
-        estadoPrueba.text = dictionary["testStatusAl"]
-        tipoPrueba.text = dictionary["testTypeAl"]
-        resultado.text =  dictionary["testResultAl"]
-        resultadoPruebaField.text = dictionary["testResultSubst"]
-        estadoPruebaDosField.text = dictionary["testStatusSubst"]
-        tipoPruebaDosField.text = dictionary["testTypeSubst"]
-        walkScholl.text = dictionary["waySchool"]
-        localizacionMomentoAccident.text = dictionary["locationWhenCollision"]
+//        rowField.text =  dictionary["row"]
+//        seatField.text = dictionary["seat"]
+//        otherLocationField.text = dictionary["otherLocation"]
+//        restraintSystemField.text = dictionary["restraintSystem"]
+//        airbagsActiviationField.text = dictionary["airbagActivation"]
+//        expulsionField.text = dictionary["expulsion"]
+//        extractionField.text = dictionary["extractionDescription"]
+//        relacionadoVelocidaField.text = dictionary["speedRelatedDescription"]
+//        conductorDistraidoBy.text = dictionary["distractedDriver"]
+//        equipoSeguridadUsado.text = dictionary["safetyEquipment"]
+//        usoAlcoholField.text = dictionary["suspectAlcohol"]
+//        usoSustanciasControladas.text = dictionary["suspectSubst"]
+//        estadoPrueba.text = dictionary["testStatusAl"]
+//        tipoPrueba.text = dictionary["testTypeAl"]
+//        resultado.text =  dictionary["testResultAl"]
+//        resultadoPruebaField.text = dictionary["testResultSubst"]
+//        estadoPruebaDosField.text = dictionary["testStatusSubst"]
+//        tipoPruebaDosField.text = dictionary["testTypeSubst"]
+//        walkScholl.text = dictionary["waySchool"]
+//        localizacionMomentoAccident.text = dictionary["locationWhenCollision"]
         
 
         scrollView.contentSize.height = 2600
@@ -402,7 +443,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         
         webServicesObjectPOST.addIData("Extraction", value: extractionField.text)
         
-        webServicesObjectPOST.addIData("DistractedDriverBy", value: conductorDistraidoBy.text)
+        webServicesObjectPOST.addIData("DistractedDriverBy", value: conductorDistraidoBy.text)//??
         
         webServicesObjectPOST.addIData("ConditionCollisionTime", value: condicionMomentoAccidente.text)
         
@@ -430,9 +471,9 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         
         webServicesObjectPOST.addIData("TransportedByME", value: personTransport.text)
         
-        webServicesObjectPOST.addIData("TransportedTo", value: TransportedTo.text)
+        webServicesObjectPOST.addIData("TransportedTo", value: TransportedTo.text)//?? reverse
         
-        webServicesObjectPOST.addIData("TransportedBy", value: transportedBy.text)
+        webServicesObjectPOST.addIData("TransportedBy", value: transportedBy.text)//?? reverse
         
         webServicesObjectPOST.addIData("MedicalEmergenciesNumber", value: MedicalEmergenciesNumber.text)
         
@@ -441,11 +482,11 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         //Temporary values for missing keys
         webServicesObjectPOST.addIData("PersonaFK", value: String(singleton.foreignKeys[0].newPerson))
         webServicesObjectPOST.addIData("TestResultTP", value: resultado.text)
-        webServicesObjectPOST.addIData("ActionsAtCollisionTime", value: accionesMomentoAccident.text)
+        webServicesObjectPOST.addIData("ActionsAtCollisionTime", value: accionesMomentoAccident.text)//??
         webServicesObjectPOST.addIData("LocationWhenCollision", value: localizacionMomentoAccident.text)
         webServicesObjectPOST.addIData("DriverCirncunstanceBC", value: circunstanciasConductorField.text)
         webServicesObjectPOST.addIData("DistractedBy", value: conductorDistraidoBy.text)
-        webServicesObjectPOST.addIData("ActionsBeforeCollision", value: accionesMomentoAccident.text)
+        webServicesObjectPOST.addIData("ActionsBeforeCollision", value: accionesMomentoAccident.text)//??
         print(webServicesObjectPOST.PostData)
         
         var postFK = webServicesObjectPOST.sendPOSTs(7)

@@ -43,6 +43,8 @@ struct Info {
 
 struct People {
     var person = ["name":"","gender":"","typeLicense":"","numLicense":""]//Dictionary<String,AnyObject>()
+    var arrayPerson:Array<Dictionary<String,AnyObject>> = [["":""]]
+    var counter = 0
     
     init(person: Dictionary<String,String>){
         self.person=person
@@ -52,6 +54,8 @@ struct People {
 
 struct Vehicle {
     var vehicle = ["numTablilla":"","year":"","make":"","model":""]
+    var arrayVehicle:Array<Dictionary<String,AnyObject>> = [["":""]]
+    var counter = 0
     
     init(vehicle: Dictionary<String,String>){
         self.vehicle=vehicle
