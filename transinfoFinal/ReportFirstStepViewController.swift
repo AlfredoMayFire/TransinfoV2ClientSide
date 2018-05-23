@@ -110,6 +110,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         //singleton.foreignKeys[0].crashBasicInformation = 167
         
         if singleton.firstTabInfo[0].sawReport {
+            
             dictionaryBro = singleton.firstTabInfo[0].firstTab
             print(dictionaryBro)
             
@@ -136,7 +137,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             UnitPedestrians.text = dictionaryBro["unitPedestrians"]
             numberVehiclesFIeld.text = dictionaryBro["unitVehiculos"]
             typeZonaField.text = dictionaryBro["zoneTypeDescriptionES"]
-            
+            correctFormat()
             
         }
         
@@ -419,5 +420,156 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         }
         
         return condition
+    }
+    func correctFormat(){
+        
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        
     }
 }
