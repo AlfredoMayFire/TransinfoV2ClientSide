@@ -613,6 +613,7 @@ class VehicleExtendedViewController: UIViewController{
         typeVehicleField.text = typeVehicleField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typeVehicleField.text = typeVehicleField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typeVehicleField.text = typeVehicleField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typeVehicleField.text = typeVehicleField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         direccionViajeField.text = direccionViajeField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         direccionViajeField.text = direccionViajeField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -620,6 +621,7 @@ class VehicleExtendedViewController: UIViewController{
         direccionViajeField.text = direccionViajeField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         direccionViajeField.text = direccionViajeField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         direccionViajeField.text = direccionViajeField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        direccionViajeField.text = direccionViajeField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         funcionEspecialField.text = funcionEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         funcionEspecialField.text = funcionEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -627,6 +629,7 @@ class VehicleExtendedViewController: UIViewController{
         funcionEspecialField.text = funcionEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         funcionEspecialField.text = funcionEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         funcionEspecialField.text = funcionEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        funcionEspecialField.text = funcionEspecialField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         usoVehiculoField.text = usoVehiculoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         usoVehiculoField.text = usoVehiculoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -634,6 +637,7 @@ class VehicleExtendedViewController: UIViewController{
         usoVehiculoField.text = usoVehiculoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         usoVehiculoField.text = usoVehiculoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         usoVehiculoField.text = usoVehiculoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        usoVehiculoField.text = usoVehiculoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         maniobraField.text = maniobraField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         maniobraField.text = maniobraField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -641,6 +645,7 @@ class VehicleExtendedViewController: UIViewController{
         maniobraField.text = maniobraField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         maniobraField.text = maniobraField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         maniobraField.text = maniobraField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        maniobraField.text = maniobraField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         roadDescriptionField.text = roadDescriptionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         roadDescriptionField.text = roadDescriptionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -648,6 +653,7 @@ class VehicleExtendedViewController: UIViewController{
         roadDescriptionField.text = roadDescriptionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         roadDescriptionField.text = roadDescriptionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         roadDescriptionField.text = roadDescriptionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        roadDescriptionField.text = roadDescriptionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         alineamientoField.text = alineamientoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         alineamientoField.text = alineamientoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -655,6 +661,7 @@ class VehicleExtendedViewController: UIViewController{
         alineamientoField.text = alineamientoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         alineamientoField.text = alineamientoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         alineamientoField.text = alineamientoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        alineamientoField.text = alineamientoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         inclinacionField.text = inclinacionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         inclinacionField.text = inclinacionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -662,6 +669,7 @@ class VehicleExtendedViewController: UIViewController{
         inclinacionField.text = inclinacionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         inclinacionField.text = inclinacionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         inclinacionField.text = inclinacionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        inclinacionField.text = inclinacionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         categoriaField.text = categoriaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         categoriaField.text = categoriaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -669,6 +677,7 @@ class VehicleExtendedViewController: UIViewController{
         categoriaField.text = categoriaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         categoriaField.text = categoriaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         categoriaField.text = categoriaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        categoriaField.text = categoriaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         typeCarrilField.text = typeCarrilField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         typeCarrilField.text = typeCarrilField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -676,6 +685,7 @@ class VehicleExtendedViewController: UIViewController{
         typeCarrilField.text = typeCarrilField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typeCarrilField.text = typeCarrilField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typeCarrilField.text = typeCarrilField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typeCarrilField.text = typeCarrilField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         tipoControlesField.text = tipoControlesField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         tipoControlesField.text = tipoControlesField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -683,6 +693,7 @@ class VehicleExtendedViewController: UIViewController{
         tipoControlesField.text = tipoControlesField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         tipoControlesField.text = tipoControlesField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         tipoControlesField.text = tipoControlesField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        tipoControlesField.text = tipoControlesField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         operacionField.text = operacionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         operacionField.text = operacionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -690,6 +701,7 @@ class VehicleExtendedViewController: UIViewController{
         operacionField.text = operacionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         operacionField.text = operacionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         operacionField.text = operacionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        operacionField.text = operacionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         primerCategoria.text = primerCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         primerCategoria.text = primerCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -697,6 +709,7 @@ class VehicleExtendedViewController: UIViewController{
         primerCategoria.text = primerCategoria.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         primerCategoria.text = primerCategoria.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         primerCategoria.text = primerCategoria.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        primerCategoria.text = primerCategoria.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         segundaCategoria.text = segundaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         segundaCategoria.text = segundaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -704,6 +717,7 @@ class VehicleExtendedViewController: UIViewController{
         segundaCategoria.text = segundaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         segundaCategoria.text = segundaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         segundaCategoria.text = segundaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        segundaCategoria.text = segundaCategoria.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         terceraCategoria.text = terceraCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         terceraCategoria.text = terceraCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -711,6 +725,7 @@ class VehicleExtendedViewController: UIViewController{
         terceraCategoria.text = terceraCategoria.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         terceraCategoria.text = terceraCategoria.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         terceraCategoria.text = terceraCategoria.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        terceraCategoria.text = terceraCategoria.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         cuartaCategoria.text = cuartaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         cuartaCategoria.text = cuartaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -718,6 +733,7 @@ class VehicleExtendedViewController: UIViewController{
         cuartaCategoria.text = cuartaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         cuartaCategoria.text = cuartaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         cuartaCategoria.text = cuartaCategoria.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        cuartaCategoria.text = cuartaCategoria.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         primerEvento.text = primerEvento.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         primerEvento.text = primerEvento.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -725,6 +741,7 @@ class VehicleExtendedViewController: UIViewController{
         primerEvento.text = primerEvento.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         primerEvento.text = primerEvento.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         primerEvento.text = primerEvento.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        primerEvento.text = primerEvento.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         segundoEvento.text = segundoEvento.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         segundoEvento.text = segundoEvento.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -732,6 +749,7 @@ class VehicleExtendedViewController: UIViewController{
         segundoEvento.text = segundoEvento.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         segundoEvento.text = segundoEvento.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         segundoEvento.text = segundoEvento.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        segundoEvento.text = segundoEvento.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         tercerEvento.text = tercerEvento.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         tercerEvento.text = tercerEvento.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -739,6 +757,7 @@ class VehicleExtendedViewController: UIViewController{
         tercerEvento.text = tercerEvento.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         tercerEvento.text = tercerEvento.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         tercerEvento.text = tercerEvento.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        tercerEvento.text = tercerEvento.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         cuartoEvento.text = cuartoEvento.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         cuartoEvento.text = cuartoEvento.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -746,6 +765,7 @@ class VehicleExtendedViewController: UIViewController{
         cuartoEvento.text = cuartoEvento.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         cuartoEvento.text = cuartoEvento.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         cuartoEvento.text = cuartoEvento.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        cuartoEvento.text = cuartoEvento.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         usoBusField.text = usoBusField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         usoBusField.text = usoBusField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -753,6 +773,7 @@ class VehicleExtendedViewController: UIViewController{
         usoBusField.text = usoBusField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         usoBusField.text = usoBusField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         usoBusField.text = usoBusField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        usoBusField.text = usoBusField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         abandonoLugarField.text = abandonoLugarField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         abandonoLugarField.text = abandonoLugarField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -760,6 +781,7 @@ class VehicleExtendedViewController: UIViewController{
         abandonoLugarField.text = abandonoLugarField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         abandonoLugarField.text = abandonoLugarField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         abandonoLugarField.text = abandonoLugarField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        abandonoLugarField.text = abandonoLugarField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         remolcadoField.text = remolcadoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         remolcadoField.text = remolcadoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -767,6 +789,7 @@ class VehicleExtendedViewController: UIViewController{
         remolcadoField.text = remolcadoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         remolcadoField.text = remolcadoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         remolcadoField.text = remolcadoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        remolcadoField.text = remolcadoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         primerDefecto.text = primerDefecto.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         primerDefecto.text = primerDefecto.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -774,6 +797,7 @@ class VehicleExtendedViewController: UIViewController{
         primerDefecto.text = primerDefecto.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         primerDefecto.text = primerDefecto.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         primerDefecto.text = primerDefecto.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        primerDefecto.text = primerDefecto.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         segundoDefecto.text = segundoDefecto.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         segundoDefecto.text = segundoDefecto.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -781,6 +805,7 @@ class VehicleExtendedViewController: UIViewController{
         segundoDefecto.text = segundoDefecto.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         segundoDefecto.text = segundoDefecto.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         segundoDefecto.text = segundoDefecto.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        segundoDefecto.text = segundoDefecto.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         PuntoInicialField.text = PuntoInicialField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         PuntoInicialField.text = PuntoInicialField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -788,6 +813,7 @@ class VehicleExtendedViewController: UIViewController{
         PuntoInicialField.text = PuntoInicialField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         PuntoInicialField.text = PuntoInicialField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         PuntoInicialField.text = PuntoInicialField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        PuntoInicialField.text = PuntoInicialField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         areaAfectadaField.text = areaAfectadaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         areaAfectadaField.text = areaAfectadaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -795,6 +821,7 @@ class VehicleExtendedViewController: UIViewController{
         areaAfectadaField.text = areaAfectadaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         areaAfectadaField.text = areaAfectadaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         areaAfectadaField.text = areaAfectadaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        areaAfectadaField.text = areaAfectadaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         gradoDanioField.text = gradoDanioField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         gradoDanioField.text = gradoDanioField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -802,6 +829,7 @@ class VehicleExtendedViewController: UIViewController{
         gradoDanioField.text = gradoDanioField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         gradoDanioField.text = gradoDanioField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         gradoDanioField.text = gradoDanioField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        gradoDanioField.text = gradoDanioField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         usoVehiculoComercialField.text = usoVehiculoComercialField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         usoVehiculoComercialField.text = usoVehiculoComercialField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -809,6 +837,7 @@ class VehicleExtendedViewController: UIViewController{
         usoVehiculoComercialField.text = usoVehiculoComercialField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         usoVehiculoComercialField.text = usoVehiculoComercialField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         usoVehiculoComercialField.text = usoVehiculoComercialField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        usoVehiculoComercialField.text = usoVehiculoComercialField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         vehiculoMovimientoField.text = vehiculoMovimientoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         vehiculoMovimientoField.text = vehiculoMovimientoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -816,6 +845,7 @@ class VehicleExtendedViewController: UIViewController{
         vehiculoMovimientoField.text = vehiculoMovimientoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         vehiculoMovimientoField.text = vehiculoMovimientoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         vehiculoMovimientoField.text = vehiculoMovimientoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        vehiculoMovimientoField.text = vehiculoMovimientoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         conductorAutorizadoField.text = conductorAutorizadoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         conductorAutorizadoField.text = conductorAutorizadoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -823,6 +853,7 @@ class VehicleExtendedViewController: UIViewController{
         conductorAutorizadoField.text = conductorAutorizadoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         conductorAutorizadoField.text = conductorAutorizadoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         conductorAutorizadoField.text = conductorAutorizadoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        conductorAutorizadoField.text = conductorAutorizadoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         inspeccionDiaField.text = inspeccionDiaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         inspeccionDiaField.text = inspeccionDiaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -830,6 +861,7 @@ class VehicleExtendedViewController: UIViewController{
         inspeccionDiaField.text = inspeccionDiaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         inspeccionDiaField.text = inspeccionDiaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         inspeccionDiaField.text = inspeccionDiaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        inspeccionDiaField.text = inspeccionDiaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         permisoEspecialField.text = permisoEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         permisoEspecialField.text = permisoEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -837,6 +869,7 @@ class VehicleExtendedViewController: UIViewController{
         permisoEspecialField.text = permisoEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         permisoEspecialField.text = permisoEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         permisoEspecialField.text = permisoEspecialField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        permisoEspecialField.text = permisoEspecialField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         pesoBrutoField.text = pesoBrutoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         pesoBrutoField.text = pesoBrutoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -844,6 +877,7 @@ class VehicleExtendedViewController: UIViewController{
         pesoBrutoField.text = pesoBrutoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         pesoBrutoField.text = pesoBrutoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         pesoBrutoField.text = pesoBrutoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        pesoBrutoField.text = pesoBrutoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         confVehiculo.text = confVehiculo.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         confVehiculo.text = confVehiculo.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -851,6 +885,7 @@ class VehicleExtendedViewController: UIViewController{
         confVehiculo.text = confVehiculo.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         confVehiculo.text = confVehiculo.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         confVehiculo.text = confVehiculo.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        confVehiculo.text = confVehiculo.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         tipoVehiculoCargaField.text = tipoVehiculoCargaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         tipoVehiculoCargaField.text = tipoVehiculoCargaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -858,6 +893,7 @@ class VehicleExtendedViewController: UIViewController{
         tipoVehiculoCargaField.text = tipoVehiculoCargaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         tipoVehiculoCargaField.text = tipoVehiculoCargaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         tipoVehiculoCargaField.text = tipoVehiculoCargaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        tipoVehiculoCargaField.text = tipoVehiculoCargaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         vehiculoContieneMPField.text = vehiculoContieneMPField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         vehiculoContieneMPField.text = vehiculoContieneMPField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -865,6 +901,7 @@ class VehicleExtendedViewController: UIViewController{
         vehiculoContieneMPField.text = vehiculoContieneMPField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         vehiculoContieneMPField.text = vehiculoContieneMPField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         vehiculoContieneMPField.text = vehiculoContieneMPField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        vehiculoContieneMPField.text = vehiculoContieneMPField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         numeroIdentificacionField.text = numeroIdentificacionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         numeroIdentificacionField.text = numeroIdentificacionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -872,6 +909,7 @@ class VehicleExtendedViewController: UIViewController{
         numeroIdentificacionField.text = numeroIdentificacionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         numeroIdentificacionField.text = numeroIdentificacionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         numeroIdentificacionField.text = numeroIdentificacionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        numeroIdentificacionField.text = numeroIdentificacionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         huboDerrameMPField.text = huboDerrameMPField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         huboDerrameMPField.text = huboDerrameMPField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -879,6 +917,7 @@ class VehicleExtendedViewController: UIViewController{
         huboDerrameMPField.text = huboDerrameMPField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         huboDerrameMPField.text = huboDerrameMPField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         huboDerrameMPField.text = huboDerrameMPField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        huboDerrameMPField.text = huboDerrameMPField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         cantidadEjesField.text = cantidadEjesField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         cantidadEjesField.text = cantidadEjesField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -886,6 +925,7 @@ class VehicleExtendedViewController: UIViewController{
         cantidadEjesField.text = cantidadEjesField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         cantidadEjesField.text = cantidadEjesField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         cantidadEjesField.text = cantidadEjesField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        cantidadEjesField.text = cantidadEjesField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         marcaField.text = marcaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         marcaField.text = marcaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -893,6 +933,7 @@ class VehicleExtendedViewController: UIViewController{
         marcaField.text = marcaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         marcaField.text = marcaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         marcaField.text = marcaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        marcaField.text = marcaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         modelField.text = modelField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         modelField.text = modelField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -900,6 +941,7 @@ class VehicleExtendedViewController: UIViewController{
         modelField.text = modelField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         modelField.text = modelField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         modelField.text = modelField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        modelField.text = modelField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
     }
  

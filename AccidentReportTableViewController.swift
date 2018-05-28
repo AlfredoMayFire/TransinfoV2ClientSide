@@ -40,6 +40,7 @@ class AccidentReportTableViewController: UITableViewController {
     @IBOutlet weak var reportText: UITextView!
     
     override func viewDidLoad() {
+        
         Reportes.delegate = self
         Reportes.dataSource = self
         super.viewDidLoad()
@@ -115,19 +116,29 @@ class AccidentReportTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
+        
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         var cellName: String
         dictionary = (myArrayTemp[indexPath.row] as? Dictionary<String,AnyObject>)!
         if transition {
+            if cell.detailTextLabel == nil {
+                print("estecoso")
+                
+                cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
+            }
+            
             cellName = "Numero de Caso: "
             cellName += (dictionary["CaseNumber"] as? String)!
-            cellName += " / "
-            cellName += "Fecha: "
-            cellName += (dictionary["crashDate"] as? String)!
-            cellName += " / "
-            cellName += "Tipo de Accidente: "
-            cellName += (dictionary["crashType"] as? String)!
+            
+            var cellNameSub = "Fecha: "
+            cellNameSub += (dictionary["crashDate"] as? String)!
+            cellNameSub += " / "
+            cellNameSub += "Tipo de Accidente: "
+            cellNameSub += (dictionary["crashType"] as? String)!
             cell.textLabel?.text = cellName
+            
+
+            cell.detailTextLabel?.text = cellNameSub
             
         }else{
             
@@ -149,13 +160,14 @@ class AccidentReportTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+       
+        
         self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
         
         // avoid paint the cell is the index is outside the bounds
         if self.selectedRowIndex != -1 {
             self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedRowIndex, inSection: 0))?.backgroundColor = UIColor.whiteColor()
         }
-        
         if selectedRowIndex != indexPath.row {
             self.thereIsCellTapped = true
             self.selectedRowIndex = indexPath.row
@@ -185,6 +197,22 @@ class AccidentReportTableViewController: UITableViewController {
     }
     
     func letsReport(action: UIAlertAction){
+        
+        
+        singleton.listNum[0] = 0
+        singleton.listNum[1] = 0
+    
+        for i in singleton.listPeople.startIndex..<singleton.listPeople.endIndex {
+            singleton.listPeople[i].counter = 0
+        }
+        for i in singleton.listVehicle.startIndex..<singleton.listVehicle.endIndex {
+            singleton.listVehicle[i].counter = 0
+        }
+        
+        
+        singleton.listPeople.removeAll()
+     
+        singleton.listVehicle.removeAll()
         let WebServicesQuery = WebService.init()
         let stringed = caseNumber["num"] as? String
         let stringeded = stringed
@@ -222,7 +250,7 @@ class AccidentReportTableViewController: UITableViewController {
         let accidentFK = singleton.foreignKeys[0].accidentCondition
         singleton.foreignKeys[0].crashBasicInformation = 0
         singleton.foreignKeys[0].accidentCondition = 0
-        print(singleton.foreignKeys[0].crashBasicInformation)
+        //print(singleton.foreignKeys[0].crashBasicInformation)
         
         let firstTab = WebServicesQuery.letsReport(caseNumberString)
         let secondTab = WebServicesQuery.secondTab(String(accidentFK))
@@ -250,7 +278,7 @@ class AccidentReportTableViewController: UITableViewController {
         converterObject = (newPerson["success"] as? Dictionary<String,AnyObject>)!
         converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
         
-        singleton.listPeople[0].arrayPerson.removeAll()
+        //singleton.listPeople[0].arrayPerson.removeAll()
         //singleton.listVehicle[0].arrayVehicle.removeAll()
         
         for i in converterArray.startIndex..<converterArray.endIndex {
@@ -293,6 +321,7 @@ class AccidentReportTableViewController: UITableViewController {
         singleton.firstTabInfo[0].sawReport = true
         
         segueBack()
+        
     }
     
     
@@ -302,7 +331,7 @@ class AccidentReportTableViewController: UITableViewController {
         var value = ""
     
         
-        print(firstTab)
+//        print(firstTab)
         
         for i in firstTab.startIndex..<firstTab.endIndex {
             if firstTab.startIndex.distanceTo(i) == 17 {
@@ -976,7 +1005,7 @@ class AccidentReportTableViewController: UITableViewController {
     
     func personTabFormat(firstTab: String){
         var value = ""
-        print(firstTab)
+//        print(firstTab)
         
         for i in firstTab.rangeOfString("city")!.startIndex ..< firstTab.endIndex {
             var j = i
@@ -1137,6 +1166,7 @@ class AccidentReportTableViewController: UITableViewController {
         }
         print(singleton.firstTabInfo[0].personTab,"thisinfor")
         singleton.listNum[1] += 1
+        
         let newPerson = People(person: singleton.firstTabInfo[0].personTab)
         foreignKeys.append(singleton.firstTabInfo[0].personTab["idNewPerson"]!)
         //let thisThing =  as? Dictionary<String,AnyObject>
@@ -1145,7 +1175,7 @@ class AccidentReportTableViewController: UITableViewController {
 
     func vehicleTabFormat(firstTab: String){
         var value = ""
-        print(firstTab)
+       // print(firstTab)
         
         for i in firstTab.rangeOfString("expirationDate")!.startIndex ..< firstTab.endIndex {
             var j = i
@@ -1317,7 +1347,7 @@ class AccidentReportTableViewController: UITableViewController {
             
             
         }
-        print(singleton.firstTabInfo[0].vehicleTab,"thisinfor")
+        //print(singleton.firstTabInfo[0].vehicleTab,"thisinfor")
         singleton.listNum[0] += 1
         foreignKeys.append(singleton.firstTabInfo[0].vehicleTab["idNewVehicle"]!)
         let newVehicle = Vehicle(vehicle: singleton.firstTabInfo[0].vehicleTab)
@@ -1328,7 +1358,7 @@ class AccidentReportTableViewController: UITableViewController {
     
     func personExtendedTabFormat(firstTab: String){
         var value = ""
-        print(firstTab)
+        //print(firstTab)
         
         for i in firstTab.rangeOfString("actionsAtCollisionTime")!.startIndex ..< firstTab.endIndex {
             var j = i
@@ -1713,7 +1743,7 @@ class AccidentReportTableViewController: UITableViewController {
             
             
         }
-        print(singleton.firstTabInfo[0].personExtenTab,"thisinfor")
+        //print(singleton.firstTabInfo[0].personExtenTab,"thisinfor")
 //        let counter  = singleton.listPeople[0].counter
 //        print(counter)
         singleton.listPeople[0].arrayPerson.append(singleton.firstTabInfo[0].personExtenTab)
@@ -1723,7 +1753,7 @@ class AccidentReportTableViewController: UITableViewController {
     
     func vehicleExtendedTabFormat(firstTab: String){
         var value = ""
-        print(firstTab)
+       // print(firstTab)
         
         for i in firstTab.rangeOfString("affectedArea")!.startIndex ..< firstTab.endIndex {
             var j = i

@@ -468,7 +468,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             return condition
         }
         print(PhoneNumber.text?.characters.count, "over here")
-        if ((Int(PhoneNumber.text!) != nil) && (PhoneNumber.text?.characters.count == 10 )){
+        if (PhoneNumber.text?.characters.count == 10 ){
             condition = true
            
         }else{

@@ -123,7 +123,7 @@ indexPath: NSIndexPath) -> UITableViewCell {
         }
         else{
            
-            cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
+            cell!.textLabel!.text = singleton.listPeople[indexPath.row].person["name"]
 
         }
         return cell!

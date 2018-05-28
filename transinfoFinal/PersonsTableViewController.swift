@@ -75,8 +75,13 @@ class PersonsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
         
+        if singleton.firstTabInfo[0].sawReport {
+            cell!.textLabel!.text = singleton.listPeople[indexPath.row].person["name"]
+        }
+        else{
+            cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
+        }
         
-        cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
         
         return cell!
     }

@@ -429,6 +429,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typeAccident.text = typeAccident.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -436,6 +437,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        numberCaseField.text = numberCaseField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         
         dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
@@ -444,6 +446,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        dateTextField.text = dateTextField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -451,6 +454,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        hourField.text = hourField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -458,6 +462,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        numberVehiclesFIeld.text = numberVehiclesFIeld.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -465,6 +470,8 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        automovilistasField.text = automovilistasField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
         
         heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -472,6 +479,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        heridosField.text = heridosField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -479,6 +487,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        fatalitiesField.text = fatalitiesField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -486,6 +495,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        latitudField.text = latitudField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -493,6 +503,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        longitudField.text = longitudField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -500,6 +511,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        stateField.text = stateField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -507,6 +519,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        direccionField.text = direccionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -514,6 +527,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        cercadeField.text = cercadeField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -521,6 +535,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -528,6 +543,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        distanceField.text = distanceField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -535,6 +551,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        UnitPedestrians.text = UnitPedestrians.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -542,6 +559,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        medidaField.text = medidaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -549,6 +567,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        propertyField.text = propertyField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -556,6 +575,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        locationField.text = locationField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -563,6 +583,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typeZonaField.text = typeZonaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -570,6 +591,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        municipioField.text = municipioField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
     }
 }

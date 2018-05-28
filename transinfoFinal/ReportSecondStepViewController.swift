@@ -391,6 +391,8 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         typeColisionField.text = typeColisionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typeColisionField.text = typeColisionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typeColisionField.text = typeColisionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typeColisionField.text = typeColisionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
         
         eventField.text = eventField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         eventField.text = eventField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -398,6 +400,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         eventField.text = eventField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         eventField.text = eventField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         eventField.text = eventField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        eventField.text = eventField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         eventLocationField.text = eventLocationField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         eventLocationField.text = eventLocationField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -405,6 +408,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         eventLocationField.text = eventLocationField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         eventLocationField.text = eventLocationField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         eventLocationField.text = eventLocationField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        eventLocationField.text = eventLocationField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         mannerColisionField.text = mannerColisionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         mannerColisionField.text = mannerColisionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -412,6 +416,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         mannerColisionField.text = mannerColisionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         mannerColisionField.text = mannerColisionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         mannerColisionField.text = mannerColisionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        mannerColisionField.text = mannerColisionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         condition1Field.text = condition1Field.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         condition1Field.text = condition1Field.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -419,6 +424,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         condition1Field.text = condition1Field.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         condition1Field.text = condition1Field.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         condition1Field.text = condition1Field.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        condition1Field.text = condition1Field.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         condition2Field.text = condition2Field.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         condition2Field.text = condition2Field.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -426,6 +432,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         condition2Field.text = condition2Field.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         condition2Field.text = condition2Field.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         condition2Field.text = condition2Field.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        condition2Field.text = condition2Field.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         visibilidadConditionField.text = visibilidadConditionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         visibilidadConditionField.text = visibilidadConditionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -433,6 +440,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         visibilidadConditionField.text = visibilidadConditionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         visibilidadConditionField.text = visibilidadConditionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         visibilidadConditionField.text = visibilidadConditionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        visibilidadConditionField.text = visibilidadConditionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         pavimentCondition.text = pavimentCondition.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         pavimentCondition.text = pavimentCondition.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -440,6 +448,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         pavimentCondition.text = pavimentCondition.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         pavimentCondition.text = pavimentCondition.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         pavimentCondition.text = pavimentCondition.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        pavimentCondition.text = pavimentCondition.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         circunstanciaAmbientalField.text = circunstanciaAmbientalField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         circunstanciaAmbientalField.text = circunstanciaAmbientalField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -447,6 +456,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         circunstanciaAmbientalField.text = circunstanciaAmbientalField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         circunstanciaAmbientalField.text = circunstanciaAmbientalField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         circunstanciaAmbientalField.text = circunstanciaAmbientalField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        circunstanciaAmbientalField.text = circunstanciaAmbientalField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         circunstanciaCarreteraField.text = circunstanciaCarreteraField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         circunstanciaCarreteraField.text = circunstanciaCarreteraField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -454,6 +464,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         circunstanciaCarreteraField.text = circunstanciaCarreteraField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         circunstanciaCarreteraField.text = circunstanciaCarreteraField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         circunstanciaCarreteraField.text = circunstanciaCarreteraField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        circunstanciaCarreteraField.text = circunstanciaCarreteraField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         interseccionDesnivelField.text = interseccionDesnivelField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         interseccionDesnivelField.text = interseccionDesnivelField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -461,6 +472,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         interseccionDesnivelField.text = interseccionDesnivelField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         interseccionDesnivelField.text = interseccionDesnivelField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         interseccionDesnivelField.text = interseccionDesnivelField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        interseccionDesnivelField.text = interseccionDesnivelField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         lugarEspecificoField.text = lugarEspecificoField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         lugarEspecificoField.text = lugarEspecificoField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -468,6 +480,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         lugarEspecificoField.text = lugarEspecificoField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         lugarEspecificoField.text = lugarEspecificoField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         lugarEspecificoField.text = lugarEspecificoField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        lugarEspecificoField.text = lugarEspecificoField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         tipoIntersecciónField.text = tipoIntersecciónField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         tipoIntersecciónField.text = tipoIntersecciónField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -475,6 +488,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         tipoIntersecciónField.text = tipoIntersecciónField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         tipoIntersecciónField.text = tipoIntersecciónField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         tipoIntersecciónField.text = tipoIntersecciónField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        tipoIntersecciónField.text = tipoIntersecciónField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         RelacionadoOmnibusField.text = RelacionadoOmnibusField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         RelacionadoOmnibusField.text = RelacionadoOmnibusField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -482,6 +496,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         RelacionadoOmnibusField.text = RelacionadoOmnibusField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         RelacionadoOmnibusField.text = RelacionadoOmnibusField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         RelacionadoOmnibusField.text = RelacionadoOmnibusField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        RelacionadoOmnibusField.text = RelacionadoOmnibusField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         relacionField.text = relacionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         relacionField.text = relacionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -489,6 +504,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         relacionField.text = relacionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         relacionField.text = relacionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         relacionField.text = relacionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        relacionField.text = relacionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         localizacionAccidenteField.text = localizacionAccidenteField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         localizacionAccidenteField.text = localizacionAccidenteField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -496,6 +512,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         localizacionAccidenteField.text = localizacionAccidenteField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         localizacionAccidenteField.text = localizacionAccidenteField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         localizacionAccidenteField.text = localizacionAccidenteField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        localizacionAccidenteField.text = localizacionAccidenteField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         typezonaField.text = typezonaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         typezonaField.text = typezonaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -503,6 +520,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         typezonaField.text = typezonaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typezonaField.text = typezonaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typezonaField.text = typezonaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typezonaField.text = typezonaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         trabajadoresPresentesField.text = trabajadoresPresentesField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         trabajadoresPresentesField.text = trabajadoresPresentesField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -510,6 +528,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         trabajadoresPresentesField.text = trabajadoresPresentesField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         trabajadoresPresentesField.text = trabajadoresPresentesField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         trabajadoresPresentesField.text = trabajadoresPresentesField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        trabajadoresPresentesField.text = trabajadoresPresentesField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         policiaPresenteField.text = policiaPresenteField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         policiaPresenteField.text = policiaPresenteField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -517,6 +536,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         policiaPresenteField.text = policiaPresenteField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         policiaPresenteField.text = policiaPresenteField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         policiaPresenteField.text = policiaPresenteField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        policiaPresenteField.text = policiaPresenteField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         narrativeField.text = narrativeField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         narrativeField.text = narrativeField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -524,6 +544,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         narrativeField.text = narrativeField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         narrativeField.text = narrativeField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         narrativeField.text = narrativeField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        narrativeField.text = narrativeField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         
     }

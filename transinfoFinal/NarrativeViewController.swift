@@ -409,6 +409,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         notifiedTimePoliceField.text = notifiedTimePoliceField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         notifiedTimePoliceField.text = notifiedTimePoliceField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         notifiedTimePoliceField.text = notifiedTimePoliceField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        notifiedTimePoliceField.text = notifiedTimePoliceField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
      
         timeArrivalPoliceField.text = timeArrivalPoliceField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         timeArrivalPoliceField.text = timeArrivalPoliceField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -416,6 +417,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         timeArrivalPoliceField.text = timeArrivalPoliceField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         timeArrivalPoliceField.text = timeArrivalPoliceField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         timeArrivalPoliceField.text = timeArrivalPoliceField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        timeArrivalPoliceField.text = timeArrivalPoliceField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         notifiedTimeEmergenceField.text = notifiedTimeEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         notifiedTimeEmergenceField.text = notifiedTimeEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -423,6 +425,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         notifiedTimeEmergenceField.text = notifiedTimeEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         notifiedTimeEmergenceField.text = notifiedTimeEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         notifiedTimeEmergenceField.text = notifiedTimeEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        notifiedTimeEmergenceField.text = notifiedTimeEmergenceField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         timeArrivalEmergenceField.text = timeArrivalEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         timeArrivalEmergenceField.text = timeArrivalEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -430,6 +433,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         timeArrivalEmergenceField.text = timeArrivalEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         timeArrivalEmergenceField.text = timeArrivalEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         timeArrivalEmergenceField.text = timeArrivalEmergenceField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        timeArrivalEmergenceField.text = timeArrivalEmergenceField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         detailField.text = detailField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         detailField.text = detailField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -437,6 +441,7 @@ class NarrativeViewController: UIViewController, UIImagePickerControllerDelegate
         detailField.text = detailField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         detailField.text = detailField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         detailField.text = detailField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        detailField.text = detailField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         
     }

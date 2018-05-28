@@ -576,6 +576,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         rowField.text = rowField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         rowField.text = rowField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         rowField.text = rowField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        rowField.text = rowField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         seatField.text = seatField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         seatField.text = seatField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -583,6 +584,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         seatField.text = seatField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         seatField.text = seatField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         seatField.text = seatField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        seatField.text = seatField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         otherLocationField.text = otherLocationField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         otherLocationField.text = otherLocationField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -590,6 +592,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         otherLocationField.text = otherLocationField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         otherLocationField.text = otherLocationField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         otherLocationField.text = otherLocationField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        otherLocationField.text = otherLocationField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         restraintSystemField.text = restraintSystemField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         restraintSystemField.text = restraintSystemField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -597,6 +600,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         restraintSystemField.text = restraintSystemField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         restraintSystemField.text = restraintSystemField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         restraintSystemField.text = restraintSystemField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        restraintSystemField.text = restraintSystemField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         usoCascoMotocicleta.text = usoCascoMotocicleta.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         usoCascoMotocicleta.text = usoCascoMotocicleta.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -604,6 +608,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         usoCascoMotocicleta.text = usoCascoMotocicleta.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         usoCascoMotocicleta.text = usoCascoMotocicleta.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         usoCascoMotocicleta.text = usoCascoMotocicleta.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        usoCascoMotocicleta.text = usoCascoMotocicleta.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         airbagsActiviationField.text = airbagsActiviationField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         airbagsActiviationField.text = airbagsActiviationField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -611,6 +616,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         airbagsActiviationField.text = airbagsActiviationField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         airbagsActiviationField.text = airbagsActiviationField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         airbagsActiviationField.text = airbagsActiviationField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        airbagsActiviationField.text = airbagsActiviationField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         expulsionField.text = expulsionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         expulsionField.text = expulsionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -618,6 +624,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         expulsionField.text = expulsionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         expulsionField.text = expulsionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         expulsionField.text = expulsionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        expulsionField.text = expulsionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         relacionadoVelocidaField.text = relacionadoVelocidaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         relacionadoVelocidaField.text = relacionadoVelocidaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -625,6 +632,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         relacionadoVelocidaField.text = relacionadoVelocidaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         relacionadoVelocidaField.text = relacionadoVelocidaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         relacionadoVelocidaField.text = relacionadoVelocidaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        relacionadoVelocidaField.text = relacionadoVelocidaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         extractionField.text = extractionField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         extractionField.text = extractionField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -632,6 +640,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         extractionField.text = extractionField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         extractionField.text = extractionField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         extractionField.text = extractionField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        extractionField.text = extractionField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         circunstanciasConductorField.text = circunstanciasConductorField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         circunstanciasConductorField.text = circunstanciasConductorField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -639,6 +648,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         circunstanciasConductorField.text = circunstanciasConductorField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         circunstanciasConductorField.text = circunstanciasConductorField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         circunstanciasConductorField.text = circunstanciasConductorField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        circunstanciasConductorField.text = circunstanciasConductorField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -646,6 +656,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -653,6 +664,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         equipoSeguridadUsado.text = equipoSeguridadUsado.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         equipoSeguridadUsado.text = equipoSeguridadUsado.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -660,6 +672,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         equipoSeguridadUsado.text = equipoSeguridadUsado.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         equipoSeguridadUsado.text = equipoSeguridadUsado.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         equipoSeguridadUsado.text = equipoSeguridadUsado.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        equipoSeguridadUsado.text = equipoSeguridadUsado.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -667,6 +680,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -674,6 +688,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         resultado.text = resultado.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         resultado.text = resultado.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -681,6 +696,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         resultado.text = resultado.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         resultado.text = resultado.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         resultado.text = resultado.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        resultado.text = resultado.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         usoSustanciasControladas.text = usoSustanciasControladas.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         usoSustanciasControladas.text = usoSustanciasControladas.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -688,6 +704,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         usoSustanciasControladas.text = usoSustanciasControladas.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         usoSustanciasControladas.text = usoSustanciasControladas.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         usoSustanciasControladas.text = usoSustanciasControladas.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        usoSustanciasControladas.text = usoSustanciasControladas.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         actionPriorToCrash.text = actionPriorToCrash.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         actionPriorToCrash.text = actionPriorToCrash.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -695,6 +712,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         actionPriorToCrash.text = actionPriorToCrash.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         actionPriorToCrash.text = actionPriorToCrash.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         actionPriorToCrash.text = actionPriorToCrash.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        actionPriorToCrash.text = actionPriorToCrash.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         walkScholl.text = walkScholl.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         walkScholl.text = walkScholl.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -702,6 +720,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         walkScholl.text = walkScholl.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         walkScholl.text = walkScholl.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         walkScholl.text = walkScholl.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        walkScholl.text = walkScholl.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         accionesMomentoAccident.text = accionesMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         accionesMomentoAccident.text = accionesMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -709,6 +728,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         accionesMomentoAccident.text = accionesMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         accionesMomentoAccident.text = accionesMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         accionesMomentoAccident.text = accionesMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        accionesMomentoAccident.text = accionesMomentoAccident.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         localizacionMomentoAccident.text = localizacionMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         localizacionMomentoAccident.text = localizacionMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -716,6 +736,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         localizacionMomentoAccident.text = localizacionMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         localizacionMomentoAccident.text = localizacionMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         localizacionMomentoAccident.text = localizacionMomentoAccident.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        localizacionMomentoAccident.text = localizacionMomentoAccident.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         usoAlcoholField.text = usoAlcoholField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         usoAlcoholField.text = usoAlcoholField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -723,6 +744,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         usoAlcoholField.text = usoAlcoholField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         usoAlcoholField.text = usoAlcoholField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         usoAlcoholField.text = usoAlcoholField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        usoAlcoholField.text = usoAlcoholField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         resultadoPruebaField.text = resultadoPruebaField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         resultadoPruebaField.text = resultadoPruebaField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -730,6 +752,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         resultadoPruebaField.text = resultadoPruebaField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         resultadoPruebaField.text = resultadoPruebaField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         resultadoPruebaField.text = resultadoPruebaField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        resultadoPruebaField.text = resultadoPruebaField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         personTransport.text = personTransport.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         personTransport.text = personTransport.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -737,6 +760,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         personTransport.text = personTransport.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         personTransport.text = personTransport.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         personTransport.text = personTransport.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        personTransport.text = personTransport.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         transportedBy.text = transportedBy.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         transportedBy.text = transportedBy.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -744,6 +768,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         transportedBy.text = transportedBy.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         transportedBy.text = transportedBy.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         transportedBy.text = transportedBy.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        transportedBy.text = transportedBy.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         TransportedTo.text = TransportedTo.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         TransportedTo.text = TransportedTo.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -751,6 +776,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         TransportedTo.text = TransportedTo.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         TransportedTo.text = TransportedTo.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         TransportedTo.text = TransportedTo.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        TransportedTo.text = TransportedTo.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         MedicalEmergenciesNumber.text = MedicalEmergenciesNumber.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         MedicalEmergenciesNumber.text = MedicalEmergenciesNumber.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -758,6 +784,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         MedicalEmergenciesNumber.text = MedicalEmergenciesNumber.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         MedicalEmergenciesNumber.text = MedicalEmergenciesNumber.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         MedicalEmergenciesNumber.text = MedicalEmergenciesNumber.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        MedicalEmergenciesNumber.text = MedicalEmergenciesNumber.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         AmbulanceCSPNumber.text = AmbulanceCSPNumber.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         AmbulanceCSPNumber.text = AmbulanceCSPNumber.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -765,6 +792,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         AmbulanceCSPNumber.text = AmbulanceCSPNumber.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         AmbulanceCSPNumber.text = AmbulanceCSPNumber.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         AmbulanceCSPNumber.text = AmbulanceCSPNumber.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        AmbulanceCSPNumber.text = AmbulanceCSPNumber.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         categoriaPersonField.text = categoriaPersonField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         categoriaPersonField.text = categoriaPersonField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -772,6 +800,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         categoriaPersonField.text = categoriaPersonField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         categoriaPersonField.text = categoriaPersonField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         categoriaPersonField.text = categoriaPersonField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        categoriaPersonField.text = categoriaPersonField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         typePersonField.text = typePersonField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         typePersonField.text = typePersonField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -779,6 +808,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         typePersonField.text = typePersonField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         typePersonField.text = typePersonField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         typePersonField.text = typePersonField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        typePersonField.text = typePersonField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -786,6 +816,8 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
         
         genderField.text = genderField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         genderField.text = genderField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -793,6 +825,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         genderField.text = genderField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
         genderField.text = genderField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         genderField.text = genderField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        genderField.text = genderField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         
         
