@@ -119,11 +119,21 @@ indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         if indexPath.section == 0{
         //let vehicles = vehicle[indexPath.row]
-        cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]//numTablilla
+            print(singleton.listVehicle,"here")
+            print(indexPath.row)
+           
+            
+            if singleton.listVehicle[indexPath.row].vehicle["plateNumber"] == nil {
+              cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["numTablilla"]
+            }
+            else{
+                cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["plateNumber"]//numTablilla
+            }
+        
         }
         else{
            
-            cell!.textLabel!.text = singleton.listPeople[indexPath.row].person["name"]
+            cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
 
         }
         return cell!

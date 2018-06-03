@@ -61,8 +61,14 @@ class VehiclesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView,cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        print(singleton.listVehicle)
       
-        cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]
+        if singleton.firstTabInfo[0].sawReportOnce {
+            cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]
+        }
+        else{
+            cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["numTablilla"]
+        }
         
         return cell!
 

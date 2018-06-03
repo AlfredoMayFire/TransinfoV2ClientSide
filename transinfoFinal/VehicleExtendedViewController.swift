@@ -286,7 +286,7 @@ class VehicleExtendedViewController: UIViewController{
         super.viewDidLoad()
         
         print(singleton.firstTabInfo[0].sawReport)
-        if singleton.firstTabInfo[0].vehicleExtendTab["vehicleType"] != "" {
+        if singleton.firstTabInfo[0].sawReportOnce {
             let counter = singleton.listVehicle[0].counter
             let arrayForStuff = singleton.listVehicle[0].arrayVehicle[counter]
             remolcadoField.text = String(arrayForStuff["towedDamage"]!)

@@ -73,9 +73,9 @@ class PersonsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView,cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        print(singleton.listVehicle.count,"this is count")
         
-        
-        if singleton.firstTabInfo[0].sawReport {
+        if singleton.firstTabInfo[0].sawReportOnce {
             cell!.textLabel!.text = singleton.listPeople[indexPath.row].person["name"]
         }
         else{
@@ -94,10 +94,19 @@ class PersonsTableViewController: UITableViewController {
         
         singleton.selectedKey = indexPath!.row
       
-        dictionary["name"] = singleton.listPeople[indexPath!.row+1].person["name"]
-        dictionary["gender"] = singleton.listPeople[indexPath!.row+1].person["gender"]
-        dictionary["typeLicense"] = singleton.listPeople[indexPath!.row+1].person["typeLicense"]
-        dictionary["numLicense"] = singleton.listPeople[indexPath!.row+1].person["numLicense"]
+        if singleton.firstTabInfo[0].sawReportOnce{
+            dictionary["name"] = singleton.listPeople[indexPath!.row].person["name"]
+            dictionary["gender"] = singleton.listPeople[indexPath!.row].person["gender"]
+            dictionary["typeLicense"] = singleton.listPeople[indexPath!.row].person["typeLicense"]
+            dictionary["numLicense"] = singleton.listPeople[indexPath!.row].person["numLicense"]
+        }
+        else{
+            dictionary["name"] = singleton.listPeople[indexPath!.row+1].person["name"]
+            dictionary["gender"] = singleton.listPeople[indexPath!.row+1].person["gender"]
+            dictionary["typeLicense"] = singleton.listPeople[indexPath!.row+1].person["typeLicense"]
+            dictionary["numLicense"] = singleton.listPeople[indexPath!.row+1].person["numLicense"]
+        }
+        
 //        let cellName = tableView.cellForRowAtIndexPath(indexPath!) //  instance of selected cell
       
          performSegueWithIdentifier("EditPersonSegue", sender: self)

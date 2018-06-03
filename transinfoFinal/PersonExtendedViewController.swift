@@ -149,9 +149,12 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
 //        transportedBy.keyPath = "DescriptionES"
 //        transportedBy.arrayList = webServicesObject1.arrayOfDictionaries("organDonor")
         
-        if singleton.firstTabInfo[0].sawReport {
+        if singleton.firstTabInfo[0].sawReportOnce {
             let counter = singleton.listPeople[0].counter
-            print(singleton.listPeople[0].arrayPerson[0])
+            print(singleton.listPeople[0].arrayPerson)
+            if ((singleton.listPeople[0].arrayPerson.first?.isEmpty) != nil){
+                singleton.listPeople[0].arrayPerson.removeAtIndex(0)
+            }
             print(singleton.listPeople[0].arrayPerson.count)
             print(counter)
             

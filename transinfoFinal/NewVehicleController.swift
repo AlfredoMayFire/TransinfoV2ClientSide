@@ -257,6 +257,7 @@ class NewVehicleController: UIViewController,UITableViewDataSource,UITableViewDe
             dictionary["make"] = marcaField.text
             dictionary["model"] = modeloField.text
             
+            //singleton.listVehicle.removeAll()
             let newVehicle = Vehicle(vehicle: dictionary)
             singleton.listVehicle.append(newVehicle)
             

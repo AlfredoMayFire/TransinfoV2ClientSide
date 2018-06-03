@@ -39,6 +39,13 @@ class AccidentReportTableViewController: UITableViewController {
     
     @IBOutlet weak var reportText: UITextView!
     
+    override func viewDidDisappear(animated: Bool) {
+         singleton.firstTabInfo[0].sawReport = false
+
+
+    }
+    
+    
     override func viewDidLoad() {
         
         Reportes.delegate = self
@@ -319,6 +326,7 @@ class AccidentReportTableViewController: UITableViewController {
         thirdTabFormat(String(converterArray))
         
         singleton.firstTabInfo[0].sawReport = true
+        singleton.firstTabInfo[0].sawReportOnce = true
         
         segueBack()
         
@@ -1358,397 +1366,399 @@ class AccidentReportTableViewController: UITableViewController {
     
     func personExtendedTabFormat(firstTab: String){
         var value = ""
-        //print(firstTab)
-        
-        for i in firstTab.rangeOfString("actionsAtCollisionTime")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            
-            if i == firstTab.rangeOfString("actionsAtCollisionTime")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+        print(firstTab)
+        if firstTab != "[]" {
+            for i in firstTab.rangeOfString("actionsAtCollisionTime")!.startIndex ..< firstTab.endIndex {
+                var j = i
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                
+                if i == firstTab.rangeOfString("actionsAtCollisionTime")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["actionsAtCollisionTime"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].personExtenTab["actionsAtCollisionTime"] = value
-                value = ""
-            }
-            
-            
-            
-            
-            if i == firstTab.rangeOfString("actionsBeforeCollision")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                
+                
+                
+                
+                if i == firstTab.rangeOfString("actionsBeforeCollision")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["actionsBeforeCollision"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].personExtenTab["actionsBeforeCollision"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("airbagsActivation")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                if i == firstTab.rangeOfString("airbagsActivation")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["airbagsActivation"] = value
+                    value = ""
+                    
                 }
-                singleton.firstTabInfo[0].personExtenTab["airbagsActivation"] = value
-                value = ""
+                if i == firstTab.rangeOfString("ambulanceCSPNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["ambulanceCSPNumber"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("categoryPerson")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["categoryPerson"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("conditionCollisionTime")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["conditionCollisionTime"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("distractedBy")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["distractedBy"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("distractedDriverBy")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["distractedDriverBy"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("driverCirncunstanceBC")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["driverCirncunstanceBC"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("expulsion")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["expulsion"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("extraction")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["extraction"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("inWayToSchool")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["inWayToSchool"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("locationWhenCollision")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["locationWhenCollision"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("medicalEmergenciesNumber")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["medicalEmergenciesNumber"] = value
+                    value = ""
+                }
+                
+                
+                
+                
+                if i == firstTab.rangeOfString("otherLocation")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["otherLocation"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("restraintSystem")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["restraintSystem"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("row")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["row"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("safetyEquipmentUsed")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["safetyEquipmentUsed"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("seat")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["seat"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("speedRelated")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["speedRelated"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("suscpectControlledSubstances")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["suscpectControlledSubstances"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("suspectAlcoholUse")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["suspectAlcoholUse"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testResultAl")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testResultAl"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testResultSub")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testResultSub"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testResultTP")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testResultTP"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testStatusAl")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testStatusAl"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testStatusSub")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testStatusSub"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testTypeAl")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testTypeAl"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("testTypeSub")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["testTypeSub"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("transportedBy")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["transportedBy"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("transportedByME")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["transportedByME"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("transportedTo")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["transportedTo"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("typePerson")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personExtenTab["typePerson"] = value
+                    value = ""
+                }
+                
+                
                 
             }
-            if i == firstTab.rangeOfString("ambulanceCSPNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["ambulanceCSPNumber"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("categoryPerson")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["categoryPerson"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("conditionCollisionTime")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["conditionCollisionTime"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("distractedBy")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["distractedBy"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("distractedDriverBy")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["distractedDriverBy"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("driverCirncunstanceBC")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["driverCirncunstanceBC"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("expulsion")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["expulsion"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("extraction")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["extraction"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("inWayToSchool")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["inWayToSchool"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("locationWhenCollision")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["locationWhenCollision"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("medicalEmergenciesNumber")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["medicalEmergenciesNumber"] = value
-                value = ""
-            }
-            
-            
-            
-            
-            if i == firstTab.rangeOfString("otherLocation")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["otherLocation"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("restraintSystem")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["restraintSystem"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("row")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["row"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("safetyEquipmentUsed")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["safetyEquipmentUsed"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("seat")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["seat"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("speedRelated")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["speedRelated"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("suscpectControlledSubstances")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["suscpectControlledSubstances"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("suspectAlcoholUse")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["suspectAlcoholUse"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testResultAl")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testResultAl"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testResultSub")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testResultSub"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testResultTP")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testResultTP"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testStatusAl")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testStatusAl"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testStatusSub")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testStatusSub"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testTypeAl")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testTypeAl"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("testTypeSub")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["testTypeSub"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("transportedBy")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["transportedBy"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("transportedByME")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["transportedByME"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("transportedTo")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["transportedTo"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("typePerson")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personExtenTab["typePerson"] = value
-                value = ""
-            }
-            
-            
-            
+            //print(singleton.firstTabInfo[0].personExtenTab,"thisinfor")
+            //        let counter  = singleton.listPeople[0].counter
+            //        print(counter)
+            singleton.listPeople[0].arrayPerson.append(singleton.firstTabInfo[0].personExtenTab)
+            singleton.listPeople[0].counter += 1
+
         }
-        //print(singleton.firstTabInfo[0].personExtenTab,"thisinfor")
-//        let counter  = singleton.listPeople[0].counter
-//        print(counter)
-        singleton.listPeople[0].arrayPerson.append(singleton.firstTabInfo[0].personExtenTab)
-        singleton.listPeople[0].counter += 1
-       
+        
     }
     
     func vehicleExtendedTabFormat(firstTab: String){
@@ -2276,5 +2286,6 @@ class AccidentReportTableViewController: UITableViewController {
         singleton.listVehicle[0].arrayVehicle[counter] = singleton.firstTabInfo[0].vehicleExtendTab
         singleton.listVehicle[0].counter += 1
     }
+    
     
 }

@@ -71,8 +71,9 @@ struct Report {
     var vehicleTab = ["":""]
     var vehicleExtendTab = ["":""]
     var sawReport = false
+    var sawReportOnce = false
     
-    init(firstTab: Dictionary<String,String>,secondTab: Dictionary<String,String>,thirdTab: Dictionary<String,String>,personTab: Dictionary<String,String>, personExtenTab: Dictionary<String,String>,vehicleTab: Dictionary<String,String>,vehicleExtendTab: Dictionary<String,String>,sawReport: Bool){
+    init(firstTab: Dictionary<String,String>,secondTab: Dictionary<String,String>,thirdTab: Dictionary<String,String>,personTab: Dictionary<String,String>, personExtenTab: Dictionary<String,String>,vehicleTab: Dictionary<String,String>,vehicleExtendTab: Dictionary<String,String>,sawReport: Bool,sawReportOnce: Bool){
     self.firstTab=firstTab
     self.secondTab=secondTab
     self.thirdTab=thirdTab
@@ -81,6 +82,7 @@ struct Report {
     self.vehicleTab=vehicleTab
     self.vehicleExtendTab=vehicleExtendTab
     self.sawReport=false
+    self.sawReportOnce=false
     }
  
 }

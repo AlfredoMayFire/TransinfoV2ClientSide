@@ -110,11 +110,11 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         //singleton.foreignKeys[0].crashBasicInformation = 167
         
         if singleton.firstTabInfo[0].sawReport {
-            
+            singleton.firstTabInfo[0].sawReport = false
             dictionaryBro = singleton.firstTabInfo[0].firstTab
             print(dictionaryBro)
             
-            typeAccident.userInteractionEnabled = false
+//            typeAccident.userInteractionEnabled = false
             typeAccident.text = (dictionaryBro["crashType"])
             numberCaseField.text = dictionaryBro["caseNumber"]
             stateField.text = dictionaryBro["cityDescriptionES"]
@@ -140,8 +140,23 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
             correctFormat()
             
         }
+        else{
+            singleton.firstTabInfo[0].sawReport = false
+            singleton.listPeople.removeAll()
+            singleton.listVehicle.removeAll()
+            print("Yesyesyesnever")
+            print(singleton.listVehicle)
+            print(singleton.listPeople)
+            let listPeopleInit = People(person: ["":""])
+            singleton.listPeople.append(listPeopleInit)
+            let listVehicleInit = Vehicle(vehicle: ["":""])
+            singleton.listVehicle.append(listVehicleInit)
+            singleton.listNum = [0,0]
+            singleton.selectedKey = 0
+        }
         
         print(singleton.foreignKeys[0])
+       
         //Direccion
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -309,7 +324,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
                 "Oprima para continuar.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Continuar.", style: UIAlertActionStyle.Default,handler: confirm))
             self.presentViewController(alertController, animated: true, completion: nil)
-
+           singleton.firstTabInfo[0].sawReportOnce = false
            // clear(self)
         }
         print ("******************")

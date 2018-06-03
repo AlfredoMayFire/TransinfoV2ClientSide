@@ -75,7 +75,7 @@ class ViewController: UIViewController {
             let listPeopleInit = People(person: ["":""])
             singleton.listPeople.append(listPeopleInit)
             
-            let listReportInit = Report(firstTab: ["":""],secondTab:["":""],thirdTab:["":""],personTab:["":""],personExtenTab:["":""],vehicleTab:["":""],vehicleExtendTab:["":""],sawReport: false)
+            let listReportInit = Report(firstTab: ["":""],secondTab:["":""],thirdTab:["":""],personTab:["":""],personExtenTab:["":""],vehicleTab:["":""],vehicleExtendTab:["":""],sawReport: false,sawReportOnce: false)
             singleton.firstTabInfo.append(listReportInit)
             
             print(singleton.foreignKeys)
