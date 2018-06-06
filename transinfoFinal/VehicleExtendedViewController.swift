@@ -285,61 +285,69 @@ class VehicleExtendedViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(singleton.firstTabInfo[0].sawReport)
-        if singleton.firstTabInfo[0].sawReportOnce {
-            let counter = singleton.listVehicle[0].counter
-            let arrayForStuff = singleton.listVehicle[0].arrayVehicle[counter]
-            remolcadoField.text = String(arrayForStuff["towedDamage"]!)
-            ocupantes.text = String(arrayForStuff["occupants"]!)
-            mphField.text = String(arrayForStuff["mPH"]!)
-            confVehiculo.text = String(arrayForStuff["vehicleConfiguration"]!)
-            cuartoEvento.text = String(arrayForStuff["cuartoEvent"]!)
-            cantidadField.text = String(arrayForStuff["laneCantidad"]!)//??
-            usoVehiculoField.text = String(arrayForStuff["motorEmergencyVU"]!)
-            abandonoLugarField.text = String(arrayForStuff["lefthPlace"]!)
-            conductorAutorizadoField.text = String(arrayForStuff["authorizedDriver"]!)
-            pesoBrutoField.text = String(arrayForStuff["grossWeight"]!)
-            segundoEvento.text = String(arrayForStuff["segundoEvent"]!)
-            cantidadEjesField.text = String(arrayForStuff["totalAxis"]!)
-            typeVehicleField.text = String(arrayForStuff["vehicleMotor"]!)
-            tipoControlesField.text = String(arrayForStuff["typeControlTraffic"]!)
-            cuartaCategoria.text = String(arrayForStuff["cuartaCategoria"]!)
-            gradoDanioField.text = String(arrayForStuff["extendDamage"]!)
-            operacionField.text = String(arrayForStuff["inOperationLost"]!)
-            tipoVehiculoCargaField.text = String(arrayForStuff["heavyVehicleType"]!)
-            roadDescriptionField.text = String(arrayForStuff["descriptionRoad"]!)
-            typeCarrilField.text = String(arrayForStuff["laneTipoCarril"]!)
-            PuntoInicialField.text = String(arrayForStuff["initialContactPoint"]!)
-            numeroIdentificacionField.text = String(arrayForStuff["diamondIdNumber"]!)
-            primerCategoria.text = String(arrayForStuff["primeraCategoriaEvent"]!)
-            segundaCategoria.text = String(arrayForStuff["segundaCategoriaEvent"]!)
-            mphdosField.text = String(arrayForStuff["mPHDescription"]!)
-            inclinacionField.text = String(arrayForStuff["slope"]!)
-            usoBusField.text = String(arrayForStuff["busUse"]!)
-            categoriaField.text = String(arrayForStuff["laneCategoria"]!)
-            vehiculoMovimientoField.text = String(arrayForStuff["vehicleMoving"]!)
-            direccionViajeField.text = String(arrayForStuff["directionTripCB"]!)
-            permisoEspecialField.text = String(arrayForStuff["specialPermit"]!)
-            areaAfectadaField.text = String(arrayForStuff["affectedArea"]!)
-            terceraCategoria.text = String(arrayForStuff["terceraCategoriaEvent"]!)
-            primerDefecto.text = String(arrayForStuff["primerDefectoMec"]!)
-            funcionEspecialField.text = String(arrayForStuff["functionSpecialMVT"]!)
-            vehiculoContieneMPField.text = String(arrayForStuff["hazardousMaterial"]!)
-            inspeccionDiaField.text = String(arrayForStuff["inspectionUpdate"]!)
-            alineamientoField.text = String(arrayForStuff["alignment"]!)
-            primerEvento.text = String(arrayForStuff["primerEvent"]!)
-            huboDerrameMPField.text = String(arrayForStuff["thereHazardousMaterial"]!)
-            typeVehicleField.text = String(arrayForStuff["vehicleType"]!)
+            if singleton.firstTabInfo[0].sawReportOnce {
+            var counter = singleton.listVehicle[0].counter
+            let amount = singleton.listVehicle[0].arrayVehicle.count
+            do{
+                if counter >= amount {
+                    counter = amount-1
+                }
+                
+                let arrayForStuff = try singleton.listVehicle[0].arrayVehicle[counter]
+                remolcadoField.text = String(arrayForStuff["towedDamage"]!)
+                ocupantes.text = String(arrayForStuff["occupants"]!)
+                mphField.text = String(arrayForStuff["mPH"]!)
+                confVehiculo.text = String(arrayForStuff["vehicleConfiguration"]!)
+                cuartoEvento.text = String(arrayForStuff["cuartoEvent"]!)
+                cantidadField.text = String(arrayForStuff["laneCantidad"]!)//??
+                usoVehiculoField.text = String(arrayForStuff["motorEmergencyVU"]!)
+                abandonoLugarField.text = String(arrayForStuff["lefthPlace"]!)
+                conductorAutorizadoField.text = String(arrayForStuff["authorizedDriver"]!)
+                pesoBrutoField.text = String(arrayForStuff["grossWeight"]!)
+                segundoEvento.text = String(arrayForStuff["segundoEvent"]!)
+                cantidadEjesField.text = String(arrayForStuff["totalAxis"]!)
+                typeVehicleField.text = String(arrayForStuff["vehicleMotor"]!)
+                tipoControlesField.text = String(arrayForStuff["typeControlTraffic"]!)
+                cuartaCategoria.text = String(arrayForStuff["cuartaCategoria"]!)
+                gradoDanioField.text = String(arrayForStuff["extendDamage"]!)
+                operacionField.text = String(arrayForStuff["inOperationLost"]!)
+                tipoVehiculoCargaField.text = String(arrayForStuff["heavyVehicleType"]!)
+                roadDescriptionField.text = String(arrayForStuff["descriptionRoad"]!)
+                typeCarrilField.text = String(arrayForStuff["laneTipoCarril"]!)
+                PuntoInicialField.text = String(arrayForStuff["initialContactPoint"]!)
+                numeroIdentificacionField.text = String(arrayForStuff["diamondIdNumber"]!)
+                primerCategoria.text = String(arrayForStuff["primeraCategoriaEvent"]!)
+                segundaCategoria.text = String(arrayForStuff["segundaCategoriaEvent"]!)
+                mphdosField.text = String(arrayForStuff["mPHDescription"]!)
+                inclinacionField.text = String(arrayForStuff["slope"]!)
+                usoBusField.text = String(arrayForStuff["busUse"]!)
+                categoriaField.text = String(arrayForStuff["laneCategoria"]!)
+                vehiculoMovimientoField.text = String(arrayForStuff["vehicleMoving"]!)
+                direccionViajeField.text = String(arrayForStuff["directionTripCB"]!)
+                permisoEspecialField.text = String(arrayForStuff["specialPermit"]!)
+                areaAfectadaField.text = String(arrayForStuff["affectedArea"]!)
+                terceraCategoria.text = String(arrayForStuff["terceraCategoriaEvent"]!)
+                primerDefecto.text = String(arrayForStuff["primerDefectoMec"]!)
+                funcionEspecialField.text = String(arrayForStuff["functionSpecialMVT"]!)
+                vehiculoContieneMPField.text = String(arrayForStuff["hazardousMaterial"]!)
+                inspeccionDiaField.text = String(arrayForStuff["inspectionUpdate"]!)
+                alineamientoField.text = String(arrayForStuff["alignment"]!)
+                primerEvento.text = String(arrayForStuff["primerEvent"]!)
+                huboDerrameMPField.text = String(arrayForStuff["thereHazardousMaterial"]!)
+                typeVehicleField.text = String(arrayForStuff["vehicleType"]!)
+                
+                usoVehiculoComercialField.text = String(arrayForStuff["commercialVehicleUse"]!)
+                
+                segundoDefecto.text = String(arrayForStuff["segundoDefectoMec"]!)
+                
+                tercerEvento.text = String(arrayForStuff["tecerEvent"]!)
+                maniobraField.text = String(arrayForStuff["maneuverVehicleMotor"]!)
+                
+                correctFormat()
+                
 
-            usoVehiculoComercialField.text = String(arrayForStuff["commercialVehicleUse"]!)
-
-            segundoDefecto.text = String(arrayForStuff["segundoDefectoMec"]!)
-
-            tercerEvento.text = String(arrayForStuff["tecerEvent"]!)
-            maniobraField.text = String(arrayForStuff["maneuverVehicleMotor"]!)
-
-            correctFormat()
-            
+            }catch{}
+         
         }
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -587,12 +595,20 @@ class VehicleExtendedViewController: UIViewController{
         huboDerrameMPField.arrayList = webServicesObject.arrayOfDictionaries("hazMatInvolved")
         
 
+        if singleton.firstTabInfo[0].sawReportOnce {
+            modelField.text = singleton.listVehicle[0].vehicle["modelos"]
+            yearField.text = singleton.listVehicle[0].vehicle["year"]
+            marcaField.text = singleton.listVehicle[0].vehicle["make"]
+            numberTablillaField.text = singleton.listVehicle[0].vehicle["plateNumber"]
+            
+        }else{
+            modelField.text = singleton.listVehicle[0].vehicle["model"]
+            yearField.text = singleton.listVehicle[0].vehicle["year"]
+            marcaField.text = singleton.listVehicle[0].vehicle["make"]
+            numberTablillaField.text = singleton.listVehicle[0].vehicle["numTablilla"]
+        }
         
         
-        modelField.text = singleton.listVehicle[0].vehicle["model"]
-        yearField.text = singleton.listVehicle[0].vehicle["year"]
-        marcaField.text = singleton.listVehicle[0].vehicle["make"]
-        numberTablillaField.text = singleton.listVehicle[0].vehicle["numTablilla"]
         
     }
     

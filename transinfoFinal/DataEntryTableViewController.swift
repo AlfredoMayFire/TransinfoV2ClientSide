@@ -121,21 +121,33 @@ indexPath: NSIndexPath) -> UITableViewCell {
         //let vehicles = vehicle[indexPath.row]
             print(singleton.listVehicle,"here")
             print(indexPath.row)
+            print(singleton.firstTabInfo[0].sawReportOnce)
            
             
-            if singleton.listVehicle[indexPath.row].vehicle["plateNumber"] == nil {
+            if !singleton.firstTabInfo[0].sawReportOnce {
               cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["numTablilla"]
             }
             else{
-                cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["plateNumber"]//numTablilla
+                cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]//numTablilla
             }
         
         }
         else{
            
-            cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
+            if !singleton.firstTabInfo[0].sawReportOnce {
+                cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
+            }
+            else{
+                cell!.textLabel!.text = singleton.listPeople[indexPath.row].person["name"]
+            }
+            
 
         }
+        try cell?.textLabel?.text = cell?.textLabel?.text!.stringByReplacingOccurrencesOfString("\"", withString: "")
+       
+        
+        
+       
         return cell!
     }
     

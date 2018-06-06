@@ -17,7 +17,54 @@ class VehiclesTableViewController: UITableViewController {
     let singleton = Global.sharedGlobal
     
     @IBOutlet var listaVehiculos: UITableView!
-    
+    var dictionary: [String:String] = [
+        "numDeTablilla" :"",
+        "marca" :"",
+        "model" :"",
+        "year": "",
+        "tipoVehiculoMotor": "",
+        "direccionDeViaje": "",
+        "funcionEspecial": "",
+        "usoDeVehiculo": "",
+        "maniobra": "",
+        "mph": "",
+        "limiteDeVelocidad": "",
+        "alineamiento": "",
+        "categoriaCarril": "",
+        "inclinacion": "",
+        "operationOrLost": "",
+        "tipoCarril": "",
+        "cantidadCarril": "",
+        "objectNum": "",
+        "primeraCategoria": "",
+        "segundaCategoria": "",
+        "terceraCategoria": "",
+        "cuartaCategoria": "",
+        "primerEvento": "",
+        "segundoEvento": "",
+        "tercerEvento": "",
+        "cuartoEvento": "",
+        "busUse": "",
+        "leftPlace": "",
+        "towedDamage": "",
+        "primerDefectoMec": "",
+        "segundoDefectoMec": "",
+        "diamondIDNumber": "",
+        "descripcionCarretera": "",
+        "commercialVehicle": "",
+        "movingVehicle": "",
+        "inspectionDate": "",
+        "extendDamage": "",
+        "authorizedDriver": "",
+        "vehicleConfiguration": "",
+        "hazardousMaterial": "",
+        "specialPermit": "",
+        "totalAxis": "",
+        "heavyVehicleType": "",
+        "grossWeight": "",
+        "initialContactPoint": "",
+        ]
+
     
     
     override func viewDidLoad() {
@@ -69,6 +116,7 @@ class VehiclesTableViewController: UITableViewController {
         else{
             cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["numTablilla"]
         }
+        cell?.textLabel?.text = cell?.textLabel?.text!.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         return cell!
 
@@ -83,7 +131,7 @@ class VehiclesTableViewController: UITableViewController {
         let cellIndex = indexPath!.row // index of selected cell
         print(indexPath?.row)//iT'S THE NUMBER YOU WANT - 1
         let cellName = tableView.cellForRowAtIndexPath(indexPath!) //  instance of selected cell
-        
+      
        
         performSegueWithIdentifier("EditVehicleSegue", sender: self)
 

@@ -71,7 +71,7 @@ class PersonsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView,cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+        print(singleton.listPeople)
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         print(singleton.listVehicle.count,"this is count")
         
@@ -81,7 +81,7 @@ class PersonsTableViewController: UITableViewController {
         else{
             cell!.textLabel!.text = singleton.listPeople[indexPath.row+1].person["name"]
         }
-        
+        cell?.textLabel?.text = cell?.textLabel?.text!.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         return cell!
     }
@@ -90,17 +90,19 @@ class PersonsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexPath = tableView.indexPathForSelectedRow // index path of selected cell
         singleton.listPeople[0].counter = (indexPath?.row)!
-        let cellIndex = indexPath!.row // index of selected cell
+        _ = indexPath!.row // index of selected cell
         
         singleton.selectedKey = indexPath!.row
       
         if singleton.firstTabInfo[0].sawReportOnce{
+            
             dictionary["name"] = singleton.listPeople[indexPath!.row].person["name"]
             dictionary["gender"] = singleton.listPeople[indexPath!.row].person["gender"]
-            dictionary["typeLicense"] = singleton.listPeople[indexPath!.row].person["typeLicense"]
-            dictionary["numLicense"] = singleton.listPeople[indexPath!.row].person["numLicense"]
+            dictionary["typeLicense"] = singleton.listPeople[indexPath!.row].person["licenseType"]
+            dictionary["numLicense"] = singleton.listPeople[indexPath!.row].person["licenceNumber"]
         }
         else{
+            //print(singleton.listPeople[indexPath!.row])
             dictionary["name"] = singleton.listPeople[indexPath!.row+1].person["name"]
             dictionary["gender"] = singleton.listPeople[indexPath!.row+1].person["gender"]
             dictionary["typeLicense"] = singleton.listPeople[indexPath!.row+1].person["typeLicense"]

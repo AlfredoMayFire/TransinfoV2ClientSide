@@ -12,11 +12,12 @@ import PhotosUI
 
 class CollisionDiagram: UIViewController {
     
+    @IBOutlet weak var pickerView: UIPickerView!
     
     //random needed variables
     var angleOfRotation = 0.0
     var location = CGPoint()
-    var list = ["Curva Derecha","Curva Izquierda",
+    var list = ["Original","Curva Derecha","Curva Izquierda",
                 "Intersección T Pare",
                 "Intersección T Semaforizada",
                 "Intersección X 4 Pare",
@@ -317,12 +318,9 @@ class CollisionDiagram: UIViewController {
             print("Nothing Happened")
         }
     }
+  
     
-    func pickerView(pickerView: UIPickerView, rowWidthForComponent component: Int) -> CGFloat {
-        return 200.0
-        
-        
-    }
+  
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         
@@ -337,17 +335,20 @@ class CollisionDiagram: UIViewController {
         label.textAlignment = .Center
         label.font = UIFont.boldSystemFontOfSize(20)
         label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.1
+        label.minimumScaleFactor = 0.7//usually 0.1
+        label.textAlignment = NSTextAlignment.Center
         return label
         
     }
+    
+    
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setup()
-    
+       
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
         //Add the recognizer to your view.
         carImage.addGestureRecognizer(tapRecognizer)
@@ -426,7 +427,7 @@ class CollisionDiagram: UIViewController {
     //Set in stone down below
     
     
-    
+   
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
@@ -447,9 +448,19 @@ class CollisionDiagram: UIViewController {
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         self.textBox.text = self.list[row]
+        
+        
         //self.dropDown.hidden = true
         determineBackground()
     }
+    
+//    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+//        let pickerLabel = UILabel()
+//        let titleData = self.list[row]
+//        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+//        pickerLabel.attributedText = myTitle
+//        return pickerLabel
+//    }
     
     func textFieldDidBeginEditing(textField: UITextField)
     {
@@ -464,7 +475,16 @@ class CollisionDiagram: UIViewController {
     func determineBackground()
     {
         switch self.textBox.text {
-        case "This guy"?:
+        case "Original"?:
+            indexCounter += 1
+            let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
+            backgroundImage1.image = UIImage(named: "2000px-Street_intersection_diagram.png")
+            let backgroundReset = UIImageView(frame: UIScreen.mainScreen().bounds)
+            backgroundReset.image = UIImage(named: "white.jpg")
+            self.view.insertSubview(backgroundReset, atIndex: indexCounter)
+            indexCounter += 1
+            self.view.insertSubview(backgroundImage1, atIndex: indexCounter)
+        case "Curva Derecha"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundImage1.image = UIImage(named: "curvaderecha.png")

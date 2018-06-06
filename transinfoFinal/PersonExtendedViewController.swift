@@ -128,7 +128,8 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(singleton.foreignKeys[0])
+//        print(singleton.foreignKeys[0])
+        print(dictionary)
    
         let webServicesObject1 = WebService.init()
         webServicesObject1.initiate(3)
@@ -150,48 +151,55 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
 //        transportedBy.arrayList = webServicesObject1.arrayOfDictionaries("organDonor")
         
         if singleton.firstTabInfo[0].sawReportOnce {
-            let counter = singleton.listPeople[0].counter
+            var counter = singleton.listPeople[0].counter
             print(singleton.listPeople[0].arrayPerson)
             if ((singleton.listPeople[0].arrayPerson.first?.isEmpty) != nil){
                 singleton.listPeople[0].arrayPerson.removeAtIndex(0)
             }
             print(singleton.listPeople[0].arrayPerson.count)
+            let amount = singleton.listPeople[0].arrayPerson.count
             print(counter)
-            
-            let arrayForStuff = singleton.listPeople[0].arrayPerson[counter]
-            
-            accionesMomentoAccident.text = String(arrayForStuff["actionsAtCollisionTime"]!)//??
-            accionesMomentoAccident.text = String(arrayForStuff["actionsBeforeCollision"]!)//??
-            airbagsActiviationField.text = String(arrayForStuff["airbagsActivation"]!)
-            AmbulanceCSPNumber.text = String(arrayForStuff["ambulanceCSPNumber"]!)
-            condicionMomentoAccidente.text = String(arrayForStuff["conditionCollisionTime"]!)
-            conductorDistraidoBy.text = String(arrayForStuff["distractedBy"]!)//??
-            conductorDistraidoBy.text = String(arrayForStuff["distractedDriverBy"]!)//??
-            circunstanciasConductorField.text = String(arrayForStuff["driverCirncunstanceBC"]!)
-            expulsionField.text = String(arrayForStuff["expulsion"]!)
-            extractionField.text = String(arrayForStuff["extraction"]!)
-            walkScholl.text = String(arrayForStuff["inWayToSchool"]!)
-            localizacionMomentoAccident.text = String(arrayForStuff["locationWhenCollision"]!)
-            MedicalEmergenciesNumber.text = String(arrayForStuff["medicalEmergenciesNumber"]!)
-            otherLocationField.text = String(arrayForStuff["otherLocation"]!)
-            restraintSystemField.text = String(arrayForStuff["restraintSystem"]!)
-            rowField.text = String(arrayForStuff["row"]!)
-            equipoSeguridadUsado.text = String(arrayForStuff["safetyEquipmentUsed"]!)
-            seatField.text = String(arrayForStuff["seat"]!)
-            relacionadoVelocidaField.text = String(arrayForStuff["speedRelated"]!)
-            usoSustanciasControladas.text = String(arrayForStuff["suscpectControlledSubstances"]!)
-            usoAlcoholField.text = String(arrayForStuff["suspectAlcoholUse"]!)
-            resultado.text = String(arrayForStuff["testResultAl"]!)//??
-            resultadoPruebaField.text = String(arrayForStuff["testResultSub"]!)
-            resultado.text = String(arrayForStuff["testStatusAl"]!)//??
-            estadoPruebaDosField.text = String(arrayForStuff["testStatusSub"]!)
-            tipoPrueba.text = String(arrayForStuff["testTypeAl"]!)
-            tipoPruebaDosField.text = String(arrayForStuff["testTypeSub"]!)
-            transportedBy.text = String(arrayForStuff["transportedBy"]!)
-            personTransport.text = String(arrayForStuff["transportedByME"]!)
-            TransportedTo.text = String(arrayForStuff["transportedTo"]!)
-            
-            correctFormat()
+            do{
+                if counter >= amount{
+                    counter = amount-1
+                }
+                let arrayForStuff = try singleton.listPeople[0].arrayPerson[counter]
+                accionesMomentoAccident.text = String(arrayForStuff["actionsAtCollisionTime"]!)//??
+                accionesMomentoAccident.text = String(arrayForStuff["actionsBeforeCollision"]!)//??
+                airbagsActiviationField.text = String(arrayForStuff["airbagsActivation"]!)
+                AmbulanceCSPNumber.text = String(arrayForStuff["ambulanceCSPNumber"]!)
+                condicionMomentoAccidente.text = String(arrayForStuff["conditionCollisionTime"]!)
+                conductorDistraidoBy.text = String(arrayForStuff["distractedBy"]!)//??
+                conductorDistraidoBy.text = String(arrayForStuff["distractedDriverBy"]!)//??
+                circunstanciasConductorField.text = String(arrayForStuff["driverCirncunstanceBC"]!)
+                expulsionField.text = String(arrayForStuff["expulsion"]!)
+                extractionField.text = String(arrayForStuff["extraction"]!)
+                walkScholl.text = String(arrayForStuff["inWayToSchool"]!)
+                localizacionMomentoAccident.text = String(arrayForStuff["locationWhenCollision"]!)
+                MedicalEmergenciesNumber.text = String(arrayForStuff["medicalEmergenciesNumber"]!)
+                otherLocationField.text = String(arrayForStuff["otherLocation"]!)
+                restraintSystemField.text = String(arrayForStuff["restraintSystem"]!)
+                rowField.text = String(arrayForStuff["row"]!)
+                equipoSeguridadUsado.text = String(arrayForStuff["safetyEquipmentUsed"]!)
+                seatField.text = String(arrayForStuff["seat"]!)
+                relacionadoVelocidaField.text = String(arrayForStuff["speedRelated"]!)
+                usoSustanciasControladas.text = String(arrayForStuff["suscpectControlledSubstances"]!)
+                usoAlcoholField.text = String(arrayForStuff["suspectAlcoholUse"]!)
+                resultado.text = String(arrayForStuff["testResultAl"]!)//??
+                resultadoPruebaField.text = String(arrayForStuff["testResultSub"]!)
+                resultado.text = String(arrayForStuff["testStatusAl"]!)//??
+                estadoPruebaDosField.text = String(arrayForStuff["testStatusSub"]!)
+                tipoPrueba.text = String(arrayForStuff["testTypeAl"]!)
+                tipoPruebaDosField.text = String(arrayForStuff["testTypeSub"]!)
+                transportedBy.text = String(arrayForStuff["transportedBy"]!)
+                personTransport.text = String(arrayForStuff["transportedByME"]!)
+                TransportedTo.text = String(arrayForStuff["transportedTo"]!)
+                
+                correctFormat()
+            }catch{
+               
+            }
+           
             
         }
         
@@ -202,10 +210,19 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         webServicesObject.initiate(4)
         
         nameField.text = dictionary["name"]
-        categoriaPersonField.text = dictionary["gender"]
+        categoriaPersonField.text = dictionary["numLicense"]
         typePersonField.text = dictionary["typeLicense"]
         
         genderField.text = dictionary["gender"]
+        
+        
+        
+//            //nameField.text = singleton.listPeople[singleton.selectedKey][0]
+//            categoriaPersonField.text = dictionary["gender"]
+//            typePersonField.text = dictionary["typeLicense"]
+//        
+//            genderField.text = dictionary["gender"]
+
         
         rowField.isKeyboardHidden = true
         rowField.isDismissWhenSelected = true
@@ -572,6 +589,14 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
     
     func correctFormat(){
         
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        nameField.text = nameField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
         
         rowField.text = rowField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         rowField.text = rowField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
@@ -660,6 +685,8 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
         conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
+        conductorDistraidoBy.text = conductorDistraidoBy.text?.stringByReplacingOccurrencesOfString("\\U201c", withString: "\"")
+        
         
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         condicionMomentoAccidente.text = condicionMomentoAccidente.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")

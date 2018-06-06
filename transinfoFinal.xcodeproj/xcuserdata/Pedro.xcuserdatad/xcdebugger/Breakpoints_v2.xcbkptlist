@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "transinfoFinal/ReportSecondStepViewController.swift"
-            timestampString = "548140295.3166569"
+            timestampString = "549928136.591966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
             landmarkName = "Guardar(_:)"
             landmarkType = "5">
          </BreakpointContent>

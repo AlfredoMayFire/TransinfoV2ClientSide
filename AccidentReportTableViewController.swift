@@ -338,327 +338,322 @@ class AccidentReportTableViewController: UITableViewController {
     func firstTabFormat(firstTab: String){
         var value = ""
     
-        
-//        print(firstTab)
-        
-        for i in firstTab.startIndex..<firstTab.endIndex {
-            if firstTab.startIndex.distanceTo(i) == 17 {
+        if firstTab != "[]"{
+            //        print(firstTab)
+            
+            for i in firstTab.startIndex..<firstTab.endIndex {
+                if firstTab.startIndex.distanceTo(i) == 17 {
+                    var j = i
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                    }
+                }
+                
+            }
+            singleton.firstTabInfo[0].firstTab["address"] = value
+            //        print(singleton.firstTabInfo[0].firstTab["address"],"this one")
+            value = ""
+            
+            for i in firstTab.rangeOfString("caseNumber")!.startIndex ..< firstTab.endIndex {
                 var j = i
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                if i == firstTab.rangeOfString("caseNumber")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["caseNumber"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("cityDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["cityDescriptionES"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("countryDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["countryDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("crashDate")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["crashDate"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("crashType")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["crashType"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("directionDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["directionDescriptionES"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("distance")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["distance"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("hour")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["hour"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("latitude")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["latitude"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("locationDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["locationDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("longitude")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["longitude"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("measurementDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["measurementDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("name")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["name"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("nearToDescriptionEs")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["nearToDescriptionEs"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("propertyDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["propertyDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("status")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["status"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("unitAutomovilistas")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["unitAutomovilistas"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("unitFatalaties")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["unitFatalaties"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("unitInjured")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["unitInjured"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("unitPedestrians")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["unitPedestrians"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("unitVehiculos")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["unitVehiculos"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("countryDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["countryDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("zoneTypeDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].firstTab["zoneTypeDescriptionES"] = value
+                    value = ""
+                    
                 }
             }
-            
         }
-        singleton.firstTabInfo[0].firstTab["address"] = value
-        //        print(singleton.firstTabInfo[0].firstTab["address"],"this one")
-        value = ""
-        
-        for i in firstTab.rangeOfString("caseNumber")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            if i == firstTab.rangeOfString("caseNumber")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["caseNumber"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("cityDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["cityDescriptionES"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("countryDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["countryDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("crashDate")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["crashDate"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("crashType")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["crashType"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("directionDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["directionDescriptionES"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("distance")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["distance"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("hour")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["hour"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("latitude")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["latitude"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("locationDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["locationDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("longitude")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["longitude"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("measurementDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["measurementDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("name")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["name"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("nearToDescriptionEs")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["nearToDescriptionEs"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("propertyDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["propertyDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("status")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["status"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("unitAutomovilistas")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["unitAutomovilistas"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("unitFatalaties")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["unitFatalaties"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("unitInjured")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["unitInjured"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("unitPedestrians")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["unitPedestrians"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("unitVehiculos")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["unitVehiculos"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("countryDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["countryDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("zoneTypeDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].firstTab["zoneTypeDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            
-            
-            
-            
-        }
-        
         
         
         
@@ -669,698 +664,703 @@ class AccidentReportTableViewController: UITableViewController {
     func secondTabFormat(firstTab: String){
         var value = ""
         
-        
-        for i in firstTab.rangeOfString("collisionTypeDescriptionES")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            if i == firstTab.rangeOfString("collisionTypeDescriptionES")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+        if firstTab != "[]" {
+            for i in firstTab.rangeOfString("collisionTypeDescriptionES")!.startIndex ..< firstTab.endIndex {
+                var j = i
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                if i == firstTab.rangeOfString("collisionTypeDescriptionES")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["collisionTypeDescriptionES"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].secondTab["collisionTypeDescriptionES"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("crashLocation")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                if i == firstTab.rangeOfString("crashLocation")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["crashLocation"] = value
+                    value = ""
+                    
                 }
-                singleton.firstTabInfo[0].secondTab["crashLocation"] = value
-                value = ""
+                if i == firstTab.rangeOfString("environmental")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["environmental"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("eventDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["eventDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("eventLocationDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["eventLocationDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("inserctionType")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["inserctionType"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("mannerofColisionDescriptionES")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["mannerofColisionDescriptionES"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("nearConstruction")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["nearConstruction"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("pavementCondition")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["pavementCondition"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("policePresent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["policePresent"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("roadDescription")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["roadDescription"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("schoolBusRelated")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["schoolBusRelated"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("specifLocation")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["specifLocation"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("visibilityCondition")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["visibilityCondition"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("weatherConditionDos")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["weatherConditionDos"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("weatherConditionUno")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["weatherConditionUno"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("withinInterchange")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["withinInterchange"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("workerPresent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["workerPresent"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("workerZoneType")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].secondTab["workerZoneType"] = value
+                    value = ""
+                    
+                }
+                
+                
+                
+                
+                
+                
                 
             }
-            if i == firstTab.rangeOfString("environmental")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["environmental"] = value
-                value = ""
-                
-            }
+            //        print(value)
+            //        
+            //        print(singleton.firstTabInfo[0].firstTab,"thisinfor",singleton.firstTabInfo[0].secondTab)
+            //        
             
-            if i == firstTab.rangeOfString("eventDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["eventDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("eventLocationDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["eventLocationDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("inserctionType")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["inserctionType"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("mannerofColisionDescriptionES")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["mannerofColisionDescriptionES"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("nearConstruction")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["nearConstruction"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("pavementCondition")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["pavementCondition"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("policePresent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["policePresent"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("roadDescription")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["roadDescription"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("schoolBusRelated")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["schoolBusRelated"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("specifLocation")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["specifLocation"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("visibilityCondition")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["visibilityCondition"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("weatherConditionDos")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["weatherConditionDos"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("weatherConditionUno")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["weatherConditionUno"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("withinInterchange")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["withinInterchange"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("workerPresent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["workerPresent"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("workerZoneType")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].secondTab["workerZoneType"] = value
-                value = ""
-                
-            }
-            
-            
-            
-            
-            
-            
-            
+
         }
-//        print(value)
-//        
-//        print(singleton.firstTabInfo[0].firstTab,"thisinfor",singleton.firstTabInfo[0].secondTab)
-//        
-        
         
     }
     
     func thirdTabFormat(firstTab: String){
         var value = ""
         
-        
-        for i in firstTab.rangeOfString("details")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            if i == firstTab.rangeOfString("details")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+        if firstTab != "[]"{
+            for i in firstTab.rangeOfString("details")!.startIndex ..< firstTab.endIndex {
+                var j = i
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                if i == firstTab.rangeOfString("details")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].thirdTab["details"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].thirdTab["details"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("notifiedTimeEmergencie")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                if i == firstTab.rangeOfString("notifiedTimeEmergencie")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].thirdTab["notifiedTimeEmergencie"] = value
+                    value = ""
+                    
                 }
-                singleton.firstTabInfo[0].thirdTab["notifiedTimeEmergencie"] = value
-                value = ""
+                if i == firstTab.rangeOfString("notifiedTimePolice")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].thirdTab["notifiedTimePolice"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("timeOfArrivalEmergencie")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].thirdTab["timeOfArrivalEmergencie"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("timeOfArrivalPolice")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].thirdTab["timeOfArrivalPolice"] = value
+                    value = ""
+                    
+                }
+                
+                
+                //            
+                //            print(value)
+                //            
+                //            print(singleton.firstTabInfo[0].firstTab,"thisinfor")
                 
             }
-            if i == firstTab.rangeOfString("notifiedTimePolice")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].thirdTab["notifiedTimePolice"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("timeOfArrivalEmergencie")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].thirdTab["timeOfArrivalEmergencie"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("timeOfArrivalPolice")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].thirdTab["timeOfArrivalPolice"] = value
-                value = ""
-                
-            }
-            
-            
-//            
-//            print(value)
-//            
-//            print(singleton.firstTabInfo[0].firstTab,"thisinfor")
-     
+
         }
-
-
-    
     }
     
     func personTabFormat(firstTab: String){
         var value = ""
 //        print(firstTab)
-        
-        for i in firstTab.rangeOfString("city")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            
-            if i == firstTab.rangeOfString("idNewPerson")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+        if firstTab != "[]"{
+            for i in firstTab.rangeOfString("city")!.startIndex ..< firstTab.endIndex {
+                var j = i
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                
+                if i == firstTab.rangeOfString("idNewPerson")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["idNewPerson"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].personTab["idNewPerson"] = value
-                value = ""
-            }
-
-            
-            
-            
-            if i == firstTab.rangeOfString("city")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                
+                
+                
+                
+                if i == firstTab.rangeOfString("city")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["city"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].personTab["city"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("expirationDate")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                if i == firstTab.rangeOfString("expirationDate")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["expirationDate"] = value
+                    value = ""
+                    
                 }
-                singleton.firstTabInfo[0].personTab["expirationDate"] = value
-                value = ""
+                if i == firstTab.rangeOfString("gender")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["gender"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("licenceNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["licenceNumber"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("licenseType")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["licenseType"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("name")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["name"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("neighborhood")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["neighborhood"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("organDonor")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["organDonor"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("phoneNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["phoneNumber"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("stateCountry")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["stateCountry"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("streetName")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["streetName"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("zipCode")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].personTab["zipCode"] = value
+                    value = ""
+                }
+                
                 
             }
-            if i == firstTab.rangeOfString("gender")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["gender"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("licenceNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["licenceNumber"] = value
-                value = ""
-                
-            }
+            print(singleton.firstTabInfo[0].personTab,"thisinfor")
+            singleton.listNum[1] += 1
             
-            if i == firstTab.rangeOfString("licenseType")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["licenseType"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("name")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["name"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("neighborhood")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["neighborhood"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("organDonor")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["organDonor"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("phoneNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["phoneNumber"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("stateCountry")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["stateCountry"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("streetName")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["streetName"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("zipCode")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].personTab["zipCode"] = value
-                value = ""
-            }
-         
-            
+            let newPerson = People(person: singleton.firstTabInfo[0].personTab)
+            foreignKeys.append(singleton.firstTabInfo[0].personTab["idNewPerson"]!)
+            //let thisThing =  as? Dictionary<String,AnyObject>
+            singleton.listPeople.append(newPerson)
         }
-        print(singleton.firstTabInfo[0].personTab,"thisinfor")
-        singleton.listNum[1] += 1
-        
-        let newPerson = People(person: singleton.firstTabInfo[0].personTab)
-        foreignKeys.append(singleton.firstTabInfo[0].personTab["idNewPerson"]!)
-        //let thisThing =  as? Dictionary<String,AnyObject>
-        singleton.listPeople.append(newPerson)
+       
     }
 
     func vehicleTabFormat(firstTab: String){
         var value = ""
        // print(firstTab)
-        
-        for i in firstTab.rangeOfString("expirationDate")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            
-            
-            if i == firstTab.rangeOfString("idNewVehicle")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+        if firstTab != "[]"{
+            for i in firstTab.rangeOfString("expirationDate")!.startIndex ..< firstTab.endIndex {
+                var j = i
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                
+                
+                if i == firstTab.rangeOfString("idNewVehicle")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["idNewVehicle"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].vehicleTab["idNewVehicle"] = value
-                value = ""
-            }
-
-            
-            
-            
-            
-            if i == firstTab.rangeOfString("expirationDate")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                
+                
+                
+                
+                
+                if i == firstTab.rangeOfString("expirationDate")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["expirationDate"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].vehicleTab["expirationDate"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("insuranceCompany")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                if i == firstTab.rangeOfString("insuranceCompany")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["insuranceCompany"] = value
+                    value = ""
+                    
                 }
-                singleton.firstTabInfo[0].vehicleTab["insuranceCompany"] = value
-                value = ""
+                if i == firstTab.rangeOfString("licenceNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["licenceNumber"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("make")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["make"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("modelos")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["modelos"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("name")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["name"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("plateNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["plateNumber"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("purchaseDate")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["purchaseDate"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("registrationNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["registrationNumber"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("state")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["state"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("vehicleJurisdiction")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["vehicleJurisdiction"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("vin")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["vin"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("year")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleTab["year"] = value
+                    value = ""
+                }
+                
                 
             }
-            if i == firstTab.rangeOfString("licenceNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["licenceNumber"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("make")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["make"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("modelos")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["modelos"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("name")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["name"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("plateNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["plateNumber"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("purchaseDate")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["purchaseDate"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("registrationNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["registrationNumber"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("state")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["state"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("vehicleJurisdiction")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["vehicleJurisdiction"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("vin")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["vin"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("year")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleTab["year"] = value
-                value = ""
-            }
-            
-            
+            //print(singleton.firstTabInfo[0].vehicleTab,"thisinfor")
+            singleton.listNum[0] += 1
+            foreignKeys.append(singleton.firstTabInfo[0].vehicleTab["idNewVehicle"]!)
+            let newVehicle = Vehicle(vehicle: singleton.firstTabInfo[0].vehicleTab)
+            //let thisThing =  as? Dictionary<String,AnyObject>
+            singleton.listVehicle.append(newVehicle)
         }
-        //print(singleton.firstTabInfo[0].vehicleTab,"thisinfor")
-        singleton.listNum[0] += 1
-        foreignKeys.append(singleton.firstTabInfo[0].vehicleTab["idNewVehicle"]!)
-        let newVehicle = Vehicle(vehicle: singleton.firstTabInfo[0].vehicleTab)
-        //let thisThing =  as? Dictionary<String,AnyObject>
-        singleton.listVehicle.append(newVehicle)
+        
     }
     
     
@@ -1764,528 +1764,530 @@ class AccidentReportTableViewController: UITableViewController {
     func vehicleExtendedTabFormat(firstTab: String){
         var value = ""
        // print(firstTab)
-        
-        for i in firstTab.rangeOfString("affectedArea")!.startIndex ..< firstTab.endIndex {
-            var j = i
-            //j = j.advancedBy(12, limit: firstTab.endIndex)
-            
-            
-            if i == firstTab.rangeOfString("affectedArea")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+        if firstTab != "[]"{
+            for i in firstTab.rangeOfString("affectedArea")!.startIndex ..< firstTab.endIndex {
+                var j = i
+                //j = j.advancedBy(12, limit: firstTab.endIndex)
+                
+                
+                if i == firstTab.rangeOfString("affectedArea")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["affectedArea"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].vehicleExtendTab["affectedArea"] = value
-                value = ""
-            }
-            
-            
-            
-            
-            if i == firstTab.rangeOfString("alignment")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                
+                
+                
+                
+                if i == firstTab.rangeOfString("alignment")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["alignment"] = value
+                    value = ""
                 }
-                singleton.firstTabInfo[0].vehicleExtendTab["alignment"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("authorizedDriver")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
+                if i == firstTab.rangeOfString("authorizedDriver")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["authorizedDriver"] = value
+                    value = ""
+                    
                 }
-                singleton.firstTabInfo[0].vehicleExtendTab["authorizedDriver"] = value
-                value = ""
+                if i == firstTab.rangeOfString("busUse")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["busUse"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("commercialVehicleUse")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["commercialVehicleUse"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("cuartaCategoria")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["cuartaCategoria"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("cuartoEvent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["cuartoEvent"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("descriptionRoad")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["descriptionRoad"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("diamondIdNumber")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["diamondIdNumber"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("directionTripCB")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["directionTripCB"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("extendDamage")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["extendDamage"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("functionSpecialMVT")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["functionSpecialMVT"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("grossWeight")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["grossWeight"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("hazardousMaterial")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["hazardousMaterial"] = value
+                    value = ""
+                }
+                
+                
+                
+                
+                if i == firstTab.rangeOfString("heavyVehicleType")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["heavyVehicleType"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("inOperationLost")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["inOperationLost"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("initialContactPoint")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["initialContactPoint"] = value
+                    value = ""
+                    
+                }
+                if i == firstTab.rangeOfString("inspectionUpdate")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["inspectionUpdate"] = value
+                    value = ""
+                    
+                }
+                
+                if i == firstTab.rangeOfString("laneCantidad")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["laneCantidad"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("laneCategoria")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["laneCategoria"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("laneTipoCarril")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["laneTipoCarril"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("lefthPlace")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["lefthPlace"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("mPH")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["mPH"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("mPHDescription")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["mPHDescription"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("maneuverVehicleMotor")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["maneuverVehicleMotor"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("motorEmergencyVU")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["motorEmergencyVU"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("occupants")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["occupants"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("primerDefectoMec")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(13)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["primerDefectoMec"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("primerEvent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["primerEvent"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("primeraCategoriaEvent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["primeraCategoriaEvent"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("segundaCategoriaEvent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["segundaCategoriaEvent"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("segundoDefectoMec")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(13)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["segundoDefectoMec"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("segundoEvent")!.endIndex.advancedBy(3) {
+                    j = i;
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["segundoEvent"] = value
+                    value = ""
+                }
+                
+                if i == firstTab.rangeOfString("slope")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["slope"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("specialPermit")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["specialPermit"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("tecerEvent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["tecerEvent"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("terceraCategoriaEvent")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["terceraCategoriaEvent"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("thereHazardousMaterial")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["thereHazardousMaterial"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("totalAxis")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["totalAxis"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("towedDamage")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["towedDamage"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("typeControlTraffic")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["typeControlTraffic"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("vehicleConfiguration")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["vehicleConfiguration"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("vehicleMotor")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["vehicleMotor"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("vehicleMoving")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["vehicleMoving"] = value
+                    value = ""
+                }
+                if i == firstTab.rangeOfString("vehicleType")!.endIndex {
+                    j=i;
+                    j = j.advancedBy(3)
+                    while firstTab[j] != ";" {
+                        value.append(firstTab[j])
+                        j = j.advancedBy(1)
+                        //                    print(value)
+                    }
+                    singleton.firstTabInfo[0].vehicleExtendTab["vehicleType"] = value
+                    value = ""
+                }
                 
             }
-            if i == firstTab.rangeOfString("busUse")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["busUse"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("commercialVehicleUse")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["commercialVehicleUse"] = value
-                value = ""
-                
-            }
             
-            if i == firstTab.rangeOfString("cuartaCategoria")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["cuartaCategoria"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("cuartoEvent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["cuartoEvent"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("descriptionRoad")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["descriptionRoad"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("diamondIdNumber")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["diamondIdNumber"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("directionTripCB")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["directionTripCB"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("extendDamage")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["extendDamage"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("functionSpecialMVT")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["functionSpecialMVT"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("grossWeight")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["grossWeight"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("hazardousMaterial")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["hazardousMaterial"] = value
-                value = ""
-            }
+            //print(singleton.firstTabInfo[0].vehicleExtendTab,"thisinfor")
+            let counter  = singleton.listVehicle[0].counter
             
-            
-            
-            
-            if i == firstTab.rangeOfString("heavyVehicleType")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["heavyVehicleType"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("inOperationLost")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["inOperationLost"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("initialContactPoint")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["initialContactPoint"] = value
-                value = ""
-                
-            }
-            if i == firstTab.rangeOfString("inspectionUpdate")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["inspectionUpdate"] = value
-                value = ""
-                
-            }
-            
-            if i == firstTab.rangeOfString("laneCantidad")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["laneCantidad"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("laneCategoria")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["laneCategoria"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("laneTipoCarril")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["laneTipoCarril"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("lefthPlace")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["lefthPlace"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("mPH")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["mPH"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("mPHDescription")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["mPHDescription"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("maneuverVehicleMotor")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["maneuverVehicleMotor"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("motorEmergencyVU")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["motorEmergencyVU"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("occupants")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["occupants"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("primerDefectoMec")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["primerDefectoMec"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("primerEvent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["primerEvent"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("primeraCategoriaEvent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["primeraCategoriaEvent"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("segundaCategoriaEvent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["segundaCategoriaEvent"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("segundoDefectoMec")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["segundoDefectoMec"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("segundoEvent")!.endIndex.advancedBy(3) {
-                j = i;
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["segundoEvent"] = value
-                value = ""
-            }
-            
-            if i == firstTab.rangeOfString("slope")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["slope"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("specialPermit")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["specialPermit"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("tecerEvent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["tecerEvent"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("terceraCategoriaEvent")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["terceraCategoriaEvent"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("thereHazardousMaterial")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["thereHazardousMaterial"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("totalAxis")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["totalAxis"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("towedDamage")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["towedDamage"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("typeControlTraffic")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["typeControlTraffic"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("vehicleConfiguration")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["vehicleConfiguration"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("vehicleMotor")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["vehicleMotor"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("vehicleMoving")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["vehicleMoving"] = value
-                value = ""
-            }
-            if i == firstTab.rangeOfString("vehicleType")!.endIndex {
-                j=i;
-                j = j.advancedBy(3)
-                while firstTab[j] != ";" {
-                    value.append(firstTab[j])
-                    j = j.advancedBy(1)
-                    //                    print(value)
-                }
-                singleton.firstTabInfo[0].vehicleExtendTab["vehicleType"] = value
-                value = ""
-            }
-    
+            singleton.listVehicle[0].arrayVehicle[counter] = singleton.firstTabInfo[0].vehicleExtendTab
+            singleton.listVehicle[0].counter += 1
+        }
+
         }
         
-        //print(singleton.firstTabInfo[0].vehicleExtendTab,"thisinfor")
-        let counter  = singleton.listVehicle[0].counter
-        
-        singleton.listVehicle[0].arrayVehicle[counter] = singleton.firstTabInfo[0].vehicleExtendTab
-        singleton.listVehicle[0].counter += 1
-    }
-    
     
 }

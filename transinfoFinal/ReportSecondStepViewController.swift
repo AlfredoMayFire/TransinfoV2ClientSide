@@ -56,7 +56,7 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
 
 //        print(singleton.foreignKeys[0],"Second Scene")
         
-        if singleton.firstTabInfo[0].sawReport {
+        if singleton.firstTabInfo[0].sawReportOnce {
             dictionaryBro = singleton.firstTabInfo[0].secondTab
             print(dictionaryBro)
             
@@ -218,9 +218,12 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         }
-        numCasoLabel.text = "Caso #" + singleton.foreignKeys[0].numCaso
-     
-        print("What's happening")
+        if singleton.firstTabInfo[0].sawReportOnce {
+            numCasoLabel.text = "Caso #" + singleton.firstTabInfo[0].firstTab["caseNumber"]!
+        }else{
+            numCasoLabel.text = "Caso #" + singleton.foreignKeys[0].numCaso
+        }
+        print(singleton.firstTabInfo[0].secondTab)
     }
     
     override func didReceiveMemoryWarning() {
