@@ -238,6 +238,8 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
                 dictionary1["typeLicense"] = driverLicence.text
                 dictionary1["numLicense"] = numLicenciaField.text
                 
+                print(dictionary1)
+                
                 let newPerson = People(person: dictionary1)
                 singleton.listPeople.append(newPerson)
                 
@@ -274,7 +276,11 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
             print("here's value accidentfk",values["accidentfk"]?.stringValue)
             webServicesObjectPOST2.sendPOSTs(10)
             
-            print(singleton.foreignKeys[0])
+  
+            dictionary1["name"] = nombreField.text
+            dictionary1["gender"] = generoField.text
+            dictionary1["typeLicense"] = driverLicence.text
+            dictionary1["numLicense"] = numLicenciaField.text
             let newPerson = People(person: dictionary1)
             singleton.listPeople.append(newPerson)
             

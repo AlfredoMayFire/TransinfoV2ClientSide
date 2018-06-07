@@ -15,6 +15,8 @@ class VehicleExtendedViewController: UIViewController{
     
     var values = Dictionary<String,AnyObject>()
     
+    var count = 0
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var typeVehicleField: SwiftDropDownList!
@@ -594,6 +596,8 @@ class VehicleExtendedViewController: UIViewController{
         huboDerrameMPField.keyPath = "DescriptionES"
         huboDerrameMPField.arrayList = webServicesObject.arrayOfDictionaries("hazMatInvolved")
         
+        
+
 
         if singleton.firstTabInfo[0].sawReportOnce {
             modelField.text = singleton.listVehicle[0].vehicle["modelos"]
@@ -601,11 +605,18 @@ class VehicleExtendedViewController: UIViewController{
             marcaField.text = singleton.listVehicle[0].vehicle["make"]
             numberTablillaField.text = singleton.listVehicle[0].vehicle["plateNumber"]
             
+            
         }else{
-            modelField.text = singleton.listVehicle[0].vehicle["model"]
-            yearField.text = singleton.listVehicle[0].vehicle["year"]
-            marcaField.text = singleton.listVehicle[0].vehicle["make"]
-            numberTablillaField.text = singleton.listVehicle[0].vehicle["numTablilla"]
+            
+            print(singleton.listVehicle[count].vehicle)
+            modelField.text = singleton.listVehicle[count].vehicle["model"]
+            yearField.text = singleton.listVehicle[count].vehicle["year"]
+            marcaField.text = singleton.listVehicle[count].vehicle["make"]
+            numberTablillaField.text = singleton.listVehicle[count].vehicle["numTablilla"]
+//            modelField.text = dictionary["model"]
+//            yearField.text = dictionary["year"]
+//            marcaField.text = dictionary["marca"]
+//            numberTablillaField.text = dictionary["numDeTablilla"]
         }
         
         

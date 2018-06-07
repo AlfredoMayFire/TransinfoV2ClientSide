@@ -13,6 +13,7 @@ class VehiclesTableViewController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var object = [NSManagedObject]()
+    var count = 0
     
     let singleton = Global.sharedGlobal
     
@@ -112,9 +113,12 @@ class VehiclesTableViewController: UITableViewController {
       
         if singleton.firstTabInfo[0].sawReportOnce {
             cell!.textLabel!.text = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]
+            dictionary["numDeTablilla"] = singleton.listVehicle[indexPath.row].vehicle["plateNumber"]
+            
         }
         else{
             cell!.textLabel!.text = singleton.listVehicle[indexPath.row+1].vehicle["numTablilla"]
+            dictionary["numDeTablilla"] = singleton.listVehicle[indexPath.row].vehicle["numTablilla"]
         }
         cell?.textLabel?.text = cell?.textLabel?.text!.stringByReplacingOccurrencesOfString("\"", withString: "")
         
@@ -130,6 +134,7 @@ class VehiclesTableViewController: UITableViewController {
         
         let cellIndex = indexPath!.row // index of selected cell
         print(indexPath?.row)//iT'S THE NUMBER YOU WANT - 1
+        count = (indexPath?.row)! + 1
         let cellName = tableView.cellForRowAtIndexPath(indexPath!) //  instance of selected cell
       
        
@@ -140,18 +145,21 @@ class VehiclesTableViewController: UITableViewController {
     }
     
     
+   
+    
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "EditVehicleSegue"){
-            //prepare for segue to the details view controller
             
-//            if let detailsVC = segue.destinationViewController as? VehicleExtendedViewController {
-//               // let indexPath = self.tableView.indexPathForSelectedRow
-//
-//            }
+            if let detailsVC = segue.destinationViewController as? VehicleExtendedViewController {
+                detailsVC.dictionary = self.dictionary
+                detailsVC.count = self.count
+               // let indexPath = self.tableView.indexPathForSelectedRow
+
+            }
             
         }
     }

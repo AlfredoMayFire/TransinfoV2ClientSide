@@ -165,7 +165,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
                 }
                 let arrayForStuff = try singleton.listPeople[0].arrayPerson[counter]
                 accionesMomentoAccident.text = String(arrayForStuff["actionsAtCollisionTime"]!)//??
-                accionesMomentoAccident.text = String(arrayForStuff["actionsBeforeCollision"]!)//??
+                actionPriorToCrash.text = String(arrayForStuff["actionsBeforeCollision"]!)//??
                 airbagsActiviationField.text = String(arrayForStuff["airbagsActivation"]!)
                 AmbulanceCSPNumber.text = String(arrayForStuff["ambulanceCSPNumber"]!)
                 condicionMomentoAccidente.text = String(arrayForStuff["conditionCollisionTime"]!)
@@ -185,9 +185,9 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
                 relacionadoVelocidaField.text = String(arrayForStuff["speedRelated"]!)
                 usoSustanciasControladas.text = String(arrayForStuff["suscpectControlledSubstances"]!)
                 usoAlcoholField.text = String(arrayForStuff["suspectAlcoholUse"]!)
+                estadoPrueba.text = String(arrayForStuff["testStatusAl"]!)
                 resultado.text = String(arrayForStuff["testResultAl"]!)//??
                 resultadoPruebaField.text = String(arrayForStuff["testResultSub"]!)
-                resultado.text = String(arrayForStuff["testStatusAl"]!)//??
                 estadoPruebaDosField.text = String(arrayForStuff["testStatusSub"]!)
                 tipoPrueba.text = String(arrayForStuff["testTypeAl"]!)
                 tipoPruebaDosField.text = String(arrayForStuff["testTypeSub"]!)
@@ -711,6 +711,14 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
         estadoPrueba.text = estadoPrueba.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
+        
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\\U00d3", withString: "Ó")
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\\U00e1", withString: "á")
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\\U00ed", withString: "í")
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\\U00fa", withString: "ú")
+        estadoPruebaDosField.text = estadoPruebaDosField.text?.stringByReplacingOccurrencesOfString("\"", withString: "")
         
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00f1", withString: "ñ")
         tipoPrueba.text = tipoPrueba.text?.stringByReplacingOccurrencesOfString("\\U00f3", withString: "ó")
