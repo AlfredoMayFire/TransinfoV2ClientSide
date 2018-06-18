@@ -136,7 +136,7 @@ class VehiclesTableViewController: UITableViewController {
         print(indexPath?.row)//iT'S THE NUMBER YOU WANT - 1
         count = (indexPath?.row)! + 1
         let cellName = tableView.cellForRowAtIndexPath(indexPath!) //  instance of selected cell
-      
+        singleton.listVehicle[0].counter = (indexPath?.row)!
        
         performSegueWithIdentifier("EditVehicleSegue", sender: self)
 

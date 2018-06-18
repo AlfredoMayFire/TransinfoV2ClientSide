@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        SettingsBundleHelper.whatIsSet()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -42,14 +42,6 @@ class ViewController: UIViewController {
         //let url = "http://136.145.116.83:8080/login"
         let url  = "http://136.145.59.111:9000/login"
                 var loginPostResults = WebService.post(url, parameters: ["username":userTextField.text!,"password":passwordTextField.text!] )
-        //print("Here's this Thing",loginPostResults["payload"])
-        //print(loginPostResults["error_code"])
-        //...................................
-        
-        
-        //print("Aqui estoy",loginPostResults.popFirst())
-        //myAO = loginPostResults.first!.1
-        //myAO = loginPostResults["payload"]
         
         
         myAO = loginPostResults["payload"]
@@ -78,20 +70,13 @@ class ViewController: UIViewController {
             let listReportInit = Report(firstTab: ["":""],secondTab:["":""],thirdTab:["":""],personTab:["":""],personExtenTab:["":""],vehicleTab:["":""],vehicleExtendTab:["":""],sawReport: false,sawReportOnce: false)
             singleton.firstTabInfo.append(listReportInit)
             
-            print(singleton.foreignKeys)
-            print(singleton.listPeople)
-            
         }else{
             let alert = UIAlertController(title: "Alert", message: "Username or password invalid", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
-        
-        
-        
-            
-            
-        }
+    
+    }
 
     
 }

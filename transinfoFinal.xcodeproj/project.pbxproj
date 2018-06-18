@@ -39,6 +39,8 @@
 		EB56E8481FC3042D004AE1C5 /* CollisionDiagramAssets in Resources */ = {isa = PBXBuildFile; fileRef = EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */; };
 		EB72BB201E66F67400AB42BA /* InfraccionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */; };
 		EB7B389F209BFF5F00BBBEF1 /* ReportsListController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B389E209BFF5F00BBBEF1 /* ReportsListController copy.swift */; };
+		EBB3606520D8423100F7572D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBB3606420D8423100F7572D /* Settings.bundle */; };
+		EBCE9FDA20D84A51000B59ED /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE9FD920D84A51000B59ED /* SettingsBundleHelper.swift */; };
 		EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED28551F0DCFD4002CDE57 /* collision.swift */; };
 		EBF3A91D1EB59DEB00F3961F /* ForeignKeyVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +103,8 @@
 		EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CollisionDiagramAssets; sourceTree = SOURCE_ROOT; };
 		EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfraccionesTableViewController.swift; sourceTree = "<group>"; };
 		EB7B389E209BFF5F00BBBEF1 /* ReportsListController copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReportsListController copy.swift"; sourceTree = "<group>"; };
+		EBB3606420D8423100F7572D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		EBCE9FD920D84A51000B59ED /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsBundleHelper.swift; path = ../SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		EBED28551F0DCFD4002CDE57 /* collision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collision.swift; sourceTree = "<group>"; };
 		EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForeignKeyVars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,7 @@
 		A078DCA21D48090500D40E51 = {
 			isa = PBXGroup;
 			children = (
+				EBB3606420D8423100F7572D /* Settings.bundle */,
 				A0FD4EAE1D64E273004784D4 /* Core Data */,
 				A078DCEB1D4A4DF400D40E51 /* SWRevealViewController */,
 				A078DCAD1D48090500D40E51 /* transinfoFinal */,
@@ -155,6 +160,7 @@
 		A078DCAD1D48090500D40E51 /* transinfoFinal */ = {
 			isa = PBXGroup;
 			children = (
+				EBCE9FD920D84A51000B59ED /* SettingsBundleHelper.swift */,
 				A03F59051DDEBDAB0021A5B5 /* SwiftDropDownList.swift */,
 				A088C9831DCB799D0008D31A /* Constants.swift */,
 				E8090A2F1E3643B800C51D1F /* WebServices 3.swift */,
@@ -333,6 +339,7 @@
 			files = (
 				EB56E8481FC3042D004AE1C5 /* CollisionDiagramAssets in Resources */,
 				A078DCBC1D48090500D40E51 /* LaunchScreen.storyboard in Resources */,
+				EBB3606520D8423100F7572D /* Settings.bundle in Resources */,
 				A078DCB91D48090500D40E51 /* Assets.xcassets in Resources */,
 				A078DCB41D48090500D40E51 /* Main.storyboard in Resources */,
 			);
@@ -366,6 +373,7 @@
 				A078DCF31D4E908F00D40E51 /* VehicleExtendedViewController.swift in Sources */,
 				A078DCEA1D4A4AE900D40E51 /* NarrativeViewController.swift in Sources */,
 				A078DCE01D491F3800D40E51 /* ReportFirstStepViewController.swift in Sources */,
+				EBCE9FDA20D84A51000B59ED /* SettingsBundleHelper.swift in Sources */,
 				A078DCE41D493FCF00D40E51 /* DataEntryTableViewController.swift in Sources */,
 				A078DCF11D4E7F4D00D40E51 /* MapPopoverViewController.swift in Sources */,
 				A078DCF71D4EA03B00D40E51 /* NewDataEntryTableViewController.swift in Sources */,

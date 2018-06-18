@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "transinfoFinal/ReportFirstStepViewController.swift"
-            timestampString = "549749003.475922"
+            timestampString = "551048785.23622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "ReportFirst(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -65,6 +65,38 @@
             endingLineNumber = "41"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transinfoFinal.ReportController.viewDidLoad () -&gt; ()"
+                  moduleName = "transinfoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/GitHub/TransinfoV2ClientSide/transinfoFinal/ReportsListController%20copy.swift"
+                  timestampString = "551051869.1097879"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "2840">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transinfoFinal.ReportController.viewDidLoad () -&gt; ()"
+                  moduleName = "transinfoFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/GitHub/TransinfoV2ClientSide/transinfoFinal/ReportsListController%20copy.swift"
+                  timestampString = "551051869.109897"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "8784">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

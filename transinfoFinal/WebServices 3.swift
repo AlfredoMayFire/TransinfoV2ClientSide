@@ -21,7 +21,7 @@ class WebService : NSObject{
 //    var resultMessage: AnyObject?
 //    var myArray = Array<AnyObject> ()
     
-    private let url = Constants.ApiScheme + Constants.ApiHost                                                                       //URL
+    private var url = Constants.ApiScheme + Constants.ApiHost                                                                       //URL
     private var dataDownloaded : Array<Bool> = [false,false,false,false,false,false]       //Variable for AlreadyDownloaded()
     private var dataSended : Array<Bool> = [false, false, false]                     //Variable for cheking If data was sended
     
@@ -29,6 +29,11 @@ class WebService : NSObject{
         GetsData.removeAll()
         Data.removeAll()
         PostData.removeAll()
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if userDefaults.stringForKey("name_preference") != nil && userDefaults.boolForKey("enabled_preference") {
+            url = "http://" + userDefaults.stringForKey("name_preference")!
+        }
+        
     }
     
     

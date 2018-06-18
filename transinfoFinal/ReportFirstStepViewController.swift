@@ -17,7 +17,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     //campos
 
     let singleton = Global.sharedGlobal
-
+    
     var once = false
     var failSubmit = false
     var condition = false
@@ -106,6 +106,8 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         //singleton.foreignKeys[0].crashBasicInformation = 167
         
