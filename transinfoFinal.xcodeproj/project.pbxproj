@@ -103,7 +103,9 @@
 		EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CollisionDiagramAssets; sourceTree = SOURCE_ROOT; };
 		EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfraccionesTableViewController.swift; sourceTree = "<group>"; };
 		EB7B389E209BFF5F00BBBEF1 /* ReportsListController copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReportsListController copy.swift"; sourceTree = "<group>"; };
+		EB96D7E920D88946009F0F29 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EBB3606420D8423100F7572D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		EBC9863020D888FE0049B981 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		EBCE9FD920D84A51000B59ED /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsBundleHelper.swift; path = ../SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		EBED28551F0DCFD4002CDE57 /* collision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collision.swift; sourceTree = "<group>"; };
 		EBF3A91C1EB59DEB00F3961F /* ForeignKeyVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForeignKeyVars.swift; sourceTree = "<group>"; };
@@ -137,6 +139,8 @@
 		A078DCA21D48090500D40E51 = {
 			isa = PBXGroup;
 			children = (
+				EB96D7E920D88946009F0F29 /* AVFoundation.framework */,
+				EBC9863020D888FE0049B981 /* AVKit.framework */,
 				EBB3606420D8423100F7572D /* Settings.bundle */,
 				A0FD4EAE1D64E273004784D4 /* Core Data */,
 				A078DCEB1D4A4DF400D40E51 /* SWRevealViewController */,
@@ -542,7 +546,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = transinfoFinal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Universidad-de-puerto-rico-Mayaguez.transinfoFinal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -561,7 +565,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = transinfoFinal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Universidad-de-puerto-rico-Mayaguez.transinfoFinal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
