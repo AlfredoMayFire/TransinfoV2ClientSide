@@ -34,6 +34,9 @@ class CollisionDiagram: UIViewController {
     
     @IBOutlet var scrollview: UIScrollView!
     
+    @IBOutlet weak var backgrounds: SwiftDropDownList!
+    var backgroundList: Array<Dictionary<String,AnyObject>> = [["MeasurementID":1,"DescriptionES":"Original","DescriptionEN":"Original"],["MeasurementID":2,"DescriptionES":"Curva Derecha","DescriptionEN":"Curva Derecha"],["MeasurementID":3,"DescriptionES":"Curva Izquierda","DescriptionEN":"Curva Izquierda"],["MeasurementID":4,"DescriptionES":"Intersección T Pare","DescriptionEN":"Intersección T Pare"],["MeasurementID":5,"DescriptionES":"Intersección T Semaforizada","DescriptionEN":"Intersección T Semaforizada"],["MeasurementID":6,"DescriptionES":"EIntersección X 4 Pare","DescriptionEN":"Intersección X 4 Pare"],["MeasurementID":7,"DescriptionES":"Intersección X 2 Pare","DescriptionEN":"Intersección X 2 Pare"],["MeasurementID":8,"DescriptionES":"Intersección X Semaforizada","DescriptionEN":"Intersección X Semaforizada"],["MeasurementID":9,"DescriptionES":"Parking","DescriptionEN":"Parking"],["MeasurementID":10,"DescriptionES":"Rampa de Entrada","DescriptionEN":"Rampa de Entrada"],["MeasurementID":11,"DescriptionES":"Rampa de Salida","DescriptionEN":"Rampa de Salida"],["MeasurementID":12,"DescriptionES":"Rotonda","DescriptionEN":"Rotonda"],["MeasurementID":13,"DescriptionES":"Tangente 4 Carriles Isleta","DescriptionEN":"Tangente 4 Carriles Isleta"],["MeasurementID":15,"DescriptionES":"Tangente 2 Carriles","DescriptionEN":"Tangente 2 Carriles"]]
+    
     
     
     
@@ -104,7 +107,7 @@ class CollisionDiagram: UIViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
-        let alertController = UIAlertController(title: "Screenshot tomadp.", message:
+        let alertController = UIAlertController(title: "Screenshot tomado.", message:
             "Acuerdese de escoger el imagen antes de subirlo!", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -348,7 +351,22 @@ class CollisionDiagram: UIViewController {
     {
         super.viewDidLoad()
         setup()
-       
+        
+//       backgroundList.arrayLi
+        
+        
+        backgrounds.isKeyboardHidden = true
+        backgrounds.isDismissWhenSelected = true
+        backgrounds.isArrayWithObject = true
+        backgrounds.keyPath = "DescriptionES"
+        backgrounds.arrayList = backgroundList
+    
+        
+        
+        
+        
+        
+        
         let tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("imageTapped:"))
         //Add the recognizer to your view.
         carImage.addGestureRecognizer(tapRecognizer)
@@ -472,9 +490,18 @@ class CollisionDiagram: UIViewController {
         }
     }
     
+    @IBAction func changed(sender: SwiftDropDownList) {
+        print("here")
+        determineBackground()
+    }
+    
+    @IBAction func changeBackground(sender: AnyObject) {
+        determineBackground()
+    }
     func determineBackground()
     {
-        switch self.textBox.text {
+        print("here")
+        switch self.backgrounds.text {
         case "Original"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
@@ -595,7 +622,7 @@ class CollisionDiagram: UIViewController {
         case "Tangente 2 Carriles"?:
             indexCounter += 1
             let backgroundImage1 = UIImageView(frame: UIScreen.mainScreen().bounds)
-            backgroundImage1.image = UIImage(named: "/Users/user/Desktop/TransinfoV2ClientSide/CollisionDiagramAssets/tangenteDosCarriles.png")
+            backgroundImage1.image = UIImage(named: "tangenteDosCarriles.png")
             let backgroundReset = UIImageView(frame: UIScreen.mainScreen().bounds)
             backgroundReset.image = UIImage(named: "white.jpg")
             self.view.insertSubview(backgroundReset, atIndex: indexCounter)

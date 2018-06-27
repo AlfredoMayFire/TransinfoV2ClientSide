@@ -406,7 +406,7 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
 //        localizacionMomentoAccident.text = dictionary["locationWhenCollision"]
         
 
-        scrollView.contentSize.height = 2600
+        scrollView.contentSize.height = 2700
         //scrollView.contentSize.width = 1000
         //scrollView.contentSize = CGSizeMake(500, 1599)
     

@@ -175,55 +175,55 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
         webServicesObject.initiate(1)
         
         
-        typeAccident.isKeyboardHidden = true
+//        typeAccident.isKeyboardHidden = true
         typeAccident.isDismissWhenSelected = true
         typeAccident.isArrayWithObject = true
         typeAccident.keyPath = "DescriptionES"
         typeAccident.arrayList = webServicesObject.arrayOfDictionaries("reportTypes")
         
-        stateField.isKeyboardHidden = true
+//        stateField.isKeyboardHidden = true
         stateField.isDismissWhenSelected = true
         stateField.isArrayWithObject = true
         stateField.keyPath = "DescriptionES"//
         stateField.arrayList = webServicesObject.arrayOfDictionaries("cities")//cities
         
-        municipioField.isKeyboardHidden = true
+//        municipioField.isKeyboardHidden = true
         municipioField.isDismissWhenSelected = true
         municipioField.isArrayWithObject = true
         municipioField.keyPath = "DescriptionES"
         municipioField.arrayList = webServicesObject.arrayOfDictionaries("counties")
         
-        medidaField.isKeyboardHidden = true
+      //  medidaField.isKeyboardHidden = true
         medidaField.isDismissWhenSelected = true
         medidaField.isArrayWithObject = true
         medidaField.keyPath = "DescriptionES"
         medidaField.arrayList = webServicesObject.arrayOfDictionaries("measurements")
         
-        puntoCardinalField.isKeyboardHidden = true
+       // puntoCardinalField.isKeyboardHidden = true
         puntoCardinalField.isDismissWhenSelected = true
         puntoCardinalField.isArrayWithObject = true
         puntoCardinalField.keyPath = "DescriptionES"
         puntoCardinalField.arrayList = webServicesObject.arrayOfDictionaries("directions")
         
-        propertyField.isKeyboardHidden = true
+       // propertyField.isKeyboardHidden = true
         propertyField.isDismissWhenSelected = true
         propertyField.isArrayWithObject = true
         propertyField.keyPath = "DescriptionES"
         propertyField.arrayList = webServicesObject.arrayOfDictionaries("properties")
        
-        locationField.isKeyboardHidden = true
+       // locationField.isKeyboardHidden = true
         locationField.isDismissWhenSelected = true
         locationField.isArrayWithObject = true
         locationField.keyPath = "DescriptionES"
         locationField.arrayList = webServicesObject.arrayOfDictionaries("locations")
         
-        typeZonaField.isKeyboardHidden = true
+       // typeZonaField.isKeyboardHidden = true
         typeZonaField.isDismissWhenSelected = true
         typeZonaField.isArrayWithObject = true
         typeZonaField.keyPath = "DescriptionES"
         typeZonaField.arrayList = webServicesObject.arrayOfDictionaries("zoneTypes")
         
-        cercadeField.isKeyboardHidden = true
+       // cercadeField.isKeyboardHidden = true
         cercadeField.isDismissWhenSelected = true
         cercadeField.isArrayWithObject = true
         cercadeField.keyPath = "DescriptionES"

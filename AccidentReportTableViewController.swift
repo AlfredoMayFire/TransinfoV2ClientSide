@@ -17,6 +17,9 @@ class AccidentReportTableViewController: UITableViewController {
     
     
     var dictionary: Dictionary<String,AnyObject> = ["":""]
+    var swap: Dictionary<String,AnyObject> = ["":""]
+    var sorted: Dictionary<String,AnyObject> = ["":""]
+    var dont = true
     var dictionary1: Dictionary<String,AnyObject> = ["":""]
     var dictionary2: Dictionary<String,AnyObject> = ["":""]
     var converterObject: Dictionary<String,AnyObject> = ["":""]
@@ -65,17 +68,30 @@ class AccidentReportTableViewController: UITableViewController {
         myArrayTemp.removeAll()
         myArrayTemp.insert(myArray[0], atIndex: 0)
         var indices = 1
+        
         for i in myArray.startIndex..<myArray.endIndex
         {
 //            print(myArrayTemp[indices-1]["CaseNumber"],myArray[i]["CaseNumber"])
-            if ((myArrayTemp[indices-1]["CaseNumber"] as? String) != (myArray[i]["CaseNumber"] as? String))
-            {
+//            if ((myArrayTemp[indices-1]["CaseNumber"] as? String) != (myArray[i]["CaseNumber"] as? String))
+//            {
+//                myArrayTemp.insert(myArray[i], atIndex: indices)
+//                indices += 1
+//            }
+            for j in myArrayTemp.startIndex..<myArrayTemp.endIndex {
+                if myArray[i]["CaseNumber"] as? String == myArrayTemp[j]["CaseNumber"] as? String {
+                    dont = true
+                    break
+                }else{
+                    dont = false
+                }
+            }
+            if !dont{
                 myArrayTemp.insert(myArray[i], atIndex: indices)
                 indices += 1
             }
           
         }
-        
+        print("Here is start",myArrayTemp,"here is end")
         tableView.reloadData()
    
         navigationController!.navigationBar.barTintColor = UIColor (red:28.0/255.0, green:69.0/255.0, blue:135.0/255.0, alpha:1.0)
@@ -87,6 +103,100 @@ class AccidentReportTableViewController: UITableViewController {
             menuButton.target = revealViewController()
             //menuButton.action = "revealToggle:"
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        }
+
+        
+        for x in myArrayTemp.startIndex..<myArrayTemp.endIndex {
+            //            print(myArrayTemp[x])
+            for y in myArrayTemp.startIndex..<myArrayTemp.endIndex {
+                
+                //                sorted = (myArrayTemp[x] as? Dictionary<String,AnyObject>)!
+                
+                
+                let theDate1 = NSDateFormatter()
+                theDate1.dateFormat = "MM-dd-yyyy"
+                let theDate2 = NSDateFormatter()
+                theDate2.dateFormat = "MM-dd-yyyy"
+                if theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!) == nil {
+                    theDate1.dateFormat = "MMM dd, yyyy"
+                    theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!)
+                    //print(theDate1)
+                    
+                    if theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!) == nil {
+                        theDate1.dateFormat = "MM/dd/yyyy"
+                        theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!)
+                        if theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!) == nil {
+                            theDate1.dateFormat = "yyyy/MM/dd"
+                            theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!)
+                            if theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!) == nil {
+                                theDate1.dateFormat = "yyyy-MM-dd"
+                                theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!)
+                                if theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!) == nil {
+                                    theDate1.dateFormat = "yyyy-dd-mm"
+                                    theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!)
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                }else{
+                    //print(theDate1)
+                    
+                }
+                if theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!) == nil {
+                    theDate2.dateFormat = "MMM dd, yyyy"
+                    theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!)
+                    //print(theDate2)
+                    if theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!) == nil{
+                        theDate2.dateFormat = "MM/dd/yyyy"
+                        if theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!) == nil {
+                            theDate2.dateFormat = "yyyy/MM/dd"
+                            theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!)
+                            if theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!) == nil {
+                                theDate2.dateFormat = "yyyy-MM-dd"
+                                theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!)
+                                if theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!) == nil {
+                                    theDate2.dateFormat = "yyyy-dd-mm"
+                                    theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!)
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                }else{
+                    //print(theDate2)
+                }
+                
+                let firstDate = theDate1.dateFromString((myArrayTemp[x]["crashDate"] as? String)!)
+                let secondDate = theDate2.dateFromString((myArrayTemp[y]["crashDate"] as? String)!)
+                
+                //                print((myArrayTemp[x]["crashDate"]))
+                //                print((myArrayTemp[y]["crashDate"]))
+                //                print("here dates")
+                //                print(firstDate)
+                //                print(secondDate)
+                
+                
+                if firstDate?.compare(secondDate!) == .OrderedAscending {
+                    //                    print("Older",firstDate)
+                    
+                }else{
+                    swap = myArrayTemp[x] as! Dictionary<String, AnyObject>
+                    myArrayTemp[x] = myArrayTemp[y]
+                    myArrayTemp[y] = swap
+                    //                    print("Older",secondDate)
+                }//end of comparison
+                
+                
+                
+                
+                
+                
+            }
         }
 
         
@@ -126,10 +236,10 @@ class AccidentReportTableViewController: UITableViewController {
         
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         var cellName: String
-        dictionary = (myArrayTemp[indexPath.row] as? Dictionary<String,AnyObject>)!
+                dictionary = (myArrayTemp[indexPath.row] as? Dictionary<String,AnyObject>)!
         if transition {
             if cell.detailTextLabel == nil {
-                print("estecoso")
+//                print("estecoso")
                 
                 cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
             }
@@ -314,6 +424,7 @@ class AccidentReportTableViewController: UITableViewController {
             converterObject = (vehicleExtended["success"] as? Dictionary<String,AnyObject>)!
             converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
             vehicleExtendedTabFormat(String(converterArray))
+            print(converterArray)
         }
         foreignKeys.removeAll()
         

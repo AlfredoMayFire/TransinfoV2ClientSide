@@ -93,115 +93,115 @@ class ReportSecondStepViewController: UIViewController, UITableViewDelegate, UIT
         webServicesObject.initiate(2)
         
         
-        typeColisionField.isKeyboardHidden = true
+  //      typeColisionField.isKeyboardHidden = true
         typeColisionField.isDismissWhenSelected = true
         typeColisionField.isArrayWithObject = true
         typeColisionField.keyPath = "DescriptionES"
         typeColisionField.arrayList = webServicesObject.arrayOfDictionaries("harmfulEventCategories")
         
-        eventField.isKeyboardHidden = true
+  //      eventField.isKeyboardHidden = true
         eventField.isDismissWhenSelected = true
         eventField.isArrayWithObject = true
         eventField.keyPath = "DescriptionES"
         eventField.arrayList = webServicesObject.arrayOfDictionaries("harmfulEvents")
         
-        eventLocationField.isKeyboardHidden = true
+   //     eventLocationField.isKeyboardHidden = true
         eventLocationField.isDismissWhenSelected = true
         eventLocationField.isArrayWithObject = true
         eventLocationField.keyPath = "DescriptionES"
         eventLocationField.arrayList = webServicesObject.arrayOfDictionaries("relativeToTrafficways")
         
-        mannerColisionField.isKeyboardHidden = true
+   //     mannerColisionField.isKeyboardHidden = true
         mannerColisionField.isDismissWhenSelected = true
         mannerColisionField.isArrayWithObject = true
         mannerColisionField.keyPath = "DescriptionES"
         mannerColisionField.arrayList = webServicesObject.arrayOfDictionaries("mannerOfCollisions")
         
-        condition1Field.isKeyboardHidden = true
+ //       condition1Field.isKeyboardHidden = true
         condition1Field.isDismissWhenSelected = true
         condition1Field.isArrayWithObject = true
         condition1Field.keyPath = "DescriptionES"
         condition1Field.arrayList = webServicesObject.arrayOfDictionaries("weatherConditions")
         
-        condition2Field.isKeyboardHidden = true
+  //      condition2Field.isKeyboardHidden = true
         condition2Field.isDismissWhenSelected = true
         condition2Field.isArrayWithObject = true
         condition2Field.keyPath = "DescriptionES"
         condition2Field.arrayList = webServicesObject.arrayOfDictionaries("weatherConditions")
         
-        visibilidadConditionField.isKeyboardHidden = true
+ //       visibilidadConditionField.isKeyboardHidden = true
         visibilidadConditionField.isDismissWhenSelected = true
         visibilidadConditionField.isArrayWithObject = true
         visibilidadConditionField.keyPath = "DescriptionES"
         visibilidadConditionField.arrayList = webServicesObject.arrayOfDictionaries("lightingConditions")
         
-        pavimentCondition.isKeyboardHidden = true
+ //       pavimentCondition.isKeyboardHidden = true
         pavimentCondition.isDismissWhenSelected = true
         pavimentCondition.isArrayWithObject = true
         pavimentCondition.keyPath = "DescriptionES"
         pavimentCondition.arrayList = webServicesObject.arrayOfDictionaries("roadSurfaces")
         
-        circunstanciaAmbientalField.isKeyboardHidden = true
+  //      circunstanciaAmbientalField.isKeyboardHidden = true
         circunstanciaAmbientalField.isDismissWhenSelected = true
         circunstanciaAmbientalField.isArrayWithObject = true
         circunstanciaAmbientalField.keyPath = "DescriptionES"
         circunstanciaAmbientalField.arrayList = webServicesObject.arrayOfDictionaries("environmentConditions")
         
-        circunstanciaCarreteraField.isKeyboardHidden = true
+//        circunstanciaCarreteraField.isKeyboardHidden = true
         circunstanciaCarreteraField.isDismissWhenSelected = true
         circunstanciaCarreteraField.isArrayWithObject = true
         circunstanciaCarreteraField.keyPath = "DescriptionES"
         circunstanciaCarreteraField.arrayList = webServicesObject.arrayOfDictionaries("roadCircumstances")
         
-        interseccionDesnivelField.isKeyboardHidden = true
+//        interseccionDesnivelField.isKeyboardHidden = true
         interseccionDesnivelField.isDismissWhenSelected = true
         interseccionDesnivelField.isArrayWithObject = true
         interseccionDesnivelField.keyPath = "DescriptionES"
         interseccionDesnivelField.arrayList = webServicesObject.arrayOfDictionaries("roadSurfaces")
         
-        lugarEspecificoField.isKeyboardHidden = true
+ //       lugarEspecificoField.isKeyboardHidden = true
         lugarEspecificoField.isDismissWhenSelected = true
         lugarEspecificoField.isArrayWithObject = true
         lugarEspecificoField.keyPath = "DescriptionES"
         lugarEspecificoField.arrayList = webServicesObject.arrayOfDictionaries("junctions")
         
-        tipoIntersecciónField.isKeyboardHidden = true
+ //       tipoIntersecciónField.isKeyboardHidden = true
         tipoIntersecciónField.isDismissWhenSelected = true
         tipoIntersecciónField.isArrayWithObject = true
         tipoIntersecciónField.keyPath = "DescriptionES"
         tipoIntersecciónField.arrayList = webServicesObject.arrayOfDictionaries("intersectionTypes")
         
-        RelacionadoOmnibusField.isKeyboardHidden = true
+    //    RelacionadoOmnibusField.isKeyboardHidden = true
         RelacionadoOmnibusField.isDismissWhenSelected = true
         RelacionadoOmnibusField.isArrayWithObject = true
         RelacionadoOmnibusField.keyPath = "DescriptionES"
         RelacionadoOmnibusField.arrayList = webServicesObject.arrayOfDictionaries("schoolBusRelated")
         
-        relacionField.isKeyboardHidden = true
+//        relacionField.isKeyboardHidden = true
         relacionField.isDismissWhenSelected = true
         relacionField.isArrayWithObject = true
         relacionField.keyPath = "DescriptionES"
         relacionField.arrayList = webServicesObject.arrayOfDictionaries("workzoneRelated")
         
-        localizacionAccidenteField.isKeyboardHidden = true
+//        localizacionAccidenteField.isKeyboardHidden = true
         localizacionAccidenteField.isDismissWhenSelected = true
         localizacionAccidenteField.isArrayWithObject = true
         localizacionAccidenteField.keyPath = "DescriptionES"
         localizacionAccidenteField.arrayList = webServicesObject.arrayOfDictionaries("workzoneLocations")
         
-        typezonaField.isKeyboardHidden = true
+ //       typezonaField.isKeyboardHidden = true
         typezonaField.isDismissWhenSelected = true
         typezonaField.isArrayWithObject = true
         typezonaField.keyPath = "DescriptionES"
         typezonaField.arrayList = webServicesObject.arrayOfDictionaries("workzoneTypes")
         
-        trabajadoresPresentesField.isKeyboardHidden = true
+//        trabajadoresPresentesField.isKeyboardHidden = true
         trabajadoresPresentesField.isDismissWhenSelected = true
         trabajadoresPresentesField.isArrayWithObject = true
         trabajadoresPresentesField.keyPath = "DescriptionES"
         trabajadoresPresentesField.arrayList = webServicesObject.arrayOfDictionaries("workersPresent")
         
-        policiaPresenteField.isKeyboardHidden = true
+  //      policiaPresenteField.isKeyboardHidden = true
         policiaPresenteField.isDismissWhenSelected = true
         policiaPresenteField.isArrayWithObject = true
         policiaPresenteField.keyPath = "DescriptionES"

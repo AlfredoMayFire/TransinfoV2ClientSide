@@ -108,7 +108,7 @@ class NewPersonController: UIViewController/*, PPScanningDelegate*/, UITableView
         generoField.isArrayWithObject = true
         generoField.keyPath = "DescriptionES"
         generoField.arrayList = webServicesObject.arrayOfDictionaries("genders")
-        
+ 
         driverLicence.isKeyboardHidden = true
         driverLicence.isDismissWhenSelected = true
         driverLicence.isArrayWithObject = true
