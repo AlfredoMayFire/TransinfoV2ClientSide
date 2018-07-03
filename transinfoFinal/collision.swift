@@ -10,7 +10,43 @@ import UIKit
 import Photos
 import PhotosUI
 
+@IBDesignable extension UIButton {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+//    @IBInspectable var borderColor: UIColor? {
+//        set {
+//            guard let uiColor = newValue else { return }
+//            layer.borderColor = UIColor.init(CGColor: UIColor.blackColor())
+//        }
+//        get {
+//            guard let color = layer.borderColor else { return nil }
+//            return UIColor(CGColor: color)
+//        }
+//    }
+}
+
 class CollisionDiagram: UIViewController {
+    
+    
+    
+    
     
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -35,7 +71,7 @@ class CollisionDiagram: UIViewController {
     @IBOutlet var scrollview: UIScrollView!
     
     @IBOutlet weak var backgrounds: SwiftDropDownList!
-    var backgroundList: Array<Dictionary<String,AnyObject>> = [["MeasurementID":1,"DescriptionES":"Original","DescriptionEN":"Original"],["MeasurementID":2,"DescriptionES":"Curva Derecha","DescriptionEN":"Curva Derecha"],["MeasurementID":3,"DescriptionES":"Curva Izquierda","DescriptionEN":"Curva Izquierda"],["MeasurementID":4,"DescriptionES":"Intersección T Pare","DescriptionEN":"Intersección T Pare"],["MeasurementID":5,"DescriptionES":"Intersección T Semaforizada","DescriptionEN":"Intersección T Semaforizada"],["MeasurementID":6,"DescriptionES":"EIntersección X 4 Pare","DescriptionEN":"Intersección X 4 Pare"],["MeasurementID":7,"DescriptionES":"Intersección X 2 Pare","DescriptionEN":"Intersección X 2 Pare"],["MeasurementID":8,"DescriptionES":"Intersección X Semaforizada","DescriptionEN":"Intersección X Semaforizada"],["MeasurementID":9,"DescriptionES":"Parking","DescriptionEN":"Parking"],["MeasurementID":10,"DescriptionES":"Rampa de Entrada","DescriptionEN":"Rampa de Entrada"],["MeasurementID":11,"DescriptionES":"Rampa de Salida","DescriptionEN":"Rampa de Salida"],["MeasurementID":12,"DescriptionES":"Rotonda","DescriptionEN":"Rotonda"],["MeasurementID":13,"DescriptionES":"Tangente 4 Carriles Isleta","DescriptionEN":"Tangente 4 Carriles Isleta"],["MeasurementID":15,"DescriptionES":"Tangente 2 Carriles","DescriptionEN":"Tangente 2 Carriles"]]
+    var backgroundList: Array<Dictionary<String,AnyObject>> = [["MeasurementID":1,"DescriptionES":"Original","DescriptionEN":"Original"],["MeasurementID":2,"DescriptionES":"Curva Derecha","DescriptionEN":"Curva Derecha"],["MeasurementID":3,"DescriptionES":"Curva Izquierda","DescriptionEN":"Curva Izquierda"],["MeasurementID":4,"DescriptionES":"Intersección T Pare","DescriptionEN":"Intersección T Pare"],["MeasurementID":5,"DescriptionES":"Intersección T Semaforizada","DescriptionEN":"Intersección T Semaforizada"],["MeasurementID":6,"DescriptionES":"Intersección X 4 Pare","DescriptionEN":"Intersección X 4 Pare"],["MeasurementID":7,"DescriptionES":"Intersección X 2 Pare","DescriptionEN":"Intersección X 2 Pare"],["MeasurementID":8,"DescriptionES":"Intersección X Semaforizada","DescriptionEN":"Intersección X Semaforizada"],["MeasurementID":9,"DescriptionES":"Parking","DescriptionEN":"Parking"],["MeasurementID":10,"DescriptionES":"Rampa de Entrada","DescriptionEN":"Rampa de Entrada"],["MeasurementID":11,"DescriptionES":"Rampa de Salida","DescriptionEN":"Rampa de Salida"],["MeasurementID":12,"DescriptionES":"Rotonda","DescriptionEN":"Rotonda"],["MeasurementID":13,"DescriptionES":"Tangente 4 Carriles Isleta","DescriptionEN":"Tangente 4 Carriles Isleta"],["MeasurementID":15,"DescriptionES":"Tangente 2 Carriles","DescriptionEN":"Tangente 2 Carriles"]]
     
     
     

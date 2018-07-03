@@ -140,8 +140,6 @@ class AccidentReportTableViewController: UITableViewController {
                         }
                         
                     }
-                    
-                    
                 }else{
                     //print(theDate1)
                     
@@ -247,8 +245,57 @@ class AccidentReportTableViewController: UITableViewController {
             cellName = "Numero de Caso: "
             cellName += (dictionary["CaseNumber"] as? String)!
             
+            var thedateFormat = ""
+            
             var cellNameSub = "Fecha: "
-            cellNameSub += (dictionary["crashDate"] as? String)!
+            let theDate1 = NSDateFormatter()
+            theDate1.dateFormat = "MM-dd-yyyy"
+            thedateFormat = "MM-dd-yyyy"
+            if theDate1.dateFromString((dictionary["crashDate"] as? String)!) == nil {
+                theDate1.dateFormat = "MM/dd/yyyy"
+               thedateFormat = "MM/dd/yyyy"
+                theDate1.dateFromString((dictionary["crashDate"] as? String)!)
+                if theDate1.dateFromString((dictionary["crashDate"] as? String)!) == nil {
+                    theDate1.dateFormat = "yyyy/MM/dd"
+                    theDate1.dateFromString((dictionary["crashDate"] as? String)!)
+                    thedateFormat = "yyyy/MM/dd"
+                    if theDate1.dateFromString((dictionary["crashDate"] as? String)!) == nil {
+                        theDate1.dateFormat = "yyyy-MM-dd"
+                        theDate1.dateFromString((dictionary["crashDate"] as? String)!)
+                        thedateFormat = "yyyy-MM-dd"
+                        if theDate1.dateFromString((dictionary["crashDate"] as? String)!) == nil {
+                            theDate1.dateFormat = "yyyy-dd-mm"
+                            theDate1.dateFromString((dictionary["crashDate"] as? String)!)
+                            thedateFormat = "yyyy-dd-mm"
+                        }}}}
+            let date = NSDate()
+            let formatter = NSDateFormatter()
+
+
+            thedateFormat = (theDate1.dateFormat)!
+
+
+            formatter.dateFormat = thedateFormat
+            let today = formatter.stringFromDate(date)
+            let theDate = formatter.dateFromString(today)
+            
+            
+        //    let cellDate = theDate1.dateFromString((dictionary["crashDate"] as? String)!)
+//            print(thedateFormat,theDate1.dateFormat)
+//            print(theDate,theDate1.dateFromString((dictionary["crashDate"] as? String)!))
+            
+
+           // let aString = dictionary["crashDate"] as? String
+            
+            
+
+            if theDate == theDate1.dateFromString((dictionary["crashDate"] as? String)!) {
+                cellNameSub += "Today"
+            }else{
+                cellNameSub += (dictionary["crashDate"] as? String)!
+            }
+            
+            
             cellNameSub += " / "
             cellNameSub += "Tipo de Accidente: "
             cellNameSub += (dictionary["crashType"] as? String)!
