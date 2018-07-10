@@ -20,6 +20,7 @@ class ReportController: UIViewController{
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let WebServicesQuery = WebService.init()
         let caseNumber = singleton.foreignKeys[0].crashBasicInformation

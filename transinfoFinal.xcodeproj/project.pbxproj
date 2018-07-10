@@ -39,6 +39,7 @@
 		EB56E8481FC3042D004AE1C5 /* CollisionDiagramAssets in Resources */ = {isa = PBXBuildFile; fileRef = EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */; };
 		EB72BB201E66F67400AB42BA /* InfraccionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */; };
 		EB7B389F209BFF5F00BBBEF1 /* ReportsListController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7B389E209BFF5F00BBBEF1 /* ReportsListController copy.swift */; };
+		EB8D375220F5588300B48AC8 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D375120F5588300B48AC8 /* animation.swift */; };
 		EBB3606520D8423100F7572D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBB3606420D8423100F7572D /* Settings.bundle */; };
 		EBCE9FDA20D84A51000B59ED /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE9FD920D84A51000B59ED /* SettingsBundleHelper.swift */; };
 		EBED28561F0DCFD4002CDE57 /* collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED28551F0DCFD4002CDE57 /* collision.swift */; };
@@ -103,6 +104,7 @@
 		EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CollisionDiagramAssets; sourceTree = SOURCE_ROOT; };
 		EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfraccionesTableViewController.swift; sourceTree = "<group>"; };
 		EB7B389E209BFF5F00BBBEF1 /* ReportsListController copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReportsListController copy.swift"; sourceTree = "<group>"; };
+		EB8D375120F5588300B48AC8 /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
 		EB96D7E920D88946009F0F29 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EBB3606420D8423100F7572D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		EBC9863020D888FE0049B981 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 				EBED28551F0DCFD4002CDE57 /* collision.swift */,
 				EB56E8471FC3042D004AE1C5 /* CollisionDiagramAssets */,
 				EB088FF01E4E0F8A004203F4 /* AccidentReportTableViewController.swift */,
+				EB8D375120F5588300B48AC8 /* animation.swift */,
 				EB7B389E209BFF5F00BBBEF1 /* ReportsListController copy.swift */,
 				EB72BB1F1E66F67400AB42BA /* InfraccionesTableViewController.swift */,
 				A078DCB81D48090500D40E51 /* Assets.xcassets */,
@@ -386,6 +389,7 @@
 				E8090A301E3643B800C51D1F /* WebServices 3.swift in Sources */,
 				A088C9841DCB799D0008D31A /* Constants.swift in Sources */,
 				A078DCAF1D48090500D40E51 /* AppDelegate.swift in Sources */,
+				EB8D375220F5588300B48AC8 /* animation.swift in Sources */,
 				EB088FF11E4E0F8A004203F4 /* AccidentReportTableViewController.swift in Sources */,
 				A078DCFB1D4ED3C100D40E51 /* NewPersonController.swift in Sources */,
 				EB17581D1E6C5EAB003BFC0F /* ReportsListController.swift in Sources */,

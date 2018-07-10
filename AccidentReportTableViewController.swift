@@ -8,12 +8,15 @@
 
 import UIKit
 
+
 class AccidentReportTableViewController: UITableViewController {
 
     let singleton = Global.sharedGlobal
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet var Reportes: UITableView!
     var objectNum = Int()
+    
+    
     
     
     var dictionary: Dictionary<String,AnyObject> = ["":""]
@@ -40,6 +43,11 @@ class AccidentReportTableViewController: UITableViewController {
     
     
     
+    
+    
+    
+    
+    
     @IBOutlet weak var reportText: UITextView!
     
     override func viewDidDisappear(animated: Bool) {
@@ -50,6 +58,11 @@ class AccidentReportTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
+        let frame = CGRect.init(x: CGRectGetMidX(self.view.bounds), y: CGRectGetMidY(self.view.bounds), width: 300, height: 300)
+        
+        let animation = SpinningView.init(frame: frame)
+        
+        animation.updateAnimation()
         
         Reportes.delegate = self
         Reportes.dataSource = self
@@ -58,6 +71,8 @@ class AccidentReportTableViewController: UITableViewController {
         let WebServiceQuery = WebService.init()
         WebServiceQuery.initiate(1)
         
+        print(singleton.foreignKeys[0].officerPlate)
+        print(singleton.foreignKeys[0].officerID)
         dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
         myArray = (dictionary1["ReportList"] as? Array<AnyObject>)!
@@ -91,7 +106,7 @@ class AccidentReportTableViewController: UITableViewController {
             }
           
         }
-        print("Here is start",myArrayTemp,"here is end")
+//        print("Here is start",myArrayTemp,"here is end")
         tableView.reloadData()
    
         navigationController!.navigationBar.barTintColor = UIColor (red:28.0/255.0, green:69.0/255.0, blue:135.0/255.0, alpha:1.0)
@@ -201,6 +216,7 @@ class AccidentReportTableViewController: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
         Reportes.reloadData()
         self.tableView.reloadData()
+//        animation.strokeEndAnimation
         
     }
     
