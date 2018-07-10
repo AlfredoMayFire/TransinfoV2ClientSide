@@ -40,13 +40,17 @@ class AccidentReportTableViewController: UITableViewController {
     var selectedRowIndex = -1
     var caseNumber: Dictionary<String,AnyObject>=["":""]
     
-    
-    
-    
-    
-    
-    
-    
+//    
+//    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+//    
+//    
+//    func startSpinning() {
+//        activityIndicatorView.startAnimating()
+//    }
+//    
+//    func stopSpinning() {
+//        activityIndicatorView.stopAnimating()
+//    }
     
     @IBOutlet weak var reportText: UITextView!
     
@@ -57,19 +61,19 @@ class AccidentReportTableViewController: UITableViewController {
     }
     
     
+    
     override func viewDidLoad() {
-        let frame = CGRect.init(x: CGRectGetMidX(self.view.bounds), y: CGRectGetMidY(self.view.bounds), width: 300, height: 300)
-        
-        let animation = SpinningView.init(frame: frame)
-        
-        animation.updateAnimation()
+//        startSpinning()
         
         Reportes.delegate = self
         Reportes.dataSource = self
         super.viewDidLoad()
-        
+     
         let WebServiceQuery = WebService.init()
         WebServiceQuery.initiate(1)
+        
+//        self.tableView.hidden = true
+//        startSpinning()
         
         print(singleton.foreignKeys[0].officerPlate)
         print(singleton.foreignKeys[0].officerID)
@@ -216,13 +220,15 @@ class AccidentReportTableViewController: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
         Reportes.reloadData()
         self.tableView.reloadData()
-//        animation.strokeEndAnimation
+//        stopSpinning()
+        self.tableView.hidden = false
         
     }
     
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -377,7 +383,7 @@ class AccidentReportTableViewController: UITableViewController {
     }
     
     func letsReport(action: UIAlertAction){
-        
+        startSpinning()
         
         singleton.listNum[0] = 0
         singleton.listNum[1] = 0

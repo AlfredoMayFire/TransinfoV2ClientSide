@@ -616,6 +616,10 @@
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-i2-Ep3">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="1024"/>
                                 <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Gv-Vm-wgX">
+                                        <rect key="frame" x="615" y="419" width="20" height="20"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número del Caso:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-Z3-3fA">
                                         <rect key="frame" x="285" y="11" width="184" height="21"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -820,7 +824,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v9a-S4-c2A">
-                                        <rect key="frame" x="208" y="493" width="335" height="30"/>
+                                        <rect key="frame" x="212" y="493" width="336" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -952,6 +956,9 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Arrow Down" translatesAutoresizingMaskIntoConstraints="NO" id="4js-2e-Ql5">
+                                        <rect key="frame" x="527" y="498" width="16" height="20"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -994,6 +1001,7 @@
                         <outlet property="propertyField" destination="VJT-Pk-ov1" id="L62-4G-0z0"/>
                         <outlet property="puntoCardinalField" destination="DQw-vS-eY9" id="IBp-gA-gND"/>
                         <outlet property="scrollview" destination="dFi-i2-Ep3" id="NRy-2t-Z27"/>
+                        <outlet property="spinnyWheel" destination="3Gv-Vm-wgX" id="RuN-qo-Z3z"/>
                         <outlet property="stateField" destination="TgW-lY-ccU" id="C0Y-A3-J7a"/>
                         <outlet property="typeAccident" destination="LmI-tK-VHr" id="7ed-8m-mlN"/>
                         <outlet property="typeZonaField" destination="JHM-6x-WXd" id="6kK-nP-HzX"/>
@@ -1002,7 +1010,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jf6-RU-uqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="-1352"/>
+            <point key="canvasLocation" x="1547" y="-1423"/>
         </scene>
         <!--Accidente-->
         <scene sceneID="WLT-t1-Oyi">
@@ -3909,7 +3917,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDC-FD-R8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3253" y="-1435"/>
+            <point key="canvasLocation" x="-3067" y="-1403"/>
         </scene>
         <!--Accidentes Reportados-->
         <scene sceneID="Thv-Ot-Bcm">
@@ -3960,7 +3968,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T8-v4-oSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Mad-hs-zdf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3433" y="-447"/>
+            <point key="canvasLocation" x="-3233" y="-455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lLh-Jg-JPh">
@@ -4383,10 +4391,10 @@
         <segue reference="6AY-Xv-40A"/>
         <segue reference="qoS-x7-Qbu"/>
         <segue reference="Bpe-HZ-5vh"/>
-        <segue reference="rRJ-lM-kEd"/>
         <segue reference="Rdt-Ca-E81"/>
         <segue reference="cIx-FK-bHu"/>
         <segue reference="9nv-1L-DMD"/>
+        <segue reference="2Xj-7a-pQp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

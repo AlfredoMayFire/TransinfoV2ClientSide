@@ -51,6 +51,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var typeZonaField: SwiftDropDownList!
     @IBOutlet weak var municipioField: SwiftDropDownList!
 
+    @IBOutlet weak var spinnyWheel: UIActivityIndicatorView!
    
     var converter: Dictionary<String,AnyObject> = ["":""]
     
@@ -61,7 +62,10 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     let manager = CLLocationManager()
 
 
-    
+    func startSpinning() {
+        spinnyWheel.startAnimating()
+    }
+
     //hora
     @IBAction func AccidenteHourField(sender: UITextField) {
         
@@ -107,7 +111,7 @@ class ReportFirstStepViewController: UIViewController, CLLocationManagerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+//        startSpinning()
 
         //singleton.foreignKeys[0].crashBasicInformation = 167
         
