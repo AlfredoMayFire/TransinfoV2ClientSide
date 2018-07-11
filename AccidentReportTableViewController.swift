@@ -9,7 +9,7 @@
 import UIKit
 
 
-class AccidentReportTableViewController: UITableViewController {
+class AccidentReportTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let singleton = Global.sharedGlobal
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -17,7 +17,7 @@ class AccidentReportTableViewController: UITableViewController {
     var objectNum = Int()
     
     
-    
+    var did = false
     
     var dictionary: Dictionary<String,AnyObject> = ["":""]
     var swap: Dictionary<String,AnyObject> = ["":""]
@@ -40,17 +40,17 @@ class AccidentReportTableViewController: UITableViewController {
     var selectedRowIndex = -1
     var caseNumber: Dictionary<String,AnyObject>=["":""]
     
-//    
-//    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
-//    
-//    
-//    func startSpinning() {
-//        activityIndicatorView.startAnimating()
-//    }
-//    
-//    func stopSpinning() {
-//        activityIndicatorView.stopAnimating()
-//    }
+    
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    
+    
+    func startSpinning() {
+        activityIndicatorView.startAnimating()
+    }
+    
+    func stopSpinning() {
+        activityIndicatorView.stopAnimating()
+    }
     
     @IBOutlet weak var reportText: UITextView!
     
@@ -68,13 +68,21 @@ class AccidentReportTableViewController: UITableViewController {
         Reportes.delegate = self
         Reportes.dataSource = self
         super.viewDidLoad()
-     
-        let WebServiceQuery = WebService.init()
-        WebServiceQuery.initiate(1)
+        
+        //activityIndicatorView.hidden = true
+        self.Reportes.hidden = true
+       // activityIndicatorView.startAnimating()
+        
+        
         
 //        self.tableView.hidden = true
 //        startSpinning()
-        
+        loadAndOrganizeTables()
+       
+    }
+    func loadAndOrganizeTables(){
+        let WebServiceQuery = WebService.init()
+        WebServiceQuery.initiate(1)
         print(singleton.foreignKeys[0].officerPlate)
         print(singleton.foreignKeys[0].officerID)
         dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
@@ -83,19 +91,19 @@ class AccidentReportTableViewController: UITableViewController {
         
         transition = true
         myArrayTemp = myArray
-  
+        
         myArrayTemp.removeAll()
         myArrayTemp.insert(myArray[0], atIndex: 0)
         var indices = 1
         
         for i in myArray.startIndex..<myArray.endIndex
         {
-//            print(myArrayTemp[indices-1]["CaseNumber"],myArray[i]["CaseNumber"])
-//            if ((myArrayTemp[indices-1]["CaseNumber"] as? String) != (myArray[i]["CaseNumber"] as? String))
-//            {
-//                myArrayTemp.insert(myArray[i], atIndex: indices)
-//                indices += 1
-//            }
+            //            print(myArrayTemp[indices-1]["CaseNumber"],myArray[i]["CaseNumber"])
+            //            if ((myArrayTemp[indices-1]["CaseNumber"] as? String) != (myArray[i]["CaseNumber"] as? String))
+            //            {
+            //                myArrayTemp.insert(myArray[i], atIndex: indices)
+            //                indices += 1
+            //            }
             for j in myArrayTemp.startIndex..<myArrayTemp.endIndex {
                 if myArray[i]["CaseNumber"] as? String == myArrayTemp[j]["CaseNumber"] as? String {
                     dont = true
@@ -108,22 +116,22 @@ class AccidentReportTableViewController: UITableViewController {
                 myArrayTemp.insert(myArray[i], atIndex: indices)
                 indices += 1
             }
-          
+            
         }
-//        print("Here is start",myArrayTemp,"here is end")
-        tableView.reloadData()
-   
+        //        print("Here is start",myArrayTemp,"here is end")
+        self.Reportes.reloadData()
+        
         navigationController!.navigationBar.barTintColor = UIColor (red:28.0/255.0, green:69.0/255.0, blue:135.0/255.0, alpha:1.0)
         navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        tableView.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
+        self.Reportes.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
         
         if revealViewController() != nil {
             menuButton.target = revealViewController()
             //menuButton.action = "revealToggle:"
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         }
-
+        
         
         for x in myArrayTemp.startIndex..<myArrayTemp.endIndex {
             //            print(myArrayTemp[x])
@@ -215,19 +223,23 @@ class AccidentReportTableViewController: UITableViewController {
                 
             }
         }
-
         
-        self.tableView.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
+        
+        self.Reportes.registerClass(UITableViewCell.self,forCellReuseIdentifier: "Cell")
         Reportes.reloadData()
-        self.tableView.reloadData()
-//        stopSpinning()
-        self.tableView.hidden = false
+        self.Reportes.reloadData()
+        //        stopSpinning()
         
+        //self.activityIndicatorView.hidden = true
+        self.Reportes.hidden = false
+        //self.activityIndicatorView.stopAnimating()
+        self.Reportes.reloadData()
     }
-    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        activityIndicatorView.hidden = true
+        activityIndicatorView.stopAnimating()
   
     }
 
@@ -237,12 +249,12 @@ class AccidentReportTableViewController: UITableViewController {
 
 
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
      
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rows: Int
         if transition {
             rows = myArrayTemp.count
@@ -252,9 +264,9 @@ class AccidentReportTableViewController: UITableViewController {
         return rows
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
+        var cell:UITableViewCell = self.Reportes.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         var cellName: String
                 dictionary = (myArrayTemp[indexPath.row] as? Dictionary<String,AnyObject>)!
         if transition {
@@ -335,7 +347,7 @@ class AccidentReportTableViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         if indexPath.row == selectedRowIndex && thereIsCellTapped {
             return 44
@@ -344,15 +356,15 @@ class AccidentReportTableViewController: UITableViewController {
         return 44
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
        
         
-        self.tableView.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+        self.Reportes.cellForRowAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
         
         // avoid paint the cell is the index is outside the bounds
         if self.selectedRowIndex != -1 {
-            self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedRowIndex, inSection: 0))?.backgroundColor = UIColor.whiteColor()
+            self.Reportes.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedRowIndex, inSection: 0))?.backgroundColor = UIColor.whiteColor()
         }
         if selectedRowIndex != indexPath.row {
             self.thereIsCellTapped = true
@@ -374,16 +386,35 @@ class AccidentReportTableViewController: UITableViewController {
                 let alertController = UIAlertController(title: "Informacion Presente", message:
                     nil, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Ver reporte completo.", style: UIAlertActionStyle.Default,handler: letsReport))
-                alertController.addAction(UIAlertAction(title: "Dismiss.", style: UIAlertActionStyle.Default,handler: nil))
+                alertController.addAction(UIAlertAction(title: "Dismiss.", style: UIAlertActionStyle.Default,handler: dismissed))
         
-                self.presentViewController(alertController, animated: true, completion: nil)
-
-        self.tableView.beginUpdates()
-        self.tableView.endUpdates()
+                self.presentViewController(alertController, animated: true){
+                    self.activityIndicatorView.hidden = false
+                    self.activityIndicatorView.startAnimating()
+        }
+        
+        
+        self.Reportes.beginUpdates()
+        self.Reportes.endUpdates()
+    }
+    
+    func dismissed(action: UIAlertAction){
+        activityIndicatorView.hidden = true
+        activityIndicatorView.stopAnimating()
     }
     
     func letsReport(action: UIAlertAction){
-        startSpinning()
+        print("wtf")
+        self.view.reloadInputViews()
+       
+       
+        did = true
+        
+//        self.activityIndicatorView.hidden = false
+//        self.activityIndicatorView.startAnimating()
+        
+
+        //startSpinning()
         
         singleton.listNum[0] = 0
         singleton.listNum[1] = 0
@@ -418,6 +449,11 @@ class AccidentReportTableViewController: UITableViewController {
         
     }
     func segueBack(){
+       
+        
+        
+//        activityIndicatorView.hidden = true
+//        stopSpinning()
         performSegueWithIdentifier("firstPage", sender: self)
     }
 
@@ -431,6 +467,7 @@ class AccidentReportTableViewController: UITableViewController {
     
     
     func getTouchedTable(caseNumberString: String){
+      
         let WebServicesQuery = WebService.init()
         //let caseNumber = singleton.foreignKeys[0].crashBasicInformation
         let accidentFK = singleton.foreignKeys[0].accidentCondition

@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2474" y="389"/>
+            <point key="canvasLocation" x="-4762" y="221"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wo5-Ww-fa9">
@@ -1791,7 +1791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSb-bC-mwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2680" y="20"/>
+            <point key="canvasLocation" x="-2800" y="-1748"/>
         </scene>
         <!--Vehículos-->
         <scene sceneID="yfA-QB-CTH">
@@ -3886,7 +3886,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWk-nF-7Ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2167.96875" y="1152.5390625"/>
+            <point key="canvasLocation" x="-3576" y="1560"/>
         </scene>
         <!--Report Controller-->
         <scene sceneID="94m-Gu-pkP">
@@ -3917,7 +3917,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDC-FD-R8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3067" y="-1403"/>
+            <point key="canvasLocation" x="-3891" y="-2019"/>
         </scene>
         <!--Accidentes Reportados-->
         <scene sceneID="Thv-Ot-Bcm">
@@ -3929,7 +3929,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="WnT-xk-uv2">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WnT-xk-uv2" id="nt4-IX-rgJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -3968,7 +3968,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5T8-v4-oSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Mad-hs-zdf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3233" y="-455"/>
+            <point key="canvasLocation" x="-3426" y="-851"/>
+        </scene>
+        <!--Accidentes Reportados-->
+        <scene sceneID="QYI-lx-l2Q">
+            <objects>
+                <viewController id="VrO-em-spI" customClass="AccidentReportTableViewController" customModule="transinfoFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dcK-Sw-hy9"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBf-bJ-fJN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="viJ-f3-FYs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mPP-Q1-HWU">
+                                <rect key="frame" x="0.0" y="0.0" width="1050" height="765"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="WX7-XX-gl3">
+                                        <rect key="frame" x="0.0" y="92" width="1050" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WX7-XX-gl3" id="l8z-iE-EO6">
+                                            <rect key="frame" x="0.0" y="0.0" width="1050" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jPN-Zz-D1b" kind="show" id="AAi-48-00O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bYK-8y-Uou" id="fAx-5Y-Mgg"/>
+                                    <outlet property="delegate" destination="bYK-8y-Uou" id="1Zk-7f-fmB"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="right" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPG-sX-3Eq">
+                                <rect key="frame" x="400" y="300" width="150" height="271"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-b8-4NU">
+                                        <rect key="frame" x="0.0" y="100" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Accidentes Reportados" id="K7c-vT-Q7v">
+                        <barButtonItem key="leftBarButtonItem" image="Sidebar 2" id="h5V-EZ-3D0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="5vi-Ff-b9B">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="1000" height="800"/>
+                    <connections>
+                        <outlet property="Reportes" destination="mPP-Q1-HWU" id="N3A-x4-uUN"/>
+                        <outlet property="activityIndicatorView" destination="n4u-b8-4NU" id="d3W-9u-L2O"/>
+                        <outlet property="menuButton" destination="h5V-EZ-3D0" id="Und-xd-bSb"/>
+                        <segue destination="a6u-BY-ary" kind="unwind" unwindAction="unwindToFirstStep:" id="zcU-iM-t5Q"/>
+                        <segue destination="KfN-BF-Lgo" kind="show" identifier="firstStep" id="GeX-mb-cg5"/>
+                        <segue destination="Mvc-ah-LMH" kind="show" identifier="firstPage" id="BQg-Ev-IMq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6i-6g-Zxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a6u-BY-ary" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-4509" y="-924"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lLh-Jg-JPh">
@@ -3980,12 +4048,12 @@
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bYK-8y-Uou" kind="relationship" relationship="rootViewController" id="qUS-jj-Kbz"/>
+                        <segue destination="VrO-em-spI" kind="relationship" relationship="rootViewController" id="wJh-Tf-7yO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QM0-Gl-DOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3207.8125" y="1164.84375"/>
+            <point key="canvasLocation" x="-3621" y="164"/>
         </scene>
         <!--Collision Diagram-->
         <scene sceneID="fLC-ie-3Sb">
@@ -4387,8 +4455,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OSB-m3-WC8"/>
-        <segue reference="WlE-RK-2pl"/>
-        <segue reference="6AY-Xv-40A"/>
+        <segue reference="BQg-Ev-IMq"/>
+        <segue reference="AAi-48-00O"/>
+        <segue reference="GeX-mb-cg5"/>
         <segue reference="qoS-x7-Qbu"/>
         <segue reference="Bpe-HZ-5vh"/>
         <segue reference="Rdt-Ca-E81"/>
