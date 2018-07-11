@@ -83,8 +83,8 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     func loadAndOrganizeTables(){
         let WebServiceQuery = WebService.init()
         WebServiceQuery.initiate(1)
-        print(singleton.foreignKeys[0].officerPlate)
-        print(singleton.foreignKeys[0].officerID)
+//        print(singleton.foreignKeys[0].officerPlate)
+//        print(singleton.foreignKeys[0].officerID)
         dictionary = WebServiceQuery.getListOfReports(singleton.foreignKeys[0].officerPlate)
         dictionary1 = (dictionary["success"] as? Dictionary<String,AnyObject>)!
         myArray = (dictionary1["ReportList"] as? Array<AnyObject>)!
@@ -404,7 +404,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     }
     
     func letsReport(action: UIAlertAction){
-        print("wtf")
+//        print("wtf")
         self.view.reloadInputViews()
        
        
@@ -530,7 +530,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
             converterObject = (vehicleExtended["success"] as? Dictionary<String,AnyObject>)!
             converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
             vehicleExtendedTabFormat(String(converterArray))
-            print(converterArray)
+            print("here is converter array, line: 533",converterArray)
         }
         foreignKeys.removeAll()
         
@@ -1385,7 +1385,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
                 
                 
             }
-            print(singleton.firstTabInfo[0].personTab,"thisinfor")
+            //print(singleton.firstTabInfo[0].personTab,"thisinfor")
             singleton.listNum[1] += 1
             
             let newPerson = People(person: singleton.firstTabInfo[0].personTab)
@@ -1583,7 +1583,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     
     func personExtendedTabFormat(firstTab: String){
         var value = ""
-        print(firstTab)
+//        print("here is firstab, line 1586",firstTab)
         if firstTab != "[]" {
             for i in firstTab.rangeOfString("actionsAtCollisionTime")!.startIndex ..< firstTab.endIndex {
                 var j = i
@@ -1981,6 +1981,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     func vehicleExtendedTabFormat(firstTab: String){
         var value = ""
        // print(firstTab)
+        print("here is firstab, line 1984",firstTab)
         if firstTab != "[]"{
             for i in firstTab.rangeOfString("affectedArea")!.startIndex ..< firstTab.endIndex {
                 var j = i
