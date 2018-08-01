@@ -18,6 +18,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     
     
     var did = false
+    var todayExtended = ""
     
     var dictionary: Dictionary<String,AnyObject> = ["":""]
     var swap: Dictionary<String,AnyObject> = ["":""]
@@ -64,7 +65,11 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad() {
 //        startSpinning()
-        
+        let today = NSDate()
+        let date = NSDateFormatter()
+        date.dateFormat = "MMM d,yyyy"
+        let result = date.stringFromDate(today)
+        print(result)
         Reportes.delegate = self
         Reportes.dataSource = self
         super.viewDidLoad()
@@ -490,7 +495,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
         
         converterObject = (firstTab["success"] as? Dictionary<String,AnyObject>)!
         converterArray = (converterObject["ReportList"] as? Array<AnyObject>)!
-        //print(converterArray)
+        print(converterArray)
         firstTabFormat(String(converterArray))
         
         converterObject = (secondTab["success"] as? Dictionary<String,AnyObject>)!
@@ -1583,7 +1588,7 @@ class AccidentReportTableViewController: UIViewController, UITableViewDataSource
     
     func personExtendedTabFormat(firstTab: String){
         var value = ""
-//        print("here is firstab, line 1586",firstTab)
+     print("here is firstab, line 1586",firstTab)
         if firstTab != "[]" {
             for i in firstTab.rangeOfString("actionsAtCollisionTime")!.startIndex ..< firstTab.endIndex {
                 var j = i

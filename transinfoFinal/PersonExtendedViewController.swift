@@ -493,7 +493,14 @@ class PersonExtendedViewController: UIViewController,UITableViewDelegate,UITable
         
         webServicesObjectPOST.addIData("TransportedTo", value: TransportedTo.text)//?? reverse
         
-        webServicesObjectPOST.addIData("TransportedBy", value: transportedBy.text)//?? reverse
+        let today = NSDate()
+        let date = NSDateFormatter()
+        date.dateFormat = "MMM d,yyyy"
+        let result = date.stringFromDate(today)
+        print(result)
+        
+        
+        webServicesObjectPOST.addIData("TransportedBy", value: transportedBy.text! + result)//?? reverse
         
         webServicesObjectPOST.addIData("MedicalEmergenciesNumber", value: MedicalEmergenciesNumber.text)
         

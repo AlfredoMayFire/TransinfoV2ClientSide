@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         
         print ("------outtt------")
         
-        //let url = "http://localhost:9000/login"
-        //let url = "http://136.145.116.83:8080/login"
+//        let url = "http://localhost:9000/login"
+//        let url = "http://136.145.116.83:8080/login"
         let url  = "http://136.145.59.111:9000/login"
                 var loginPostResults = WebService.post(url, parameters: ["username":userTextField.text!,"password":passwordTextField.text!] )
         
